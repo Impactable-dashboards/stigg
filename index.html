@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Intelligence Room | Stigg</title>
+<!--
+RECOMMENDATION VARIABLES (single source of truth)
+thesis: one measured system, two engines. Enterprise engine (LinkedIn ABM + outbound) lands 20 logos; self-serve engine (developer-native reach + capture) brings 150 customers; all wired to HubSpot for influenced revenue.
+goals: 20 enterprise AI logos (ABM + outbound) + 150 self-serve paying customers (developer-native inbound), 3 months.
+budget: ~$135k / 3 months (~$45k/mo, ramping $33k->$45.5k->$56.5k). LinkedIn $66k (49%), Developer Community $45k (33%), Google $24k (18%).
+recommended_option: Option 2, Both Engines (pinned).
+personas: engineering-led. Platform/eng leaders (VP Eng, CTO), senior software engineers (self-serve), founders/CEOs, + financial-engineering roles.
+named_accounts: ~360 vetted frontier-AI accounts (dev-infra: Vercel/Weaviate/Qdrant/Pinecone/Baseten/Fireworks; AI apps: ElevenLabs/WRITER/W&B/xAI).
+google_role: precise capture lane, 5 campaigns (category, vendor, competitor displacement, adjacent subscription, brand). Qualified pool ~18,080/mo (17,600 non-brand + 480 brand) of 399,720 in file; deploys full ~$24k Google budget on a ramp $6,019 -> $7,995 -> $10,002/mo.
+developer_community: Reddit, dev newsletters (TLDR/Bytes/Console), podcasts, YouTube+AI-search. The self-serve demand engine.
+channel_order: Create+Developer reach (start) -> Connect/LinkedIn ABM (start) -> Capture/Google lean (start) -> Intelligence (start) -> Activate (build) -> Extend (later).
+additive_css: ws-*, tw-*, and room additive (ov-/eco-/hiw-/edu-/pf-) travel with the views on splice.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#0A0A0C;--concrete:#15151A;--court:#22222A;--bone:#F4F1EA;--chalk:#D8D4C8;
+  --navy:#0D2D5E;--navy-deep:#071A38;--blue:#1B9BD1;--blue-soft:#5BB8E0;
+  --canopy:#D4FF3D;--moss:#7BAA3E;--terracotta:#C4521F;--hazard:#FF5A1F;--clay:#FFB627;--jet-pink:#FF2D7A;
+  --bg:var(--asphalt);--surface:var(--concrete);--line:var(--court);--ink:var(--bone);--muted:#9a9788;--card:#15151A;
+  --canopy-text:#D4FF3D;--moss-text:#8Fc24e;--clay-text:#FFB627;--blue-text:#5BB8E0;--terra-text:#E0794A;--pink-text:#FF6FA3;
+  --panel-deep:#071A38;--panel-mid:#0D2D5E;
+  --barcanopy:#D4FF3D;--barblue:#1B9BD1;--barterra:#C4521F;--barclay:#FFB627;--barmoss:#7BAA3E;--barpink:#FF2D7A;--barnavy:#0D2D5E;
+}
+[data-theme="light"]{
+  --bg:#F4F1EA;--surface:#FBFAF6;--line:#E0DCCF;--ink:#161512;--muted:#6b6659;--card:#FFFFFF;--chalk:#4a463c;
+  --canopy-text:#5C7200;--moss-text:#4a7a20;--clay-text:#b07800;--blue-text:#0f6a92;--terra-text:#9c3d13;--pink-text:#c01458;
+}
+.dark-panel{--canopy-text:#D4FF3D;--blue-text:#5BB8E0;--moss-text:#8FC24E;}
+.dark-panel .btn.ghost{border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.75)}
+.dark-panel .btn.ghost:hover{border-color:rgba(255,255,255,.6);color:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.mono{font-family:'JetBrains Mono',monospace}
+a{color:var(--blue-text);text-decoration:none}
+/* nav */
+nav.top{position:sticky;top:0;z-index:50;background:var(--panel-deep);border-bottom:1px solid rgba(255,255,255,.08)}
+nav.top .inner{max-width:1120px;margin:0 auto;padding:11px 26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-family:'JetBrains Mono';font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#F4F1EA;font-weight:700;white-space:nowrap}
+.brand .sep{color:rgba(216,212,200,.6);font-size:10px;font-weight:400;margin-left:8px;letter-spacing:.1em}
+.tabs{display:flex;gap:5px;flex-wrap:wrap;margin-left:6px}
+.tab{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:rgba(216,212,200,.72);background:none;border:1px solid transparent;padding:7px 11px;border-radius:7px;cursor:pointer;transition:all .16s;white-space:nowrap}
+.tab:hover{color:#fff;border-color:rgba(255,255,255,.18)}
+.tab.active{color:var(--asphalt);background:var(--canopy);font-weight:700}
+.navright{margin-left:auto;display:flex;align-items:center;gap:9px}
+.nav-cta{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:8px 13px;border-radius:7px;background:var(--blue);color:#04121f;white-space:nowrap}
+.themeBtn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#F4F1EA;width:32px;height:32px;border-radius:7px;cursor:pointer;font-size:14px}
+/* views */
+.view{display:none;animation:fade .25s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+section.blk{padding:46px 0;border-bottom:1px solid var(--line)}
+section.blk:last-child{border-bottom:none}
+.secnum{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.24em;color:var(--pink-text);margin-bottom:11px}
+.kicker{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink-text);margin-bottom:14px}
+h1.big{font-family:'Archivo Black',sans-serif;font-size:clamp(32px,5.4vw,60px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+h1.big em{color:var(--canopy-text);font-style:italic;display:inline-block;transform:skewX(-5deg)}
+h2.sec{font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3.4vw,38px);line-height:1;letter-spacing:-.02em;text-transform:uppercase}
+h2.sec em{color:var(--canopy-text);font-style:italic}
+h3.sub{font-family:'Archivo Black',sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:-.01em;margin:34px 0 12px}
+h3.sub em{color:var(--canopy-text);font-style:italic}
+.lede{max-width:800px;margin-top:16px;color:var(--chalk);font-size:16.5px}
+.sub{max-width:840px;margin-top:12px;color:var(--chalk)}
+p.body{max-width:840px;margin:12px 0;color:var(--ink)}
+.metastrip{display:flex;gap:24px;flex-wrap:wrap;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:22px 24px;margin-bottom:15px}
+.card.tl{border-left:4px solid var(--canopy)}.card.tb{border-left:4px solid var(--blue)}.card.tt{border-left:4px solid var(--terracotta)}.card.tc{border-left:4px solid var(--clay)}.card.tm{border-left:4px solid var(--moss)}
+.card h4{font-family:'Archivo Black';font-size:18px;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:5px}
+.card .role{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.chhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.chhead .clabel{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.chhead .ctitle{font-family:'Archivo Black';font-size:18px;text-transform:uppercase;letter-spacing:-.01em}
+.chhead .ctags{margin-left:auto;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:820px){.grid3,.grid4,.grid2{grid-template-columns:1fr}}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0}
+.tag{font-family:'JetBrains Mono';font-size:11.5px;background:rgba(0,0,0,.05);border:1px solid var(--line);color:var(--chalk);padding:4px 10px;border-radius:6px}
+[data-theme="dark"] .tag{background:rgba(255,255,255,.05)}
+.why{background:rgba(0,0,0,.04);border-left:3px solid var(--canopy);border-radius:0 8px 8px 0;padding:12px 15px;margin-top:13px;font-size:14px;color:var(--ink)}
+[data-theme="dark"] .why{background:rgba(212,255,61,.06)}
+.why b{color:var(--canopy-text)}
+.card.tt .why{border-left-color:var(--terracotta)}.card.tt .why b{color:var(--terra-text)}
+.card.tb .why{border-left-color:var(--blue)}.card.tb .why b{color:var(--blue-text)}
+.card.tc .why{border-left-color:var(--clay)}.card.tc .why b{color:var(--clay-text)}
+.card.tm .why{border-left-color:var(--moss)}.card.tm .why b{color:var(--moss-text)}
+.ev{font-size:13.5px;color:var(--muted);margin-top:10px}
+.ev b{color:var(--ink)}
+/* stat */
+.stat{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:16px 18px}
+.stat .n{font-family:'Archivo Black';font-size:30px;line-height:1;color:var(--canopy-text)}
+.stat .l{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+/* badges */
+.badge{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:700;white-space:nowrap;display:inline-block}
+.bh{background:rgba(123,170,62,.18);color:var(--moss-text)}
+.bm{background:rgba(255,182,39,.16);color:var(--clay-text)}
+.bl{background:rgba(154,151,136,.16);color:var(--muted)}
+[data-theme="light"] .bh{color:#39601a}[data-theme="light"] .bm{color:#6b4a00}[data-theme="light"] .bl{color:#565143}
+.bstart{background:var(--canopy);color:var(--asphalt)}
+.bbuild{background:rgba(27,155,209,.18);color:var(--blue-text)}
+.blater{background:rgba(154,151,136,.16);color:var(--muted)}
+.pill{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(0,0,0,.05);border:1px solid var(--line);color:var(--chalk)}
+[data-theme="dark"] .pill{background:rgba(255,255,255,.05)}
+/* callout */
+.callout{background:rgba(0,0,0,.03);border:1px solid var(--line);border-left:3px solid var(--canopy);border-radius:12px;padding:22px 24px;margin:24px 0}
+[data-theme="dark"] .callout{background:linear-gradient(135deg,rgba(212,255,61,.07),rgba(27,155,209,.05))}
+.callout.blue{border-left-color:var(--blue)}.callout.clay{border-left-color:var(--clay)}.callout.terra{border-left-color:var(--terracotta)}
+.callout .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--canopy-text);margin-bottom:9px}
+.callout.blue .k{color:var(--blue-text)}.callout.clay .k{color:var(--clay-text)}.callout.terra .k{color:var(--terra-text)}
+.callout p{color:var(--ink);font-size:14.5px}.callout b{color:var(--ink)}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:13.5px}
+.tbl th{text-align:left;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line)}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--chalk)}
+.tbl td.k{color:var(--ink);font-weight:600}
+.scroll{overflow-x:auto}
+@media(max-width:760px){.scroll .tbl,.scroll .kw{min-width:640px}}
+/* filter table */
+.ftable{width:100%;border-collapse:collapse;margin-top:10px}
+.ftable td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13.5px}
+.ftable td.lbl{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);width:180px}
+.ftable td.val{color:var(--ink)}
+.ftable tr:last-child td{border-bottom:none}
+/* keyword */
+.kw{width:100%;border-collapse:collapse;margin-top:14px;font-size:13.5px}
+.kw th{text-align:left;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line)}
+.kw td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--chalk)}
+.kw td.term{color:var(--ink);font-family:'JetBrains Mono';font-size:12px}
+/* tierlabel */
+.tierlabel{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:30px 0 14px;font-weight:700}
+.tierlabel .d{width:11px;height:11px;border-radius:50%}
+.tw .d{background:var(--canopy)}.tw{color:var(--canopy-text)}
+.tabm .d{background:var(--blue)}.tabm{color:var(--blue-text)}
+.tcold .d{background:var(--terracotta)}.tcold{color:var(--terra-text)}
+/* figures */
+figure{margin:26px 0}
+.fig{width:100%;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:22px}
+.figscroll{overflow-x:auto}
+@media(max-width:700px){.figscroll svg{min-width:600px}}
+svg{width:100%;height:auto;display:block}
+figcaption{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.03em;color:var(--muted);margin-top:12px;line-height:1.5}
+.svglabel{font-family:'JetBrains Mono';font-size:11px;fill:var(--ink)}
+.svgmuted{font-family:'JetBrains Mono';font-size:10px;fill:var(--muted)}
+.svgnum{font-family:'Archivo Black';fill:var(--ink)}
+/* details/disclosure */
+details{margin:12px 0;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--card)}
+summary{list-style:none;cursor:pointer;padding:12px 16px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:10px;background:rgba(0,0,0,.03)}
+[data-theme="dark"] summary{background:rgba(255,255,255,.04)}
+summary::-webkit-details-marker{display:none}
+summary .chip{font-weight:700;color:var(--canopy-text);border:1px solid var(--line);border-radius:5px;padding:0 7px;font-size:13px}
+details[open] summary .chip{color:var(--terra-text)}
+details[open] summary .verb{display:none}
+.dbody{padding:6px 16px 14px}
+/* clean list */
+ul.clean{list-style:none;margin:10px 0}
+ul.clean li{position:relative;padding-left:22px;margin:7px 0;color:var(--ink)}
+ul.clean li::before{content:'▸';position:absolute;left:0;color:var(--canopy-text)}
+/* buttons */
+.btn{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:14px 22px;border-radius:8px;display:inline-block;transition:transform .15s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--canopy);color:var(--asphalt)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+/* move cards (overview) */
+.move{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;cursor:pointer;transition:border-color .15s,transform .15s;display:block}
+.move:hover{border-color:var(--canopy);transform:translateY(-2px)}
+.move .mn{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;color:var(--pink-text);margin-bottom:8px}
+.move .mt{font-family:'Archivo Black';font-size:16px;text-transform:uppercase;margin-bottom:6px}
+.move .md{font-size:13.5px;color:var(--chalk)}
+.move .arrow{font-family:'JetBrains Mono';font-size:11px;color:var(--canopy-text);margin-top:10px;letter-spacing:.06em}
+/* pricing matrix */
+.pm{width:100%;border-collapse:separate;border-spacing:0;margin-top:18px;font-size:13px}
+.pm th,.pm td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.pm .rowlbl{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);width:180px}
+.pm .ohead{font-family:'Archivo Black';font-size:16px;text-transform:uppercase}
+.pm .price{font-family:'Archivo Black';font-size:22px;color:var(--canopy-text)}
+.pm .per{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.pm td.rec{background:var(--panel-deep);color:#F4F1EA}
+.pm td.rec .ohead{color:#fff}
+.pm td.rec .price{color:#D4FF3D}
+.pm td.rec .per{color:rgba(216,212,200,.7)}
+.pm .rectint{background:rgba(13,45,94,.06)}
+[data-theme="dark"] .pm .rectint{background:rgba(91,184,224,.08)}
+.recpill{font-family:'JetBrains Mono';font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;background:var(--canopy);color:var(--asphalt);padding:3px 8px;border-radius:20px;display:inline-block;margin-bottom:8px}
+.ck{color:var(--moss-text);font-weight:700}
+.cx{color:var(--muted)}
+.cp{color:var(--clay-text);font-weight:700}
+td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,200,.55)}
+.freebar{background:rgba(0,0,0,.03);border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:13.5px;color:var(--ink)}
+[data-theme="dark"] .freebar{background:rgba(123,170,62,.08)}
+/* CTA */
+.ctablock{background:var(--panel-deep);border-radius:16px;padding:40px 36px;margin-top:30px;text-align:center}
+.ctablock h2{font-family:'Archivo Black';font-size:clamp(24px,3.4vw,36px);text-transform:uppercase;color:#F4F1EA;line-height:1.02}
+.ctablock h2 em{color:#D4FF3D;font-style:italic}
+.ctablock p{color:rgba(216,212,200,.85);max-width:600px;margin:14px auto 0;font-size:15px}
+.ctablock .btnrow{justify-content:center}
+/* footer */
+.foot{padding:30px 0 60px}
+.foot .fb{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:700}
+.foot .note{color:var(--muted);font-size:11.5px;margin-top:12px;max-width:860px;line-height:1.6}
+.hl{color:var(--canopy-text)}
+</style>
+<style>
+/* ===== ROOM ADDITIVE (overview / ecosystem / how it works / paths forward) ===== */
+.roomwrap{max-width:1120px;margin:0 auto;padding:0 26px}
+/* --- overview --- */
+.ov-hero{padding:56px 0 30px;border-bottom:1px solid var(--line)}
+.ov-thesis{background:var(--panel-deep);border-radius:16px;padding:30px 32px;margin:24px 0}
+.ov-thesis .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#D4FF3D;margin-bottom:12px}
+.ov-thesis p{color:#F4F1EA;font-size:clamp(18px,2.4vw,23px);line-height:1.4;font-family:'Fraunces',serif;font-style:italic}
+.ov-thesis p em{color:#D4FF3D;font-style:italic}
+.ov-movegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+@media(max-width:820px){.ov-movegrid{grid-template-columns:1fr}}
+/* --- ecosystem board --- */
+.eco-board{display:flex;flex-direction:column;gap:13px;margin-top:20px}
+.eco-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:7px}
+.eco-owner{font-family:'JetBrains Mono';font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 7px}
+.eco-pips{display:flex;gap:4px;margin-left:auto;align-items:center}
+.eco-pip{width:20px;height:7px;border-radius:3px;background:rgba(0,0,0,.1)}
+[data-theme="dark"] .eco-pip{background:rgba(255,255,255,.12)}
+.eco-pip.on-canopy{background:var(--barcanopy)}.eco-pip.on-blue{background:var(--barblue)}.eco-pip.on-terra{background:var(--barterra)}.eco-pip.on-clay{background:var(--barclay)}.eco-pip.on-moss{background:var(--barmoss)}.eco-pip.on-pink{background:var(--barpink)}
+.eco-legend{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0 4px}
+.eco-legend span{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px}
+.eco-legend i{width:24px;height:8px;border-radius:3px;display:inline-block}
+/* --- how it works --- */
+.hiw-stack{display:flex;flex-direction:column;gap:15px;margin-top:18px}
+.hiw-video{position:relative;padding-bottom:56.25%;height:0;border-radius:13px;overflow:hidden;margin:20px 0;border:1px solid var(--line)}
+.hiw-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+/* educational: compounding loop + coverage waterfall + influenced-revenue */
+.edu-wf{display:flex;flex-direction:column;gap:9px;margin:20px 0 6px}
+.edu-wf-row{display:flex;align-items:center;gap:13px}
+.edu-wf-lbl{width:150px;flex-shrink:0;font-family:'Archivo Black';font-size:12.5px;text-transform:uppercase;letter-spacing:-.01em;text-align:right;color:var(--ink)}
+.edu-wf-track{flex:1;background:rgba(0,0,0,.05);border-radius:6px;height:32px;overflow:hidden}
+[data-theme="dark"] .edu-wf-track{background:rgba(255,255,255,.05)}
+.edu-wf-bar{height:32px;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-family:'JetBrains Mono';font-size:11px;font-weight:700;color:#0A0A0C}
+.edu-svgbox{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.edu-svghub{fill:rgba(27,155,209,.10);stroke:var(--blue);stroke-width:2}
+[data-theme="dark"] .edu-svghub{fill:rgba(27,155,209,.18)}
+.edu-svgout{fill:rgba(212,255,61,.12);stroke:var(--moss);stroke-width:1.5}
+[data-theme="dark"] .edu-svgout{fill:rgba(212,255,61,.10)}
+.edu-arrow{stroke:var(--muted);stroke-width:2;fill:none}
+.edu-boxlabel{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:var(--ink)}
+.edu-boxsub{font-family:'JetBrains Mono';font-size:9.5px;fill:var(--muted)}
+.edu-statrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.edu-stat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:10px;padding:14px 16px}
+.edu-stat .n{font-family:'Archivo Black';font-size:24px;line-height:1;color:var(--moss-text)}
+.edu-stat .l{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.4}
+/* --- paths forward --- */
+.pf-fitgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:18px 0}
+@media(max-width:820px){.pf-fitgrid{grid-template-columns:1fr}}
+.pf-proofgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:16px}
+@media(max-width:900px){.pf-proofgrid{grid-template-columns:1fr}}
+.pf-proof .n{font-family:'Archivo Black';font-size:20px;color:var(--canopy-text);line-height:1}
+.pmscroll{overflow-x:auto}
+@media(max-width:820px){.pmscroll .pm{min-width:720px}}
+/* --- developer community layer (pink accent) + budget/dual-motion visuals --- */
+.card.tp{border-left:4px solid var(--jet-pink)}
+.card.tp .why{border-left-color:var(--jet-pink)}
+.card.tp .why b{color:var(--pink-text)}
+.dm-budget{display:flex;flex-direction:column;gap:11px;margin:20px 0 6px}
+.dm-brow{display:flex;align-items:center;gap:13px}
+.dm-blbl{width:170px;flex-shrink:0;font-family:'Archivo Black';font-size:12.5px;text-transform:uppercase;letter-spacing:-.01em;text-align:right;color:var(--ink)}
+.dm-btrack{flex:1;background:rgba(0,0,0,.05);border-radius:6px;height:34px;overflow:hidden}
+[data-theme="dark"] .dm-btrack{background:rgba(255,255,255,.05)}
+.dm-bar{height:34px;border-radius:6px;display:flex;align-items:center;padding:0 13px;font-family:'JetBrains Mono';font-size:11.5px;font-weight:700;color:#0A0A0C}
+.dm-bamt{margin-left:auto;font-family:'JetBrains Mono';font-size:11px;color:var(--muted);width:120px;text-align:right;flex-shrink:0}
+@media(max-width:640px){.dm-blbl{width:96px}.dm-bamt{width:80px}}
+.dm-lanes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+@media(max-width:820px){.dm-lanes{grid-template-columns:1fr}}
+.dm-lane{border-radius:13px;padding:20px 22px;border:1px solid var(--line)}
+.dm-lane.ent{background:rgba(27,155,209,.07);border-left:4px solid var(--blue)}
+.dm-lane.self{background:rgba(255,45,122,.06);border-left:4px solid var(--jet-pink)}
+[data-theme="dark"] .dm-lane.ent{background:rgba(27,155,209,.10)}
+[data-theme="dark"] .dm-lane.self{background:rgba(255,45,122,.10)}
+.dm-lane .goal{font-family:'Archivo Black';font-size:20px;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+.dm-lane.ent .goal{color:var(--blue-text)}.dm-lane.self .goal{color:var(--pink-text)}
+.dm-lane .glbl{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:5px 0 12px}
+.dm-lane ul{list-style:none;margin:0}
+.dm-lane li{position:relative;padding-left:18px;margin:7px 0;font-size:13.5px;color:var(--ink);line-height:1.45}
+.dm-lane li::before{content:'\2192';position:absolute;left:0;color:var(--muted)}
+/* --- capture tab (google paid search) --- */
+.cap-excl{display:flex;flex-direction:column;gap:9px;margin:20px 0 6px}
+.cap-erow{display:flex;align-items:center;gap:13px}
+.cap-elbl{width:210px;flex-shrink:0;font-size:13px;font-weight:600;text-align:right;color:var(--ink);line-height:1.25}
+.cap-etrack{flex:1;background:rgba(0,0,0,.05);border-radius:6px;height:30px;overflow:hidden;min-width:40px}
+[data-theme="dark"] .cap-etrack{background:rgba(255,255,255,.05)}
+.cap-ebar{height:30px;border-radius:6px}
+.cap-eamt{width:118px;flex-shrink:0;font-family:'JetBrains Mono';font-size:11px;color:var(--muted);text-align:right}
+.cap-erow.keep .cap-elbl{color:var(--canopy-text);font-family:'Archivo Black';font-weight:normal;text-transform:uppercase;font-size:12px}
+.cap-erow.keep .cap-eamt{color:var(--canopy-text);font-weight:700}
+@media(max-width:640px){.cap-elbl{width:120px;font-size:11px}.cap-eamt{width:82px}}
+.cap-camps{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.cap-meta{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 12px;font-family:'JetBrains Mono';font-size:11px;color:var(--muted)}
+.cap-meta b{color:var(--ink)}
+.cap-ag{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+.cap-ag .agn{color:var(--ink);font-weight:600;font-size:13.5px}
+.cap-ag .agv{font-family:'JetBrains Mono';font-size:10.5px;color:var(--muted)}
+.cap-ag .agp{font-family:'JetBrains Mono';font-size:10.5px;color:var(--terra-text);text-align:right;flex-shrink:0}
+
+/* --- white-space view additive styles (unique names) --- */
+.wswrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.ws-hero{padding:54px 0 34px;border-bottom:1px solid var(--line)}
+.ws-camp-legend{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 4px}
+.ws-camp-legend span{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px}
+.ws-camp-legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.ws-say{font-size:13.5px;color:var(--ink)}
+.ws-say b{color:var(--ink)}
+.wsaxis{stroke:var(--line);stroke-width:1.2}
+.wsaxis-soft{stroke:var(--line);stroke-width:1;stroke-dasharray:4 4}
+.ws-openzone{fill:rgba(212,255,61,.10)}
+[data-theme="dark"] .ws-openzone{fill:rgba(212,255,61,.07)}
+.ws-lanehead{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.ws-lanehead h4{flex:1;min-width:240px}
+.ws-line{margin:9px 0;font-size:14px;color:var(--ink);line-height:1.5}
+.ws-line b{color:var(--ink)}
+.ws-mgrid td.k{white-space:nowrap}
+.ck2{color:var(--moss-text);font-weight:700}
+.cx2{color:var(--muted)}
+.cp2{color:var(--clay-text);font-weight:700}
+.ws-uvp{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--canopy);border-radius:0 13px 13px 0;padding:26px 28px;margin:22px 0}
+[data-theme="dark"] .ws-uvp{background:linear-gradient(135deg,rgba(212,255,61,.07),rgba(27,155,209,.05))}
+.ws-uvp .q{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(19px,2.6vw,26px);line-height:1.35;color:var(--ink)}
+.ws-uvp .q em{color:var(--canopy-text);font-style:italic}
+/* light-mode contrast: clay/amber text is too light for small copy; darken it */
+[data-theme="light"] .cp2{color:#7a5300}
+[data-theme="light"] .card.tc .why b{color:#7a5300}
+[data-theme="light"] .callout.clay .k{color:#7a5300}
+/* --- targeting worksheet additive styles (unique names) --- */
+.twwrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.tw-hero{padding:54px 0 34px;border-bottom:1px solid var(--line)}
+/* narrowing funnel */
+.tw-funnel{margin:24px auto 6px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.tw-band{border-radius:11px;padding:15px 22px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.tw-band .bt{font-family:'Archivo Black';font-size:15px;text-transform:uppercase;letter-spacing:-.01em}
+.tw-band .bs{font-family:'JetBrains Mono';font-size:11px;margin-top:4px}
+.tw-band.b1{background:var(--barclay);width:100%;color:#0A0A0C}
+.tw-band.b1 .bs{color:#3a2c00}
+.tw-band.b2{background:var(--barblue);width:70%;color:#04121f}
+.tw-band.b2 .bs{color:#04121f}
+.tw-band.b3{background:var(--barcanopy);width:46%;color:#0A0A0C}
+.tw-band.b3 .bs{color:#2c3600}
+.tw-bandnote{font-size:12.5px;color:var(--muted);max-width:520px;margin:2px auto 0;text-align:center}
+.tw-banddesc{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:2px}
+.tw-banddesc .d{font-size:12.5px;color:var(--ink)}
+/* committee persona chip row */
+.tw-chiprow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
+.tw-chiprow .lbl{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+/* stepped-bar ladder */
+.tw-ladder{margin:22px 0 6px;display:flex;flex-direction:column;gap:12px}
+.tw-rung{display:flex;align-items:center;gap:14px}
+.tw-rungnum{font-family:'Archivo Black';font-size:15px;color:var(--muted);width:20px;flex-shrink:0;text-align:center}
+.tw-track{width:210px;flex-shrink:0;background:rgba(0,0,0,.05);border-radius:6px;height:30px;overflow:hidden}
+[data-theme="dark"] .tw-track{background:rgba(255,255,255,.05)}
+.tw-bar{height:30px;border-radius:6px}
+.tw-b-canopy{background:var(--barcanopy)}.tw-b-moss{background:var(--barmoss)}.tw-b-blue{background:var(--barblue)}.tw-b-clay{background:var(--barclay)}.tw-b-terra{background:var(--barterra)}
+.tw-rungbody{flex:1;min-width:0}
+.tw-rungbody .rn{font-family:'Archivo Black';font-size:13.5px;text-transform:uppercase;letter-spacing:-.01em}
+.tw-rungbody .rn .cpl{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);text-transform:none;margin-left:8px;letter-spacing:.02em}
+.tw-rungbody .rp{font-size:13px;color:var(--ink);margin-top:3px}
+@media(max-width:640px){.tw-track{width:120px}}
+/* tradeoff two-panel */
+.tw-tradeoff{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+@media(max-width:820px){.tw-tradeoff{grid-template-columns:1fr}}
+.tw-panel{border-radius:13px;padding:20px 22px;border:1px solid var(--line)}
+.tw-panel.up{background:rgba(123,170,62,.08);border-left:4px solid var(--moss)}
+.tw-panel.catch{background:rgba(196,82,31,.08);border-left:4px solid var(--terracotta)}
+[data-theme="dark"] .tw-panel.up{background:rgba(123,170,62,.10)}
+[data-theme="dark"] .tw-panel.catch{background:rgba(196,82,31,.10)}
+.tw-panel .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;font-weight:700}
+.tw-panel.up .k{color:#39601a}.tw-panel.catch .k{color:#9c3d13}
+[data-theme="dark"] .tw-panel.up .k{color:#8FC24E}[data-theme="dark"] .tw-panel.catch .k{color:#E0794A}
+.tw-panel ul{list-style:none;margin:0}
+.tw-panel li{position:relative;padding-left:20px;margin:8px 0;font-size:13.5px;color:var(--ink);line-height:1.45}
+.tw-panel.up li::before{content:'▲';position:absolute;left:0;color:#4a7a20;font-size:10px;top:3px}
+.tw-panel.catch li::before{content:'▼';position:absolute;left:0;color:#9c3d13;font-size:10px;top:3px}
+[data-theme="dark"] .tw-panel.up li::before{color:#8FC24E}[data-theme="dark"] .tw-panel.catch li::before{color:#E0794A}
+/* intent + cost indicator chips */
+.tw-inds{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.tw-ind{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:20px;display:inline-block}
+.tw-hi{background:rgba(123,170,62,.18);color:#39601a}
+[data-theme="dark"] .tw-hi{color:#8FC24E}
+.tw-med{background:rgba(255,182,39,.16);color:#7a5300}
+[data-theme="dark"] .tw-med{color:#FFB627}
+.tw-lo{background:rgba(154,151,136,.18);color:#565143}
+[data-theme="dark"] .tw-lo{color:#b9b6a8}
+.tw-costhi{background:rgba(196,82,31,.14);color:#9c3d13}
+[data-theme="dark"] .tw-costhi{color:#E0794A}
+.tw-costlo{background:rgba(123,170,62,.18);color:#39601a}
+[data-theme="dark"] .tw-costlo{color:#8FC24E}
+/* segment tag */
+.tw-segtag{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block}
+.tw-segnative{background:rgba(212,255,61,.2);color:#41530a}
+[data-theme="dark"] .tw-segnative{background:rgba(212,255,61,.14);color:#D4FF3D}
+.tw-segcombo{background:rgba(27,155,209,.16);color:#0f6a92}
+[data-theme="dark"] .tw-segcombo{color:#5BB8E0}
+.tw-priostat{margin-left:auto}
+/* motion flow + convergence SVG helpers */
+.tw-svgbox{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.tw-svghub{fill:rgba(27,155,209,.10);stroke:var(--blue);stroke-width:2}
+[data-theme="dark"] .tw-svghub{fill:rgba(27,155,209,.18)}
+.tw-svgsig{fill:rgba(212,255,61,.12);stroke:var(--moss);stroke-width:1.5}
+[data-theme="dark"] .tw-svgsig{fill:rgba(212,255,61,.10)}
+.tw-arrow{stroke:var(--muted);stroke-width:2;fill:none}
+.tw-feedback{stroke:var(--barmoss);stroke-width:2;stroke-dasharray:6 4;fill:none}
+.tw-svgboxlabel{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:var(--ink)}
+.tw-svgboxsub{font-family:'JetBrains Mono';font-size:9.5px;fill:var(--muted)}
+@media(max-width:520px){nav.top .brand .sep{display:none}}
+</style>
+</head>
+<body>
+<nav class="top dark-panel">
+  <div class="inner">
+    <div class="brand">IMPACTABLE<span class="sep">// Stigg / Intelligence Room</span></div>
+    <div class="tabs">
+      <button class="tab active" data-v="overview">Overview</button>
+      <button class="tab" data-v="whitespace">White Space</button>
+      <button class="tab" data-v="targeting">Targeting</button>
+      <button class="tab" data-v="capture">Capture</button>
+      <button class="tab" data-v="ecosystem">Ecosystem</button>
+      <button class="tab" data-v="howitworks">How It Works</button>
+      <button class="tab" data-v="pathsforward">Paths Forward</button>
+    </div>
+    <div class="navright">
+      <a class="nav-cta" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a call</a>
+      <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">&#9680;</button>
+    </div>
+  </div>
+</nav>
+<section class="view active" id="overview">
+<div class="roomwrap">
+  <header class="ov-hero">
+    <div class="kicker">Intelligence Room / Stigg</div>
+    <h1 class="big">You already make demand.<br>Let's build the <em>connective tissue</em>.</h1>
+    <p class="lede">Stigg already makes demand exist and already runs the right channels, and now the goals and budget are on the table: 20 new enterprise AI logos and 150 new self-serve paying customers over three months, backed by a real multi-channel budget. Two goals, two motions. The job is to wire the channels you have budgeted into one measured system, an enterprise engine that lands the named logos and a self-serve engine that brings the volume, both reporting back to HubSpot.</p>
+    <div class="ov-thesis dark-panel">
+      <div class="k">The thesis, in one sentence</div>
+      <p>Run one measured system with two engines: LinkedIn account-based marketing and outbound to land the <em>enterprise logos</em>, developer-native reach and capture to feed the <em>self-serve volume</em>, and the whole thing wired into HubSpot so you see what actually influenced pipeline and revenue.</p>
+    </div>
+    <div class="btnrow">
+      <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
+      <button class="btn ghost" data-goto="pathsforward">See the starting points</button>
+    </div>
+  </header>
+
+  <section class="blk">
+    <div class="secnum">THE MOVES</div>
+    <h2 class="sec">Five moves, <em>in order</em></h2>
+    <p class="body">Each one is a tab. Read them top to bottom and the whole argument is there: where the market is open, who to aim at, what already runs, how the system works, and where to start.</p>
+    <div class="ov-movegrid">
+      <div class="move" data-goto="whitespace">
+        <div class="mn">01 / WHITE SPACE</div>
+        <div class="mt">Where the market is open</div>
+        <div class="md">The field split into four groups, and Stigg sits nearly alone in the most valuable one: a real-time layer that runs on top of your billing. No one else can say the whole sentence.</div>
+        <div class="arrow">See the open ground &rsaquo;</div>
+      </div>
+      <div class="move" data-goto="targeting">
+        <div class="mn">02 / TARGETING</div>
+        <div class="mt">Who to aim at, most cheaply</div>
+        <div class="md">The engineers who choose the infrastructure, from senior software engineers up to CTOs and founders, plus the named frontier-AI accounts for the enterprise motion. Reached warm-first, cheapest audiences first.</div>
+        <div class="arrow">See the audience plan &rsaquo;</div>
+      </div>
+      <div class="move" data-goto="capture">
+        <div class="mn">03 / CAPTURE</div>
+        <div class="mt">The precise Google plan</div>
+        <div class="md">Built on your own keyword file: about 18,080 of 399,720 monthly searches are your buyer, so Google runs as a precise capture lane, five intent-separated campaigns funded to $10,000 a month, not a spend bucket.</div>
+        <div class="arrow">See the Google plan &rsaquo;</div>
+      </div>
+      <div class="move" data-goto="ecosystem">
+        <div class="mn">04 / ECOSYSTEM</div>
+        <div class="mt">What already runs, and what to add</div>
+        <div class="md">The founder's content and Google are already live. The layer to add is the connective tissue: the LinkedIn account-based hub, the developer-community reach for the self-serve engine, and the attribution underneath it all.</div>
+        <div class="arrow">See the footprint &rsaquo;</div>
+      </div>
+      <div class="move" data-goto="howitworks">
+        <div class="mn">05 / HOW IT WORKS</div>
+        <div class="mt">How the system runs</div>
+        <div class="md">LinkedIn qualifies the traffic before spend, the signals compose into one account view, and the revenue wires back into HubSpot so you see influenced pipeline, not just clicks.</div>
+        <div class="arrow">See the method &rsaquo;</div>
+      </div>
+      <div class="move" data-goto="pathsforward">
+        <div class="mn">06 / PATHS FORWARD</div>
+        <div class="mt">Where to start</div>
+        <div class="md">Three ways in, each aimed at one motion and built to expand. Start small, prove it, and grow into the full system from strength.</div>
+        <div class="arrow">See the options &rsaquo;</div>
+      </div>
+    </div>
+  </section>
+</div>
+</section>
+
+<section class="view" id="whitespace">
+<div class="wswrap">
+<!-- HERO -->
+<header class="ws-hero">
+  <div class="kicker">Competitive Landscape / Step 3</div>
+  <h1 class="big">Where the market is crowded,<br>where it is <em>open</em>.</h1>
+  <p class="lede">The tools in Stigg's market have split into four groups, and the split itself is the opening. This is where every competitor is, what they all say, and the one position Stigg can hold on the strength of what it already does today.</p>
+  <div class="metastrip">
+    <span>10 competitors</span><span>4 groups</span><span>Pre-call briefing</span><span>September 2026</span>
+  </div>
+</header>
+
+<!-- 1. SHAPE OF THE MARKET -->
+<section class="blk">
+  <div class="secnum">01 / THE SHAPE OF THE MARKET</div>
+  <h2 class="sec">Four groups, and a gap <em>in the middle</em></h2>
+  <p class="body">Put simply: the giants want to replace your billing, the usage counters only measure it, and the two most popular middle options were just bought by payment companies. Almost nobody sits where Stigg sits, a fast, independent layer that enforces the rules in the moment and leaves your billing where it is.</p>
+
+  <div class="grid2" style="margin-top:20px">
+    <div class="card tt">
+      <h4>Bought by payment companies</h4>
+      <div class="role">Metronome, Orb</div>
+      <p class="ws-say">The two largest independent usage-billing tools were just acquired by payment processors: Metronome by Stripe, Orb by Adyen. A billing tool owned by a payment company has a reason to steer you toward that company's own payment rails.</p>
+    </div>
+    <div class="card tc">
+      <h4>The big billing suites</h4>
+      <div class="role">Zuora, Chargebee</div>
+      <p class="ws-say">Older, heavy platforms that want to run your entire money operation. Powerful, but you replace a lot to adopt them, and Zuora is now owned by a private equity firm.</p>
+    </div>
+    <div class="card tb">
+      <h4>The usage counters</h4>
+      <div class="role">Lago, m3ter, Amberflo, OpenMeter</div>
+      <p class="ws-say">Newer tools that are very good at measuring usage and turning it into a bill. They count what happened. They do not stop it while it is happening.</p>
+    </div>
+    <div class="card tl">
+      <h4>The real-time control layer</h4>
+      <div class="role">Stigg, Schematic, Credyt</div>
+      <p class="ws-say">A small, new group that decides in the moment what a customer or an AI agent is allowed to do, and runs on top of the billing you already have. This is where Stigg sits. Only two others are nearby, and each has a limit Stigg does not.</p>
+    </div>
+  </div>
+
+  <figure>
+    <div class="fig figscroll">
+      <svg viewBox="0 0 720 440" role="img" aria-label="Positioning map: how each tool decides and where it sits relative to your billing">
+        <!-- open zone top-right -->
+        <rect class="ws-openzone" x="372" y="52" width="300" height="150" rx="6"/>
+        <!-- axes -->
+        <line class="wsaxis" x1="60" y1="360" x2="672" y2="360"/>
+        <line class="wsaxis" x1="60" y1="52" x2="60" y2="360"/>
+        <line class="wsaxis-soft" x1="366" y1="52" x2="366" y2="360"/>
+        <line class="wsaxis-soft" x1="60" y1="206" x2="672" y2="206"/>
+        <!-- axis labels -->
+        <text class="svgmuted" x="66" y="380">Measures after the fact</text>
+        <text class="svgmuted" x="672" y="380" text-anchor="end">Decides in real time, before the cost</text>
+        <text class="svgmuted" x="52" y="66" text-anchor="end" transform="rotate(-90 52 66)" style="text-anchor:middle" >Runs on top of your billing</text>
+        <text class="svgmuted" x="52" y="352" text-anchor="end" transform="rotate(-90 52 352)" style="text-anchor:middle">Replaces your billing</text>
+        <!-- clusters (dots use theme-independent hex) -->
+        <!-- big suites: replaces billing + after the fact (bottom-left) -->
+        <circle cx="150" cy="300" r="8" fill="#FFB627"/><text class="svglabel" x="164" y="304">Zuora</text>
+        <circle cx="150" cy="330" r="8" fill="#FFB627"/><text class="svglabel" x="164" y="334">Chargebee</text>
+        <!-- usage counters: on-top-ish + after the fact (upper-left) -->
+        <circle cx="150" cy="120" r="8" fill="#1B9BD1"/><text class="svglabel" x="164" y="124">Lago</text>
+        <circle cx="235" cy="150" r="8" fill="#1B9BD1"/><text class="svglabel" x="249" y="154">m3ter</text>
+        <circle cx="150" cy="175" r="8" fill="#1B9BD1"/><text class="svglabel" x="164" y="179">Amberflo</text>
+        <circle cx="255" cy="105" r="8" fill="#1B9BD1"/><text class="svglabel" x="269" y="109">OpenMeter</text>
+        <!-- bought by payments: some on-top + after the fact (middle-left) -->
+        <circle cx="300" cy="250" r="8" fill="#C4521F"/><text class="svglabel" x="314" y="254">Metronome</text>
+        <circle cx="300" cy="285" r="8" fill="#C4521F"/><text class="svglabel" x="314" y="289">Orb</text>
+        <!-- control layer: real-time + on-top (top-right open zone) -->
+        <circle cx="470" cy="150" r="8" fill="#5BB8E0"/><text class="svglabel" x="484" y="154">Schematic</text>
+        <circle cx="455" cy="120" r="8" fill="#5BB8E0"/><text class="svglabel" x="469" y="124">Credyt</text>
+        <!-- Stigg highlighted -->
+        <circle cx="600" cy="95" r="13" fill="#D4FF3D" stroke="#0A0A0C" stroke-width="1.5"/>
+        <text class="svgnum" x="600" y="80" text-anchor="middle" style="font-size:15px">STIGG</text>
+      </svg>
+    </div>
+    <figcaption>How each tool decides, and where it sits relative to your billing. The shaded corner, real time and on top of your billing, is where buyers increasingly want to be, and it is nearly empty.</figcaption>
+  </figure>
+</section>
+
+<!-- 2. WHAT EVERYONE IS SAYING -->
+<section class="blk">
+  <div class="secnum">02 / WHAT EVERYONE IS SAYING</div>
+  <h2 class="sec">The claims that <em>no longer</em> separate anyone</h2>
+  <p class="body">These phrases show up on almost every competitor's site. Because everyone says them, they no longer help a buyer choose. Saying them louder will not set Stigg apart. The one claim almost nobody can make is at the bottom, and that is where the opening is.</p>
+
+  <figure>
+    <div class="fig figscroll">
+      <svg viewBox="0 0 720 330" role="img" aria-label="How many of the eleven tools make each claim">
+        <!-- row 1 -->
+        <text class="svglabel" x="16" y="46">Usage-based billing for modern software</text>
+        <rect x="320" y="32" width="260" height="20" rx="4" fill="#C4521F"/>
+        <text class="svgnum" x="592" y="48" style="font-size:12px;fill:#C4521F">11 of 11</text>
+        <!-- row 2 -->
+        <text class="svglabel" x="16" y="102">Built for AI, credits and tokens</text>
+        <rect x="320" y="88" width="213" height="20" rx="4" fill="#C4521F"/>
+        <text class="svgnum" x="592" y="104" style="font-size:12px;fill:#C4521F">9 of 11</text>
+        <!-- row 3 -->
+        <text class="svglabel" x="16" y="158">Change pricing without engineering</text>
+        <rect x="320" y="144" width="165" height="20" rx="4" fill="#FFB627"/>
+        <text class="svgnum" x="592" y="160" style="font-size:12px;fill:#b07800">7 of 11</text>
+        <!-- row 4 -->
+        <text class="svglabel" x="16" y="214">Keep your existing billing, no migration</text>
+        <rect x="320" y="200" width="118" height="20" rx="4" fill="#FFB627"/>
+        <text class="svgnum" x="592" y="216" style="font-size:12px;fill:#b07800">5 of 11</text>
+        <!-- row 5 highlighted -->
+        <text class="svglabel" x="16" y="270" style="font-weight:700">Stops usage in real time, before the cost</text>
+        <rect x="320" y="256" width="71" height="20" rx="4" fill="#D4FF3D" stroke="#0A0A0C" stroke-width="1"/>
+        <text class="svgnum" x="592" y="272" style="font-size:12px;fill:#5C7200">3 of 11</text>
+        <line class="wsaxis-soft" x1="320" y1="20" x2="320" y2="290"/>
+      </svg>
+    </div>
+    <figcaption>How many of the eleven tools make each claim. The top claims are crowded, so they cannot carry the story. The short, highlighted claim at the bottom is the open ground.</figcaption>
+  </figure>
+</section>
+
+<!-- 3. THE TEN COMPETITORS -->
+<section class="blk">
+  <div class="secnum">03 / THE TEN COMPETITORS</div>
+  <h2 class="sec">Everyone in the field, <em>grouped by what they do</em></h2>
+  <div class="ws-camp-legend">
+    <span><i style="background:#C4521F"></i>Bought by payments</span>
+    <span><i style="background:#FFB627"></i>Big billing suites</span>
+    <span><i style="background:#1B9BD1"></i>Usage counters</span>
+    <span><i style="background:#D4FF3D"></i>Real-time control layer</span>
+  </div>
+
+  <h3 class="sub">Group one: <em>bought by payment companies</em></h3>
+  <div class="card tt">
+    <h4>Metronome</h4><div class="role">Usage billing, now part of Stripe</div>
+    <p class="ws-say">Measures product usage and turns it into invoices, popular with large usage-based software companies. Acquired by Stripe, closed January 2026. Was the best-funded independent option in this space.</p>
+    <div class="why"><b>What it means for Stigg:</b> It bills at the end of the cycle, so nothing is stopped in the moment. Now that Stripe owns it, choosing Metronome leans a buyer toward Stripe's payment rails. That is the exact concern Stigg's independence answers.</div>
+  </div>
+  <div class="card tt">
+    <h4>Orb</h4><div class="role">Usage billing, now part of Adyen</div>
+    <p class="ws-say">Usage-based billing built for pricing changes, credits, and invoicing. A closed, hosted platform with quote-based pricing, now owned by the payments company Adyen.</p>
+    <div class="why"><b>What it means for Stigg:</b> Same story as Metronome. It bills after the fact and now sits inside a payments company. Stigg stays independent and enforces before the cost is incurred.</div>
+  </div>
+
+  <h3 class="sub">Group two: <em>the big billing suites</em></h3>
+  <div class="card tc">
+    <h4>Zuora</h4><div class="role">Enterprise billing suite</div>
+    <p class="ws-say">The long-standing enterprise platform for subscriptions, billing, payments, and revenue reporting. Founded 2007, Redwood City. Taken private by Silver Lake and GIC for 1.7 billion dollars in early 2025, and recently absorbed a usage-pricing tool called Togai.</p>
+    <div class="why"><b>What it means for Stigg:</b> Powerful but heavy. You adopt a large suite and change a lot to use it. Stigg is a light layer you add without replacing what you run.</div>
+  </div>
+  <div class="card tc">
+    <h4>Chargebee</h4><div class="role">Subscription and billing suite</div>
+    <p class="ws-say">A mature subscription-billing platform now adding usage and entitlement features as it moves up-market. Widely used, often described as a category unicorn.</p>
+    <div class="why"><b>What it means for Stigg:</b> A full billing system, not a control layer. It handles invoices; the in-product rules that decide what a customer can actually use are still yours to build unless you adopt more of the suite.</div>
+  </div>
+
+  <h3 class="sub">Group three: <em>the usage counters</em></h3>
+  <div class="card tb">
+    <h4>Lago</h4><div class="role">Open-source usage billing</div>
+    <p class="ws-say">An open-source billing engine for usage, credits, and hybrid pricing, popular with teams that want full control. Free to self-host, with paid managed tiers.</p>
+    <div class="why"><b>What it means for Stigg:</b> Strong on measuring usage and on control for teams that will run it themselves. It reconciles into an invoice; it does not enforce limits in real time inside the request. Stigg does, and offers a fully managed version.</div>
+  </div>
+  <div class="card tb">
+    <h4>m3ter</h4><div class="role">Metering and rating infrastructure</div>
+    <p class="ws-say">Measures usage and calculates bills, then feeds the numbers into your existing sales and finance systems. United Kingdom, raised roughly 14 million dollars.</p>
+    <div class="why"><b>What it means for Stigg:</b> A back-office calculation layer for finance teams. It is about producing an accurate bill, not about stopping an AI agent mid-action. A different job than Stigg's.</div>
+  </div>
+  <div class="card tb">
+    <h4>Amberflo</h4><div class="role">Usage metering and AI monetization</div>
+    <p class="ws-say">Real-time usage metering for AI and cloud products, with credits, budgets, and cost controls. San Jose, founded by former AWS engineers, raised roughly 21 million dollars.</p>
+    <div class="why"><b>What it means for Stigg:</b> The closest of the counters to Stigg on AI features. One thing to be straight about: Amberflo also offers AI credits and cost controls, so the AI point is a lead for Stigg, not a lock. Stigg's edge is enforcement in the request path plus running in your own cloud.</div>
+  </div>
+  <div class="card tb">
+    <h4>OpenMeter</h4><div class="role">Open-source metering, part of Kong</div>
+    <p class="ws-say">Open-source, real-time metering for AI and API usage, with some entitlement features. Now part of the API company Kong, available open-source or managed.</p>
+    <div class="why"><b>What it means for Stigg:</b> Built for engineers who want to compose their own setup. Strong on metering, lighter on the packaged credits, governance, and enterprise support Stigg provides out of the box.</div>
+  </div>
+
+  <h3 class="sub">Group four: <em>the real-time control layer, where Stigg sits</em></h3>
+  <div class="card tl">
+    <h4>Schematic</h4><div class="role">Entitlements, built on Stripe</div>
+    <p class="ws-say">An entitlements layer that sits between your product and Stripe and enforces access in real time. Raised about 6.5 million dollars, launched a Stripe App.</p>
+    <div class="why"><b>What it means for Stigg:</b> The nearest match to Stigg's message, almost word for word. The difference that matters: Schematic is built specifically for Stripe. Stigg works with Stripe, Zuora, Chargebee, and others, and can run in your own cloud. That breadth is the wedge.</div>
+  </div>
+  <div class="card tl">
+    <h4>Credyt</h4><div class="role">Real-time AI billing</div>
+    <p class="ws-say">Authorizes AI usage in real time before the cost is incurred, either as a full billing system or alongside your existing one. A newer, smaller entrant in the same camp as Stigg.</p>
+    <div class="why"><b>What it means for Stigg:</b> Shares Stigg's core idea of deciding before spend. It is early and small, without Stigg's enterprise track record, named customers, or in-your-cloud option. A validator of the category more than a threat today.</div>
+  </div>
+</section>
+
+<!-- 4. COMPARISON MATRIX -->
+<section class="blk">
+  <div class="secnum">04 / COMPARISON AT A GLANCE</div>
+  <h2 class="sec">One row answers <em>yes</em> to everything</h2>
+  <p class="body"><b>Yes</b> means a clear, built-in strength. <b>Some</b> means partial, or available only through a larger commitment. <b>No</b> means it is not what the tool is for.</p>
+  <div class="scroll">
+    <table class="tbl ws-mgrid">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Stops usage in real time, before cost</th>
+          <th>Adds onto your existing billing</th>
+          <th>Built for AI credits and agent limits</th>
+          <th>Runs in your own cloud</th>
+          <th>Change pricing without engineering</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="k" style="color:var(--canopy-text);font-weight:700">Stigg</td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td></tr>
+        <tr><td class="k">Metronome (Stripe)</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Orb (Adyen)</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Zuora</td><td><span class="cx2">No</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Chargebee</td><td><span class="cx2">No</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Lago</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">m3ter</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Amberflo</td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">OpenMeter (Kong)</td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Schematic</td><td><span class="ck2">Yes</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="cx2">No</span></td><td><span class="ck2">Yes</span></td></tr>
+        <tr><td class="k">Credyt</td><td><span class="ck2">Yes</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="cx2">Unknown</span></td><td><span class="cp2">Some</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout" style="margin-top:20px">
+    <div class="k">The row that matters</div>
+    <p>No other tool answers <b>Yes</b> across all five at once. Schematic comes closest, but it is tied to Stripe and does not run in your cloud. Everyone else either measures after the fact or asks you to replace your billing.</p>
+  </div>
+</section>
+
+<!-- 5. THE OPEN GROUND -->
+<section class="blk">
+  <div class="secnum">05 / WHAT NOBODY ELSE IS SAYING</div>
+  <h2 class="sec">The open ground Stigg <em>can own</em></h2>
+  <p class="body">Each of these is a position Stigg can hold on the strength of what it already does today. Each is written the way a customer would understand it.</p>
+
+  <div class="card tl">
+    <div class="ws-lanehead"><h4>It says no in the moment, before the money is spent</h4><span class="badge bh">Strongest lane</span></div>
+    <div class="ws-line"><b>What it means:</b> Most tools here add up usage and send a bill at the end of the month. By then a single customer or AI agent may already have run up a large cost. Stigg checks whether an action is allowed and stops it right away, in a few thousandths of a second, before the cost happens.</div>
+    <div class="ws-line"><b>How Stigg is different:</b> This is Stigg's clearest strength. The counters and the billing suites reconcile after the fact. Only Schematic and Credyt sit near this, so it is mostly open rather than entirely empty.</div>
+    <div class="ws-line"><b>Who it is for:</b> The finance leader watching AI costs climb, and the platform engineer who otherwise builds the guardrails by hand.</div>
+    <div class="ws-line"><b>How big a deal:</b> The strongest and most defensible position. It is the one thing the after-the-fact tools cannot match.</div>
+  </div>
+
+  <div class="card tl">
+    <div class="ws-lanehead"><h4>Keep the billing system you already run</h4><span class="badge bh">Wide open, and newly so</span></div>
+    <div class="ws-line"><b>What it means:</b> You do not have to rip out and replace your current billing to get all of this. Stigg sits on top of Stripe, Zuora, Chargebee, and others, and syncs both ways. There is no migration project.</div>
+    <div class="ws-line"><b>How Stigg is different:</b> This matters more now that the two most popular middle options belong to payment companies. Stigg stays independent of any payment processor. Schematic makes a similar promise, but only for Stripe.</div>
+    <div class="ws-line"><b>Who it is for:</b> The engineering leader who dreads a billing migration, and the finance leader who does not want to be tied to one payment company.</div>
+    <div class="ws-line"><b>How big a deal:</b> Freshly opened by the Stripe and Adyen deals. A timely, ownable position.</div>
+  </div>
+
+  <div class="card tl">
+    <div class="ws-lanehead"><h4>Built for AI usage from day one, including limits on AI agents</h4><span class="badge bh">Strong lead</span></div>
+    <div class="ws-line"><b>What it means:</b> Newer AI products do not just charge per seat. They spend real money on every request, token, and AI agent action. Stigg handles credits, budgets, and limits per user, per team, and per AI agent, out of the box.</div>
+    <div class="ws-line"><b>How Stigg is different:</b> The older suites were built for subscriptions. The counters measure AI usage but focus on the bill. Stigg's per-agent budget caps, enforced the moment an action happens, are a specific current strength. One thing to be straight about: Amberflo also plays here, so this is a lead, not a lock.</div>
+    <div class="ws-line"><b>Who it is for:</b> The AI product team launching credit-based or agent-based pricing.</div>
+    <div class="ws-line"><b>How big a deal:</b> A strong lead, best paired with the real-time point above.</div>
+  </div>
+
+  <div class="card tl">
+    <div class="ws-lanehead"><h4>Run it inside your own cloud, so your data never leaves</h4><span class="badge bh">Open at the top end</span></div>
+    <div class="ws-line"><b>What it means:</b> For large or regulated companies, sending usage data to an outside vendor can be a dealbreaker. Stigg can run entirely inside the customer's own cloud, with no per-event bill.</div>
+    <div class="ws-line"><b>How Stigg is different:</b> Most competitors are hosted only. The main alternative is open-source tools you self-host, like Lago and OpenMeter, which your own team must run and maintain. Stigg offers a fully managed version inside your cloud, plus an air-gapped option and a path to government-grade compliance.</div>
+    <div class="ws-line"><b>Who it is for:</b> Enterprise and frontier AI teams with strict data rules.</div>
+    <div class="ws-line"><b>How big a deal:</b> Mostly open at the managed, in-your-cloud end, which is the part enterprises actually want.</div>
+  </div>
+
+  <div class="card tl">
+    <div class="ws-lanehead"><h4>Change your pricing without a coding project</h4><span class="badge bm">Solid, shared</span></div>
+    <div class="ws-line"><b>What it means:</b> When pricing rules live inside your product's code, every plan change becomes an engineering ticket that takes weeks. Stigg keeps those rules outside the code, so a business team can change a plan or launch a tier the same day.</div>
+    <div class="ws-line"><b>How Stigg is different:</b> This is the original Stigg promise and it still holds. The billing suites handle invoices but leave the in-product rules for you to build. Schematic offers this too, so it is a position Stigg shares rather than owns alone.</div>
+    <div class="ws-line"><b>Who it is for:</b> The growth, product, or monetization leader who owns pricing but waits on engineering to change it.</div>
+    <div class="ws-line"><b>How big a deal:</b> Solid and real, but shared with Schematic. Use it as support, not as the headline.</div>
+  </div>
+</section>
+
+<!-- 6. THE POSITION -->
+<section class="blk">
+  <div class="secnum">06 / THE POSITION STIGG CAN OWN</div>
+  <h2 class="sec">One sentence a customer <em>would repeat back</em></h2>
+  <div class="ws-uvp">
+    <div class="q">Stigg is the layer that decides, in the moment, what every customer and AI agent is allowed to do, and it runs on <em>top of the billing you already have</em>, inside your own cloud if you need it.</div>
+  </div>
+  <p class="body">That sentence is true today, is easy to understand, and is something no other tool can say in full. The counters cannot say <b>in the moment</b>. The suites cannot say <b>on top of the billing you already have</b>. Schematic cannot say <b>inside your own cloud</b> or <b>with any billing provider</b>. The whole position belongs to Stigg.</p>
+</section>
+
+<!-- 7. PROBLEMS -->
+<section class="blk">
+  <div class="secnum">07 / PROBLEMS STIGG IS SUITED TO SOLVE</div>
+  <h2 class="sec">Five problems, <em>five plain answers</em></h2>
+  <ul class="clean">
+    <li><b>A single customer or AI agent runs up a runaway cost.</b> Stigg stops it in real time, before the spend, rather than showing it on next month's bill.</li>
+    <li><b>The team dreads a billing migration.</b> Stigg adds on top of the current billing system, so there is nothing to rip out.</li>
+    <li><b>A new AI product needs credits and agent limits fast.</b> Stigg ships those out of the box; one customer went live with AI credits in under six weeks.</li>
+    <li><b>Usage data is not allowed to leave the company's cloud.</b> Stigg runs inside the customer's own cloud, fully managed, with a path to government-grade compliance.</li>
+    <li><b>Pricing changes are stuck waiting on engineering.</b> Stigg keeps pricing rules outside the code, so business teams can change them the same day.</li>
+  </ul>
+</section>
+
+<!-- 8. WHO TO FOCUS ON -->
+<section class="blk">
+  <div class="secnum">08 / WHO TO FOCUS ON</div>
+  <h2 class="sec">Two people decide, and they <em>care about different things</em></h2>
+  <div class="grid2" style="margin-top:16px">
+    <div class="card tb">
+      <h4>The engineering or platform leader</h4>
+      <div class="role">The champion who builds it</div>
+      <p class="ws-say">Implements Stigg and cares about speed, staying out of the codebase, and running it in their own cloud. Speak to real-time enforcement, easy adoption, and data control.</p>
+    </div>
+    <div class="card tl">
+      <h4>The growth, product, or finance leader</h4>
+      <div class="role">The buyer who signs</div>
+      <p class="ws-say">Feels the value: pricing changes without waiting on engineering, and control over AI costs. Speak to speed of pricing changes and protecting margins.</p>
+    </div>
+  </div>
+  <div class="callout blue" style="margin-top:18px">
+    <div class="k">Best-fit companies</div>
+    <p>Software and AI companies launching or scaling usage, credit, or AI-agent pricing, where every request costs real money. Mid-market through enterprise, with a special fit for teams that need data to stay in their own cloud.</p>
+  </div>
+</section>
+
+<!-- 9. WHAT TO SAY -->
+<section class="blk">
+  <div class="secnum">09 / WHAT TO SAY AT EACH STAGE</div>
+  <h2 class="sec">The message, <em>by where they are</em></h2>
+  <div class="card tl"><h4>For someone who has not felt the problem yet</h4><p class="ws-say">Every AI request is a spend decision. Your billing tool tells you what it cost. It does not stop it before it happens.</p></div>
+  <div class="card tb"><h4>For someone comparing options</h4><p class="ws-say">You do not have to replace your billing to control AI usage. And the two most popular options are now owned by payment companies. Here is the independent one that runs on top of what you already have.</p></div>
+  <div class="card tm"><h4>For someone evaluating Stigg specifically</h4><p class="ws-say">One customer launched AI credits in under six weeks, on top of their existing stack. It can run inside your own cloud, so your data never leaves, with no per-event bill.</p></div>
+</section>
+
+<!-- 10. TAKEAWAYS -->
+<section class="blk">
+  <div class="secnum">10 / KEY TAKEAWAYS</div>
+  <h2 class="sec">The <em>short version</em></h2>
+  <ul class="clean">
+    <li>The market split into four groups, and Stigg sits nearly alone in the most valuable one: a real-time layer that runs on top of your billing.</li>
+    <li>The two most popular middle options were just bought by payment companies, which hands Stigg a timely, honest independence story.</li>
+    <li>Stigg's single strongest, hardest-to-copy point is stopping usage in the moment, before the cost, which the after-the-fact tools cannot match.</li>
+    <li>The closest rival, Schematic, uses almost the same words but is tied to Stripe and cannot run in your cloud. That breadth is Stigg's wedge.</li>
+    <li>Two claims, built for AI and change pricing without engineering, are real but shared, so they support the story rather than lead it.</li>
+    <li>Two people decide: the engineer who builds it and the growth or finance leader who signs. The message has to land with both.</li>
+  </ul>
+</section>
+
+<!-- 11. HONEST NOTE -->
+<section class="blk">
+  <div class="secnum">11 / ONE HONEST NOTE</div>
+  <h2 class="sec">The growth direction, <em>not a current claim</em></h2>
+  <div class="callout clay">
+    <div class="k">Where the whole market, Stigg included, has not arrived yet</div>
+    <p>Turning all this usage data into a clear revenue picture a sales or finance team can act on is something nobody in this field has fully solved, and early reviews note Stigg's own reporting can feel rigid. So that is not a current advantage to advertise; it is the direction to build toward, and it needs a system around it rather than a single feature. The same is true of getting this story in front of the right buyers at scale. Both belong in the plan for how the work gets done, not in the list of things Stigg already owns.</p>
+  </div>
+</section>
+</div>
+</section>
+<section class="view" id="targeting">
+<div class="twwrap">
+<!-- HERO -->
+<header class="tw-hero">
+  <div class="kicker">Audience Targeting / Step 4</div>
+  <h1 class="big">Who to target,<br>and how to reach them <em>most cheaply</em>.</h1>
+  <p class="lede">Who Stigg can serve, who the priority buyer is, and the cheapest path to that buyer first. Then what LinkedIn actually lets us select, the named plays to launch, what to bid on in search, and the signals that build the account list.</p>
+  <div class="metastrip">
+    <span>Warm-first pacing</span><span>LinkedIn as the hub</span><span>Google as capture</span><span>September 2026</span>
+  </div>
+</header>
+
+<!-- SECTION 01 -->
+<section class="blk">
+  <div class="secnum">01 / TARGET AUDIENCE AND MARKET</div>
+  <h2 class="sec">Who Stigg can serve, <em>and who to aim at first</em></h2>
+  <p class="body">The market of software and AI companies that charge for usage is large and growing, and the AI-native slice of it is the sharpest fit for what Stigg does today. The figures below are third-party estimates that vary by source; the point is direction, not precision.</p>
+
+  <div class="grid4" style="margin-top:18px">
+    <div class="stat"><div class="n">~$6.5B</div><div class="l">Usage-based billing software market, 2026, heading toward ~$15B by 2032 (est., varies by source)</div></div>
+    <div class="stat"><div class="n">83%</div><div class="l">AI-native software companies now offer usage-based pricing (Deloitte, 2026)</div></div>
+    <div class="stat"><div class="n">40%</div><div class="l">Of software spend expected to shift to usage or outcome pricing by 2030 (Gartner)</div></div>
+    <div class="stat"><div class="n">Fortune 500</div><div class="l">Stigg already serves Miro, Webflow, PagerDuty. The aim is more of that tier, not a bigger share of a small one</div></div>
+  </div>
+
+  <h3 class="sub">Narrowing to the <em>priority buyer</em></h3>
+  <div class="tw-funnel">
+    <div class="tw-band b1"><div class="bt">Software and AI companies that charge for usage</div><div class="bs">Usage or hybrid pricing, mid-market through enterprise</div></div>
+    <div class="tw-band b2"><div class="bt">Those launching or changing usage, credit, or agent pricing now</div><div class="bs">The priority ICP (ideal customer profile): fit plus timing</div></div>
+    <div class="tw-band b3"><div class="bt">AI-native teams shipping credit or agent pricing</div><div class="bs">The beachhead</div></div>
+  </div>
+  <div class="tw-banddesc">
+    <div class="d"><b>Priority ICP:</b> companies actively standing up or reworking consumption pricing, where every request has a real cost.</div>
+    <div class="d"><b>Beachhead:</b> AI-native products, where Stigg's sharpest edge lands: stop spend in real time, AI credits and agent limits, run in your own cloud.</div>
+  </div>
+  <p class="body" style="font-size:13px;color:var(--muted);margin-top:8px">Each band is a subset of the one above it, not a separate audience. We aim the motion at the beachhead first, then widen.</p>
+
+  <h3 class="sub">The buying committee, <em>and how we reach each one</em></h3>
+  <div class="grid2" style="margin-top:8px">
+
+    <div class="card tb">
+      <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+        <h4 style="margin-bottom:2px">Platform and engineering leaders</h4>
+        <span class="badge bstart tw-priostat">Primary target</span>
+      </div>
+      <div class="role">The champions who choose the infrastructure</div>
+      <div style="font-size:14px;color:var(--ink);margin:6px 0">VPs of Engineering and CTOs who own the build decision. They care about real-time enforcement, staying out of the codebase, and the option to run it in their own cloud. The lead persona for the enterprise motion.</div>
+      <div class="tw-chiprow"><span class="lbl">Reach them:</span>
+        <span class="tag">Function: Engineering, IT</span><span class="tag">Seniority: CXO, VP, Director</span><span class="tag">Title: CTO, VP of Engineering, Head of Platform</span><span class="tag">Skills: API Development, Cloud Computing, Distributed Systems</span>
+      </div>
+    </div>
+
+    <div class="card tl">
+      <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+        <h4 style="margin-bottom:2px">Senior software engineers</h4>
+        <span class="badge bstart tw-priostat">Primary target</span>
+      </div>
+      <div class="role">The evaluators, and the self-serve buyers</div>
+      <div style="font-size:14px;color:var(--ink);margin:6px 0">The individual contributors who actually evaluate infrastructure by reading and building, not by booking a demo. They drive the 150 self-serve customers, and they are reached in developer channels and by self-selection, rarely by a native title filter.</div>
+      <div class="tw-chiprow"><span class="lbl">Reach them:</span>
+        <span class="tag">Function: Engineering</span><span class="tag">Seniority: Senior</span><span class="tag">Skills: API Development, Backend, Distributed Systems</span><span class="tag">Message-led: developer community, docs, self-serve</span>
+      </div>
+    </div>
+
+    <div class="card tm">
+      <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+        <h4 style="margin-bottom:2px">Founders, CEOs, and monetization leads</h4>
+        <span class="badge bstart tw-priostat">Primary target</span>
+      </div>
+      <div class="role">The economic buyers, especially at smaller companies</div>
+      <div style="font-size:14px;color:var(--ink);margin:6px 0">At frontier-AI startups the co-founder or CEO is often both the champion and the buyer, and owns pricing directly. They feel the value: shipping usage or credit pricing without a build, and keeping AI costs under control.</div>
+      <div class="tw-chiprow"><span class="lbl">Reach them:</span>
+        <span class="tag">Seniority: CXO, Owner</span><span class="tag">Title: Co-Founder, CEO, Head of Growth</span><span class="tag">Company Size: 11-50, 51-200</span><span class="tag">Skills: Monetization, Pricing Strategy</span>
+      </div>
+    </div>
+
+    <div class="card tc">
+      <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+        <h4 style="margin-bottom:2px">The build-it-in-house instinct</h4>
+        <span class="badge bm tw-priostat">Objection to answer</span>
+      </div>
+      <div class="role">Not an ad audience, a belief to address</div>
+      <div style="font-size:14px;color:var(--ink);margin:6px 0">Strong engineering teams, exactly the buyer here, often assume they can build entitlements and metering themselves. This is handled in the message, not with a targeting filter.</div>
+      <div class="tw-chiprow"><span class="lbl">The answer:</span>
+        <span class="tag">Your team can build it. Maintaining real-time enforcement, credits, and every edge case is the cost.</span><span class="tag">Live in weeks, not a quarter, and free engineers for the product.</span>
+      </div>
+    </div>
+
+  </div>
+  <p class="body" style="font-size:13px;color:var(--muted);margin-top:12px">In smaller, founder-led targets these roles collapse onto one or two people, and we adapt the message accordingly. Where the vertical calls for it, we layer in financial-engineering roles, the people building the billing and revenue logic inside fintech and financial-infrastructure products.</p>
+</section>
+
+<!-- SECTION 02 -->
+<section class="blk">
+  <div class="secnum">02 / THE EFFICIENCY LADDER</div>
+  <h2 class="sec">Cheapest audiences <em>run first</em></h2>
+  <p class="body">The order below is fixed for a reason. Each rung up costs more per lead than the one before it, so the cheapest, warmest audiences run first and cold earns budget last, only after the tiers above it prove out. Because Stigg already has site traffic, a following, and a live LinkedIn motion, warm-first pacing is available on day one.</p>
+
+  <div class="tw-ladder">
+    <div class="tw-rung"><div class="tw-rungnum">1</div>
+      <div class="tw-track"><div class="tw-bar tw-b-canopy" style="width:30%"></div></div>
+      <div class="tw-rungbody"><div class="rn">Warm first-party, bottom of funnel<span class="cpl">$75 to $150 per lead, runs first</span></div>
+        <div class="rp">HubSpot pipeline and qualified leads, named accounts and prospects already on the site, and demo and pricing-page visitors.</div></div>
+    </div>
+    <div class="tw-rung"><div class="tw-rungnum">2</div>
+      <div class="tw-track"><div class="tw-bar tw-b-moss" style="width:44%"></div></div>
+      <div class="tw-rungbody"><div class="rn">Warm first-party, mid funnel<span class="cpl">$120 to $250 per lead</span></div>
+        <div class="rp">LinkedIn ad engagers, the company-page audience of roughly 5,000, the founder's thought-leadership audience, and the SEO and search traffic already hitting the site.</div></div>
+    </div>
+    <div class="tw-rung"><div class="tw-rungnum">3</div>
+      <div class="tw-track"><div class="tw-bar tw-b-blue" style="width:56%"></div></div>
+      <div class="tw-rungbody"><div class="rn">In-market search traffic<span class="cpl">capture, feeds the pools</span></div>
+        <div class="rp">Buyers already searching for usage billing, metering, and competitor alternatives, captured on Google and Bing plus review sites like G2. The next lever after warm.</div></div>
+    </div>
+    <div class="tw-rung"><div class="tw-rungnum">4</div>
+      <div class="tw-track"><div class="tw-bar tw-b-clay" style="width:74%"></div></div>
+      <div class="tw-rungbody"><div class="rn">Account-based<span class="cpl">$250 to $400 per lead, the workhorse</span></div>
+        <div class="rp">A named list of software and AI companies standing up usage, credit, or agent pricing, built from intent, timing, and fit signals, person-filtered to the buying committee.</div></div>
+    </div>
+    <div class="tw-rung"><div class="tw-rungnum">5</div>
+      <div class="tw-track"><div class="tw-bar tw-b-terra" style="width:94%"></div></div>
+      <div class="tw-rungbody"><div class="rn">Cold LinkedIn, native filters<span class="cpl">$300 to $600+ per lead, last</span></div>
+        <div class="rp">Broad product and engineering leaders at software and AI companies by title, seniority, and skills. Longer sales cycle and more budget to warm and convert, so it runs only after the tiers above prove out.</div></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="k">Budget shape and how to read this</div>
+    <p><b>Warm-first start, roughly 60% warm, 25% account-based, 15% cold test.</b> Management fee is separate from ad spend, and the cost bands are indicative, not a forecast. A wider bar means a higher cost per lead: the cheapest, warmest audiences run first, and cold earns budget last.</p>
+  </div>
+</section>
+
+<!-- SECTION 03 -->
+<section class="blk">
+  <div class="secnum">03 / HOW THE MOTION WORKS</div>
+  <h2 class="sec">LinkedIn is the <em>hub</em></h2>
+  <p class="body">Earned and warm traffic arrives at the site. LinkedIn filters that traffic by company, seniority, and function before spend, converts the fits, and produces signals: named accounts, hidden pipeline, and retargeting pools. Those pools feed the next cycle, which is why warm leads and cold runs last.</p>
+
+  <figure>
+    <div class="fig figscroll">
+      <svg viewBox="0 0 760 320" role="img" aria-label="How traffic becomes qualified pipeline through LinkedIn">
+        <defs>
+          <marker id="tw-ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#9a9788"/></marker>
+          <marker id="tw-ahm" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#7BAA3E"/></marker>
+        </defs>
+        <!-- box 1 -->
+        <rect class="tw-svgbox" x="20" y="90" width="150" height="86" rx="10"/>
+        <text class="tw-svgboxlabel" x="95" y="118" text-anchor="middle">Earned and warm</text>
+        <text class="tw-svgboxlabel" x="95" y="134" text-anchor="middle">traffic</text>
+        <text class="tw-svgboxsub" x="95" y="154" text-anchor="middle">SEO, founder content,</text>
+        <text class="tw-svgboxsub" x="95" y="166" text-anchor="middle">LinkedIn ads</text>
+        <line class="tw-arrow" x1="172" y1="133" x2="212" y2="133" marker-end="url(#tw-ah)"/>
+        <!-- box 2 -->
+        <rect class="tw-svgbox" x="214" y="98" width="130" height="70" rx="10"/>
+        <text class="tw-svgboxlabel" x="279" y="128" text-anchor="middle">The site</text>
+        <text class="tw-svgboxsub" x="279" y="146" text-anchor="middle">~5,000 visits / month</text>
+        <line class="tw-arrow" x1="346" y1="133" x2="386" y2="133" marker-end="url(#tw-ah)"/>
+        <!-- box 3 hub -->
+        <rect class="tw-svghub" x="388" y="86" width="176" height="94" rx="10"/>
+        <text class="tw-svgboxlabel" x="476" y="112" text-anchor="middle" style="font-weight:700">LinkedIn qualifies</text>
+        <text class="tw-svgboxsub" x="476" y="130" text-anchor="middle">by company, seniority,</text>
+        <text class="tw-svgboxsub" x="476" y="142" text-anchor="middle">and function, then converts</text>
+        <text class="tw-svgboxsub" x="476" y="162" text-anchor="middle" style="fill:#1B9BD1;font-weight:700">the hub</text>
+        <line class="tw-arrow" x1="566" y1="133" x2="606" y2="133" marker-end="url(#tw-ah)"/>
+        <!-- box 4 signals -->
+        <rect class="tw-svgsig" x="608" y="90" width="134" height="86" rx="10"/>
+        <text class="tw-svgboxlabel" x="675" y="114" text-anchor="middle">Signals</text>
+        <text class="tw-svgboxsub" x="675" y="132" text-anchor="middle">named accounts,</text>
+        <text class="tw-svgboxsub" x="675" y="144" text-anchor="middle">hidden pipeline,</text>
+        <text class="tw-svgboxsub" x="675" y="156" text-anchor="middle">retargeting pools</text>
+        <!-- feedback loop -->
+        <path class="tw-feedback" d="M 675 176 C 675 250, 95 250, 95 178" marker-end="url(#tw-ahm)"/>
+        <text class="tw-svgboxsub" x="385" y="245" text-anchor="middle" style="fill:#7BAA3E;font-weight:700">pools feed the next cycle</text>
+      </svg>
+    </div>
+    <figcaption>LinkedIn is the only channel that filters site traffic by company, seniority, and function before spend. That is why warm and search traffic run first, cold runs last, and the signals loop back to make the next cycle cheaper.</figcaption>
+  </figure>
+</section>
+
+<!-- SECTION 04 -->
+<section class="blk">
+  <div class="secnum">04 / LINKEDIN TARGETING ATTRIBUTES</div>
+  <h2 class="sec">What LinkedIn <em>actually lets us select</em></h2>
+  <p class="body">LinkedIn Campaign Manager targets official, curated lists, not free-text keywords. Roles that are not clean standardized titles (for example "monetization owner") are reached through Job Function plus Seniority plus Member Skills. And the most telling things about a buyer, such as just launching credit pricing or moving off a billing limitation, are not attributes at all: those are reached by the ad message and self-selection, sometimes proxied by an intent signal, never by a native filter.</p>
+
+  <div class="card">
+    <div class="clabel" style="color:var(--canopy-text)">Member Job Titles (standardized)</div>
+    <div class="tags"><span class="tag">Chief Technology Officer</span><span class="tag">VP of Engineering</span><span class="tag">Head of Platform</span><span class="tag">Chief Product Officer</span><span class="tag">VP of Product</span><span class="tag">Head of Product</span><span class="tag">VP of Growth</span><span class="tag">Chief Financial Officer</span><span class="tag">Head of Revenue Operations</span><span class="tag">Principal Engineer</span></div>
+  </div>
+  <div class="card">
+    <div class="clabel" style="color:var(--blue-text)">Job Functions</div>
+    <div class="tags"><span class="tag">Engineering</span><span class="tag">Product Management</span><span class="tag">Information Technology</span><span class="tag">Finance</span><span class="tag">Operations</span><span class="tag">Business Development</span></div>
+    <div class="clabel" style="color:var(--blue-text);margin-top:14px">Job Seniorities</div>
+    <div class="tags"><span class="tag">CXO</span><span class="tag">VP</span><span class="tag">Director</span><span class="tag">Manager</span><span class="tag">Owner</span></div>
+  </div>
+  <div class="card">
+    <div class="clabel" style="color:var(--terra-text)">Industries (current LinkedIn taxonomy)</div>
+    <div class="tags"><span class="tag">Software Development</span><span class="tag">Technology, Information and Internet</span><span class="tag">IT Services and IT Consulting</span><span class="tag">Financial Services</span><span class="tag">Data Infrastructure and Analytics</span></div>
+    <div class="clabel" style="color:var(--terra-text);margin-top:14px">Company Size (official bands)</div>
+    <div class="tags"><span class="tag">51-200</span><span class="tag">201-500</span><span class="tag">501-1,000</span><span class="tag">1,001-5,000</span><span class="tag">5,001-10,000</span><span class="tag">10,001+</span></div>
+  </div>
+  <div class="card">
+    <div class="clabel" style="color:var(--clay-text)">Member Skills</div>
+    <div class="tags"><span class="tag">SaaS</span><span class="tag">Billing</span><span class="tag">Monetization</span><span class="tag">Pricing Strategy</span><span class="tag">API Development</span><span class="tag">Cloud Computing</span><span class="tag">Product-Led Growth</span><span class="tag">Revenue Operations</span></div>
+    <div class="clabel" style="color:var(--clay-text);margin-top:14px">Member Groups and Traits (widening layer on cold only)</div>
+    <div class="tags"><span class="tag">SaaS monetization communities</span><span class="tag">Product-led growth groups</span><span class="tag">Frequent Contributors</span></div>
+  </div>
+  <div class="card tm">
+    <div class="clabel" style="color:var(--moss-text)">Location and Exclusions</div>
+    <div class="tags"><span class="tag">United States</span><span class="tag">United Kingdom</span><span class="tag">Israel</span><span class="tag">European tech hubs</span></div>
+    <div class="tags" style="margin-top:8px"><span class="tag">Exclude: existing customers (company list)</span><span class="tag">Exclude: Stigg employees</span><span class="tag">Exclude: competitors</span><span class="tag">Exclude: students, job seekers</span></div>
+  </div>
+  <div class="callout terra" style="margin-top:18px">
+    <div class="k">Reached by message, not by a filter</div>
+    <p>Traits like <b>just launched credit-based pricing</b>, <b>moving off a billing limitation</b>, or <b>just raised a round and adding AI features</b> cannot be selected in LinkedIn. They are reached by the ad message and self-selection ("launching usage or credit pricing?"), proxied where possible by a third-party intent signal or a search retarget. The segments below say clearly which traits are filtered and which are message-qualified.</p>
+  </div>
+</section>
+
+<!-- SECTION 05 -->
+<section class="blk">
+  <div class="secnum">05 / THE PRIORITY SEGMENTS</div>
+  <h2 class="sec">The named plays, <em>launch-ready first</em></h2>
+  <p class="body">Two plays to launch and one to expand into. The first is buildable today with no outside data. The others layer a signal on top and are framed as expansion, once the launch play proves out.</p>
+
+  <div class="card tl">
+    <div class="chhead">
+      <span class="clabel" style="color:var(--canopy-text)">Segment 1</span>
+      <span class="ctitle">Platform and product leaders at scaling software and AI companies</span>
+      <span class="ctags"><span class="tw-segtag tw-segnative">LinkedIn native, launch now</span></span>
+    </div>
+    <p class="body" style="margin:6px 0 2px">The two people who own the decision: the leader who builds it and the leader who realizes its value. Buildable today, no third-party data required, so it launches immediately.</p>
+    <table class="ftable">
+      <tr><td class="lbl">Job Function</td><td class="val">Engineering, Product Management</td></tr>
+      <tr><td class="lbl">Seniority</td><td class="val">CXO, VP, Director</td></tr>
+      <tr><td class="lbl">Industry</td><td class="val">Software Development; Technology, Information and Internet</td></tr>
+      <tr><td class="lbl">Company Size</td><td class="val">51-200, 201-500, 501-1,000, 1,001-5,000</td></tr>
+      <tr><td class="lbl">Member Skills</td><td class="val">SaaS, Billing, Monetization, API Development</td></tr>
+      <tr><td class="lbl">Exclusions</td><td class="val">Customers, competitors, employees, students. Audience Expansion off, Audience Network off.</td></tr>
+    </table>
+    <div class="ev"><b>Estimated size:</b> mid-tens of thousands globally (inferred, size in-platform before launch).</div>
+    <div class="why"><b>Why chase it:</b> reaches both primary buyers at once with zero data dependency, so the motion starts the day the account is built.</div>
+  </div>
+
+  <div class="card tb">
+    <div class="chhead">
+      <span class="clabel" style="color:var(--blue-text)">Segment 2</span>
+      <span class="ctitle">Companies showing monetization intent right now</span>
+      <span class="ctags"><span class="tw-segtag tw-segcombo">LinkedIn + intent signal, expansion</span></span>
+    </div>
+    <p class="body" style="margin:6px 0 2px">The same people as Segment 1, narrowed to accounts actively in a pricing or billing decision. This is where the timing trait that LinkedIn cannot filter gets supplied by a signal.</p>
+    <table class="ftable">
+      <tr><td class="lbl">Base</td><td class="val">Segment 1 roles and firmographics</td></tr>
+      <tr><td class="lbl">Signal layer</td><td class="val">Intent on usage-billing and monetization topics (Bombora, DemandSense), pricing and comparison-page visitors (Website Visitor ID), and engagers of the founder's posts (Trigify)</td></tr>
+      <tr><td class="lbl">Activation</td><td class="val">Uploaded as a Matched Audience, person-filtered to the committee</td></tr>
+    </table>
+    <div class="ev"><b>Estimated size:</b> smaller and sharper than Segment 1 (inferred, sized after the signal pull).</div>
+    <div class="why"><b>Why chase it:</b> catches the growth or monetization buyer at the exact moment they are choosing a billing approach.</div>
+  </div>
+
+  <div class="card tm">
+    <div class="chhead">
+      <span class="clabel" style="color:var(--moss-text)">Segment 3</span>
+      <span class="ctitle">Named AI-native companies shipping credit or agent pricing</span>
+      <span class="ctags"><span class="tw-segtag tw-segcombo">LinkedIn + fit signals, account-based</span></span>
+    </div>
+    <p class="body" style="margin:6px 0 2px">The enterprise motion, aimed at the roughly 360 frontier-AI accounts you have already assembled and vetted, the source of the 20 target logos.</p>
+    <table class="ftable">
+      <tr><td class="lbl">The list</td><td class="val">Your vetted frontier-AI target accounts: AI infrastructure and developer tools like Vercel, Weaviate, Qdrant, Pinecone, Baseten, and Fireworks, and AI applications like ElevenLabs, WRITER, Weights and Biases, and xAI, with fit notes already attached</td></tr>
+      <tr><td class="lbl">Sharpening</td><td class="val">Enriched in Clay and scored on fit and timing, so effort concentrates on the accounts standing up usage, credit, or agent pricing now</td></tr>
+      <tr><td class="lbl">Activation</td><td class="val">Company Matched Audience, person-filtered to the engineering leaders and founders, handed to LinkedIn and email outreach when signal says ready</td></tr>
+    </table>
+    <div class="ev"><b>Size:</b> roughly 360 named accounts, observed from your list, refined on fit and timing.</div>
+    <div class="why"><b>Why chase it:</b> these are the exact accounts behind the 20-logo goal, and the ones where Stigg's strongest, least-shared advantages matter most.</div>
+  </div>
+</section>
+
+<!-- SECTION 06 -->
+<section class="blk">
+  <div class="secnum">06 / CAPTURE</div>
+  <h2 class="sec">Google is the <em>precise capture lane</em></h2>
+  <p class="body">Your own keyword research shows the qualified search pool is precise: about 18,080 searches a month out of 399,720 in the file, because most of the word "billing" belongs to invoicing, accounting, and telecom. It is precise but deep enough to run a full five-campaign motion, so Google is a capture, conquest, and adjacent-category lane rather than a growth engine. The full account structure, the honest volume read, the ad-group-to-page routing, and the negatives that enforce it have their own tab.</p>
+  <div class="btnrow" style="margin-top:8px"><button class="btn primary" data-goto="capture">See the full Google plan</button></div>
+</section>
+
+<!-- SECTION 06b: DEVELOPER COMMUNITY -->
+<section class="blk">
+  <div class="secnum">06b / DEVELOPER COMMUNITY REACH</div>
+  <h2 class="sec">Where the self-serve buyer <em>actually is</em></h2>
+  <p class="body">The 150 self-serve customers come from senior software engineers, and they do not respond to a demo form or a title-filtered ad. They are reached in the places they already trust, and this layer is a third of the budget for exactly that reason. The job is presence and credibility in the developer conversation, feeding the same retargeting pools everything else draws on.</p>
+  <div class="grid2">
+    <div class="card tp"><h4>Reddit, AI and developer subreddits</h4>
+      <div class="ev" style="margin-top:6px">Paid placement in the communities where engineers debate infrastructure. High trust, native format.</div>
+    </div>
+    <div class="card tp"><h4>Developer newsletters</h4>
+      <div class="ev" style="margin-top:6px">TLDR, Bytes, Console, and similar. The engineer's morning read, where a placement lands as a recommendation.</div>
+    </div>
+    <div class="card tp"><h4>Developer and AI podcasts</h4>
+      <div class="ev" style="margin-top:6px">Dev and AI shows the buyer already listens to, where the founder's category point of view carries.</div>
+    </div>
+    <div class="card tp"><h4>YouTube and AI-search</h4>
+      <div class="ev" style="margin-top:6px">Video reach plus presence in AI-answer engines, where engineers increasingly start their evaluation.</div>
+    </div>
+  </div>
+  <div class="callout" style="border-left-color:var(--jet-pink)">
+    <div class="k" style="color:var(--pink-text)">How this ties back</div>
+    <p>Everyone who engages here becomes a retargeting audience and a signal, so developer reach is not a separate silo. It fills the pools the LinkedIn hub qualifies and the outreach layer works, and its own success is read on self-serve starts, not vanity impressions.</p>
+  </div>
+</section>
+
+
+<!-- SECTION 07 -->
+<section class="blk">
+  <div class="secnum">07 / FIT AND INTENT SIGNALS</div>
+  <h2 class="sec">The signals that <em>build the account list</em></h2>
+  <p class="body">The account-based rung and the sharpened cold audience are built from enrichment signals composed into one account view. No single signal is enough on its own; stacked, they say which accounts are worth a named play and which are ready for outreach.</p>
+
+  <figure>
+    <div class="fig figscroll">
+      <svg viewBox="0 0 760 360" role="img" aria-label="Five signal sources composing into one scored account view">
+        <!-- five inputs left -->
+        <g>
+          <rect class="tw-svgbox" x="16" y="24" width="196" height="42" rx="8"/>
+          <text class="tw-svgboxlabel" x="28" y="42">CRM deals and pipeline</text><text class="tw-svgboxsub" x="28" y="57">HubSpot</text>
+          <rect class="tw-svgbox" x="16" y="86" width="196" height="42" rx="8"/>
+          <text class="tw-svgboxlabel" x="28" y="104">LinkedIn paid engagement</text><text class="tw-svgboxsub" x="28" y="119">Company Hub</text>
+          <rect class="tw-svgbox" x="16" y="148" width="196" height="42" rx="8"/>
+          <text class="tw-svgboxlabel" x="28" y="166">LinkedIn organic engagement</text><text class="tw-svgboxsub" x="28" y="181">Trigify</text>
+          <rect class="tw-svgbox" x="16" y="210" width="196" height="42" rx="8"/>
+          <text class="tw-svgboxlabel" x="28" y="228">Companies on the site</text><text class="tw-svgboxsub" x="28" y="243">Website Visitor ID</text>
+          <rect class="tw-svgbox" x="16" y="272" width="196" height="42" rx="8"/>
+          <text class="tw-svgboxlabel" x="28" y="290">People on the site</text><text class="tw-svgboxsub" x="28" y="305">Website Visitor ID</text>
+        </g>
+        <!-- converging lines -->
+        <path class="tw-arrow" d="M212 45 C 340 45, 380 170, 500 178" marker-end="url(#tw-ah)"/>
+        <path class="tw-arrow" d="M212 107 C 340 107, 400 172, 500 180" marker-end="url(#tw-ah)"/>
+        <path class="tw-arrow" d="M212 169 L 500 182" marker-end="url(#tw-ah)"/>
+        <path class="tw-arrow" d="M212 231 C 340 231, 400 192, 500 186" marker-end="url(#tw-ah)"/>
+        <path class="tw-arrow" d="M212 293 C 340 293, 380 196, 500 188" marker-end="url(#tw-ah)"/>
+        <!-- output node -->
+        <rect class="tw-svghub" x="502" y="140" width="180" height="86" rx="12"/>
+        <text class="tw-svgboxlabel" x="592" y="172" text-anchor="middle" style="font-weight:700">One scored</text>
+        <text class="tw-svgboxlabel" x="592" y="188" text-anchor="middle" style="font-weight:700">account view</text>
+        <text class="tw-svgboxsub" x="592" y="208" text-anchor="middle">composed in DemandSense</text>
+      </svg>
+    </div>
+    <figcaption>Five sources compose into one account view. Clay and third-party intent enrich it further. The output is a ranked list: which accounts to name, which to retarget, and which are ready to hand to outreach.</figcaption>
+  </figure>
+
+  <div class="grid3">
+    <div class="card tl"><h4>CRM fit</h4><div class="ev"><b>Indicates:</b> existing relationship and deal stage. <b>Source:</b> HubSpot.</div></div>
+    <div class="card tb"><h4>Paid engagement</h4><div class="ev"><b>Indicates:</b> an account is warming to the ads. <b>Source:</b> LinkedIn Company Hub.</div></div>
+    <div class="card tt"><h4>Organic engagement</h4><div class="ev"><b>Indicates:</b> interest in the founder's category point of view. <b>Source:</b> Trigify.</div></div>
+    <div class="card tc"><h4>Companies on site</h4><div class="ev"><b>Indicates:</b> named accounts actively researching. <b>Source:</b> Website Visitor ID.</div></div>
+    <div class="card tm"><h4>People on site</h4><div class="ev"><b>Indicates:</b> which roles inside an account are looking. <b>Source:</b> Website Visitor ID, person-level.</div></div>
+    <div class="card tb"><h4>Technographic and hiring</h4><div class="ev"><b>Indicates:</b> current billing stack, recent funding, and hiring for monetization or billing roles. <b>Source:</b> Clay.</div></div>
+    <div class="card tl"><h4>Third-party intent</h4><div class="ev"><b>Indicates:</b> active research on usage-billing and monetization topics. <b>Source:</b> Bombora and DemandSense.</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="k">How the list gets built</div>
+    <p>Build the enriched list in Clay, compose the signals into one account view through DemandSense, upload it as a LinkedIn Matched Audience, and hand the top-scoring accounts to LinkedIn and email outreach the moment the signal says they are ready. DemandSense and Website Visitor ID are Impactable's own software.</p>
+  </div>
+</section>
+</div>
+</section>
+<section class="view" id="capture">
+<div class="roomwrap">
+  <header class="ov-hero" style="padding-bottom:20px">
+    <div class="kicker">Capture / Google paid search</div>
+    <h1 class="big">A precise capture lane, <em>run at full budget</em></h1>
+    <p class="lede">We pulled your keyword research apart before positioning Google, because the file is misleading at first glance. It holds 399,720 searches a month, and most of it is invoicing, accounting, medical, and telecom demand that only shares the word "billing." Strip all of it and the qualified pool is about 18,080 searches a month. That is enough to run a real capture, conquest, and adjacent-category motion, funded on a three-month ramp from $6,019 to $10,002 a month, without ever spending on the wrong buyer.</p>
+  </header>
+
+  <section class="blk">
+    <div class="secnum">01 / THE HONEST READ</div>
+    <h2 class="sec">381,640 of 399,720 searches <em>are not your buyer</em></h2>
+    <p class="body">Here is what is actually in the file. To Google, "billing" means invoicing and accounting software, so that is where the volume sits. A single term, "usage pricing" at 33,100 a month, looks like the largest opportunity in the whole set and is telecom and cloud data-usage demand, not software. The job of this build is to make sure the budget never touches any of it.</p>
+
+    <div class="cap-excl">
+      <div class="cap-erow"><div class="cap-elbl">Consumer, vertical and other billing</div><div class="cap-etrack"><div class="cap-ebar" style="width:100%;background:rgba(140,140,150,.42)"></div></div><div class="cap-eamt">~164,000</div></div>
+      <div class="cap-erow"><div class="cap-elbl">Invoicing and invoice tools</div><div class="cap-etrack"><div class="cap-ebar" style="width:71%;background:rgba(140,140,150,.42)"></div></div><div class="cap-eamt">117,000</div></div>
+      <div class="cap-erow"><div class="cap-elbl">SMB accounting</div><div class="cap-etrack"><div class="cap-ebar" style="width:41%;background:rgba(140,140,150,.42)"></div></div><div class="cap-eamt">67,600</div></div>
+      <div class="cap-erow"><div class="cap-elbl">"Usage pricing", telecom and cloud</div><div class="cap-etrack"><div class="cap-ebar" style="width:20%;background:var(--barclay)"></div></div><div class="cap-eamt">33,100</div></div>
+      <div class="cap-erow keep"><div class="cap-elbl">Your actual buyer</div><div class="cap-etrack"><div class="cap-ebar" style="width:11%;background:var(--barcanopy);min-width:10px"></div></div><div class="cap-eamt">18,080</div></div>
+    </div>
+    <figcaption>Bars are share of the 399,720 searches in your keyword file. The bright band, about 4.5 percent, is the qualified pool: 17,600 non-brand plus 480 on the brand. The clay bar is the trap, a term that looks like the biggest prize and belongs to telecom.</figcaption>
+
+    <div class="callout"><div class="k">A number inside the pool worth stating plainly</div><p>Even inside the qualified 18,080, one figure needs honesty before anyone forecasts from it. The Competitors campaign shows 7,790 searches, but 5,400 of that, 69 percent, is the single bare term "zuora," and a bare competitor brand is overwhelmingly that company's own users heading to login, docs, and support. Strip the navigational half and genuinely in-market competitor demand is about 2,060 a month. That is the figure the plan is built on, and the reason bare "zuora" runs exact match only with a navigational negative list loaded before launch.</p></div>
+
+    <div class="callout" style="border-left-color:var(--hazard)">
+      <div class="k" style="color:var(--terra-text)">The negatives are the whole game</div>
+      <p>Because the wrong meaning of "billing" outnumbers the right one twenty to one, tight negatives are what make this account work. The list loads in full before a dollar is spent: invoicing and invoice software, SMB accounting, medical and healthcare billing, legal and attorney billing, revenue-cycle management and ASC 606 revenue recognition, hotel and property revenue management, field-service and utility billing, consumer subscription-tracker and Shopify apps, and the term "usage pricing." On top of that, two campaign-specific blocks: the brand-navigational list, without which the Zuora ad group buys Zuora's own support traffic, and the music list, without which the Metronome ad group buys metronome shoppers.</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">02 / THE ACCOUNT</div>
+    <h2 class="sec">Five campaigns, <em>separated by intent</em></h2>
+    <p class="body">The account buys three questions in three places, plus an adjacent category and the brand. Someone typing "metered billing" is still deciding how to price at all. Someone typing "stripe metered billing" has already built it and hit the wall Stigg exists to solve. Someone typing "zuora alternatives" is actively trying to leave a platform. Those are three different conversations that need three sets of ad copy and three landing routes, so category, vendor, and displacement intent never share a budget. Each campaign carries its own cap, no keyword appears twice, and every ad group routes to its own page, never the homepage.</p>
+
+    <div class="cap-camps">
+      <div class="card tt">
+        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Campaign 1</span><span class="ctitle">Usage-Based Billing</span><span class="ctags">Category intent</span></div>
+        <div class="cap-meta"><span><b>1,520</b> searches/mo</span><span><b>$1,094 &rarr; $1,885</b>/mo</span><span>Cheapest clicks in the account</span></div>
+        <div class="cap-ag"><span class="agn">Usage-Based Billing Software <span class="agv">610/mo</span></span><span class="agp">&rarr; BYOC Metering page</span></div>
+        <div class="cap-ag"><span class="agn">Usage-Based Pricing <span class="agv">390/mo</span></span><span class="agp">&rarr; Entitlements page</span></div>
+        <div class="cap-ag"><span class="agn">Metered Billing <span class="agv">280/mo</span></span><span class="agp">&rarr; BYOC Metering page</span></div>
+        <div class="cap-ag"><span class="agn">Consumption-Based Billing <span class="agv">240/mo</span></span><span class="agp">&rarr; AI Credits Engine page</span></div>
+      </div>
+      <div class="card tl">
+        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Campaign 2</span><span class="ctitle">Billing Platform and Entitlements</span><span class="ctags">Vendor intent</span></div>
+        <div class="cap-meta"><span><b>2,050</b> searches/mo</span><span><b>$1,702 &rarr; $2,888</b>/mo</span><span>Highest intent in the account</span></div>
+        <div class="cap-ag"><span class="agn">Billing Platform Selection <span class="agv">1,300/mo</span></span><span class="agp">&rarr; New positioning page</span></div>
+        <div class="cap-ag"><span class="agn">Stripe Usage Billing <span class="agv">530/mo</span></span><span class="agp">&rarr; New "Stigg + Stripe" page</span></div>
+        <div class="cap-ag"><span class="agn">Entitlement Management <span class="agv">220/mo</span></span><span class="agp">&rarr; Entitlements page</span></div>
+      </div>
+      <div class="card tc">
+        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Campaign 3</span><span class="ctitle">Competitors</span><span class="ctags">Displacement intent</span></div>
+        <div class="cap-meta"><span><b>7,790</b> searches/mo (<b>2,060</b> in-market)</span><span><b>$1,702 &rarr; $2,706</b>/mo</span><span>Manual CPC, one rival per ad group</span></div>
+        <div class="cap-ag"><span class="agn">Zuora <span class="agv">6,180/mo, exact only</span></span><span class="agp">&rarr; /zuora-competitors</span></div>
+        <div class="cap-ag"><span class="agn">Metronome <span class="agv">910/mo</span></span><span class="agp">&rarr; /metronome-alternatives</span></div>
+        <div class="cap-ag"><span class="agn">Orb <span class="agv">700/mo</span></span><span class="agp">&rarr; /orb-alternative</span></div>
+      </div>
+      <div class="card tb">
+        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Campaign 4</span><span class="ctitle">Subscription and Recurring Billing</span><span class="ctags">Adjacent category</span></div>
+        <div class="cap-meta"><span><b>6,240</b> searches/mo</span><span><b>$1,216 &rarr; $2,219</b>/mo</span><span>Broadest reach, heaviest negative list</span></div>
+        <div class="cap-ag"><span class="agn">Billing Platform <span class="agv">2,660/mo</span></span><span class="agp">&rarr; New positioning page</span></div>
+        <div class="cap-ag"><span class="agn">Subscription Billing and Management <span class="agv">1,820/mo</span></span><span class="agp">&rarr; New positioning page</span></div>
+        <div class="cap-ag"><span class="agn">Stripe Subscription <span class="agv">1,760/mo</span></span><span class="agp">&rarr; New "Stigg + Stripe" page</span></div>
+      </div>
+      <div class="card tm">
+        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Campaign 5</span><span class="ctitle">Brand</span><span class="ctags">Defend the name</span></div>
+        <div class="cap-meta"><span><b>480</b> searches/mo</span><span><b>$304</b>/mo flat</span><span>Cheapest conversion in the account</span></div>
+        <div class="cap-ag"><span class="agn">Stigg Brand <span class="agv">480/mo</span></span><span class="agp">&rarr; stigg.io</span></div>
+      </div>
+    </div>
+
+    <div class="callout"><div class="k">Why intent never shares a budget</div><p>Pool category, vendor, and displacement intent together and the cheapest impression takes the money regardless of which one is worth more to Stigg. Separated, each campaign carries its own cap and reporting always tells you which of the three questions, how do I price usage, which platform do I use, or how do I leave the one I have, is producing pipeline. Cross-campaign negatives keep the two Stripe ad groups, one in vendor and one in the subscription category, from bidding against each other.</p></div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">03 / THE INVENTORY THAT MATTERS</div>
+    <h2 class="sec">Where the real value <em>hides</em></h2>
+    <p class="body">Across five campaigns, a few pockets carry most of the value. These are the ones worth building pages and copy around, and the ones to watch in the search-term report.</p>
+    <div class="grid2">
+      <div class="card tl"><h4>The Stripe gap, highest intent</h4>
+        <div class="ev" style="margin-top:6px">"Stripe metered billing" and its variants are a buyer describing Stigg's exact wedge: they have Stripe, are trying to make it enforce usage, and are finding out it does not do entitlements or credits. There is no persuasion step in that conversation, and it deserves its own page.</div>
+      </div>
+      <div class="card tm"><h4>Entitlement management, owned outright</h4>
+        <div class="ev" style="margin-top:6px">220 searches a month, effectively uncontested, and the only term set in the plan where Stigg is the literal answer rather than one option among several. Low cost, clean intent, worth protecting from the identity-and-access-management terms that share the word.</div>
+      </div>
+      <div class="card tc"><h4>Metronome and Orb, not Zuora</h4>
+        <div class="ev" style="margin-top:6px">Zuora carries the volume but most of it is navigational. Metronome and Orb are the direct category competitors, same usage-runtime pitch and same buyer, and Stigg has a published comparison page for each. Expect them to beat Zuora on cost per lead even though they never beat it on volume.</div>
+      </div>
+      <div class="card tb"><h4>The one page that must be built</h4>
+        <div class="ev" style="margin-top:6px">Billing Platform Selection, 1,300 searches a month, is the largest ad group and the worst intent match: "subscription billing software" wants a biller, and Stigg sits on top of one. The fix is a single page that leads with "keep your biller, add the layer it is missing." It serves two campaigns, so it is the highest-return page build in the engagement.</div>
+      </div>
+      <div class="card tt"><h4>The research-intent risk</h4>
+        <div class="ev" style="margin-top:6px">The Usage-Based Pricing ad group may be founders researching how to price, not engineers sourcing infrastructure. It stays in because the same searcher becomes the buyer weeks later, but the rule is clear: if it converts below half the campaign rate after 100 clicks, pause it and let content own that demand.</div>
+      </div>
+      <div class="card"><h4>The subscription category, watched daily</h4>
+        <div class="ev" style="margin-top:6px">Campaign 4 gives the account the reach to spend at full budget by Month 3, but "billing software" and "billing system" sit right on top of the 200,000-plus invoicing searches. It lives or dies on the negative list, so the search-term report is read daily for the first week.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">04 / BUDGET, MEASUREMENT, AND THE ONE RISK</div>
+    <h2 class="sec">Full budget, <em>bid on the right thing</em></h2>
+    <p class="body">The qualified pool supports the full Google budget across the five campaigns, funded on a three-month ramp where each step is a phase gate: buy data and prove the negative lists in Month 1, expand into the extra budget in Month 2 only if pollution stays under 20 percent, and convert that into a defensible Month 4 recommendation in Month 3. The split matches your plan almost exactly.</p>
+
+    <div class="dm-budget">
+      <div class="dm-brow"><div class="dm-blbl">Month 1</div><div class="dm-btrack"><div class="dm-bar" style="width:60%;background:var(--barterra)"></div></div><div class="dm-bamt">$6,019</div></div>
+      <div class="dm-brow"><div class="dm-blbl">Month 2</div><div class="dm-btrack"><div class="dm-bar" style="width:80%;background:var(--barterra)"></div></div><div class="dm-bamt">$7,995</div></div>
+      <div class="dm-brow"><div class="dm-blbl">Month 3</div><div class="dm-btrack"><div class="dm-bar" style="width:100%;background:var(--barterra)"></div></div><div class="dm-bamt">$10,002</div></div>
+    </div>
+    <figcaption>The 90-day Google total is $24,016: roughly $7,509 on brand and competitor defense and $16,507 on the non-brand category, which lines up with the Google line in your budget.</figcaption>
+
+    <div class="callout" style="border-left-color:var(--hazard)">
+      <div class="k" style="color:var(--terra-text)">The biggest risk in this account</div>
+      <p>Your free Build tier and your $40,000-a-year BYOC contract produce two conversions that look identical to Google and are worth wildly different amounts to Stigg. Left alone, Smart Bidding optimizes toward whichever fires more often, and that is always the free signup. Three things fix it, in order: bid on "Book a Demo" only at launch and keep free signup as a secondary event, assign static conversion values by plan tier in Month 1, and wire offline conversion import on closed-won contracts as soon as the CRM feed allows, so the account bids on closed revenue, not booked demos.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card tt"><h4>Two pages worth building</h4>
+        <div class="ev" style="margin-top:6px">Most ad groups route to product pages that already exist. Two new pages earn their keep and serve more than one campaign each: a billing-platform positioning page ("keep your biller, add the layer") and a "Stigg plus Stripe" page for the highest-intent Stripe queries.</div>
+      </div>
+      <div class="card tb"><h4>How it is measured</h4>
+        <div class="ev" style="margin-top:6px">Book a Demo is the primary conversion. Search only, Display and Search Partners off, United States to start, and the competitor campaign on manual bidding. Displacement demand is tracked as its own conversion segment, so it is measured against category demand rather than blended into it.</div>
+      </div>
+    </div>
+
+    <div class="callout blue"><div class="k">Search feeds the system, it does not carry it</div><p>Every click that does not convert today becomes a retargeting audience and a signal. The engineer who searches "metered billing," reads, and leaves is retargeted on LinkedIn and re-reached in the developer channels, so a single expensive click turns into a multi-touch journey. That is why Google runs precise here even at full budget: its job is to intercept the engineer already building, and hand everyone else to the rest of the system.</p></div>
+  </section>
+</div>
+</section>
+
+<section class="view" id="ecosystem">
+<div class="roomwrap">
+  <section class="blk">
+    <div class="secnum">ECOSYSTEM / CURRENT FOOTPRINT</div>
+    <h2 class="sec">What already runs, <em>and the layer to add</em></h2>
+    <p class="body">Here is Stigg's demand system on one board, mapped to the jobs a full motion does. The point is encouraging: the two hardest layers to stand up, making demand exist and having real channels behind it, are already running. Create is live through the founder's content, and Capture is live through Google. With the budget and the two goals now set, this becomes one system with two engines. An enterprise engine, LinkedIn account-based marketing plus outbound, lands the 20 named logos. A self-serve engine, developer-native reach plus capture, brings the 150 paying customers. The center of gravity for the work ahead is the connective tissue: the LinkedIn hub, the developer-community layer, and the intelligence that ties both back to deals.</p>
+
+    <div class="eco-legend">
+      <span><i class="bstart" style="background:var(--canopy)"></i>Start here</span>
+      <span><i style="background:var(--blue)"></i>Build during the engagement</span>
+      <span><i style="background:rgba(154,151,136,.4)"></i>Sequenced for later</span>
+    </div>
+
+    <div class="eco-board">
+
+      <div class="card tl">
+        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Create</span><span class="ctitle">Make demand exist</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span></span></div>
+        <p class="body" style="margin:4px 0">Running well already. The founder publishes category-defining posts and the company has an engaged following.</p>
+        <div class="why"><b>What we would run:</b> amplify the strongest existing posts with Thought Leader Ads. The content already exists, so there is no creative discovery phase, and it is the cheapest reach in the system.</div>
+      </div>
+
+      <div class="card tp">
+        <div class="chhead"><span class="clabel" style="color:var(--pink-text)">Developer reach</span><span class="ctitle">Reach the engineers where they are</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip on-pink"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
+        <p class="body" style="margin:4px 0">The self-serve goal, 150 paying customers, comes mostly from senior software engineers who never fill out a demo form. This is the layer that reaches them where they already are, and it is a third of the budget.</p>
+        <div class="why"><b>What we would run:</b> paid placement in AI and developer subreddits, developer newsletters like TLDR, Bytes, and Console, developer and AI podcasts, and YouTube plus AI-search. The demand-creation engine for the self-serve motion.</div>
+      </div>
+
+      <div class="card tb">
+        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Connect</span><span class="ctitle">Qualify and convert, the hub</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip on-blue"></span><span class="eco-pip on-blue"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
+        <p class="body" style="margin:4px 0">LinkedIn ads are live. The step to take is structural: make this the layer that filters the traffic by company and role before spend.</p>
+        <div class="why"><b>What we would run:</b> restructure the spend into warm retargeting of the site visitors and content engagers, plus named-account targeting. This is the entry motion and the center of gravity.</div>
+      </div>
+
+      <div class="card tt">
+        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Capture</span><span class="ctitle">Harvest active demand</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip on-terra"></span><span class="eco-pip on-terra"></span><span class="eco-pip on-terra"></span><span class="eco-pip"></span></span></div>
+        <p class="body" style="margin:4px 0">Google is already running. Its job here is capturing the buyers already searching and defending the brand against the named rivals.</p>
+        <div class="why"><b>What we would run:</b> point Google at category, method, and competitor terms, each with a matched landing page, so it feeds the same retargeting pools rather than running on its own.</div>
+      </div>
+
+      <div class="card">
+        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Intelligence</span><span class="ctitle">The layer underneath</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip on-canopy"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
+        <p class="body" style="margin:4px 0">HubSpot is in place, which is the foundation. The layer to build is the connection that turns ad activity into a revenue picture.</p>
+        <div class="why"><b>What we would run:</b> wire HubSpot and the five-source signals so influenced pipeline, named accounts, and hidden pipeline become visible. This is the other half of the entry, and it answers the attribution question directly.</div>
+      </div>
+
+      <div class="card tm">
+        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Activate</span><span class="ctitle">Turn signal into conversations</span><span class="ctags"><span class="badge bbuild">Build during</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip on-moss"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
+        <p class="body" style="margin:4px 0">This layer turns on once the signals are firing. Its job is converting warmed named accounts into conversations.</p>
+        <div class="why"><b>What we would run:</b> signal-triggered LinkedIn and email outreach on the accounts the ads warm up, handed over the moment the signal says they are ready.</div>
+      </div>
+
+      <div class="card tc">
+        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Extend</span><span class="ctitle">Scale reach on a qualified pool</span><span class="ctags"><span class="badge blater">Later</span></span></div>
+        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
+          <span class="eco-pips"><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
+        <p class="body" style="margin:4px 0">Sequenced for later, once a qualified pool exists. Meta and programmatic inherit a pool; they cannot build one, so they run after LinkedIn qualifies the audience.</p>
+        <div class="why"><b>What we would run:</b> account-based air cover across Meta and programmatic for the accounts LinkedIn under-delivers, reassessed after the first ninety days.</div>
+      </div>
+
+    </div>
+    <p class="body" style="font-size:13px;color:var(--muted);margin-top:14px">The bars show how ready each layer is to run today, not a grade. The four marked to start here are the recommended entry motion; the rest are sequenced behind them so budget only moves to the next layer once the current one earns it.</p>
+  </section>
+</div>
+</section>
+
+<section class="view" id="howitworks">
+<div class="roomwrap">
+  <section class="blk">
+    <div class="secnum">HOW IT WORKS / THE METHOD</div>
+    <h2 class="sec">One system, <em>with an order</em></h2>
+    <p class="body">We do not run channels as a menu. We run them as one system with two engines, each pointed at one of your goals. An enterprise engine, LinkedIn account-based marketing plus outbound, lands the 20 named logos. A self-serve engine, developer-native reach plus capture, brings the 150 paying customers. Each layer has a job, and each makes the next one cheaper. Here is what each does in Stigg's account, why LinkedIn looks expensive on its own but is not once the system is judged as a whole, and how the signals and revenue tie back to HubSpot.</p>
+
+    <div class="hiw-stack">
+      <div class="card tl">
+        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Create</span><span class="ctitle">Make demand exist</span><span class="ctags">Thought Leader Ads / founder content</span></div>
+        <p class="body" style="margin:6px 0">Stigg already has the hardest part of this: a founder who publishes a real category point of view. We amplify the strongest existing posts with Thought Leader Ads, which run the content that already exists, so there is no creative discovery phase and it is the cheapest reach in the system.</p>
+        <div class="why"><b>Job in this account:</b> seed the top of the funnel and grow the retargeting pools cheaply, so every layer below has warm traffic to work with.</div>
+      </div>
+      <div class="card tp">
+        <div class="chhead"><span class="clabel" style="color:var(--pink-text)">Developer reach</span><span class="ctitle">Reach the engineers where they are</span><span class="ctags">Reddit / newsletters / podcasts / YouTube</span></div>
+        <p class="body" style="margin:6px 0">Your self-serve buyer is a senior software engineer who evaluates infrastructure by reading and building, not by filling out a demo form. We reach them in the places they already trust: AI and developer subreddits, developer newsletters like TLDR and Bytes, developer and AI podcasts, and YouTube plus AI-search. This is a third of the budget and the engine behind the 150 self-serve customers.</p>
+        <div class="why"><b>Job in this account:</b> create demand among the developers who become self-serve customers, and feed the same retargeting pools the enterprise motion draws on.</div>
+      </div>
+      <div class="card tb">
+        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Connect</span><span class="ctitle">Qualify and convert, the hub</span><span class="ctags">Retargeting / account-based / Matched Audiences</span></div>
+        <p class="body" style="margin:6px 0">LinkedIn is the only channel that can read a site visitor's company, size, seniority, and function and decide whether they are worth spending on, before the spend. It retargets the warm traffic, runs named-account plays, and turns a stream of anonymous visits into a qualified, named audience the rest of the system works against.</p>
+        <div class="why"><b>Job in this account:</b> qualify the roughly 5,000 monthly visits and the content engagers, and produce the signals every other layer reads from.</div>
+      </div>
+      <div class="card tt">
+        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Capture</span><span class="ctitle">Harvest active demand</span><span class="ctags">Google search / conquest</span></div>
+        <p class="body" style="margin:6px 0">Google catches the buyers already searching for usage billing, metering, and competitor alternatives, and defends the brand against the named rivals. Each group points at a matched landing page rather than the homepage, because the page decides the return on an expensive click, not the click itself.</p>
+        <div class="why"><b>Job in this account:</b> harvest in-market demand and feed the same retargeting pools, so search and LinkedIn compound instead of running separately.</div>
+      </div>
+      <div class="card tc">
+        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Extend</span><span class="ctitle">Scale on a qualified pool</span><span class="ctags">Meta / programmatic, later</span></div>
+        <p class="body" style="margin:6px 0">Meta and programmatic re-engage the enriched buyers LinkedIn prices out, at a fraction of the cost per thousand impressions, and give account-based air cover across display and native. They inherit a qualified pool; they cannot build one, which is exactly why they run after LinkedIn, not before.</p>
+        <div class="why"><b>Job in this account:</b> cheap, high-frequency reach against an audience LinkedIn has already qualified, reassessed after the first ninety days.</div>
+      </div>
+      <div class="card tm">
+        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Activate</span><span class="ctitle">Turn signal into conversations</span><span class="ctags">Signal-triggered outreach / nurture</span></div>
+        <p class="body" style="margin:6px 0">When the signals say an account is leaning in, we hand it to signal-triggered LinkedIn and email outreach, with full context on what each prospect engaged with. This is where marketing hands sales a warm, named account instead of a cold list.</p>
+        <div class="why"><b>Job in this account:</b> convert the accounts the ads warm up into conversations, the moment they are ready.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">TWO ENGINES, ONE BUDGET</div>
+    <h2 class="sec">Your budget, <em>mapped to your goals</em></h2>
+    <p class="body">You shared two goals and a real budget, so here is how the money maps to them. The two engines share the same signal layer and retargeting pools, but each is pointed at a different outcome and measured on a different number.</p>
+
+    <div class="dm-lanes">
+      <div class="dm-lane ent">
+        <div class="goal">20 enterprise logos</div>
+        <div class="glbl">The enterprise engine / account-based plus outbound</div>
+        <ul>
+          <li>LinkedIn account-based marketing, Thought Leader and Document Ads on the named frontier-AI list</li>
+          <li>Sponsored Content and video to the buying committee</li>
+          <li>Signal-triggered outreach on the accounts the ads warm up</li>
+          <li>Retargeting and Lead Gen Forms to convert the engaged accounts</li>
+        </ul>
+      </div>
+      <div class="dm-lane self">
+        <div class="goal">150 self-serve customers</div>
+        <div class="glbl">The self-serve engine / developer-native inbound</div>
+        <ul>
+          <li>Developer community: subreddits, newsletters, podcasts, YouTube and AI-search</li>
+          <li>Google capture on the precise, high-intent search that exists</li>
+          <li>The founder's content, amplified with Thought Leader Ads</li>
+          <li>Retargeting the developers who engage, into a self-serve start</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub">Where the money goes</h3>
+    <div class="dm-budget">
+      <div class="dm-brow"><div class="dm-blbl">LinkedIn</div><div class="dm-btrack"><div class="dm-bar" style="width:100%;background:var(--barblue)"></div></div><div class="dm-bamt">$66K &middot; 49%</div></div>
+      <div class="dm-brow"><div class="dm-blbl">Developer community</div><div class="dm-btrack"><div class="dm-bar" style="width:68%;background:var(--barpink)"></div></div><div class="dm-bamt">$45K &middot; 33%</div></div>
+      <div class="dm-brow"><div class="dm-blbl">Google</div><div class="dm-btrack"><div class="dm-bar" style="width:36%;background:var(--barterra)"></div></div><div class="dm-bamt">$24K &middot; 18%</div></div>
+    </div>
+    <figcaption>The three-month allocation you shared, roughly $135,000, ramping month over month. LinkedIn carries the enterprise engine, developer community carries the self-serve engine, and Google is the precise capture lane feeding both.</figcaption>
+
+    <div class="callout clay">
+      <div class="k">The Google budget, fully deployed</div>
+      <p>Your own keyword research tells an honest story: of 399,720 monthly searches in the file, only about 18,080 are actually your buyer, the rest is invoicing, accounting, medical, and telecom demand that shares the word "billing." That qualified pool is precise, but it is deep enough to run a real five-campaign motion, category, vendor, competitor displacement, and the adjacent subscription category, which deploys the full Google budget on a ramp to about $10,000 a month by Month 3. Google stays a capture and conquest lane rather than a demand engine, and every non-converting click still feeds the retargeting pools the other two engines draw on.</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">WHY IT COMPOUNDS</div>
+    <h2 class="sec">Expensive alone, <em>cheap as a system</em></h2>
+    <p class="body">Judged one channel at a time, LinkedIn looks expensive: its cost per thousand impressions runs roughly $70 to $120, next to Google's $1 to $5 per click. That comparison misses the point. LinkedIn is buying precision, finding and validating the exact right people, while Google is buying active intent. Run together, each layer lowers the cost of the next.</p>
+
+    <figure>
+      <div class="fig figscroll">
+        <svg viewBox="0 0 760 210" role="img" aria-label="How each channel makes the next one cheaper">
+          <defs><marker id="hiw-ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#9a9788"/></marker></defs>
+          <rect class="edu-svgbox" x="14" y="70" width="150" height="66" rx="10"/>
+          <text class="edu-boxlabel" x="89" y="98" text-anchor="middle">Content</text>
+          <text class="edu-boxsub" x="89" y="116" text-anchor="middle">creates brand searches</text>
+          <line class="edu-arrow" x1="166" y1="103" x2="204" y2="103" marker-end="url(#hiw-ah)"/>
+          <rect class="edu-svgbox" x="206" y="70" width="150" height="66" rx="10"/>
+          <text class="edu-boxlabel" x="281" y="98" text-anchor="middle">Google</text>
+          <text class="edu-boxsub" x="281" y="116" text-anchor="middle">cheaper, and feeds pools</text>
+          <line class="edu-arrow" x1="358" y1="103" x2="396" y2="103" marker-end="url(#hiw-ah)"/>
+          <rect class="edu-svghub" x="398" y="70" width="150" height="66" rx="10"/>
+          <text class="edu-boxlabel" x="473" y="94" text-anchor="middle" style="font-weight:700">LinkedIn</text>
+          <text class="edu-boxsub" x="473" y="110" text-anchor="middle">retargets paid traffic,</text>
+          <text class="edu-boxsub" x="473" y="122" text-anchor="middle">so it gets cheaper too</text>
+          <line class="edu-arrow" x1="550" y1="103" x2="588" y2="103" marker-end="url(#hiw-ah)"/>
+          <rect class="edu-svgbox" x="590" y="70" width="156" height="66" rx="10"/>
+          <text class="edu-boxlabel" x="668" y="94" text-anchor="middle">Meta / programmatic</text>
+          <text class="edu-boxsub" x="668" y="112" text-anchor="middle">finally have a</text>
+          <text class="edu-boxsub" x="668" y="124" text-anchor="middle">qualified pool to work</text>
+          <path class="edu-arrow" d="M 668 70 C 668 30, 89 30, 89 68" stroke-dasharray="6 4" marker-end="url(#hiw-ah)"/>
+          <text class="edu-boxsub" x="380" y="24" text-anchor="middle">the signals loop back and make the next cycle cheaper</text>
+        </svg>
+      </div>
+      <figcaption>Each layer lowers the cost of the next. Judged as a system, the expensive-looking channel is what makes the cheap ones convert.</figcaption>
+    </figure>
+
+    <div class="edu-statrow">
+      <div class="edu-stat"><div class="n">28% lower</div><div class="l">Blended cost to acquire, when Meta is layered onto LinkedIn correctly</div></div>
+      <div class="edu-stat"><div class="n">40% higher</div><div class="l">Click-through on warm audiences versus cold prospecting</div></div>
+      <div class="edu-stat"><div class="n">~3x</div><div class="l">Pipeline conversion on accounts touched more than once versus single-touch</div></div>
+    </div>
+    <p class="body" style="font-size:13px;color:var(--muted);margin-top:12px">Figures are Impactable's typical observed ranges, not a guarantee for any one account.</p>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">THE SIGNAL LAYER</div>
+    <h2 class="sec">Reporting the board <em>actually asks for</em></h2>
+    <p class="body">Most agencies rent a dashboard. We run on DemandSense, a signal platform we are a top partner in. It composes five signal sources into one account-level view: who is engaging, from what company, in what role, and how close they are to buying. That produces a coverage picture no single channel can, so the conversation moves from clicks to accounts and pipeline.</p>
+
+    <div class="edu-wf">
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Unaware</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:100%;background:var(--barclay)">the addressable universe</div></div></div>
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Aware</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:74%;background:var(--barblue);color:#04121f">reached and served</div></div></div>
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Engaged</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:52%;background:var(--barblue);color:#04121f">clicked, watched, visited</div></div></div>
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Active pipeline</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:32%;background:var(--barmoss)">in a deal</div></div></div>
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Closed-won</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:16%;background:var(--barcanopy)">revenue</div></div></div>
+    </div>
+    <figcaption>The coverage waterfall: where target accounts sit, from unaware to revenue. Because multi-touch accounts convert at roughly three times the single-touch rate, the work is moving accounts down this ladder, not only reaching more of them.</figcaption>
+
+    <h3 class="sub">What the signal layer surfaces</h3>
+    <ul class="clean">
+      <li><b>Served versus underserved accounts.</b> Which target accounts are getting delivery and engaging, and which are not, so the underserved ones move to Meta, programmatic, or outreach.</li>
+      <li><b>Accounts in motion.</b> Engagement surges by account, with a score and a next action, so sales knows who is heating up this week.</li>
+      <li><b>Hidden pipeline.</b> Accounts with heavy ad engagement and no deal record at all, surfaced automatically and exportable to outreach. Often the single most useful list in the system for a lean team.</li>
+      <li><b>Named companies and people on the site.</b> Website Visitor ID turns anonymous pricing and docs visits into named accounts and roles.</li>
+    </ul>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">ATTRIBUTION / THE HUBSPOT ANSWER</div>
+    <h2 class="sec">See what the ads <em>actually influenced</em></h2>
+    <p class="body">LinkedIn's own reporting cannot see the CRM, so it structurally cannot tell you whether the ads brought deals. Because Stigg runs HubSpot, this is where the measurement story lands. Connect HubSpot once, and deal and company data flows in and matches to the accounts that saw or engaged with the ads, with the window set to Stigg's real sales cycle.</p>
+
+    <figure>
+      <div class="fig figscroll">
+        <svg viewBox="0 0 760 240" role="img" aria-label="How influenced revenue is calculated">
+          <defs><marker id="hiw-ah2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#9a9788"/></marker></defs>
+          <rect class="edu-svgbox" x="14" y="28" width="180" height="40" rx="8"/><text class="edu-boxlabel" x="26" y="45">Ad impressions and clicks</text><text class="edu-boxsub" x="26" y="60">who saw and engaged</text>
+          <rect class="edu-svgbox" x="14" y="100" width="180" height="40" rx="8"/><text class="edu-boxlabel" x="26" y="117">Site visits, named</text><text class="edu-boxsub" x="26" y="132">Website Visitor ID</text>
+          <rect class="edu-svgbox" x="14" y="172" width="180" height="40" rx="8"/><text class="edu-boxlabel" x="26" y="189">Deals and companies</text><text class="edu-boxsub" x="26" y="204">from HubSpot</text>
+          <path class="edu-arrow" d="M194 48 C 300 48, 320 108, 402 118" marker-end="url(#hiw-ah2)"/>
+          <path class="edu-arrow" d="M194 120 L 402 120" marker-end="url(#hiw-ah2)"/>
+          <path class="edu-arrow" d="M194 192 C 300 192, 320 132, 402 122" marker-end="url(#hiw-ah2)"/>
+          <rect class="edu-svghub" x="404" y="92" width="150" height="56" rx="12"/><text class="edu-boxlabel" x="479" y="116" text-anchor="middle" style="font-weight:700">Match in HubSpot</text><text class="edu-boxsub" x="479" y="132" text-anchor="middle">on your sales-cycle window</text>
+          <line class="edu-arrow" x1="556" y1="120" x2="592" y2="120" marker-end="url(#hiw-ah2)"/>
+          <rect class="edu-svgout" x="594" y="34" width="152" height="46" rx="9"/><text class="edu-boxlabel" x="670" y="54" text-anchor="middle">Influenced pipeline</text><text class="edu-boxsub" x="670" y="69" text-anchor="middle">and closed-won</text>
+          <rect class="edu-svgout" x="594" y="96" width="152" height="46" rx="9"/><text class="edu-boxlabel" x="670" y="116" text-anchor="middle">Campaign influence</text><text class="edu-boxsub" x="670" y="131" text-anchor="middle">scale or cut</text>
+          <rect class="edu-svgout" x="594" y="158" width="152" height="46" rx="9"/><text class="edu-boxlabel" x="670" y="178" text-anchor="middle">Hidden pipeline</text><text class="edu-boxsub" x="670" y="193" text-anchor="middle">engaged, no deal yet</text>
+        </svg>
+      </div>
+      <figcaption>Influenced revenue in one picture: ad exposure and named visits match to deals in HubSpot, and out comes influenced pipeline, a scale-or-cut score, and the hidden-pipeline list.</figcaption>
+    </figure>
+
+    <div class="callout"><div class="k">Why this changes the read</div><p>Campaign Manager only sees clicks, so it often understates the truth. In one account, once conversions and CRM milestones were captured properly, the perceived cost per conversion fell from over $800 to about $12. The ads had not changed; the measurement had. That is the difference between optimizing for clicks and optimizing for pipeline.</p></div>
+
+    <div class="hiw-video">
+      <iframe src="https://www.youtube-nocookie.com/embed/7Pqs4jgyZA4" title="DemandSense influenced revenue walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <h3 class="sub">What we report, and what we would not promise</h3>
+    <p class="body">Each layer has its own honest measure: reach and engaged accounts for Create, qualified reach and cost per qualified lead for Connect, search capture and landing-page conversion for Capture, and influenced pipeline and closed-won for the whole system. What we would not claim is full econometric marketing-mix modeling; that is a specialist discipline, usually run in-house or with a dedicated analytics partner. And every number rests on the conversion capture underneath it, which is why the events get defined and verified in week one, before anything spends.</p>
+    <div class="callout blue"><div class="k">Two clocks, read differently</div><p>The two engines move at different speeds, so we read them differently. The self-serve engine shows results fast: sign-ups and self-serve starts inside the first weeks. The enterprise engine is slower, so its first sixty days are read on account penetration, persona reach, and repeat engagement across the named list, the leading indicators that show the motion working while the 20 logos form, not booked calls alone.</p></div>
+  </section>
+</div>
+</section>
+
+<section class="view" id="pathsforward">
+<div class="roomwrap">
+  <section class="blk">
+    <div class="secnum">PATHS FORWARD / FIT</div>
+    <h2 class="sec">Where we fit, <em>and where to start</em></h2>
+    <p class="body">Before the options, the honest read on fit. Stigg is a strong fit for how we work, for a specific reason: the two hardest things to stand up are already here. You make demand exist and you run real channels. That means the engagement is not a rebuild, it is connective tissue, which is the fastest kind of work to show a return on.</p>
+
+    <div class="pf-fitgrid">
+      <div class="card tl">
+        <h4>The demand exists</h4>
+        <div style="font-size:14px;color:var(--ink);margin-top:6px">A founder with a real category voice and a site with real traffic. We amplify what works rather than starting content from zero.</div>
+      </div>
+      <div class="card tb">
+        <h4>The channels are live</h4>
+        <div style="font-size:14px;color:var(--ink);margin-top:6px">LinkedIn and Google already run. The work is structuring them into one qualifying-and-capturing motion, not launching from scratch.</div>
+      </div>
+      <div class="card">
+        <h4>The CRM is in place</h4>
+        <div style="font-size:14px;color:var(--ink);margin-top:6px">HubSpot is the foundation for the attribution you asked about. We wire it so the ads tie back to influenced pipeline and closed-won.</div>
+      </div>
+    </div>
+    <div class="callout"><div class="k">What we aim at</div><p>Two goals, two engines, one budget. The enterprise engine, LinkedIn account-based marketing plus outbound, is pointed at the 20 named logos. The self-serve engine, developer-native reach plus capture, is pointed at the 150 paying customers. We run Google lean and precise where the qualified search actually is, and move the overflow into the developer and content layers where the self-serve demand is created.</p></div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">THE OPTIONS</div>
+    <h2 class="sec">Three ways in, <em>built to expand</em></h2>
+    <p class="body">Each option is aimed at one motion and earns the next. Start small, prove it, and grow into the full system from strength. The recommended entry matches your center of gravity and answers the attribution question directly.</p>
+
+    <div class="pmscroll">
+    <table class="pm">
+      <tr>
+        <td class="rowlbl"></td>
+        <td>
+          <div class="ohead">The enterprise engine</div>
+          <div class="per" style="margin:4px 0 8px">Option 1 / the 20 logos first</div>
+          <!-- CONFIRM FEE: Option 1 -->
+          <div class="price">Scoped</div><div class="per">fee confirmed on your call</div>
+          <a class="btn ghost" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">Talk it through</a>
+        </td>
+        <td class="rec">
+          <span class="recpill">Recommended for Stigg</span>
+          <div class="ohead">Both engines</div>
+          <div class="per" style="margin:4px 0 8px;color:rgba(216,212,200,.7)">Option 2 / matches your budget and goals</div>
+          <!-- CONFIRM FEE: Option 2 -->
+          <div class="price">Scoped</div><div class="per" style="color:rgba(216,212,200,.7)">fee confirmed on your call</div>
+          <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">Start here</a>
+        </td>
+        <td>
+          <div class="ohead">The connected system</div>
+          <div class="per" style="margin:4px 0 8px">Option 3 / the full picture</div>
+          <!-- CONFIRM FEE: Option 3 -->
+          <div class="price">Scoped</div><div class="per">fee confirmed on your call</div>
+          <a class="btn ghost" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">See the horizon</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="rowlbl">What it targets</td>
+        <td><span class="ck">&#10003;</span> The 20 enterprise logos</td>
+        <td class="rectint"><span class="ck">&#10003;</span> The 20 logos and the 150 self-serve customers</td>
+        <td><span class="ck">&#10003;</span> Both goals, run at full scale</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">The channels</td>
+        <td><span class="ck">&#10003;</span> LinkedIn account-based and retargeting</td>
+        <td class="rectint"><span class="ck">&#10003;</span> LinkedIn, Google, and developer community</td>
+        <td><span class="ck">&#10003;</span> Plus Meta and programmatic air cover</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Developer community (self-serve)</td>
+        <td><span class="cx">&#8212;</span> Not in this option</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Reddit, newsletters, podcasts, YouTube</td>
+        <td><span class="ck">&#10003;</span> Full developer program</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Create (content)</td>
+        <td><span class="ck">&#10003;</span> Thought Leader Ads on existing posts</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Thought Leader Ads on existing posts</td>
+        <td><span class="ck">&#10003;</span> Full content engine, monthly interviews fanned out</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Named-account motion</td>
+        <td><span class="ck">&#10003;</span> The frontier-AI list, account-based</td>
+        <td class="rectint"><span class="ck">&#10003;</span> The frontier-AI list, account-based</td>
+        <td><span class="ck">&#10003;</span> Account-based plus air cover</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Signals and Intelligence</td>
+        <td><span class="ck">&#10003;</span> Five-source signals</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Signals, Web ID, CRM sync, influenced revenue</td>
+        <td><span class="ck">&#10003;</span> Full stack, plus CAPI and person-level Web ID</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Activate (outreach)</td>
+        <td class="rectint"><span class="cp">&#9683;</span> Begins as signals fire</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Signal-triggered LinkedIn and email</td>
+        <td><span class="ck">&#10003;</span> Signal-triggered LinkedIn and email</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Team</td>
+        <td>Strategist plus execution pod</td>
+        <td class="rectint">The pod running both engines as one motion</td>
+        <td>Dedicated senior strategist and full pod</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Reporting</td>
+        <td>Quarterly diagnostic Impact Report</td>
+        <td class="rectint">Cross-channel, anchored in influenced revenue</td>
+        <td>Board-grade, with a quarterly business review</td>
+      </tr>
+      <tr>
+        <td class="rowlbl">Why it fits Stigg</td>
+        <td>Prove the enterprise engine and attribution before adding the self-serve reach</td>
+        <td class="rectint">Runs both engines you have budgeted for, and answers attribution</td>
+        <td>The scaled version to grow into once both engines are proven</td>
+      </tr>
+    </table>
+    </div>
+
+    <div class="freebar">The free Demand Plan is already delivered and stays free. The white space, targeting, and motion design in this room are yours to keep, whichever path you choose.</div>
+
+    <div class="callout blue" style="margin-top:18px">
+      <div class="k">Our recommendation</div>
+      <p>Start at <b>Option 2</b>. It runs both engines your budget already funds: the enterprise motion for the 20 logos and the developer-native self-serve motion for the 150 customers, wired to HubSpot so you see what influenced pipeline. <b>Option 1</b> is the tighter start if you want the enterprise engine and attribution proven before the self-serve reach turns on. <b>Option 3</b> is the scaled version to grow into. Every option assumes the week-one measurement wiring, since none of the reporting is trustworthy without it.</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">PROOF</div>
+    <h2 class="sec">The closest <em>matches</em></h2>
+    <p class="body">Not a list of everyone we have worked with, just the three whose situation looks most like Stigg's.</p>
+    <div class="pf-proofgrid">
+      <div class="card tl pf-proof">
+        <div class="n">20X</div>
+        <h4 style="margin-top:6px">HeyReach</h4>
+        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">Product-led SaaS with a founder on camera and strong organic. 13x return on ad spend and 158 customers, by activating warm traffic instead of buying cheap sign-ups that churn.</div>
+        <div class="why"><b>Why this one for you:</b> the closest analog to Stigg, a product-led company with a founder voice and real warm traffic, turned into pipeline.</div>
+      </div>
+      <div class="card tb pf-proof">
+        <div class="n">21x</div>
+        <h4 style="margin-top:6px">Vertical-AI SaaS</h4>
+        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A 21.11x return on ad spend, $389K closed-won, and $805K in pipeline in ninety days, with the results tied back to revenue rather than clicks.</div>
+        <div class="why"><b>Why this one for you:</b> this is the influenced-revenue answer to "did the ads bring deals," proven in an AI software company with the same attribution question.</div>
+      </div>
+      <div class="card tt pf-proof">
+        <div class="n">$111</div>
+        <h4 style="margin-top:6px">Kong</h4>
+        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A developer-infrastructure company where cost per lead fell from roughly $1,000 to $111 and the account-based motion built $663K in pipeline across multiple regions.</div>
+        <div class="why"><b>Why this one for you:</b> the enterprise-logo analog, an API and developer-infrastructure company where account-based marketing landed named accounts efficiently at scale.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" style="border-bottom:none">
+    <div class="ctablock dark-panel">
+      <h2>Let's pick the <em>starting point</em>.</h2>
+      <p>Book a call and we will scope the right path with you, confirm the fee, and set the week-one measurement plan. No pitch.</p>
+      <div class="btnrow">
+        <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
+        <button class="btn ghost" data-goto="overview">Back to the overview</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="fb">Impactable <span class="hl">// Intelligence Room for Stigg</span></div>
+  </footer>
+</div>
+</section>
+
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var saved=localStorage.getItem('imp_theme');if(saved){root.setAttribute('data-theme',saved);}}catch(e){}
+  function showView(id){
+    var el=document.getElementById(id);
+    if(!el){return;}
+    var views=document.querySelectorAll('.view');
+    for(var i=0;i<views.length;i++){views[i].classList.remove('active');}
+    el.classList.add('active');
+    var tabs=document.querySelectorAll('.tab');
+    for(var j=0;j<tabs.length;j++){tabs[j].classList.toggle('active', tabs[j].getAttribute('data-v')===id);}
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click',function(){var id=t.getAttribute('data-v');history.pushState(null,'','#'+id);showView(id);});
+  });
+  document.querySelectorAll('[data-goto]').forEach(function(b){
+    b.addEventListener('click',function(){var id=b.getAttribute('data-goto');history.pushState(null,'','#'+id);showView(id);});
+  });
+  window.addEventListener('hashchange',function(){var id=location.hash.replace('#','')||'overview';showView(id);});
+  var initial=location.hash.replace('#','')||'overview';
+  if(!document.getElementById(initial)){initial='overview';}
+  showView(initial);
+  var btn=document.getElementById('themeBtn');
+  if(btn){btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')==='dark'?'dark':'light';
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('imp_theme',next);}catch(e){}
+  });}
+})();
+</script>
+</body>
+</html>
