@@ -7,16 +7,17 @@
 <title>Intelligence Room | Stigg</title>
 <!--
 RECOMMENDATION VARIABLES (single source of truth)
-thesis: one measured system, two engines. Enterprise engine (LinkedIn ABM + outbound) lands 20 logos; self-serve engine (developer-native reach + capture) brings 150 customers; all wired to HubSpot for influenced revenue.
-goals: 20 enterprise AI logos (ABM + outbound) + 150 self-serve paying customers (developer-native inbound), 3 months.
-budget: ~$135k / 3 months (~$45k/mo, ramping $33k->$45.5k->$56.5k). LinkedIn $66k (49%), Developer Community $45k (33%), Google $24k (18%).
-recommended_option: Option 2, Both Engines (pinned).
-personas: engineering-led. Platform/eng leaders (VP Eng, CTO), senior software engineers (self-serve), founders/CEOs, + financial-engineering roles.
-named_accounts: ~360 vetted frontier-AI accounts (dev-infra: Vercel/Weaviate/Qdrant/Pinecone/Baseten/Fireworks; AI apps: ElevenLabs/WRITER/W&B/xAI).
-google_role: precise capture lane, 5 campaigns (category, vendor, competitor displacement, adjacent subscription, brand). Qualified pool ~18,080/mo (17,600 non-brand + 480 brand) of 399,720 in file; deploys full ~$24k Google budget on a ramp $6,019 -> $7,995 -> $10,002/mo.
-developer_community: Reddit, dev newsletters (TLDR/Bytes/Console), podcasts, YouTube+AI-search. The self-serve demand engine.
-channel_order: Create+Developer reach (start) -> Connect/LinkedIn ABM (start) -> Capture/Google lean (start) -> Intelligence (start) -> Activate (build) -> Extend (later).
-additive_css: ws-*, tw-*, and room additive (ov-/eco-/hiw-/edu-/pf-) travel with the views on splice.
+thesis: aim LinkedIn account-based marketing at the named AI accounts and the warm ecosystem, keep Google as a targeted capture lane, humanize with thought leadership, and wire it all to HubSpot so you see which accounts the ads moved.
+goal: acquire the named AI logos (0-to-1 after token-economy rebrand; ~9-month window to prove the model -> acquisition, in talks with major AI orgs, or growth), plus convert the warm ecosystem for fast early wins.
+options: TWO. Option 1 LinkedIn + Google, $4,500/mo mgmt, media up to $30k/mo combined. Option 2 (RECOMMENDED) LinkedIn + Google + Thought Leadership, $6,000/mo mgmt, media up to $30k/mo, +500 Web ID credits. Both include DemandSense + HubSpot sync + 90-day Web ID + 60-day impact report + complimentary CRO audit.
+thought_leadership (Option 2, monthly): 1 SME interview, 1 long-form YouTube video, 8 short clips (YouTube + social), 12 personal LinkedIn posts, 8 company-page posts, 1 newsletter or blog.
+recommended_option: Option 2 (thought leadership = the trust layer that converts the warm mid-funnel; the fastest way to rise above Metronome/Orb noise for a 0-to-1 brand).
+personas: engineering-led. Senior software engineers, VP Eng, CTO, founders/CEOs. Buying committee mapped; list expanding daily (Sagi researching more).
+competitors: Metronome + Orb = primary rivals (mature, lead on measure-after-the-fact). Schematic + Credyt = minor/immature (Credyt heavy SEO). Zuora + Chargebee = PARTNERS (Stigg layers on top, works with them; NOT competitors). Homegrown / build-in-house = the third, implicit competitor to answer in message + targeting.
+wedge: decide in real-time, before the action, before money is spent (vs rivals measuring after the fact). Plus keep-your-billing, built-for-AI from day one incl. agent limits, run-in-your-own-cloud.
+google_role: targeted, secondary capture lane (high-intent capture + select conquest). Milovan's 5-campaign plan lives in the Capture tab, positioned as targeted alongside the primary ABM motion, not a co-equal engine. Zuora conquest softened (partner).
+channel_order: Create (thought leadership) -> Connect (LinkedIn ABM hub + warm conversion, start) -> Capture (Google targeted, start) -> Intelligence (DemandSense/Web ID/HubSpot, start) -> Activate (LinkedIn + email outreach, build) -> Extend (Meta/programmatic, later).
+attribution: HubSpot stays inbound system of record (Salesforce siloed on sales side). DemandSense syncs CRM + LinkedIn paid/organic + company intelligence API + RB2B/Common Room; account movement, campaigns by persona, surface accounts to sales.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -220,8 +221,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .ov-hero{padding:56px 0 30px;border-bottom:1px solid var(--line)}
 .ov-thesis{background:var(--panel-deep);border-radius:16px;padding:30px 32px;margin:24px 0}
 .ov-thesis .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#D4FF3D;margin-bottom:12px}
-.ov-thesis p{color:#F4F1EA;font-size:clamp(18px,2.4vw,23px);line-height:1.4;font-family:'Fraunces',serif;font-style:italic}
-.ov-thesis p em{color:#D4FF3D;font-style:italic}
+.ov-thesis p{color:#F4F1EA;font-size:clamp(17px,2.1vw,21px);line-height:1.55;font-family:'Inter',sans-serif;font-style:normal;font-weight:450}
+.ov-thesis p em{color:#D4FF3D;font-style:normal;font-weight:650}
 .ov-movegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
 @media(max-width:820px){.ov-movegrid{grid-template-columns:1fr}}
 /* --- ecosystem board --- */
@@ -266,7 +267,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .pf-proof .n{font-family:'Archivo Black';font-size:20px;color:var(--canopy-text);line-height:1}
 .pmscroll{overflow-x:auto}
 @media(max-width:820px){.pmscroll .pm{min-width:720px}}
-/* --- developer community layer (pink accent) + budget/dual-motion visuals --- */
+/* --- accent card + budget-ramp bar helpers --- */
 .card.tp{border-left:4px solid var(--jet-pink)}
 .card.tp .why{border-left-color:var(--jet-pink)}
 .card.tp .why b{color:var(--pink-text)}
@@ -444,10 +445,10 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <header class="ov-hero">
     <div class="kicker">Intelligence Room / Stigg</div>
     <h1 class="big">You already make demand.<br>Let's build the <em>connective tissue</em>.</h1>
-    <p class="lede">Stigg already makes demand exist and already runs the right channels, and now the goals and budget are on the table: 20 new enterprise AI logos and 150 new self-serve paying customers over three months, backed by a real multi-channel budget. Two goals, two motions. The job is to wire the channels you have budgeted into one measured system, an enterprise engine that lands the named logos and a self-serve engine that brings the volume, both reporting back to HubSpot.</p>
+    <p class="lede">Stigg is a 0-to-1 company after a rebrand into the token economy, with one clear priority: acquire the named AI logos that prove the model, and do it with quality attention rather than volume. The good news is the hardest parts are already here. The founder has a real voice, the site draws healthy organic traffic, and HubSpot is in place. What is not yet built is the connective tissue: a LinkedIn motion that aims at those accounts and converts the warm ecosystem, targeted search for the people already looking, and an attribution loop that ties it all back to deals.</p>
     <div class="ov-thesis dark-panel">
       <div class="k">The thesis, in one sentence</div>
-      <p>Run one measured system with two engines: LinkedIn account-based marketing and outbound to land the <em>enterprise logos</em>, developer-native reach and capture to feed the <em>self-serve volume</em>, and the whole thing wired into HubSpot so you see what actually influenced pipeline and revenue.</p>
+      <p>Aim LinkedIn account-based marketing at the named AI accounts and the warm ecosystem you already have, keep Google as a targeted capture lane, humanize the brand with thought leadership in the middle, and wire it all into HubSpot so you can see <em>which accounts the ads actually moved</em>.</p>
     </div>
     <div class="btnrow">
       <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
@@ -481,7 +482,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="move" data-goto="ecosystem">
         <div class="mn">04 / ECOSYSTEM</div>
         <div class="mt">What already runs, and what to add</div>
-        <div class="md">The founder's content and Google are already live. The layer to add is the connective tissue: the LinkedIn account-based hub, the developer-community reach for the self-serve engine, and the attribution underneath it all.</div>
+        <div class="md">The founder's content and healthy organic traffic are already live. The layer to add is the connective tissue: the LinkedIn account-based hub, the warm-audience conversion, and the attribution underneath it all.</div>
         <div class="arrow">See the footprint &rsaquo;</div>
       </div>
       <div class="move" data-goto="howitworks">
@@ -493,7 +494,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="move" data-goto="pathsforward">
         <div class="mn">06 / PATHS FORWARD</div>
         <div class="mt">Where to start</div>
-        <div class="md">Three ways in, each aimed at one motion and built to expand. Start small, prove it, and grow into the full system from strength.</div>
+        <div class="md">Two ways in, both aimed at the acquisition engine and built to expand. Start small, prove it, and grow into the full system from strength.</div>
         <div class="arrow">See the options &rsaquo;</div>
       </div>
     </div>
@@ -517,18 +518,18 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 <section class="blk">
   <div class="secnum">01 / THE SHAPE OF THE MARKET</div>
   <h2 class="sec">Four groups, and a gap <em>in the middle</em></h2>
-  <p class="body">Put simply: the giants want to replace your billing, the usage counters only measure it, and the two most popular middle options were just bought by payment companies. Almost nobody sits where Stigg sits, a fast, independent layer that enforces the rules in the moment and leaves your billing where it is.</p>
+  <p class="body">Put simply: the two rivals Stigg actually meets in deals, Metronome and Orb, lead on measuring usage after the fact. The usage counters only measure it. The billing suites, Zuora and Chargebee, are partners Stigg runs on top of, not competitors. Almost nobody sits where Stigg sits, a fast, independent layer that decides in the moment and leaves your billing where it is. One more rival is invisible on any tool map: the sharpest accounts in this market often try to build that layer themselves, and that homegrown instinct is the third competitor to answer.</p>
 
   <div class="grid2" style="margin-top:20px">
     <div class="card tt">
-      <h4>Bought by payment companies</h4>
+      <h4>The rivals that matter</h4>
       <div class="role">Metronome, Orb</div>
-      <p class="ws-say">The two largest independent usage-billing tools were just acquired by payment processors: Metronome by Stripe, Orb by Adyen. A billing tool owned by a payment company has a reason to steer you toward that company's own payment rails.</p>
+      <p class="ws-say">The two names Stigg actually goes head to head with in deals. Both are mature and both lead on measuring usage after the fact, and both were bought by payment companies, Metronome by Stripe and Orb by Adyen, so each also has a reason to steer you toward its owner's rails.</p>
     </div>
     <div class="card tc">
-      <h4>The big billing suites</h4>
-      <div class="role">Zuora, Chargebee</div>
-      <p class="ws-say">Older, heavy platforms that want to run your entire money operation. Powerful, but you replace a lot to adopt them, and Zuora is now owned by a private equity firm.</p>
+      <h4>The billing systems you keep</h4>
+      <div class="role">Zuora, Chargebee, Stripe</div>
+      <p class="ws-say">Not rivals. Stigg runs on top of these and syncs both ways, and they are systems Stigg works alongside rather than competes with. They handle invoices and payments; Stigg adds the real-time control layer they leave you to build.</p>
     </div>
     <div class="card tb">
       <h4>The usage counters</h4>
@@ -538,8 +539,13 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <div class="card tl">
       <h4>The real-time control layer</h4>
       <div class="role">Stigg, Schematic, Credyt</div>
-      <p class="ws-say">A small, new group that decides in the moment what a customer or an AI agent is allowed to do, and runs on top of the billing you already have. This is where Stigg sits. Only two others are nearby, and each has a limit Stigg does not.</p>
+      <p class="ws-say">A small, new group that decides in the moment what a customer or an AI agent is allowed to do, and runs on top of the billing you already have. This is where Stigg sits. Only two others are nearby, Schematic and Credyt, and both are small and still maturing.</p>
     </div>
+  </div>
+
+  <div class="callout" style="border-left-color:var(--jet-pink)">
+    <div class="k" style="color:var(--pink-text)">The third competitor is homegrown</div>
+    <p>The accounts worth winning here are the fastest, sharpest AI companies in the market, and they are also the most likely to build this layer in-house. So the real contest is often not against another vendor at all, it is against an engineering team that assumes it can build entitlements, credits, and real-time limits itself. That is answered in the message and the targeting, not with a feature list: the cost is not building it once, it is maintaining real-time enforcement and every edge case while the product roadmap waits.</p>
   </div>
 
   <figure>
@@ -622,13 +628,13 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <div class="secnum">03 / THE TEN COMPETITORS</div>
   <h2 class="sec">Everyone in the field, <em>grouped by what they do</em></h2>
   <div class="ws-camp-legend">
-    <span><i style="background:#C4521F"></i>Bought by payments</span>
-    <span><i style="background:#FFB627"></i>Big billing suites</span>
+    <span><i style="background:#C4521F"></i>Rivals that matter</span>
+    <span><i style="background:#FFB627"></i>Billing systems you keep</span>
     <span><i style="background:#1B9BD1"></i>Usage counters</span>
     <span><i style="background:#D4FF3D"></i>Real-time control layer</span>
   </div>
 
-  <h3 class="sub">Group one: <em>bought by payment companies</em></h3>
+  <h3 class="sub">Group one: <em>the rivals that matter</em></h3>
   <div class="card tt">
     <h4>Metronome</h4><div class="role">Usage billing, now part of Stripe</div>
     <p class="ws-say">Measures product usage and turns it into invoices, popular with large usage-based software companies. Acquired by Stripe, closed January 2026. Was the best-funded independent option in this space.</p>
@@ -640,16 +646,17 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <div class="why"><b>What it means for Stigg:</b> Same story as Metronome. It bills after the fact and now sits inside a payments company. Stigg stays independent and enforces before the cost is incurred.</div>
   </div>
 
-  <h3 class="sub">Group two: <em>the big billing suites</em></h3>
+  <h3 class="sub">Group two: <em>the billing systems you keep</em></h3>
+  <p class="body" style="margin:-6px 0 14px;font-size:13.5px;color:var(--muted)">These are not competitors. Stigg runs on top of them and works alongside them, and they are shown here only to make clear what they leave for Stigg to do.</p>
   <div class="card tc">
-    <h4>Zuora</h4><div class="role">Enterprise billing suite</div>
+    <h4>Zuora</h4><div class="role">Enterprise billing suite, a partner</div>
     <p class="ws-say">The long-standing enterprise platform for subscriptions, billing, payments, and revenue reporting. Founded 2007, Redwood City. Taken private by Silver Lake and GIC for 1.7 billion dollars in early 2025, and recently absorbed a usage-pricing tool called Togai.</p>
-    <div class="why"><b>What it means for Stigg:</b> Powerful but heavy. You adopt a large suite and change a lot to use it. Stigg is a light layer you add without replacing what you run.</div>
+    <div class="why"><b>What it means for Stigg:</b> A system Stigg runs on top of, not against. Zuora handles the billing; Stigg adds the real-time control layer it does not, without a migration.</div>
   </div>
   <div class="card tc">
-    <h4>Chargebee</h4><div class="role">Subscription and billing suite</div>
+    <h4>Chargebee</h4><div class="role">Subscription and billing suite, a partner</div>
     <p class="ws-say">A mature subscription-billing platform now adding usage and entitlement features as it moves up-market. Widely used, often described as a category unicorn.</p>
-    <div class="why"><b>What it means for Stigg:</b> A full billing system, not a control layer. It handles invoices; the in-product rules that decide what a customer can actually use are still yours to build unless you adopt more of the suite.</div>
+    <div class="why"><b>What it means for Stigg:</b> A full billing system Stigg layers on, not a control layer. It handles invoices; the in-product rules that decide what a customer can actually use are what Stigg adds on top.</div>
   </div>
 
   <h3 class="sub">Group three: <em>the usage counters</em></h3>
@@ -909,9 +916,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <span class="badge bstart tw-priostat">Primary target</span>
       </div>
       <div class="role">The evaluators, and the self-serve buyers</div>
-      <div style="font-size:14px;color:var(--ink);margin:6px 0">The individual contributors who actually evaluate infrastructure by reading and building, not by booking a demo. They drive the 150 self-serve customers, and they are reached in developer channels and by self-selection, rarely by a native title filter.</div>
+      <div style="font-size:14px;color:var(--ink);margin:6px 0">The individual contributors who actually evaluate infrastructure by reading and building, not by booking a demo. They are the champions who bring Stigg in from the bottom up, reached by self-selection and content rather than a native title filter, which is why the message matters more than the filter for this persona.</div>
       <div class="tw-chiprow"><span class="lbl">Reach them:</span>
-        <span class="tag">Function: Engineering</span><span class="tag">Seniority: Senior</span><span class="tag">Skills: API Development, Backend, Distributed Systems</span><span class="tag">Message-led: developer community, docs, self-serve</span>
+        <span class="tag">Function: Engineering</span><span class="tag">Seniority: Senior</span><span class="tag">Skills: API Development, Backend, Distributed Systems</span><span class="tag">Message-led: content, docs, self-selection</span>
       </div>
     </div>
 
@@ -1135,31 +1142,6 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <div class="btnrow" style="margin-top:8px"><button class="btn primary" data-goto="capture">See the full Google plan</button></div>
 </section>
 
-<!-- SECTION 06b: DEVELOPER COMMUNITY -->
-<section class="blk">
-  <div class="secnum">06b / DEVELOPER COMMUNITY REACH</div>
-  <h2 class="sec">Where the self-serve buyer <em>actually is</em></h2>
-  <p class="body">The 150 self-serve customers come from senior software engineers, and they do not respond to a demo form or a title-filtered ad. They are reached in the places they already trust, and this layer is a third of the budget for exactly that reason. The job is presence and credibility in the developer conversation, feeding the same retargeting pools everything else draws on.</p>
-  <div class="grid2">
-    <div class="card tp"><h4>Reddit, AI and developer subreddits</h4>
-      <div class="ev" style="margin-top:6px">Paid placement in the communities where engineers debate infrastructure. High trust, native format.</div>
-    </div>
-    <div class="card tp"><h4>Developer newsletters</h4>
-      <div class="ev" style="margin-top:6px">TLDR, Bytes, Console, and similar. The engineer's morning read, where a placement lands as a recommendation.</div>
-    </div>
-    <div class="card tp"><h4>Developer and AI podcasts</h4>
-      <div class="ev" style="margin-top:6px">Dev and AI shows the buyer already listens to, where the founder's category point of view carries.</div>
-    </div>
-    <div class="card tp"><h4>YouTube and AI-search</h4>
-      <div class="ev" style="margin-top:6px">Video reach plus presence in AI-answer engines, where engineers increasingly start their evaluation.</div>
-    </div>
-  </div>
-  <div class="callout" style="border-left-color:var(--jet-pink)">
-    <div class="k" style="color:var(--pink-text)">How this ties back</div>
-    <p>Everyone who engages here becomes a retargeting audience and a signal, so developer reach is not a separate silo. It fills the pools the LinkedIn hub qualifies and the outreach layer works, and its own success is read on self-serve starts, not vanity impressions.</p>
-  </div>
-</section>
-
 
 <!-- SECTION 07 -->
 <section class="blk">
@@ -1303,7 +1285,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="ev" style="margin-top:6px">220 searches a month, effectively uncontested, and the only term set in the plan where Stigg is the literal answer rather than one option among several. Low cost, clean intent, worth protecting from the identity-and-access-management terms that share the word.</div>
       </div>
       <div class="card tc"><h4>Metronome and Orb, not Zuora</h4>
-        <div class="ev" style="margin-top:6px">Zuora carries the volume but most of it is navigational. Metronome and Orb are the direct category competitors, same usage-runtime pitch and same buyer, and Stigg has a published comparison page for each. Expect them to beat Zuora on cost per lead even though they never beat it on volume.</div>
+        <div class="ev" style="margin-top:6px">Metronome and Orb are the direct rivals, same usage-runtime pitch and same buyer, and Stigg has a published comparison page for each. Zuora carries volume but most of it is navigational, and Stigg partners with Zuora rather than competing with it, so that ad group runs exact-match only as a light intercept. Expect Metronome and Orb to beat it on cost per lead.</div>
       </div>
       <div class="card tb"><h4>The one page that must be built</h4>
         <div class="ev" style="margin-top:6px">Billing Platform Selection, 1,300 searches a month, is the largest ad group and the worst intent match: "subscription billing software" wants a biller, and Stigg sits on top of one. The fix is a single page that leads with "keep your biller, add the layer it is missing." It serves two campaigns, so it is the highest-return page build in the engagement.</div>
@@ -1343,7 +1325,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       </div>
     </div>
 
-    <div class="callout blue"><div class="k">Search feeds the system, it does not carry it</div><p>Every click that does not convert today becomes a retargeting audience and a signal. The engineer who searches "metered billing," reads, and leaves is retargeted on LinkedIn and re-reached in the developer channels, so a single expensive click turns into a multi-touch journey. That is why Google runs precise here even at full budget: its job is to intercept the engineer already building, and hand everyone else to the rest of the system.</p></div>
+    <div class="callout blue"><div class="k">Search feeds the system, it does not carry it</div><p>Every click that does not convert today becomes a retargeting audience and a signal. The engineer who searches "metered billing," reads, and leaves is retargeted on LinkedIn and re-reached by the thought-leadership content, so a single expensive click turns into a multi-touch journey. That is why Google runs precise here even at full budget: its job is to intercept the engineer already building, and hand everyone else to the rest of the system.</p></div>
   </section>
 </div>
 </section>
@@ -1353,7 +1335,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <section class="blk">
     <div class="secnum">ECOSYSTEM / CURRENT FOOTPRINT</div>
     <h2 class="sec">What already runs, <em>and the layer to add</em></h2>
-    <p class="body">Here is Stigg's demand system on one board, mapped to the jobs a full motion does. The point is encouraging: the two hardest layers to stand up, making demand exist and having real channels behind it, are already running. Create is live through the founder's content, and Capture is live through Google. With the budget and the two goals now set, this becomes one system with two engines. An enterprise engine, LinkedIn account-based marketing plus outbound, lands the 20 named logos. A self-serve engine, developer-native reach plus capture, brings the 150 paying customers. The center of gravity for the work ahead is the connective tissue: the LinkedIn hub, the developer-community layer, and the intelligence that ties both back to deals.</p>
+    <p class="body">Here is Stigg's demand system on one board, mapped to the jobs a full motion does. The point is encouraging: the two hardest layers to stand up, making demand exist and having a real audience behind it, are already running. Create is live through the founder's content, and there is healthy warm traffic to work with. With the goal now clear, acquiring the named AI logos with quality attention, the center of gravity for the work ahead is the connective tissue: the LinkedIn account-based hub that aims at those accounts and converts the warm ecosystem, a targeted Google capture lane, and the intelligence layer that ties both back to deals.</p>
 
     <div class="eco-legend">
       <span><i class="bstart" style="background:var(--canopy)"></i>Start here</span>
@@ -1369,14 +1351,6 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
           <span class="eco-pips"><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span></span></div>
         <p class="body" style="margin:4px 0">Running well already. The founder publishes category-defining posts and the company has an engaged following.</p>
         <div class="why"><b>What we would run:</b> amplify the strongest existing posts with Thought Leader Ads. The content already exists, so there is no creative discovery phase, and it is the cheapest reach in the system.</div>
-      </div>
-
-      <div class="card tp">
-        <div class="chhead"><span class="clabel" style="color:var(--pink-text)">Developer reach</span><span class="ctitle">Reach the engineers where they are</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
-        <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
-          <span class="eco-pips"><span class="eco-pip on-pink"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
-        <p class="body" style="margin:4px 0">The self-serve goal, 150 paying customers, comes mostly from senior software engineers who never fill out a demo form. This is the layer that reaches them where they already are, and it is a third of the budget.</p>
-        <div class="why"><b>What we would run:</b> paid placement in AI and developer subreddits, developer newsletters like TLDR, Bytes, and Console, developer and AI podcasts, and YouTube plus AI-search. The demand-creation engine for the self-serve motion.</div>
       </div>
 
       <div class="card tb">
@@ -1430,18 +1404,13 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <section class="blk">
     <div class="secnum">HOW IT WORKS / THE METHOD</div>
     <h2 class="sec">One system, <em>with an order</em></h2>
-    <p class="body">We do not run channels as a menu. We run them as one system with two engines, each pointed at one of your goals. An enterprise engine, LinkedIn account-based marketing plus outbound, lands the 20 named logos. A self-serve engine, developer-native reach plus capture, brings the 150 paying customers. Each layer has a job, and each makes the next one cheaper. Here is what each does in Stigg's account, why LinkedIn looks expensive on its own but is not once the system is judged as a whole, and how the signals and revenue tie back to HubSpot.</p>
+    <p class="body">We do not run channels as a menu. We run them as one system with an order, aimed at acquiring the named AI accounts and converting the warm ecosystem you already have. Each layer has a job, and each makes the next one cheaper. Here is what each does in Stigg's account, why LinkedIn looks expensive on its own but is not once the system is judged as a whole, and how the signals and revenue tie back to HubSpot.</p>
 
     <div class="hiw-stack">
       <div class="card tl">
         <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Create</span><span class="ctitle">Make demand exist</span><span class="ctags">Thought Leader Ads / founder content</span></div>
         <p class="body" style="margin:6px 0">Stigg already has the hardest part of this: a founder who publishes a real category point of view. We amplify the strongest existing posts with Thought Leader Ads, which run the content that already exists, so there is no creative discovery phase and it is the cheapest reach in the system.</p>
         <div class="why"><b>Job in this account:</b> seed the top of the funnel and grow the retargeting pools cheaply, so every layer below has warm traffic to work with.</div>
-      </div>
-      <div class="card tp">
-        <div class="chhead"><span class="clabel" style="color:var(--pink-text)">Developer reach</span><span class="ctitle">Reach the engineers where they are</span><span class="ctags">Reddit / newsletters / podcasts / YouTube</span></div>
-        <p class="body" style="margin:6px 0">Your self-serve buyer is a senior software engineer who evaluates infrastructure by reading and building, not by filling out a demo form. We reach them in the places they already trust: AI and developer subreddits, developer newsletters like TLDR and Bytes, developer and AI podcasts, and YouTube plus AI-search. This is a third of the budget and the engine behind the 150 self-serve customers.</p>
-        <div class="why"><b>Job in this account:</b> create demand among the developers who become self-serve customers, and feed the same retargeting pools the enterprise motion draws on.</div>
       </div>
       <div class="card tb">
         <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Connect</span><span class="ctitle">Qualify and convert, the hub</span><span class="ctags">Retargeting / account-based / Matched Audiences</span></div>
@@ -1463,48 +1432,6 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <p class="body" style="margin:6px 0">When the signals say an account is leaning in, we hand it to signal-triggered LinkedIn and email outreach, with full context on what each prospect engaged with. This is where marketing hands sales a warm, named account instead of a cold list.</p>
         <div class="why"><b>Job in this account:</b> convert the accounts the ads warm up into conversations, the moment they are ready.</div>
       </div>
-    </div>
-  </section>
-
-  <section class="blk">
-    <div class="secnum">TWO ENGINES, ONE BUDGET</div>
-    <h2 class="sec">Your budget, <em>mapped to your goals</em></h2>
-    <p class="body">You shared two goals and a real budget, so here is how the money maps to them. The two engines share the same signal layer and retargeting pools, but each is pointed at a different outcome and measured on a different number.</p>
-
-    <div class="dm-lanes">
-      <div class="dm-lane ent">
-        <div class="goal">20 enterprise logos</div>
-        <div class="glbl">The enterprise engine / account-based plus outbound</div>
-        <ul>
-          <li>LinkedIn account-based marketing, Thought Leader and Document Ads on the named frontier-AI list</li>
-          <li>Sponsored Content and video to the buying committee</li>
-          <li>Signal-triggered outreach on the accounts the ads warm up</li>
-          <li>Retargeting and Lead Gen Forms to convert the engaged accounts</li>
-        </ul>
-      </div>
-      <div class="dm-lane self">
-        <div class="goal">150 self-serve customers</div>
-        <div class="glbl">The self-serve engine / developer-native inbound</div>
-        <ul>
-          <li>Developer community: subreddits, newsletters, podcasts, YouTube and AI-search</li>
-          <li>Google capture on the precise, high-intent search that exists</li>
-          <li>The founder's content, amplified with Thought Leader Ads</li>
-          <li>Retargeting the developers who engage, into a self-serve start</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">Where the money goes</h3>
-    <div class="dm-budget">
-      <div class="dm-brow"><div class="dm-blbl">LinkedIn</div><div class="dm-btrack"><div class="dm-bar" style="width:100%;background:var(--barblue)"></div></div><div class="dm-bamt">$66K &middot; 49%</div></div>
-      <div class="dm-brow"><div class="dm-blbl">Developer community</div><div class="dm-btrack"><div class="dm-bar" style="width:68%;background:var(--barpink)"></div></div><div class="dm-bamt">$45K &middot; 33%</div></div>
-      <div class="dm-brow"><div class="dm-blbl">Google</div><div class="dm-btrack"><div class="dm-bar" style="width:36%;background:var(--barterra)"></div></div><div class="dm-bamt">$24K &middot; 18%</div></div>
-    </div>
-    <figcaption>The three-month allocation you shared, roughly $135,000, ramping month over month. LinkedIn carries the enterprise engine, developer community carries the self-serve engine, and Google is the precise capture lane feeding both.</figcaption>
-
-    <div class="callout clay">
-      <div class="k">The Google budget, fully deployed</div>
-      <p>Your own keyword research tells an honest story: of 399,720 monthly searches in the file, only about 18,080 are actually your buyer, the rest is invoicing, accounting, medical, and telecom demand that shares the word "billing." That qualified pool is precise, but it is deep enough to run a real five-campaign motion, category, vendor, competitor displacement, and the adjacent subscription category, which deploys the full Google budget on a ramp to about $10,000 a month by Month 3. Google stays a capture and conquest lane rather than a demand engine, and every non-converting click still feeds the retargeting pools the other two engines draw on.</p>
     </div>
   </section>
 
@@ -1605,7 +1532,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 
     <h3 class="sub">What we report, and what we would not promise</h3>
     <p class="body">Each layer has its own honest measure: reach and engaged accounts for Create, qualified reach and cost per qualified lead for Connect, search capture and landing-page conversion for Capture, and influenced pipeline and closed-won for the whole system. What we would not claim is full econometric marketing-mix modeling; that is a specialist discipline, usually run in-house or with a dedicated analytics partner. And every number rests on the conversion capture underneath it, which is why the events get defined and verified in week one, before anything spends.</p>
-    <div class="callout blue"><div class="k">Two clocks, read differently</div><p>The two engines move at different speeds, so we read them differently. The self-serve engine shows results fast: sign-ups and self-serve starts inside the first weeks. The enterprise engine is slower, so its first sixty days are read on account penetration, persona reach, and repeat engagement across the named list, the leading indicators that show the motion working while the 20 logos form, not booked calls alone.</p></div>
+    <div class="callout blue"><div class="k">Two clocks, read differently</div><p>The motion runs on two clocks. The warm ecosystem and in-market search convert fast, so their first weeks are read on booked demos and conversions. The named-account acquisition is slower, so its first sixty days are read on account penetration, persona reach, and repeat engagement across the list, the leading indicators that show the motion working while the logos form, not booked calls alone.</p></div>
   </section>
 </div>
 </section>
@@ -1615,125 +1542,106 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <section class="blk">
     <div class="secnum">PATHS FORWARD / FIT</div>
     <h2 class="sec">Where we fit, <em>and where to start</em></h2>
-    <p class="body">Before the options, the honest read on fit. Stigg is a strong fit for how we work, for a specific reason: the two hardest things to stand up are already here. You make demand exist and you run real channels. That means the engagement is not a rebuild, it is connective tissue, which is the fastest kind of work to show a return on.</p>
+    <p class="body">Before the options, the honest read on fit. Stigg is a strong fit for how we work, for a specific reason: the two hardest things to stand up are already here. You make demand exist through the founder's voice and a real organic audience, and you run on HubSpot. That means the engagement is not a rebuild, it is connective tissue: aim the spend at the named AI accounts, convert the warm ecosystem you already have, and wire it all back to deals.</p>
 
     <div class="pf-fitgrid">
-      <div class="card tl">
-        <h4>The demand exists</h4>
-        <div style="font-size:14px;color:var(--ink);margin-top:6px">A founder with a real category voice and a site with real traffic. We amplify what works rather than starting content from zero.</div>
-      </div>
       <div class="card tb">
-        <h4>The channels are live</h4>
-        <div style="font-size:14px;color:var(--ink);margin-top:6px">LinkedIn and Google already run. The work is structuring them into one qualifying-and-capturing motion, not launching from scratch.</div>
+        <h4>Acquire the named logos</h4>
+        <div style="font-size:14px;color:var(--ink);margin-top:6px">The priority is intentional acquisition of specific AI accounts, reached with quality attention and tracked by account movement long before a lead appears.</div>
+      </div>
+      <div class="card tl">
+        <h4>Convert the warm ecosystem</h4>
+        <div style="font-size:14px;color:var(--ink);margin-top:6px">Roughly 5,000 to 7,000 monthly visitors and 5,000 company-page followers, filtered to the ideal customer profile, are the fastest path to early return while the account-based motion builds.</div>
       </div>
       <div class="card">
-        <h4>The CRM is in place</h4>
-        <div style="font-size:14px;color:var(--ink);margin-top:6px">HubSpot is the foundation for the attribution you asked about. We wire it so the ads tie back to influenced pipeline and closed-won.</div>
+        <h4>Prove it back to the CRM</h4>
+        <div style="font-size:14px;color:var(--ink);margin-top:6px">HubSpot stays the inbound system of record. We wire it to DemandSense so ad exposure, engagement, and account journeys tie back to real deals for the sales team.</div>
       </div>
     </div>
-    <div class="callout"><div class="k">What we aim at</div><p>Two goals, two engines, one budget. The enterprise engine, LinkedIn account-based marketing plus outbound, is pointed at the 20 named logos. The self-serve engine, developer-native reach plus capture, is pointed at the 150 paying customers. We run Google lean and precise where the qualified search actually is, and move the overflow into the developer and content layers where the self-serve demand is created.</p></div>
+    <div class="callout"><div class="k">What we aim at</div><p>One goal, run on two clocks. The long clock is intentional acquisition of the named AI accounts, which builds awareness and engagement over a quarter or more before it converts. The short clock is the warm ecosystem and the in-market search traffic, which we convert now for early wins. Paid search stays targeted and high-intent, so people already looking can reach you, rather than a broad spray. A complimentary conversion-rate audit is included so the demos actually land.</p></div>
   </section>
 
   <section class="blk">
     <div class="secnum">THE OPTIONS</div>
-    <h2 class="sec">Three ways in, <em>built to expand</em></h2>
-    <p class="body">Each option is aimed at one motion and earns the next. Start small, prove it, and grow into the full system from strength. The recommended entry matches your center of gravity and answers the attribution question directly.</p>
+    <h2 class="sec">Two ways in, <em>built to expand</em></h2>
+    <p class="body">Both options run the same acquisition engine, LinkedIn account-based marketing plus retargeting and targeted Google capture, with the full signal and attribution layer underneath. The difference is the trust layer on top: whether Stigg runs its own thought leadership or we run it for you. Management fee is always separate from ad spend, and either option carries up to $30,000 a month in combined media.</p>
 
     <div class="pmscroll">
     <table class="pm">
       <tr>
         <td class="rowlbl"></td>
         <td>
-          <div class="ohead">The enterprise engine</div>
-          <div class="per" style="margin:4px 0 8px">Option 1 / the 20 logos first</div>
-          <!-- CONFIRM FEE: Option 1 -->
-          <div class="price">Scoped</div><div class="per">fee confirmed on your call</div>
+          <div class="ohead">LinkedIn and Google</div>
+          <div class="per" style="margin:4px 0 8px">Option 1 / the acquisition engine</div>
+          <div class="price">$4,500</div><div class="per">per month, management fee</div>
           <a class="btn ghost" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">Talk it through</a>
         </td>
         <td class="rec">
           <span class="recpill">Recommended for Stigg</span>
-          <div class="ohead">Both engines</div>
-          <div class="per" style="margin:4px 0 8px;color:rgba(216,212,200,.7)">Option 2 / matches your budget and goals</div>
-          <!-- CONFIRM FEE: Option 2 -->
-          <div class="price">Scoped</div><div class="per" style="color:rgba(216,212,200,.7)">fee confirmed on your call</div>
+          <div class="ohead">LinkedIn, Google and Thought Leadership</div>
+          <div class="per" style="margin:4px 0 8px;color:rgba(216,212,200,.7)">Option 2 / the engine plus the trust layer</div>
+          <div class="price">$6,000</div><div class="per" style="color:rgba(216,212,200,.7)">per month, management fee</div>
           <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">Start here</a>
         </td>
-        <td>
-          <div class="ohead">The connected system</div>
-          <div class="per" style="margin:4px 0 8px">Option 3 / the full picture</div>
-          <!-- CONFIRM FEE: Option 3 -->
-          <div class="price">Scoped</div><div class="per">fee confirmed on your call</div>
-          <a class="btn ghost" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">See the horizon</a>
-        </td>
       </tr>
       <tr>
-        <td class="rowlbl">What it targets</td>
-        <td><span class="ck">&#10003;</span> The 20 enterprise logos</td>
-        <td class="rectint"><span class="ck">&#10003;</span> The 20 logos and the 150 self-serve customers</td>
-        <td><span class="ck">&#10003;</span> Both goals, run at full scale</td>
+        <td class="rowlbl">Ad spend</td>
+        <td><span class="ck">&#10003;</span> Up to $30,000/mo across LinkedIn and Google</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Up to $30,000/mo across LinkedIn and Google</td>
       </tr>
       <tr>
-        <td class="rowlbl">The channels</td>
-        <td><span class="ck">&#10003;</span> LinkedIn account-based and retargeting</td>
-        <td class="rectint"><span class="ck">&#10003;</span> LinkedIn, Google, and developer community</td>
-        <td><span class="ck">&#10003;</span> Plus Meta and programmatic air cover</td>
+        <td class="rowlbl">Named-account acquisition</td>
+        <td><span class="ck">&#10003;</span> LinkedIn account-based marketing on the named AI list</td>
+        <td class="rectint"><span class="ck">&#10003;</span> LinkedIn account-based marketing on the named AI list</td>
       </tr>
       <tr>
-        <td class="rowlbl">Developer community (self-serve)</td>
-        <td><span class="cx">&#8212;</span> Not in this option</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Reddit, newsletters, podcasts, YouTube</td>
-        <td><span class="ck">&#10003;</span> Full developer program</td>
+        <td class="rowlbl">Warm-audience conversion</td>
+        <td><span class="ck">&#10003;</span> Retargeting site visitors and page followers, filtered to fit</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Retargeting site visitors and page followers, filtered to fit</td>
       </tr>
       <tr>
-        <td class="rowlbl">Create (content)</td>
-        <td><span class="ck">&#10003;</span> Thought Leader Ads on existing posts</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Thought Leader Ads on existing posts</td>
-        <td><span class="ck">&#10003;</span> Full content engine, monthly interviews fanned out</td>
+        <td class="rowlbl">Targeted paid search</td>
+        <td><span class="ck">&#10003;</span> High-intent capture and select conquest</td>
+        <td class="rectint"><span class="ck">&#10003;</span> High-intent capture and select conquest</td>
       </tr>
       <tr>
-        <td class="rowlbl">Named-account motion</td>
-        <td><span class="ck">&#10003;</span> The frontier-AI list, account-based</td>
-        <td class="rectint"><span class="ck">&#10003;</span> The frontier-AI list, account-based</td>
-        <td><span class="ck">&#10003;</span> Account-based plus air cover</td>
+        <td class="rowlbl">Thought leadership content</td>
+        <td><span class="cx">&#8212;</span> You run it in-house</td>
+        <td class="rectint"><span class="ck">&#10003;</span> Full monthly program, produced and distributed</td>
       </tr>
       <tr>
-        <td class="rowlbl">Signals and Intelligence</td>
-        <td><span class="ck">&#10003;</span> Five-source signals</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Signals, Web ID, CRM sync, influenced revenue</td>
-        <td><span class="ck">&#10003;</span> Full stack, plus CAPI and person-level Web ID</td>
+        <td class="rowlbl">Signals and attribution</td>
+        <td><span class="ck">&#10003;</span> DemandSense, HubSpot sync, influenced revenue, account movement</td>
+        <td class="rectint"><span class="ck">&#10003;</span> DemandSense, HubSpot sync, influenced revenue, account movement</td>
       </tr>
       <tr>
-        <td class="rowlbl">Activate (outreach)</td>
-        <td class="rectint"><span class="cp">&#9683;</span> Begins as signals fire</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Signal-triggered LinkedIn and email</td>
-        <td><span class="ck">&#10003;</span> Signal-triggered LinkedIn and email</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Team</td>
-        <td>Strategist plus execution pod</td>
-        <td class="rectint">The pod running both engines as one motion</td>
-        <td>Dedicated senior strategist and full pod</td>
+        <td class="rowlbl">Website Visitor ID</td>
+        <td><span class="ck">&#10003;</span> Included for the first 90 days</td>
+        <td class="rectint"><span class="ck">&#10003;</span> 90 days included, plus 500 credits added</td>
       </tr>
       <tr>
         <td class="rowlbl">Reporting</td>
-        <td>Quarterly diagnostic Impact Report</td>
-        <td class="rectint">Cross-channel, anchored in influenced revenue</td>
-        <td>Board-grade, with a quarterly business review</td>
+        <td>60-day impact report, campaigns by persona, CRO audit</td>
+        <td class="rectint">60-day impact report, campaigns by persona, CRO audit</td>
       </tr>
       <tr>
         <td class="rowlbl">Why it fits Stigg</td>
-        <td>Prove the enterprise engine and attribution before adding the self-serve reach</td>
-        <td class="rectint">Runs both engines you have budgeted for, and answers attribution</td>
-        <td>The scaled version to grow into once both engines are proven</td>
+        <td>The full acquisition engine at the lightest fee, if content stays in-house</td>
+        <td class="rectint">Adds the trust layer that converts the warm mid-funnel, the fastest way to rise above the noise</td>
       </tr>
     </table>
     </div>
 
-    <div class="freebar">The free Demand Plan is already delivered and stays free. The white space, targeting, and motion design in this room are yours to keep, whichever path you choose.</div>
+    <div class="callout blue" style="margin-top:16px">
+      <div class="k">What the thought leadership program includes, each month</div>
+      <p>One subject-matter interview with the founder or team, one long-form video for YouTube, eight short clips for YouTube and social, twelve personal LinkedIn posts and eight company-page posts, and one newsletter or blog. Produced and distributed by us, fed straight into the retargeting funnel so the content does double duty as demand and as trust.</p>
+    </div>
+
+    <div class="freebar">The free Demand Plan is already delivered and stays free. The white space, targeting, Google plan, and motion design in this room are yours to keep, whichever path you choose.</div>
 
     <div class="callout blue" style="margin-top:18px">
       <div class="k">Our recommendation</div>
-      <p>Start at <b>Option 2</b>. It runs both engines your budget already funds: the enterprise motion for the 20 logos and the developer-native self-serve motion for the 150 customers, wired to HubSpot so you see what influenced pipeline. <b>Option 1</b> is the tighter start if you want the enterprise engine and attribution proven before the self-serve reach turns on. <b>Option 3</b> is the scaled version to grow into. Every option assumes the week-one measurement wiring, since none of the reporting is trustworthy without it.</p>
+      <p>Start at <b>Option 2</b>. For a 0-to-1 brand that needs to rise above Metronome and Orb, thought leadership is not a nice-to-have, it is the layer that humanizes the brand and builds trust in the mid-funnel before the stronger calls to action land. It also means the founder's point of view, your sharpest asset, gets distributed rather than sitting idle. <b>Option 1</b> is the right call if Stigg keeps content in-house and wants us focused purely on the paid acquisition engine. Both assume the week-one measurement wiring, since none of the reporting is trustworthy without it.</p>
     </div>
   </section>
 
@@ -1745,8 +1653,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="card tl pf-proof">
         <div class="n">20X</div>
         <h4 style="margin-top:6px">HeyReach</h4>
-        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">Product-led SaaS with a founder on camera and strong organic. 13x return on ad spend and 158 customers, by activating warm traffic instead of buying cheap sign-ups that churn.</div>
-        <div class="why"><b>Why this one for you:</b> the closest analog to Stigg, a product-led company with a founder voice and real warm traffic, turned into pipeline.</div>
+        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A software company with a founder on camera and strong organic traffic. 13x return on ad spend and 158 customers, by activating warm traffic and layering thought leadership rather than buying cold clicks.</div>
+        <div class="why"><b>Why this one for you:</b> the closest analog to Stigg, a founder voice and real warm traffic turned into pipeline, which is exactly the Option 2 motion.</div>
       </div>
       <div class="card tb pf-proof">
         <div class="n">21x</div>
@@ -1754,11 +1662,11 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A 21.11x return on ad spend, $389K closed-won, and $805K in pipeline in ninety days, with the results tied back to revenue rather than clicks.</div>
         <div class="why"><b>Why this one for you:</b> this is the influenced-revenue answer to "did the ads bring deals," proven in an AI software company with the same attribution question.</div>
       </div>
-      <div class="card tt pf-proof">
+      <div class="card tc pf-proof">
         <div class="n">$111</div>
         <h4 style="margin-top:6px">Kong</h4>
         <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A developer-infrastructure company where cost per lead fell from roughly $1,000 to $111 and the account-based motion built $663K in pipeline across multiple regions.</div>
-        <div class="why"><b>Why this one for you:</b> the enterprise-logo analog, an API and developer-infrastructure company where account-based marketing landed named accounts efficiently at scale.</div>
+        <div class="why"><b>Why this one for you:</b> the named-logo analog, an API and developer-infrastructure company where account-based marketing landed named accounts efficiently at scale.</div>
       </div>
     </div>
   </section>
@@ -1766,7 +1674,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <section class="blk" style="border-bottom:none">
     <div class="ctablock dark-panel">
       <h2>Let's pick the <em>starting point</em>.</h2>
-      <p>Book a call and we will scope the right path with you, confirm the fee, and set the week-one measurement plan. No pitch.</p>
+      <p>Book a call and we will confirm the path, agree the named-account list, and set the week-one measurement plan. No pitch.</p>
       <div class="btnrow">
         <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
         <button class="btn ghost" data-goto="overview">Back to the overview</button>
