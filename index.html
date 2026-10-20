@@ -540,6 +540,142 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .mo-line{font-size:13.5px;color:var(--chalk);margin-top:6px}.mo-line b{color:var(--ink)}
 .mo-img{font-family:var(--body);font-weight:800;font-size:15px;line-height:1.25;color:var(--ink);text-transform:uppercase;letter-spacing:.01em}
 </style>
+<style id="targeting-v2">
+/* targeting v2 (t2-), additive */
+.t2-chip{display:inline-block;font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--tint);color:var(--ink);margin:3px 5px 3px 0;line-height:1.35}
+.t2-note{font-size:14px;color:var(--ink);margin-top:14px;max-width:900px}
+.t2-sum{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.t2-sum>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14.5px;color:var(--ink)}
+.t2-sum span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-text);margin-bottom:6px;font-weight:700}
+.t2-ladder{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.t2-rung{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.t2-rbar{width:var(--w);min-width:300px;max-width:100%;background:var(--c);color:#001122;border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.t2-rn{font-family:var(--disp);font-size:30px;line-height:1}
+.t2-rt{flex:1;min-width:0}.t2-rt b{display:block;font-size:16px}.t2-rt i{font-style:normal;font-size:13px}
+.t2-rm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.t2-badge{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,17,34,.12);padding:3px 8px;border-radius:999px;font-weight:700}
+.t2-cpl{font-family:var(--mono);font-size:12px;font-weight:700;white-space:nowrap}
+.t2-rd{padding:0 4px 4px 4px}.t2-rd p{font-size:13.5px;color:var(--muted);margin-top:2px}
+.t2-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 16px}
+.t2-stats>div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:12px;padding:16px}
+.t2-stats b{display:block;font-family:var(--disp);font-size:40px;line-height:1;color:var(--ink)}.t2-stats span{display:block;font-size:14px;color:var(--ink);margin-top:6px}.t2-stats i{font-style:normal;font-size:12px;color:var(--muted)}
+.t2-filters{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;padding:18px 20px}
+.t2-fh{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-text);font-weight:700;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.t2-fh span{color:var(--muted)}
+.t2-frow{display:grid;grid-template-columns:140px 1fr;gap:10px;align-items:start;padding:6px 0;border-top:1px dashed var(--line)}
+.t2-frow>span{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:6px}
+.t2-limit{font-size:13.5px;color:var(--ink);margin-top:10px}
+.t2-kd{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+.t2-keep,.t2-drop{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.t2-keep{border-top:4px solid var(--teal)}.t2-drop{border-top:4px solid var(--rust)}
+.t2-keep h4,.t2-drop h4{font-size:15px;margin-bottom:8px;color:var(--ink)}
+.t2-k{padding:8px 0 8px 26px;border-top:1px dashed var(--line);font-size:14px;position:relative;color:var(--ink)}
+.t2-k::before{content:'✓';position:absolute;left:2px;color:var(--teal-text);font-weight:800}.t2-k b{display:block}
+.t2-d{padding:8px 0 8px 26px;border-top:1px dashed var(--line);font-size:14px;position:relative;color:var(--ink)}
+.t2-d::before{content:'✕';position:absolute;left:3px;color:var(--rust-text);font-weight:800}
+.t2-eq{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1.1fr;gap:10px;align-items:stretch}
+.t2-eqc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.t2-eqh b{display:block;font-family:var(--disp);font-size:26px;text-transform:uppercase;line-height:1;color:var(--ink)}.t2-eqh span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-text)}
+.t2-eqi{font-size:13.5px;padding:6px 0;border-top:1px dashed var(--line);color:var(--ink)}
+.t2-op{display:flex;align-items:center;font-family:var(--disp);font-size:34px;color:var(--teal-text)}
+.t2-eqr{background:#001122;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:center}
+.t2-eqr span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#00C4B3}
+.t2-eqr p{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.35;color:#F5F5F5;margin-top:6px}
+.t2-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.t2-callout{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:0 12px 12px 0;padding:14px 18px;font-size:14.5px;color:var(--ink)}
+.t2-callout.warn{border-left-color:#F4A261}
+.t2-dq{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--rust);border-radius:0 12px 12px 0;padding:14px 18px;font-size:14px;color:var(--ink)}
+.t2-dq b{display:block;margin-bottom:4px}.t2-dq div{padding:3px 0}
+.t2-pg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.t2-p{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;border-top:4px solid var(--blue)}
+.t2-p.pri{border-top-color:#00C4B3}
+.t2-tier{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--blue-text)}
+.t2-p.pri .t2-tier{color:var(--teal-text)}
+.t2-p h4{font-size:17px;margin:4px 0;color:var(--ink)}.t2-p>p{font-size:14px;color:var(--ink)}
+.t2-l{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:10px 0 2px}
+.t2-hg{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}
+.t2-h{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column}
+.t2-h.star{background:#001122;border-color:#0D2744}
+.t2-star{align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:#C6FF3D;color:#001122;padding:4px 10px;border-radius:999px;font-weight:700;margin-bottom:6px}
+.t2-htag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-text)}
+.t2-hn{font-family:var(--disp);font-size:28px;text-transform:uppercase;line-height:1;margin:6px 0;color:var(--ink)}
+.t2-hw{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.3;margin-bottom:10px;color:var(--ink)}
+.t2-hr{display:grid;grid-template-columns:78px 1fr;gap:8px;padding:5px 0;border-top:1px dashed var(--line);font-size:13px;color:var(--ink)}
+.t2-hr span{font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-top:2px}
+.t2-hk{margin-top:auto;padding-top:12px;font-weight:700;font-size:14.5px;color:var(--ink)}
+.t2-h.star .t2-htag{color:#00C4B3}.t2-h.star .t2-hn,.t2-h.star .t2-hw,.t2-h.star .t2-hr{color:#F5F5F5}.t2-h.star .t2-hr{border-color:rgba(255,255,255,.18)}
+.t2-h.star .t2-hr span{color:rgba(232,228,218,.72)}.t2-h.star .t2-hk{color:#C6FF3D}
+.t2-lg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.t2-lay{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-top:4px solid var(--blue);display:flex;flex-direction:column}
+.t2-lay.k-timing{border-top-color:#F4A261}.t2-lay.k-engagement{border-top-color:#C6FF3D}.t2-lay.k-core{border-top-color:#00C4B3}
+.t2-kind{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.t2-lay h4{font-size:16px;margin:4px 0;color:var(--ink)}.t2-lay p{font-size:13.5px;color:var(--ink)}
+.t2-ex{font-size:12.5px;color:var(--muted);margin-top:6px}
+.t2-lh{margin-top:auto;padding-top:10px;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--teal-text)}
+.t2-big{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.t2-big>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-top:4px solid #F4A261}
+.t2-big b{display:block;font-family:var(--disp);font-size:42px;line-height:1;color:var(--ink)}.t2-big span{font-size:13.5px;color:var(--ink)}
+.t2-bars{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.t2-bar{display:grid;grid-template-columns:280px 1fr 90px;gap:12px;align-items:center}
+.t2-bl{display:flex;align-items:center;gap:10px;min-width:0}.t2-bl b{font-size:14px;color:var(--ink)}
+.t2-bt{height:14px;background:var(--tint);border-radius:99px;overflow:hidden}.t2-bt i{display:block;height:100%;background:#F4A261;border-radius:99px}
+.t2-bv{font-family:var(--mono);font-size:12.5px;text-align:right;color:var(--ink)}
+.t2-pri{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--tint);color:var(--ink);border:1px solid var(--line);white-space:nowrap}
+.t2-pri.lead{background:#00C4B3;color:#001122;border-color:#00C4B3}
+.t2-cg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.t2-c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-top:4px solid var(--line)}
+.t2-c.lead{border-top-color:#00C4B3}
+.t2-ch b{display:block;font-size:16px;margin-top:6px;color:var(--ink)}.t2-ch em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.t2-c>p{font-size:13.5px;color:var(--ink);margin:8px 0}
+.t2-kwh,.t2-kw{display:grid;grid-template-columns:1fr 54px 92px;gap:8px;align-items:center;font-size:13px;padding:5px 0;border-top:1px dashed var(--line);color:var(--ink)}
+.t2-kwh{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-top:0}
+.t2-kwh b,.t2-kwh i{font-weight:400;font-style:normal;text-align:right}
+.t2-kw b{text-align:right;font-family:var(--mono)}.t2-kw i{font-style:normal;text-align:right;font-size:12px;color:var(--muted)}
+.t2-pg2{font-family:var(--mono);font-size:11px;color:var(--blue-text);margin-top:8px}
+.t2-det{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.t2-det summary{cursor:pointer;font-weight:700;color:var(--blue-text);font-size:14px}
+.t2-det .scroll{margin-top:12px;max-height:520px;overflow:auto}
+.t2-neg{margin-top:16px;font-size:14px;color:var(--ink)}.t2-neg b{margin-right:6px}
+.t2-sg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.t2-sgc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-top:4px solid #00C4B3}
+.t2-sgc.g-timing{border-top-color:#F4A261}.t2-sgc.g-intent{border-top-color:#0099D1}
+.t2-sgh b{display:block;font-family:var(--disp);font-size:28px;text-transform:uppercase;line-height:1;color:var(--ink)}.t2-sgh span{font-size:13.5px;color:var(--muted)}
+.t2-sgi{padding:10px 0;border-top:1px dashed var(--line);margin-top:8px}
+.t2-sgi b{font-size:14.5px;color:var(--ink)}.t2-sgi p{font-size:13.5px;color:var(--ink);margin:3px 0}.t2-sgi i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--blue-text)}
+.t2-flow{display:flex;align-items:stretch;gap:8px}
+.t2-fs{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.t2-fs span{display:inline-flex;width:26px;height:26px;border-radius:50%;background:#00C4B3;color:#001122;font-weight:800;align-items:center;justify-content:center;font-size:13px}
+.t2-fs b{display:block;margin:6px 0 2px;color:var(--ink)}.t2-fs p{font-size:13.5px;color:var(--ink)}
+.t2-arr{display:flex;align-items:center;font-size:22px;color:var(--teal-text)}
+@media(max-width:1000px){.t2-eq{grid-template-columns:1fr}.t2-op{justify-content:center;font-size:26px}.t2-lg{grid-template-columns:repeat(2,1fr)}.t2-cg{grid-template-columns:1fr 1fr}.t2-hg{grid-template-columns:1fr}}
+@media(max-width:760px){.t2-sum,.t2-stats,.t2-kd,.t2-two,.t2-pg,.t2-sg,.t2-cg,.t2-lg{grid-template-columns:1fr}.t2-big{grid-template-columns:1fr 1fr}.t2-bar{grid-template-columns:1fr 70px}.t2-bt{grid-column:1 / -1;order:3}.t2-frow{grid-template-columns:1fr}.t2-flow{flex-direction:column}.t2-arr{justify-content:center;transform:rotate(90deg)}.t2-rbar{min-width:0;width:100%!important;flex-wrap:wrap}.t2-rm{justify-content:flex-start}}
+.t2-blk{margin-top:10px}
+.t2-bh{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--blue-text);margin-bottom:2px}
+.t2-hr{grid-template-columns:96px 1fr}
+.t2-lim{margin-top:12px;font-size:13px;color:var(--ink);background:var(--tint);border-radius:8px;padding:9px 11px}
+.t2-msg{margin-top:12px;padding-top:12px;border-top:2px solid var(--line)}
+.t2-msg .t2-hk{margin-top:2px;padding-top:0}
+.t2-msg p{font-size:13px;color:var(--ink);margin-top:6px}
+.t2-alt{font-size:12.5px;color:var(--muted);margin-top:6px}
+.t2-h.star .t2-bh{color:#5BB8E0}.t2-h.star .t2-lim{background:rgba(255,255,255,.07);color:#F5F5F5}
+.t2-h.star .t2-msg{border-color:rgba(255,255,255,.2)}.t2-h.star .t2-msg p{color:rgba(232,228,218,.9)}.t2-h.star .t2-alt{color:rgba(232,228,218,.75)}
+@media(min-width:1001px){.t2-hg{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+/* v2.1 launch segments (Frugal Start) and search intent tags */
+.t2-lc{display:grid;grid-template-columns:1fr;gap:12px;margin-top:10px}
+.t2-ls{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.t2-ls.sat{border-top:4px solid var(--teal)}.t2-ls.slow{border-top:4px solid var(--blue)}
+.t2-lsh{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.t2-lt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--teal-text)}
+.t2-ls.slow .t2-lt{color:var(--blue-text)}
+.t2-lz{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink)}.t2-lz i{font-style:normal;font-weight:400;color:var(--muted)}
+.t2-ls h4{font-size:17px;margin:6px 0 4px;color:var(--ink)}
+.t2-lj{font-size:14px;color:var(--ink);margin-bottom:6px}
+.t2-ls .t2-hr{grid-template-columns:110px 1fr}
+.t2-lm{font-size:13px;color:var(--ink);margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.t2-int{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--blue-text);margin:4px 0}
+@media (min-width:900px){.t2-lc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+</style>
 <style id="brand-v3">
 /* ==========================================================================
    Impactable Brand v3 layer (brand_v3.css)
@@ -733,13 +869,13 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <div class="move" data-goto="messaging">
         <div class="mn">03 / MESSAGE AND OFFER</div>
         <div class="mt">What to say, and what to offer</div>
-        <div class="md">One idea in Stigg's own words, five ranked messages, and an offer at every stage, starting with what Stigg already has.</div>
+        <div class="md">One idea, five ranked messages, and an offer at every stage, starting with what Stigg already has.</div>
         <div class="arrow">See the message plan &rsaquo;</div>
       </div>
       <div class="move" data-goto="capture">
         <div class="mn">04 / CAPTURE</div>
         <div class="mt">The precise Google plan</div>
-        <div class="md">Built on your own keyword file: about 18,080 of 399,720 monthly searches are your buyer, so Google runs as a precise capture lane, five intent-separated campaigns funded to $10,000 a month, not a spend bucket.</div>
+        <div class="md">Built on your own keyword file: about 18,100 of 399,720 monthly searches are your buyer, so Google runs as a precise capture lane, five intent-separated campaigns funded to $10,000 a month, not a spend bucket.</div>
         <div class="arrow">See the Google plan &rsaquo;</div>
       </div>
       <div class="move" data-goto="ecosystem">
@@ -751,7 +887,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <div class="move" data-goto="howitworks">
         <div class="mn">06 / HOW IT WORKS</div>
         <div class="mt">How the system runs</div>
-        <div class="md">LinkedIn qualifies the traffic before spend, the signals compose into one account view, and the revenue wires back into HubSpot so you see influenced pipeline, not just clicks.</div>
+        <div class="md">Each channel's job, and what runs in each of the first 90 days: LinkedIn, thought leadership, Google, and the signals that show which accounts moved.</div>
         <div class="arrow">See the method &rsaquo;</div>
       </div>
       <div class="move" data-goto="agreed">
@@ -1090,7 +1226,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <div class="ws-uvp">
     <div class="q">Stigg is the real-time control layer that decides what each customer, user, or AI agent is allowed to use, and charges for it correctly, <em>without you building billing infrastructure</em>.</div>
   </div>
-  <p class="body">That is Stigg's own sentence, and every part of it is something a rival cannot claim in full. The after-the-fact tools cannot say <b>decides</b>. The billing suites cannot say <b>on top of the billing you already have</b>. And the in-house build cannot say <b>without building billing infrastructure</b>.</p>
+  <p class="body">Every part of it is something a rival cannot claim in full. The after-the-fact tools cannot say <b>decides</b>. The billing suites cannot say <b>on top of the billing you already have</b>. And the in-house build cannot say <b>without building billing infrastructure</b>.</p>
 </section>
 
 <!-- 7. PROBLEMS -->
@@ -1179,1103 +1315,21 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
 </section>
 </div>
 </section>
-<section class="view" id="targeting">
-<div class="twwrap">
-  <header class="tw-hero">
-    <div class="kicker">Audience Targeting / Source of Truth</div>
-    <h1 class="big">Who to target,<br>and every way to <em>reach them</em>.</h1>
-    <p class="lede">The single source of truth for who Stigg sells to and how we capture that audience. It starts in plain language, narrows from the whole market down to the beachhead, and translates every layer into the exact LinkedIn filters that build it, with honest sizes. Then the named plays to launch, how the same buyer shows up on search, and the signals that assemble the named accounts.</p>
-    <div class="metastrip">
-      <span>Ideal client profile</span><span>LinkedIn filters</span><span>October 2026</span>
-    </div>
-  </header>
+<section class="view" id="targeting"><div class="roomwrap"><section class="blk"><div class="kicker">Targeting | Who we reach, and how</div><h1 class="big">Who Stigg <em>should</em> reach</h1><p class="lede">How we think about audiences for Stigg: which ones come first, how we define the market, and the LinkedIn filters, search terms, and signals that reach the right buyers.</p><div class="t2-sum"><div><span>What they sell</span>A real-time layer that decides what every customer, user, and agent can use, and charges for it correctly, on top of the billing a company already runs.</div><div><span>Who buys</span>Engineering leaders and engineers at software companies that charge their own customers for AI usage.</div><div><span>Not a fit</span>Companies that use AI only internally, consumer products, and teams under 10 people.</div></div></section><section class="blk"><div class="secnum">01 | AUDIENCE PRIORITY</div><h2 class="sec">Warmest <em>first</em></h2><p class="body">Five kinds of audience, in the order we fund them. The closer an audience is to Stigg, the more efficiently it converts.</p><div class="t2-ladder"><div class="t2-rung" style="--w:56%;--c:#00C4B3"><div class="t2-rbar"><span class="t2-rn">1</span><div class="t2-rt"><b>First-party data</b><i>Accounts and people Stigg already knows</i></div><div class="t2-rm"><span class="t2-badge">Month 1, contacts in Month 2</span><span class="t2-cpl">$75 to $150</span></div></div><div class="t2-rd"><div><span class="t2-chip">Priority accounts (65)</span><span class="t2-chip">Secondary accounts (139)</span><span class="t2-chip">Pipeline and closed-lost deals in HubSpot</span><span class="t2-chip">Newsletter and email lists</span></div><p>Uploaded to LinkedIn as company and contact lists, and to Google Customer Match</p></div></div><div class="t2-rung" style="--w:67%;--c:#2FB8C9"><div class="t2-rbar"><span class="t2-rn">2</span><div class="t2-rt"><b>Digital audiences</b><i>People who have engaged with Stigg online</i></div><div class="t2-rm"><span class="t2-badge">Month 1</span><span class="t2-cpl">$120 to $250</span></div></div><div class="t2-rd"><div><span class="t2-chip">stigg.io visitors, 90 and 180 days</span><span class="t2-chip">Pricing and docs page visitors</span><span class="t2-chip">After Tokens registrants</span><span class="t2-chip">Ad, video, and Dor&#x27;s post engagers</span></div><p>LinkedIn retargeting filtered to engineering roles, plus Spotlight</p></div></div><div class="t2-rung" style="--w:78%;--c:#F4A261"><div class="t2-rbar"><span class="t2-rn">3</span><div class="t2-rt"><b>In-market search traffic</b><i>Buyers searching right now</i></div><div class="t2-rm"><span class="t2-badge">Month 1</span><span class="t2-cpl">Capture</span></div></div><div class="t2-rd"><div><span class="t2-chip">stripe usage based billing</span><span class="t2-chip">entitlement management software</span><span class="t2-chip">metronome alternatives</span><span class="t2-chip">usage based billing software</span></div><p>Google Search, five campaigns separated by intent</p></div></div><div class="t2-rung" style="--w:89%;--c:#FFD166"><div class="t2-rbar"><span class="t2-rn">4</span><div class="t2-rt"><b>Signal-built company lists</b><i>Accounts built from signals that say now</i></div><div class="t2-rm"><span class="t2-badge">Month 2</span><span class="t2-cpl">$250 to $400</span></div></div><div class="t2-rd"><div><span class="t2-chip">Hiring billing or platform engineers</span><span class="t2-chip">New engineering leader</span><span class="t2-chip">Moving to credits or usage pricing</span><span class="t2-chip">Verified to charge for AI usage</span></div><p>Built in Clay, uploaded as company lists</p></div></div><div class="t2-rung" style="--w:100%;--c:#0099D1"><div class="t2-rbar"><span class="t2-rn">5</span><div class="t2-rt"><b>Native platform audiences</b><i>The right engineers who do not know Stigg yet</i></div><div class="t2-rm"><span class="t2-badge">Month 1</span><span class="t2-cpl">$300 to $600+</span></div></div><div class="t2-rd"><div><span class="t2-chip">Engineering leaders</span><span class="t2-chip">Engineers</span><span class="t2-chip">Leaders at fast-growing companies</span><span class="t2-chip">Frequent contributors</span></div><p>LinkedIn filters on the named accounts, four campaigns</p></div></div></div><p class="t2-note">Warmest first. Each tier earns budget only once the tier above it is working. Cost bands are benchmarks from Impactable&#x27;s B2B accounts, not a forecast.</p></section><section class="blk"><div class="secnum">02 | TOTAL ADDRESSABLE MARKET</div><h2 class="sec">The whole <em>market</em></h2><p class="body">Every software company with a customer-facing AI feature: everyone who could one day need to meter, limit, and charge for AI usage.</p><div class="t2-stats"><div><b>204</b><span>Named accounts on Stigg&#x27;s two lists</span><i>Stigg</i></div><div><b>18,100</b><span>Monthly searches in the qualified keyword set</span><i>Impactable Google research</i></div></div><div class="t2-filters"><div class="t2-fh">LinkedIn filters for this layer <span>Estimate after build</span></div><div class="t2-frow"><span>Industries</span><div><span class="t2-chip">Software Development</span><span class="t2-chip">Technology‚ Information and Internet</span><span class="t2-chip">IT Services and IT Consulting</span></div></div><div class="t2-frow"><span>Company Size</span><div><span class="t2-chip">11 employees and up</span></div></div><div class="t2-frow"><span>Job Function</span><div><span class="t2-chip">Engineering</span><span class="t2-chip">Information Technology</span><span class="t2-chip">Product Management</span></div></div><div class="t2-frow"><span>Locations</span><div><span class="t2-chip">United States</span><span class="t2-chip">Central Europe</span><span class="t2-chip">Israel</span></div></div><p class="t2-limit"><b>The limit:</b> LinkedIn cannot see whether a company charges its customers for AI usage, so this layer is far wider than the real market. It is a sizing base, never a launch audience.</p></div></section><section class="blk"><div class="secnum">03 | SERVICEABLE MARKET</div><h2 class="sec">What Stigg can <em>win and serve</em></h2><p class="body">The part of that market Stigg can win and serve today.</p><div class="t2-kd"><div class="t2-keep"><h4>We keep</h4><div class="t2-k"><b>Where</b>United States first; Central Europe and Israel later as tests; English only</div><div class="t2-k"><b>Product</b>Charges its own customers for AI usage: credits, tokens, per request, or overages</div><div class="t2-k"><b>Size</b>51 to 10,000 employees first; 11 to 50 and 10,001 and up second</div><div class="t2-k"><b>Buyer</b>An engineering-led purchase, Senior through VP</div></div><div class="t2-drop"><h4>We leave out</h4><div class="t2-d">Companies that use AI only internally</div><div class="t2-d">Consumer products</div><div class="t2-d">Teams of 10 people or fewer</div><div class="t2-d">Current Stigg customers and competitors</div></div></div><p class="t2-note">Size: Estimate after build in Campaign Manager. Charging customers for AI usage is the real qualifier. LinkedIn cannot filter on it, so the named lists carry it, and account-by-account verification will sharpen them.</p></section><section class="blk"><div class="secnum">04 | IDEAL CLIENT PROFILE</div><h2 class="sec">Right company, charges for AI, <em>right moment</em></h2><p class="body">The right company, charging its customers for AI usage, at the moment its current approach stops keeping up.</p><div class="t2-eq"><div class="t2-eqc"><div class="t2-eqh"><b>Fit</b><span>LinkedIn filters</span></div><div class="t2-eqi">Engineering, Senior through VP</div><div class="t2-eqi">51 to 10,000 employees</div><div class="t2-eqi">Software and internet companies</div><div class="t2-eqi">United States</div></div><div class="t2-op">+</div><div class="t2-eqc"><div class="t2-eqh"><b>Usage</b><span>Category signal</span></div><div class="t2-eqi">Customer-facing AI feature</div><div class="t2-eqi">Credits or tokens on the pricing page</div><div class="t2-eqi">Usage or overage charges</div><div class="t2-eqi">Runs Stripe, Zuora, or another biller</div></div><div class="t2-op">+</div><div class="t2-eqc"><div class="t2-eqh"><b>Timing</b><span>Buying signal</span></div><div class="t2-eqi">In-house build hitting a wall</div><div class="t2-eqi">New pricing model on a deadline</div><div class="t2-eqi">Enterprise customers asking to see usage</div><div class="t2-eqi">Agents running up costs</div></div><div class="t2-op">=</div><div class="t2-eqr dark-panel"><span>Ideal client</span><p>A VP of Engineering at a 600-person software company that just launched AI credits on Stripe and is hiring a billing engineer.</p></div></div><div class="t2-two"><div class="t2-callout"><b>Where we start:</b> Start with the 204 named accounts: AI-native and frontier software companies where agents spend money on their own and pricing is being built now.</div><div class="t2-dq"><b>Not a fit, even with a good title</b><div>Uses AI internally and charges nothing for it</div><div>Consumer product</div><div>Locked into a billing contract that already enforces limits</div><div>10 people or fewer</div></div></div></section><section class="blk"><div class="secnum">05 | LINKEDIN AUDIENCES</div><h2 class="sec">The buyers, the segments, and the <em>filters</em></h2><p class="body">LinkedIn has no free-text title field. We reach each buyer through Job Function plus Seniority plus standardized titles, then sharpen with Member Skills.</p><h3 class="sub">The buying committee</h3><div class="t2-pg"><div class="t2-p pri"><span class="t2-tier">Primary</span><h4>Engineering leader</h4><p>Owns the build-or-buy decision</p><span class="t2-l">Titles</span><div><span class="t2-chip">VP of Engineering</span><span class="t2-chip">Director of Engineering</span><span class="t2-chip">Head of Platform</span></div><span class="t2-l">Skills to layer</span><div><span class="t2-chip">Platform Engineering</span><span class="t2-chip">Distributed Systems</span><span class="t2-chip">Software Architecture</span></div></div><div class="t2-p pri"><span class="t2-tier">Primary</span><h4>AI and platform engineer</h4><p>Feels agent costs and usage questions first; the inside champion</p><span class="t2-l">Titles</span><div><span class="t2-chip">AI Engineer</span><span class="t2-chip">Machine Learning Engineer</span><span class="t2-chip">Staff Software Engineer</span><span class="t2-chip">Senior Backend Engineer</span></div><span class="t2-l">Skills to layer</span><div><span class="t2-chip">Machine Learning</span><span class="t2-chip">Large Language Models</span><span class="t2-chip">API Development</span></div></div><div class="t2-p "><span class="t2-tier">Secondary</span><h4>Founder or CEO</h4><p>Signs at smaller companies; reached from Month 2</p><span class="t2-l">Titles</span><div><span class="t2-chip">Founder</span><span class="t2-chip">Co-founder</span><span class="t2-chip">CEO</span><span class="t2-chip">CTO</span></div><span class="t2-l">Skills to layer</span><div><span class="t2-chip">Reached only at accounts whose engineers have engaged</span></div></div><div class="t2-p "><span class="t2-tier">Secondary</span><h4>Finance and revenue operations</h4><p>Feels margin and billing accuracy</p><span class="t2-l">Titles</span><div><span class="t2-chip">VP Finance</span><span class="t2-chip">Head of Revenue Operations</span><span class="t2-chip">Head of Pricing</span></div><span class="t2-l">Skills to layer</span><div><span class="t2-chip">Reached through retargeting, not cold campaigns</span></div></div></div><p class="t2-note">Also in the room: product leaders who own pricing, security and procurement, and the current billing vendor. They are answered with proof, not targeted with cold ads.</p><h3 class="sub">Three segments to lead with</h3><p class="body">Each segment is defined only by what we can filter in LinkedIn or detect in data, and named for how it is built.</p><div class="t2-hg"><div class="t2-h star dark-panel"><span class=t2-star>Start here</span><span class="t2-htag">Company lists and LinkedIn filters, launch now</span><div class="t2-hn">Engineering leaders at the named accounts</div><p class="t2-hw">Directors and VPs in engineering at the 204 companies on Stigg&#x27;s two lists.</p><div class="t2-blk"><div class="t2-bh">LinkedIn filters</div><div class="t2-hr"><span>Company lists</span><div>Stigg priority (65) and secondary (139)</div></div><div class="t2-hr"><span>Job Function</span><div>Engineering</div></div><div class="t2-hr"><span>Seniority</span><div>Director, VP</div></div><div class="t2-hr"><span>Location</span><div>United States</div></div></div><div class="t2-blk"><div class="t2-bh">Data or signal</div><div class="t2-hr"><span>List</span><div>Stigg&#x27;s priority and secondary account files, uploaded as company lists</div></div></div><div class="t2-lim"><b>What this cannot tell us:</b> Whether each company charges its customers for AI usage today. That is verified account by account.</div></div><div class="t2-h"><span class="t2-htag">Company lists and LinkedIn filters, launch now</span><div class="t2-hn">Engineering leaders at fast-growing named accounts</div><p class="t2-hw">The same leaders, at named companies growing 10 percent or more.</p><div class="t2-blk"><div class="t2-bh">LinkedIn filters</div><div class="t2-hr"><span>Company lists</span><div>Stigg priority and secondary</div></div><div class="t2-hr"><span>Job Function</span><div>Engineering</div></div><div class="t2-hr"><span>Seniority</span><div>Director, VP</div></div><div class="t2-hr"><span>Company Growth Rate</span><div>10 percent and above</div></div></div><div class="t2-blk"><div class="t2-bh">Data or signal</div><div class="t2-hr"><span>List</span><div>Stigg&#x27;s two account files</div></div></div><div class="t2-lim"><b>What this cannot tell us:</b> Why the company is growing. Growth is a sign of momentum, not proof of a pricing change.</div></div><div class="t2-h"><span class="t2-htag">Signal list, expansion</span><div class="t2-hn">AI companies hiring billing or platform engineers</div><p class="t2-hw">Engineers and their leaders at companies hiring for billing, monetization, or usage metering.</p><div class="t2-blk"><div class="t2-bh">LinkedIn filters</div><div class="t2-hr"><span>Job Function</span><div>Engineering</div></div><div class="t2-hr"><span>Seniority</span><div>Senior, Manager, Director, VP</div></div><div class="t2-hr"><span>Location</span><div>United States</div></div></div><div class="t2-blk"><div class="t2-bh">Data or signal</div><div class="t2-hr"><span>Signal</span><div>Open job posts for billing, monetization, or usage-metering roles, via Clay, refreshed monthly</div></div><div class="t2-hr"><span>Optional list</span><div>Accounts verified to charge for AI usage, once the verification logic is approved</div></div></div><div class="t2-lim"><b>What this cannot tell us:</b> Whether the current build is struggling. A job post shows the work exists, not that it is stuck.</div></div></div><h3 class="sub">How we launch: pockets first, one slow burn</h3><p class="body">All four cold campaigns run on Stigg&#x27;s two named lists, one buyer slice each. Three are small pockets sized to activate inside 90 days; engineers is the broadest and burns slowly to fill the warm audience.</p><p class="t2-note"><b>Sized for:</b> The Month 1 LinkedIn budget at a $70 to $120 CPM. Sizes show what each budget can saturate until Campaign Manager confirms the matched counts.</p><div class="t2-lc"><div class="t2-ls sat"><div class="t2-lsh"><span class="t2-lt">Saturation</span><span class="t2-lz">About 1,500 to 2,500 <i>inferred</i></span></div><h4>Engineering leaders</h4><p class="t2-lj">Reach the people who own the build-or-buy decision often enough to act.</p><div class="t2-hr"><span>Build</span><div>Company lists, Engineering, Director and VP; excludes fast growth and Frequent Contributors</div></div><div class="t2-hr"><span>Monthly budget</span><div>$500 to $1,200</div></div><div class="t2-lm"><b>The math:</b> 2,000 members x 65% reach x 20 impressions over 90 days: about 8,700 impressions a month, $600 to $1,040.</div></div><div class="t2-ls sat"><div class="t2-lsh"><span class="t2-lt">Saturation</span><span class="t2-lz">About 1,000 to 2,000 <i>inferred</i></span></div><h4>Leaders at fast-growing companies</h4><p class="t2-lj">Reach named accounts where growth means pricing is changing.</p><div class="t2-hr"><span>Build</span><div>Company lists, Engineering, Director and VP, Company Growth Rate 10% and above</div></div><div class="t2-hr"><span>Monthly budget</span><div>$400 to $1,000</div></div><div class="t2-lm"><b>The math:</b> 1,500 members x 65% reach x 20 impressions over 90 days: about 6,500 impressions a month, $455 to $780.</div></div><div class="t2-ls sat"><div class="t2-lsh"><span class="t2-lt">Saturation</span><span class="t2-lz">About 1,000 to 2,000 <i>inferred</i></span></div><h4>Frequent contributors</h4><p class="t2-lj">Reach the engineers most likely to engage in public.</p><div class="t2-hr"><span>Build</span><div>Company lists, Engineering, Senior to VP, Frequent Contributors</div></div><div class="t2-hr"><span>Monthly budget</span><div>$400 to $1,000</div></div><div class="t2-lm"><b>The math:</b> 1,500 members x 65% reach x 20 impressions over 90 days: about 6,500 impressions a month, $455 to $780.</div></div><div class="t2-ls slow"><div class="t2-lsh"><span class="t2-lt">Slow Burn</span><span class="t2-lz">Estimate after build <i>inferred</i></span></div><h4>Engineers</h4><p class="t2-lj">Reach the wider engineering bench and feed the warm audience.</p><div class="t2-hr"><span>Build</span><div>Company lists, Engineering, Senior and Manager; excludes Frequent Contributors</div></div><div class="t2-hr"><span>Monthly budget</span><div>$1,500 to $3,000</div></div><div class="t2-lm"><b>The math:</b> Judged on reach, CPM, and warm-audience growth, never on cost per lead. Above about 10,000 members it splits into one campaign per list.</div></div></div><p class="t2-note">Spotlight retargeting runs at about $500 a month once the warm audience passes 300 people.</p><p class="t2-note">No broader native campaign at launch: the named accounts take the first budget, and a wider audience opens only once these four earn it.</p><p class="t2-note">If budget tightens: Spotlight first, then engineering leaders, then the other pockets, then engineers.</p><h3 class="sub">Filters that sharpen any segment</h3><p class="body">Each one narrows an audience to people with a reason to act now.</p><div class="t2-lg"><div class="t2-lay k-core"><span class="t2-kind">core</span><h4>Member Skills</h4><p>Reaches the work a person does</p><div class="t2-ex">Machine Learning, Large Language Models, API Development</div></div><div class="t2-lay k-timing"><span class="t2-kind">timing</span><h4>Recently Promoted</h4><p>New leaders reviewing what they inherited</p><div class="t2-ex">On the leader campaigns</div></div><div class="t2-lay k-timing"><span class="t2-kind">timing</span><h4>New in Position</h4><p>Changed companies in the last 90 days</p><div class="t2-ex">Sales Navigator list, uploaded</div></div><div class="t2-lay k-engagement"><span class="t2-kind">engagement</span><h4>Frequent Contributors</h4><p>People who post and comment in public</p><div class="t2-ex">The fourth cold campaign</div></div><div class="t2-lay k-engagement"><span class="t2-kind">engagement</span><h4>Member Interests</h4><p>Engaging with AI topics now</p><div class="t2-ex">Artificial Intelligence, Machine Learning</div></div><div class="t2-lay k-engagement"><span class="t2-kind">engagement</span><h4>Member Groups</h4><p>Members of practitioner communities</p><div class="t2-ex">AI engineering and SaaS pricing groups</div></div><div class="t2-lay k-timing"><span class="t2-kind">timing</span><h4>Company Growth Rate</h4><p>A sign of momentum, not of a pricing change</p><div class="t2-ex">10 percent and above</div></div><div class="t2-lay k-core"><span class="t2-kind">core</span><h4>Years of Experience</h4><p>Keeps engineer audiences senior</p><div class="t2-ex">5 years and up</div></div></div><p class="t2-note">Layers are AND filters, so we add one or two at a time and re-size. Interests and traits work with company lists, but not with contact lists or website retargeting. Skills and interests refine an audience; they never lead it.</p></section><section class="blk"><div class="secnum">06 | PAID SEARCH</div><h2 class="sec">Buyers already <em>searching</em> for what Stigg does</h2><p class="body">Real U.S. monthly volumes from Impactable&#x27;s Google team research. Costs per click are confirmed from the first weeks of live data.</p><div class="t2-big"><div><b>18,100</b><span>searches a month</span></div><div><b>86</b><span>high-intent keywords</span></div><div><b>5</b><span>campaigns, one need each</span></div></div><div class="t2-bars"><div class="t2-bar"><div class="t2-bl"><span class="t2-pri lead">Lead 1</span><b>Billing Platform &amp; Entitlements</b></div><div class="t2-bt"><i style="width:26.2%"></i></div><div class="t2-bv">2,050/mo</div></div><div class="t2-bar"><div class="t2-bl"><span class="t2-pri lead">Lead 2</span><b>Competitors</b></div><div class="t2-bt"><i style="width:100.0%"></i></div><div class="t2-bv">7,810/mo</div></div><div class="t2-bar"><div class="t2-bl"><span class="t2-pri lead">Lead 3</span><b>Usage-Based Billing</b></div><div class="t2-bt"><i style="width:19.5%"></i></div><div class="t2-bv">1,520/mo</div></div><div class="t2-bar"><div class="t2-bl"><span class="t2-pri">Supporting</span><b>Subscription &amp; Recurring Billing</b></div><div class="t2-bt"><i style="width:79.9%"></i></div><div class="t2-bv">6,240/mo</div></div><div class="t2-bar"><div class="t2-bl"><span class="t2-pri">Supporting</span><b>Brand</b></div><div class="t2-bt"><i style="width:6.1%"></i></div><div class="t2-bv">480/mo</div></div></div><p class="t2-note"><b>Why this order:</b> Purchase intent leads: a team choosing a billing platform or making Stripe bill by usage is already a buyer. Competitor searches run alongside on manual bids, planned on about 2,060 in-market searches rather than the navigational volume on zuora. Category terms come third; the broad subscription campaign runs capped with the heaviest negatives; brand is always on.</p><div class="t2-cg"><div class="t2-c lead"><div class="t2-ch"><span class="t2-pri lead">Lead 1</span><b>Billing Platform &amp; Entitlements</b><span class="t2-int">Purchase intent</span><em>2,050 searches/mo · 21 keywords</em></div><p>Teams choosing a billing platform, and Stripe users trying to make it bill by usage</p><div class="t2-kwh"><span>Example search</span><b>Per month</b><i>Est. cost per click</i></div><div class="t2-kw"><span>subscription billing software</span><b>320</b><i>&nbsp;</i></div><div class="t2-kw"><span>stripe usage based billing</span><b>320</b><i>&nbsp;</i></div><div class="t2-kw"><span>subscription billing platform</span><b>210</b><i>&nbsp;</i></div><div class="t2-kw"><span>saas billing</span><b>210</b><i>&nbsp;</i></div><div class="t2-pg2">Lands on A new positioning page, a new Stigg plus Stripe page, and the entitlements page</div></div><div class="t2-c lead"><div class="t2-ch"><span class="t2-pri lead">Lead 2</span><b>Competitors</b><span class="t2-int">Conquest</span><em>7,810 searches/mo · 18 keywords</em></div><p>Buyers comparing or leaving Metronome, Orb, and Zuora</p><div class="t2-kwh"><span>Example search</span><b>Per month</b><i>Est. cost per click</i></div><div class="t2-kw"><span>zuora</span><b>5,400</b><i>&nbsp;</i></div><div class="t2-kw"><span>metronome billing</span><b>480</b><i>&nbsp;</i></div><div class="t2-kw"><span>orb billing</span><b>390</b><i>&nbsp;</i></div><div class="t2-kw"><span>zuora billing</span><b>320</b><i>&nbsp;</i></div><div class="t2-pg2">Lands on Stigg&#x27;s comparison page for each rival</div></div><div class="t2-c lead"><div class="t2-ch"><span class="t2-pri lead">Lead 3</span><b>Usage-Based Billing</b><span class="t2-int">Category</span><em>1,520 searches/mo · 26 keywords</em></div><p>Teams deciding how to meter and bill usage</p><div class="t2-kwh"><span>Example search</span><b>Per month</b><i>Est. cost per click</i></div><div class="t2-kw"><span>usage based billing</span><b>260</b><i>&nbsp;</i></div><div class="t2-kw"><span>usage based pricing</span><b>210</b><i>&nbsp;</i></div><div class="t2-kw"><span>usage based billing software</span><b>140</b><i>&nbsp;</i></div><div class="t2-kw"><span>consumption based pricing</span><b>110</b><i>&nbsp;</i></div><div class="t2-pg2">Lands on The metering, entitlements, and AI credits pages</div></div><div class="t2-c"><div class="t2-ch"><span class="t2-pri">Supporting</span><b>Subscription &amp; Recurring Billing</b><span class="t2-int">Category</span><em>6,240 searches/mo · 20 keywords</em></div><p>The broader billing-software market, on a capped budget</p><div class="t2-kwh"><span>Example search</span><b>Per month</b><i>Est. cost per click</i></div><div class="t2-kw"><span>stripe subscription</span><b>1,300</b><i>&nbsp;</i></div><div class="t2-kw"><span>billing software</span><b>880</b><i>&nbsp;</i></div><div class="t2-kw"><span>billing platform</span><b>590</b><i>&nbsp;</i></div><div class="t2-kw"><span>subscription management software</span><b>590</b><i>&nbsp;</i></div><div class="t2-pg2">Lands on A new positioning page and the Stigg plus Stripe page</div></div><div class="t2-c"><div class="t2-ch"><span class="t2-pri">Supporting</span><b>Brand</b><span class="t2-int">Brand</span><em>480 searches/mo · 1 keywords</em></div><p>People searching for Stigg by name</p><div class="t2-kwh"><span>Example search</span><b>Per month</b><i>Est. cost per click</i></div><div class="t2-kw"><span>stigg</span><b>480</b><i>$1 to $3</i></div><div class="t2-pg2">Lands on stigg.io</div></div></div><div class="t2-two"><div class="t2-callout"><b>The bridge to LinkedIn:</b> Everyone who clicks and does not convert is retargeted on LinkedIn, filtered to engineering roles at fit companies. Geography: United States, Google Search only.</div></div><details class="t2-det"><summary>Show all 86 keywords</summary><div class="scroll"><table class="ftable"><tr><th>Campaign</th><th>Ad group</th><th>Keyword</th><th>Match</th><th>Searches/mo</th></tr><tr><td>Brand</td><td>Brand</td><td>stigg</td><td>Exact</td><td>480</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage based billing</td><td>Phrase</td><td>260</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage based billing software</td><td>Phrase</td><td>140</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage based billing platform</td><td>Phrase</td><td>90</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage billing</td><td>Phrase</td><td>50</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage billing software</td><td>Phrase</td><td>30</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage based billing saas</td><td>Phrase</td><td>30</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Billing Software</td><td>usage based billing system</td><td>Phrase</td><td>10</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based pricing</td><td>Phrase</td><td>210</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based pricing models</td><td>Phrase</td><td>90</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based pricing saas</td><td>Phrase</td><td>50</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based saas pricing</td><td>Phrase</td><td>10</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based subscription model</td><td>Phrase</td><td>10</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based pricing companies</td><td>Phrase</td><td>10</td></tr><tr><td>Usage-Based Billing</td><td>Usage-Based Pricing</td><td>usage based saas</td><td>Phrase</td><td>10</td></tr><tr><td>Usage-Based Billing</td><td>Metered Billing</td><td>metered billing</td><td>Phrase</td><td>70</td></tr><tr><td>Usage-Based Billing</td><td>Metered Billing</td><td>metered pricing</td><td>Phrase</td><td>70</td></tr><tr><td>Usage-Based Billing</td><td>Metered Billing</td><td>metered billing software</td><td>Phrase</td><td>40</td></tr><tr><td>Usage-Based Billing</td><td>Metered Billing</td><td>billing and metering</td><td>Phrase</td><td>40</td></tr><tr><td>Usage-Based Billing</td><td>Metered Billing</td><td>metering billing</td><td>Phrase</td><td>30</td></tr><tr><td>Usage-Based Billing</td><td>Metered Billing</td><td>metered usage</td><td>Phrase</td><td>30</td></tr><tr><td>Usage-Based Billing</td><td>Consumption-Based Billing</td><td>consumption based pricing</td><td>Phrase</td><td>110</td></tr><tr><td>Usage-Based Billing</td><td>Consumption-Based Billing</td><td>consumption pricing</td><td>Phrase</td><td>40</td></tr><tr><td>Usage-Based Billing</td><td>Consumption-Based Billing</td><td>consumption based pricing model</td><td>Phrase</td><td>40</td></tr><tr><td>Usage-Based Billing</td><td>Consumption-Based Billing</td><td>consumption based billing</td><td>Phrase</td><td>30</td></tr><tr><td>Usage-Based Billing</td><td>Consumption-Based Billing</td><td>consumption based pricing saas</td><td>Phrase</td><td>10</td></tr><tr><td>Usage-Based Billing</td><td>Consumption-Based Billing</td><td>consumption based billing software</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>subscription billing software</td><td>Phrase</td><td>320</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>subscription billing platform</td><td>Phrase</td><td>210</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>saas billing</td><td>Phrase</td><td>210</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>billing api</td><td>Phrase</td><td>170</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>saas billing software</td><td>Phrase</td><td>140</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>billing system software</td><td>Phrase</td><td>140</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Billing Platform Selection</td><td>ai billing software</td><td>Phrase</td><td>110</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>stripe usage based billing</td><td>Phrase</td><td>320</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>stripe metered billing</td><td>Phrase</td><td>110</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>usage based billing stripe</td><td>Phrase</td><td>50</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>stripe usage based pricing</td><td>Phrase</td><td>20</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>stripe metered subscription</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>stripe metered usage</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Stripe Usage Billing</td><td>stripe checkout metered billing</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>entitlement management systems</td><td>Phrase</td><td>90</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>entitlement management software</td><td>Phrase</td><td>70</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>entitlement management solutions</td><td>Phrase</td><td>20</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>entitlement management software vendors</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>saas entitlement management</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>entitlements api</td><td>Phrase</td><td>10</td></tr><tr><td>Billing Platform &amp; Entitlements</td><td>Entitlement Management</td><td>entitlements software</td><td>Phrase</td><td>10</td></tr><tr><td>Competitors</td><td>Zuora</td><td>chargebee usage based billing</td><td>Phrase</td><td>20</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora</td><td>Phrase</td><td>5,400</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora billing</td><td>Phrase</td><td>320</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora inc</td><td>Phrase</td><td>210</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora software</td><td>Phrase</td><td>70</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora competitors</td><td>Phrase</td><td>70</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora subscription</td><td>Phrase</td><td>50</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora pricing</td><td>Phrase</td><td>30</td></tr><tr><td>Competitors</td><td>Zuora</td><td>zuora alternatives</td><td>Phrase</td><td>30</td></tr><tr><td>Competitors</td><td>Metronome</td><td>metronome billing</td><td>Phrase</td><td>480</td></tr><tr><td>Competitors</td><td>Metronome</td><td>metronome pricing</td><td>Phrase</td><td>260</td></tr><tr><td>Competitors</td><td>Metronome</td><td>metronome usage based billing</td><td>Phrase</td><td>70</td></tr><tr><td>Competitors</td><td>Metronome</td><td>metronome saas</td><td>Phrase</td><td>50</td></tr><tr><td>Competitors</td><td>Metronome</td><td>metronome competitors</td><td>Phrase</td><td>30</td></tr><tr><td>Competitors</td><td>Metronome</td><td>metronome alternatives</td><td>Phrase</td><td>20</td></tr><tr><td>Competitors</td><td>Orb</td><td>orb billing</td><td>Phrase</td><td>390</td></tr><tr><td>Competitors</td><td>Orb</td><td>withorb</td><td>Phrase</td><td>260</td></tr><tr><td>Competitors</td><td>Orb</td><td>orb usage based billing</td><td>Phrase</td><td>50</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>billing software</td><td>Phrase</td><td>880</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>billing platform</td><td>Phrase</td><td>590</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>automatic billing software</td><td>Phrase</td><td>320</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>billing system</td><td>Phrase</td><td>210</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>billing solutions</td><td>Phrase</td><td>210</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>automated billing system</td><td>Phrase</td><td>170</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>billing management software</td><td>Phrase</td><td>140</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Billing Platform</td><td>cloud billing software</td><td>Phrase</td><td>140</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>subscription management software</td><td>Phrase</td><td>590</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>subscription payments</td><td>Phrase</td><td>590</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>recurring billing software</td><td>Phrase</td><td>320</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>subscription billing</td><td>Phrase</td><td>210</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>enterprise billing software</td><td>Phrase</td><td>50</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>b2b billing software</td><td>Phrase</td><td>20</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>recurring billing platforms</td><td>Phrase</td><td>20</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Subscription Billing &amp; Management</td><td>subscription payment platform</td><td>Phrase</td><td>20</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Stripe Subscription</td><td>stripe subscription</td><td>Phrase</td><td>1,300</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Stripe Subscription</td><td>stripe subscription management</td><td>Phrase</td><td>320</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Stripe Subscription</td><td>stripe automatic payments</td><td>Phrase</td><td>90</td></tr><tr><td>Subscription &amp; Recurring Billing</td><td>Stripe Subscription</td><td>stripe subscription payments</td><td>Phrase</td><td>50</td></tr></table></div></details><div class="t2-neg"><b>Blocked from day one:</b> <span class="t2-chip">metronome music, seiko metronome (music)</span><span class="t2-chip">zuora login, zuora support (existing users)</span><span class="t2-chip">invoice software, quickbooks (invoicing and accounting)</span><span class="t2-chip">medical, legal, and utility billing</span><span class="t2-chip">usage pricing (telecom and cloud data)</span><span class="t2-chip">jobs, salary (job seekers)</span><span class="t2-chip">free</span></div></section><section class="blk"><div class="secnum">07 | THIRD-PARTY SIGNALS</div><h2 class="sec">Lists built on <em>reasons to buy</em></h2><p class="body">Fit says an account could buy. Timing and intent say it is looking now. The best lists combine both.</p><p class="t2-note">Stigg already runs RB2B, Common Room, and HubSpot. We use them; we do not resell them. DemandSense and 90 days of Web ID are part of the engagement.</p><div class="t2-sg"><div class="t2-sgc g-fit"><div class="t2-sgh"><b>Fit</b><span>Is this the right company?</span></div><div class="t2-sgi"><b>Charges for AI usage</b><p>Credits, tokens, per-request, or overage pricing on the company&#x27;s own pricing page</p><i>Pricing pages, verified account by account</i></div><div class="t2-sgi"><b>AI product in market</b><p>A customer-facing AI feature, not internal use only</p><i>Product pages and launch news</i></div><div class="t2-sgi"><b>Billing stack</b><p>Stripe, Zuora, or another biller detected on the site</p><i>BuiltWith via Clay</i></div></div><div class="t2-sgc g-timing"><div class="t2-sgh"><b>Timing</b><span>Is something changing right now?</span></div><div class="t2-sgi"><b>Hiring billing or platform engineers</b><p>An open role in billing, monetization, or usage metering</p><i>Job posts via Clay</i></div><div class="t2-sgi"><b>New engineering leader</b><p>A new VP or Director of Engineering reviewing what they inherited</p><i>Sales Navigator alerts, Clay</i></div><div class="t2-sgi"><b>Pricing change</b><p>A move to credits or usage pricing, announced or underway</p><i>Launch news and pricing pages</i></div><div class="t2-sgi"><b>New funding</b><p>New capital often comes with a new pricing push</p><i>Crunchbase</i></div></div><div class="t2-sgc g-intent"><div class="t2-sgh"><b>Intent</b><span>Are they paying attention?</span></div><div class="t2-sgi"><b>On the Stigg site</b><p>Named accounts on pricing, docs, and product pages</p><i>DemandSense, Web ID, RB2B, Insight Tag</i></div><div class="t2-sgi"><b>Engaging with the category</b><p>Engaging with Dor&#x27;s posts or competitor content</p><i>Common Room, LinkedIn Company Hub</i></div><div class="t2-sgi"><b>HubSpot history</b><p>Pipeline, closed-lost deals, and past evaluations</p><i>HubSpot</i></div></div></div><h3 class="sub">How a signal becomes an audience</h3><div class="t2-flow"><div class="t2-fs"><span>1</span><b>Build</b><p>Pull the signal list in Clay</p></div><div class="t2-arr">→</div><div class="t2-fs"><span>2</span><b>Combine</b><p>Add the accounts DemandSense, RB2B, and Common Room already flag</p></div><div class="t2-arr">→</div><div class="t2-fs"><span>3</span><b>Upload</b><p>LinkedIn company list and Google Customer Match</p></div><div class="t2-arr">→</div><div class="t2-fs"><span>4</span><b>Refresh</b><p>Hiring and leader lists monthly; site and HubSpot signals live</p></div></div><div class="t2-neg"><b>Never paid to reach:</b> <span class="t2-chip">Current Stigg customers</span><span class="t2-chip">Stigg employees</span><span class="t2-chip">Competitors: Metronome, Orb, Chargebee, Schematic, Paid, Credyt</span><span class="t2-chip">Job seekers</span><span class="t2-chip">Students and trainees</span><span class="t2-chip">Entry-level roles</span><span class="t2-chip">Executives on cold campaigns (reached from Month 2)</span><span class="t2-chip">Proposed: WRITER, World Labs, Waymo, Viz.ai</span></div></section><script type="application/json" id="icp-source-of-truth">{"client": "Stigg", "version": "3.0", "date": "2026-10-20", "changelog": "Version 3.0: rebuilt on the October 6 onboarding, the October 19 sync, Stigg's two account files, and the Google team's keyword research. Launch campaigns typed and sized to the Month 1 budget.", "inputs": ["Strategy call (September 8)", "Stigg's intake form", "Onboarding call (October 6)", "Sync call (October 19)", "Stigg's priority and secondary account files", "Impactable Google team keyword research", "LinkedIn Help Center targeting rules (checked October 2026)"], "summary": {"sells": "A real-time layer that decides what every customer, user, and agent can use, and charges for it correctly, on top of the billing a company already runs.", "buys": "Engineering leaders and engineers at software companies that charge their own customers for AI usage.", "not_fit": "Companies that use AI only internally, consumer products, and teams under 10 people."}, "priority": [{"n": 1, "name": "First-party data", "what": "Accounts and people Stigg already knows", "mav": ["Priority accounts (65)", "Secondary accounts (139)", "Pipeline and closed-lost deals in HubSpot", "Newsletter and email lists"], "how": "Uploaded to LinkedIn as company and contact lists, and to Google Customer Match", "cpl": "$75 to $150", "when": "Month 1, contacts in Month 2"}, {"n": 2, "name": "Digital audiences", "what": "People who have engaged with Stigg online", "mav": ["stigg.io visitors, 90 and 180 days", "Pricing and docs page visitors", "After Tokens registrants", "Ad, video, and Dor's post engagers"], "how": "LinkedIn retargeting filtered to engineering roles, plus Spotlight", "cpl": "$120 to $250", "when": "Month 1"}, {"n": 3, "name": "In-market search traffic", "what": "Buyers searching right now", "mav": ["stripe usage based billing", "entitlement management software", "metronome alternatives", "usage based billing software"], "how": "Google Search, five campaigns separated by intent", "cpl": "Capture", "when": "Month 1"}, {"n": 4, "name": "Signal-built company lists", "what": "Accounts built from signals that say now", "mav": ["Hiring billing or platform engineers", "New engineering leader", "Moving to credits or usage pricing", "Verified to charge for AI usage"], "how": "Built in Clay, uploaded as company lists", "cpl": "$250 to $400", "when": "Month 2"}, {"n": 5, "name": "Native platform audiences", "what": "The right engineers who do not know Stigg yet", "mav": ["Engineering leaders", "Engineers", "Leaders at fast-growing companies", "Frequent contributors"], "how": "LinkedIn filters on the named accounts, four campaigns", "cpl": "$300 to $600+", "when": "Month 1"}], "priority_note": "Warmest first. Each tier earns budget only once the tier above it is working. Cost bands are benchmarks from Impactable's B2B accounts, not a forecast.", "tam": {"line": "Every software company with a customer-facing AI feature: everyone who could one day need to meter, limit, and charge for AI usage.", "stats": [["204", "Named accounts on Stigg's two lists", "Stigg"], ["18,100", "Monthly searches in the qualified keyword set", "Impactable Google research"]], "filters": [["Industries", "Software Development, Technology\u201a Information and Internet, IT Services and IT Consulting"], ["Company Size", "11 employees and up"], ["Job Function", "Engineering, Information Technology, Product Management"], ["Locations", "United States, Central Europe, Israel"]], "size": "Estimate after build", "limit": "LinkedIn cannot see whether a company charges its customers for AI usage, so this layer is far wider than the real market. It is a sizing base, never a launch audience."}, "sam": {"line": "The part of that market Stigg can win and serve today.", "keep": [["Where", "United States first; Central Europe and Israel later as tests; English only"], ["Product", "Charges its own customers for AI usage: credits, tokens, per request, or overages"], ["Size", "51 to 10,000 employees first; 11 to 50 and 10,001 and up second"], ["Buyer", "An engineering-led purchase, Senior through VP"]], "drop": ["Companies that use AI only internally", "Consumer products", "Teams of 10 people or fewer", "Current Stigg customers and competitors"], "size": "Estimate after build"}, "sam_note": "Charging customers for AI usage is the real qualifier. LinkedIn cannot filter on it, so the named lists carry it, and account-by-account verification will sharpen them.", "icp_title": "Right company, charges for AI, <em>right moment<\/em>", "icp": {"line": "The right company, charging its customers for AI usage, at the moment its current approach stops keeping up.", "parts": [{"k": "Fit", "sub": "LinkedIn filters", "items": ["Engineering, Senior through VP", "51 to 10,000 employees", "Software and internet companies", "United States"]}, {"k": "Usage", "sub": "Category signal", "items": ["Customer-facing AI feature", "Credits or tokens on the pricing page", "Usage or overage charges", "Runs Stripe, Zuora, or another biller"]}, {"k": "Timing", "sub": "Buying signal", "items": ["In-house build hitting a wall", "New pricing model on a deadline", "Enterprise customers asking to see usage", "Agents running up costs"]}], "result": "A VP of Engineering at a 600-person software company that just launched AI credits on Stripe and is hiring a billing engineer.", "beachhead": "Start with the 204 named accounts: AI-native and frontier software companies where agents spend money on their own and pricing is being built now.", "disq": ["Uses AI internally and charges nothing for it", "Consumer product", "Locked into a billing contract that already enforces limits", "10 people or fewer"]}, "personas": [{"name": "Engineering leader", "tier": "Primary", "role": "Owns the build-or-buy decision", "titles": ["VP of Engineering", "Director of Engineering", "Head of Platform"], "skills": ["Platform Engineering", "Distributed Systems", "Software Architecture"]}, {"name": "AI and platform engineer", "tier": "Primary", "role": "Feels agent costs and usage questions first; the inside champion", "titles": ["AI Engineer", "Machine Learning Engineer", "Staff Software Engineer", "Senior Backend Engineer"], "skills": ["Machine Learning", "Large Language Models", "API Development"]}, {"name": "Founder or CEO", "tier": "Secondary", "role": "Signs at smaller companies; reached from Month 2", "titles": ["Founder", "Co-founder", "CEO", "CTO"], "skills": ["Reached only at accounts whose engineers have engaged"]}, {"name": "Finance and revenue operations", "tier": "Secondary", "role": "Feels margin and billing accuracy", "titles": ["VP Finance", "Head of Revenue Operations", "Head of Pricing"], "skills": ["Reached through retargeting, not cold campaigns"]}], "influencers": "Also in the room: product leaders who own pricing, security and procurement, and the current billing vendor. They are answered with proof, not targeted with cold ads.", "heroes_intro": "Each segment is defined only by what we can filter in LinkedIn or detect in data, and named for how it is built.", "heroes": [{"star": true, "name": "Engineering leaders at the named accounts", "who": "Directors and VPs in engineering at the 204 companies on Stigg's two lists.", "tag": "Company lists and LinkedIn filters, launch now", "li": [["Company lists", "Stigg priority (65) and secondary (139)"], ["Job Function", "Engineering"], ["Seniority", "Director, VP"], ["Location", "United States"]], "data": [["List", "Stigg's priority and secondary account files, uploaded as company lists"]], "not_tell": "Whether each company charges its customers for AI usage today. That is verified account by account."}, {"star": false, "name": "Engineering leaders at fast-growing named accounts", "who": "The same leaders, at named companies growing 10 percent or more.", "tag": "Company lists and LinkedIn filters, launch now", "li": [["Company lists", "Stigg priority and secondary"], ["Job Function", "Engineering"], ["Seniority", "Director, VP"], ["Company Growth Rate", "10 percent and above"]], "data": [["List", "Stigg's two account files"]], "not_tell": "Why the company is growing. Growth is a sign of momentum, not proof of a pricing change."}, {"star": false, "name": "AI companies hiring billing or platform engineers", "who": "Engineers and their leaders at companies hiring for billing, monetization, or usage metering.", "tag": "Signal list, expansion", "li": [["Job Function", "Engineering"], ["Seniority", "Senior, Manager, Director, VP"], ["Location", "United States"]], "data": [["Signal", "Open job posts for billing, monetization, or usage-metering roles, via Clay, refreshed monthly"], ["Optional list", "Accounts verified to charge for AI usage, once the verification logic is approved"]], "not_tell": "Whether the current build is struggling. A job post shows the work exists, not that it is stuck."}], "launch": {"intro": "All four cold campaigns run on Stigg's two named lists, one buyer slice each. Three are small pockets sized to activate inside 90 days; engineers is the broadest and burns slowly to fill the warm audience.", "basis": "The Month 1 LinkedIn budget at a $70 to $120 CPM. Sizes show what each budget can saturate until Campaign Manager confirms the matched counts.", "segments": [{"name": "Engineering leaders", "type": "Saturation", "job": "Reach the people who own the build-or-buy decision often enough to act.", "recipe": "Company lists, Engineering, Director and VP; excludes fast growth and Frequent Contributors", "size": "About 1,500 to 2,500", "size_status": "inferred", "budget": "$500 to $1,200", "math": "2,000 members x 65% reach x 20 impressions over 90 days: about 8,700 impressions a month, $600 to $1,040."}, {"name": "Leaders at fast-growing companies", "type": "Saturation", "job": "Reach named accounts where growth means pricing is changing.", "recipe": "Company lists, Engineering, Director and VP, Company Growth Rate 10% and above", "size": "About 1,000 to 2,000", "size_status": "inferred", "budget": "$400 to $1,000", "math": "1,500 members x 65% reach x 20 impressions over 90 days: about 6,500 impressions a month, $455 to $780."}, {"name": "Frequent contributors", "type": "Saturation", "job": "Reach the engineers most likely to engage in public.", "recipe": "Company lists, Engineering, Senior to VP, Frequent Contributors", "size": "About 1,000 to 2,000", "size_status": "inferred", "budget": "$400 to $1,000", "math": "1,500 members x 65% reach x 20 impressions over 90 days: about 6,500 impressions a month, $455 to $780."}, {"name": "Engineers", "type": "Slow Burn", "job": "Reach the wider engineering bench and feed the warm audience.", "recipe": "Company lists, Engineering, Senior and Manager; excludes Frequent Contributors", "size": "Estimate after build", "size_status": "inferred", "budget": "$1,500 to $3,000", "math": "Judged on reach, CPM, and warm-audience growth, never on cost per lead. Above about 10,000 members it splits into one campaign per list."}], "notes": ["Spotlight retargeting runs at about $500 a month once the warm audience passes 300 people.", "No broader native campaign at launch: the named accounts take the first budget, and a wider audience opens only once these four earn it.", "If budget tightens: Spotlight first, then engineering leaders, then the other pockets, then engineers."]}, "layers": [{"name": "Member Skills", "does": "Reaches the work a person does", "ex": "Machine Learning, Large Language Models, API Development", "hook": "", "kind": "core"}, {"name": "Recently Promoted", "does": "New leaders reviewing what they inherited", "ex": "On the leader campaigns", "hook": "", "kind": "timing"}, {"name": "New in Position", "does": "Changed companies in the last 90 days", "ex": "Sales Navigator list, uploaded", "hook": "", "kind": "timing"}, {"name": "Frequent Contributors", "does": "People who post and comment in public", "ex": "The fourth cold campaign", "hook": "", "kind": "engagement"}, {"name": "Member Interests", "does": "Engaging with AI topics now", "ex": "Artificial Intelligence, Machine Learning", "hook": "", "kind": "engagement"}, {"name": "Member Groups", "does": "Members of practitioner communities", "ex": "AI engineering and SaaS pricing groups", "hook": "", "kind": "engagement"}, {"name": "Company Growth Rate", "does": "A sign of momentum, not of a pricing change", "ex": "10 percent and above", "hook": "", "kind": "timing"}, {"name": "Years of Experience", "does": "Keeps engineer audiences senior", "ex": "5 years and up", "hook": "", "kind": "core"}], "layer_rules": "Layers are AND filters, so we add one or two at a time and re-size. Interests and traits work with company lists, but not with contact lists or website retargeting. Skills and interests refine an audience; they never lead it.", "search": {"total": 18100, "kw": 86, "geo": "United States, Google Search only", "title": "Buyers already <em>searching<\/em> for what Stigg does", "intro": "Real U.S. monthly volumes from Impactable's Google team research. Costs per click are confirmed from the first weeks of live data.", "camps": [{"name": "Billing Platform & Entitlements", "pri": 1, "intent": "Purchase intent", "who": "Teams choosing a billing platform, and Stripe users trying to make it bill by usage", "page": "A new positioning page, a new Stigg plus Stripe page, and the entitlements page", "vol": 2050, "n": 21, "groups": [{"g": "Billing Platform Selection", "vol": 1300}, {"g": "Stripe Usage Billing", "vol": 530}, {"g": "Entitlement Management", "vol": 220}], "top": [{"kw": "subscription billing software", "vol": 320, "cpc": ""}, {"kw": "stripe usage based billing", "vol": 320, "cpc": ""}, {"kw": "subscription billing platform", "vol": 210, "cpc": ""}, {"kw": "saas billing", "vol": 210, "cpc": ""}]}, {"name": "Competitors", "pri": 2, "intent": "Conquest", "who": "Buyers comparing or leaving Metronome, Orb, and Zuora", "page": "Stigg's comparison page for each rival", "vol": 7810, "n": 18, "groups": [{"g": "Zuora", "vol": 6200}, {"g": "Metronome", "vol": 910}, {"g": "Orb", "vol": 700}], "top": [{"kw": "zuora", "vol": 5400, "cpc": ""}, {"kw": "metronome billing", "vol": 480, "cpc": ""}, {"kw": "orb billing", "vol": 390, "cpc": ""}, {"kw": "zuora billing", "vol": 320, "cpc": ""}]}, {"name": "Usage-Based Billing", "pri": 3, "intent": "Category", "who": "Teams deciding how to meter and bill usage", "page": "The metering, entitlements, and AI credits pages", "vol": 1520, "n": 26, "groups": [{"g": "Usage-Based Billing Software", "vol": 610}, {"g": "Usage-Based Pricing", "vol": 390}, {"g": "Metered Billing", "vol": 280}, {"g": "Consumption-Based Billing", "vol": 240}], "top": [{"kw": "usage based billing", "vol": 260, "cpc": ""}, {"kw": "usage based pricing", "vol": 210, "cpc": ""}, {"kw": "usage based billing software", "vol": 140, "cpc": ""}, {"kw": "consumption based pricing", "vol": 110, "cpc": ""}]}, {"name": "Subscription & Recurring Billing", "pri": 4, "intent": "Category", "who": "The broader billing-software market, on a capped budget", "page": "A new positioning page and the Stigg plus Stripe page", "vol": 6240, "n": 20, "groups": [{"g": "Billing Platform", "vol": 2660}, {"g": "Subscription Billing & Management", "vol": 1820}, {"g": "Stripe Subscription", "vol": 1760}], "top": [{"kw": "stripe subscription", "vol": 1300, "cpc": ""}, {"kw": "billing software", "vol": 880, "cpc": ""}, {"kw": "billing platform", "vol": 590, "cpc": ""}, {"kw": "subscription management software", "vol": 590, "cpc": ""}]}, {"name": "Brand", "pri": 5, "intent": "Brand", "who": "People searching for Stigg by name", "page": "stigg.io", "vol": 480, "n": 1, "groups": [{"g": "Brand", "vol": 480}], "top": [{"kw": "stigg", "vol": 480, "cpc": "$1 to $3"}]}], "why_order": "Purchase intent leads: a team choosing a billing platform or making Stripe bill by usage is already a buyer. Competitor searches run alongside on manual bids, planned on about 2,060 in-market searches rather than the navigational volume on zuora. Category terms come third; the broad subscription campaign runs capped with the heaviest negatives; brand is always on.", "bridge": "Everyone who clicks and does not convert is retargeted on LinkedIn, filtered to engineering roles at fit companies.", "all": [{"campaign": "Brand", "group": "Brand", "kw": "stigg", "match": "Exact", "vol": 480}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage based billing", "match": "Phrase", "vol": 260}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage based billing software", "match": "Phrase", "vol": 140}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage based billing platform", "match": "Phrase", "vol": 90}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage billing", "match": "Phrase", "vol": 50}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage billing software", "match": "Phrase", "vol": 30}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage based billing saas", "match": "Phrase", "vol": 30}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Billing Software", "kw": "usage based billing system", "match": "Phrase", "vol": 10}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based pricing", "match": "Phrase", "vol": 210}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based pricing models", "match": "Phrase", "vol": 90}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based pricing saas", "match": "Phrase", "vol": 50}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based saas pricing", "match": "Phrase", "vol": 10}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based subscription model", "match": "Phrase", "vol": 10}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based pricing companies", "match": "Phrase", "vol": 10}, {"campaign": "Usage-Based Billing", "group": "Usage-Based Pricing", "kw": "usage based saas", "match": "Phrase", "vol": 10}, {"campaign": "Usage-Based Billing", "group": "Metered Billing", "kw": "metered billing", "match": "Phrase", "vol": 70}, {"campaign": "Usage-Based Billing", "group": "Metered Billing", "kw": "metered pricing", "match": "Phrase", "vol": 70}, {"campaign": "Usage-Based Billing", "group": "Metered Billing", "kw": "metered billing software", "match": "Phrase", "vol": 40}, {"campaign": "Usage-Based Billing", "group": "Metered Billing", "kw": "billing and metering", "match": "Phrase", "vol": 40}, {"campaign": "Usage-Based Billing", "group": "Metered Billing", "kw": "metering billing", "match": "Phrase", "vol": 30}, {"campaign": "Usage-Based Billing", "group": "Metered Billing", "kw": "metered usage", "match": "Phrase", "vol": 30}, {"campaign": "Usage-Based Billing", "group": "Consumption-Based Billing", "kw": "consumption based pricing", "match": "Phrase", "vol": 110}, {"campaign": "Usage-Based Billing", "group": "Consumption-Based Billing", "kw": "consumption pricing", "match": "Phrase", "vol": 40}, {"campaign": "Usage-Based Billing", "group": "Consumption-Based Billing", "kw": "consumption based pricing model", "match": "Phrase", "vol": 40}, {"campaign": "Usage-Based Billing", "group": "Consumption-Based Billing", "kw": "consumption based billing", "match": "Phrase", "vol": 30}, {"campaign": "Usage-Based Billing", "group": "Consumption-Based Billing", "kw": "consumption based pricing saas", "match": "Phrase", "vol": 10}, {"campaign": "Usage-Based Billing", "group": "Consumption-Based Billing", "kw": "consumption based billing software", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "subscription billing software", "match": "Phrase", "vol": 320}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "subscription billing platform", "match": "Phrase", "vol": 210}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "saas billing", "match": "Phrase", "vol": 210}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "billing api", "match": "Phrase", "vol": 170}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "saas billing software", "match": "Phrase", "vol": 140}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "billing system software", "match": "Phrase", "vol": 140}, {"campaign": "Billing Platform & Entitlements", "group": "Billing Platform Selection", "kw": "ai billing software", "match": "Phrase", "vol": 110}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "stripe usage based billing", "match": "Phrase", "vol": 320}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "stripe metered billing", "match": "Phrase", "vol": 110}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "usage based billing stripe", "match": "Phrase", "vol": 50}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "stripe usage based pricing", "match": "Phrase", "vol": 20}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "stripe metered subscription", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "stripe metered usage", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Stripe Usage Billing", "kw": "stripe checkout metered billing", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "entitlement management systems", "match": "Phrase", "vol": 90}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "entitlement management software", "match": "Phrase", "vol": 70}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "entitlement management solutions", "match": "Phrase", "vol": 20}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "entitlement management software vendors", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "saas entitlement management", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "entitlements api", "match": "Phrase", "vol": 10}, {"campaign": "Billing Platform & Entitlements", "group": "Entitlement Management", "kw": "entitlements software", "match": "Phrase", "vol": 10}, {"campaign": "Competitors", "group": "Zuora", "kw": "chargebee usage based billing", "match": "Phrase", "vol": 20}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora", "match": "Phrase", "vol": 5400}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora billing", "match": "Phrase", "vol": 320}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora inc", "match": "Phrase", "vol": 210}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora software", "match": "Phrase", "vol": 70}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora competitors", "match": "Phrase", "vol": 70}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora subscription", "match": "Phrase", "vol": 50}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora pricing", "match": "Phrase", "vol": 30}, {"campaign": "Competitors", "group": "Zuora", "kw": "zuora alternatives", "match": "Phrase", "vol": 30}, {"campaign": "Competitors", "group": "Metronome", "kw": "metronome billing", "match": "Phrase", "vol": 480}, {"campaign": "Competitors", "group": "Metronome", "kw": "metronome pricing", "match": "Phrase", "vol": 260}, {"campaign": "Competitors", "group": "Metronome", "kw": "metronome usage based billing", "match": "Phrase", "vol": 70}, {"campaign": "Competitors", "group": "Metronome", "kw": "metronome saas", "match": "Phrase", "vol": 50}, {"campaign": "Competitors", "group": "Metronome", "kw": "metronome competitors", "match": "Phrase", "vol": 30}, {"campaign": "Competitors", "group": "Metronome", "kw": "metronome alternatives", "match": "Phrase", "vol": 20}, {"campaign": "Competitors", "group": "Orb", "kw": "orb billing", "match": "Phrase", "vol": 390}, {"campaign": "Competitors", "group": "Orb", "kw": "withorb", "match": "Phrase", "vol": 260}, {"campaign": "Competitors", "group": "Orb", "kw": "orb usage based billing", "match": "Phrase", "vol": 50}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "billing software", "match": "Phrase", "vol": 880}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "billing platform", "match": "Phrase", "vol": 590}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "automatic billing software", "match": "Phrase", "vol": 320}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "billing system", "match": "Phrase", "vol": 210}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "billing solutions", "match": "Phrase", "vol": 210}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "automated billing system", "match": "Phrase", "vol": 170}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "billing management software", "match": "Phrase", "vol": 140}, {"campaign": "Subscription & Recurring Billing", "group": "Billing Platform", "kw": "cloud billing software", "match": "Phrase", "vol": 140}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "subscription management software", "match": "Phrase", "vol": 590}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "subscription payments", "match": "Phrase", "vol": 590}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "recurring billing software", "match": "Phrase", "vol": 320}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "subscription billing", "match": "Phrase", "vol": 210}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "enterprise billing software", "match": "Phrase", "vol": 50}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "b2b billing software", "match": "Phrase", "vol": 20}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "recurring billing platforms", "match": "Phrase", "vol": 20}, {"campaign": "Subscription & Recurring Billing", "group": "Subscription Billing & Management", "kw": "subscription payment platform", "match": "Phrase", "vol": 20}, {"campaign": "Subscription & Recurring Billing", "group": "Stripe Subscription", "kw": "stripe subscription", "match": "Phrase", "vol": 1300}, {"campaign": "Subscription & Recurring Billing", "group": "Stripe Subscription", "kw": "stripe subscription management", "match": "Phrase", "vol": 320}, {"campaign": "Subscription & Recurring Billing", "group": "Stripe Subscription", "kw": "stripe automatic payments", "match": "Phrase", "vol": 90}, {"campaign": "Subscription & Recurring Billing", "group": "Stripe Subscription", "kw": "stripe subscription payments", "match": "Phrase", "vol": 50}], "negatives": ["metronome music, seiko metronome (music)", "zuora login, zuora support (existing users)", "invoice software, quickbooks (invoicing and accounting)", "medical, legal, and utility billing", "usage pricing (telecom and cloud data)", "jobs, salary (job seekers)", "free"]}, "signals_intro": "Fit says an account could buy. Timing and intent say it is looking now. The best lists combine both.", "signals_owned": "Stigg already runs RB2B, Common Room, and HubSpot. We use them; we do not resell them. DemandSense and 90 days of Web ID are part of the engagement.", "signal_groups": [{"g": "Fit", "c": "Is this the right company?", "items": [["Charges for AI usage", "Pricing pages, verified account by account", "Credits, tokens, per-request, or overage pricing on the company's own pricing page"], ["AI product in market", "Product pages and launch news", "A customer-facing AI feature, not internal use only"], ["Billing stack", "BuiltWith via Clay", "Stripe, Zuora, or another biller detected on the site"]]}, {"g": "Timing", "c": "Is something changing right now?", "items": [["Hiring billing or platform engineers", "Job posts via Clay", "An open role in billing, monetization, or usage metering"], ["New engineering leader", "Sales Navigator alerts, Clay", "A new VP or Director of Engineering reviewing what they inherited"], ["Pricing change", "Launch news and pricing pages", "A move to credits or usage pricing, announced or underway"], ["New funding", "Crunchbase", "New capital often comes with a new pricing push"]]}, {"g": "Intent", "c": "Are they paying attention?", "items": [["On the Stigg site", "DemandSense, Web ID, RB2B, Insight Tag", "Named accounts on pricing, docs, and product pages"], ["Engaging with the category", "Common Room, LinkedIn Company Hub", "Engaging with Dor's posts or competitor content"], ["HubSpot history", "HubSpot", "Pipeline, closed-lost deals, and past evaluations"]]}], "list_flow": [["Build", "Pull the signal list in Clay"], ["Combine", "Add the accounts DemandSense, RB2B, and Common Room already flag"], ["Upload", "LinkedIn company list and Google Customer Match"], ["Refresh", "Hiring and leader lists monthly; site and HubSpot signals live"]], "exclusions": ["Current Stigg customers", "Stigg employees", "Competitors: Metronome, Orb, Chargebee, Schematic, Paid, Credyt", "Job seekers", "Students and trainees", "Entry-level roles", "Executives on cold campaigns (reached from Month 2)", "Proposed: WRITER, World Labs, Waymo, Viz.ai"], "next_link": false}</script><p class="body"><a class="r-next" data-goto="messaging" href="#messaging">Next: what we say and offer &rsaquo;</a></p></div></section>
 
-  <!-- S01 AT A GLANCE -->
-  <section class="blk">
-    <div class="secnum">01 / AT A GLANCE</div>
-    <h2 class="sec">Stigg, <em>in plain language</em></h2>
-    <div class="icp-sum dark-panel">
-      <div class="icp-k">The 30-second read</div>
-      <div class="icp-row"><div class="lab">What they sell</div><div class="val">A real-time layer that sits between an application and its billing system and decides, in the moment, what each customer or AI agent is allowed to do. It meters usage, enforces entitlements and credit limits, and runs the wallets and ledgers behind AI credit pricing, <em>without replacing the billing system already in place</em>.</div></div>
-      <div class="icp-row"><div class="lab">Who buys it</div><div class="val">Software companies with an AI feature their customers use, charging by usage, credits, or tokens, where an <em>engineering leader</em> owns the build-versus-buy decision. AI does not have to be the core product.</div></div>
-      <div class="icp-row"><div class="lab">Why they win</div><div class="val">It decides in real time, <em>before the action and before the money is spent</em>, while the established tools measure usage after the fact.</div></div>
-      <div class="icp-row"><div class="lab">The ideal client</div><div class="val">Software companies of 51 to 10,000 employees with a customer-facing AI feature, pricing by usage or credits or about to, where an engineering leader owns the decision and the team is otherwise tempted to build it in-house. Frontier AI companies are the priority logos. United States first.</div></div>
-      <div class="icp-row"><div class="lab">Not a fit</div><div class="val">Flat per-seat software with no consumption pricing, pre-product startups with nothing to meter, and non-software businesses.</div></div>
-      <div class="icp-chips">
-        <div class="icp-chip"><div class="n">204</div><div class="c">Named accounts (priority and secondary)</div></div>
-        <div class="icp-chip"><div class="n">51-10,000</div><div class="c">Priority company size</div></div>
-        <div class="icp-chip"><div class="n">Eng-led</div><div class="c">Decision owner</div></div>
-        <div class="icp-chip"><div class="n">Two clocks</div><div class="c">Warm fast, named-account slow</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- S02 TAM -->
-  <section class="blk">
-    <div class="secnum">02 / TOTAL ADDRESSABLE MARKET</div>
-    <h2 class="sec">Everyone who <em>could</em> need it</h2>
-    <p class="body">The widest boundary: every software company that charges, or will charge, by usage, consumption, credits, or tokens, and therefore needs to meter and control it in real time. The narrowing, from that market down to the slice to win first:</p>
-
-    <div class="fnl">
-      <div class="fnl-band" style="width:100%;background:var(--barcanopy)"><div class="bt">Total Addressable Market</div><div class="bs">Every usage-priced or usage-curious software company, globally</div></div>
-      <div class="fnl-band" style="width:76%;background:var(--barmoss)"><div class="bt">Serviceable Market</div><div class="bs">US-first software companies with AI features and usage pricing with the scale and engineering to integrate</div></div>
-      <div class="fnl-band" style="width:54%;background:var(--barblue)"><div class="bt">Ideal Client Profile</div><div class="bs">Software companies with a customer-facing AI feature, 51 to 10,000 employees, engineering leader owns it</div></div>
-      <div class="fnl-band" style="width:34%;background:var(--barterra)"><div class="bt">Beachhead</div><div class="bs">Frontier AI companies launching usage or credit pricing right now (204 named, priority and secondary)</div></div>
-    </div>
-    <figcaption>Each band is a subset of the one above it. Widths are illustrative of the narrowing, not to scale.</figcaption>
-
-    <div class="grid4" style="margin-top:18px">
-      <div class="stat"><div class="n">$6.5B &rarr; $15.3B</div><div class="l">Usage-based billing software market, 2026 to 2032 (12.8% CAGR). Third-party estimate, varies by source.</div></div>
-      <div class="stat"><div class="n">77%</div><div class="l">Of the largest software companies now use consumption pricing. Third-party estimate.</div></div>
-      <div class="stat"><div class="n">64%</div><div class="l">Of Forbes Next Billion-Dollar Startups use usage-based models. Third-party estimate.</div></div>
-      <div class="stat"><div class="n">40%</div><div class="l">Of SaaS spend shifts to usage or outcome pricing by 2030 (Gartner). The demand is moving toward exactly what Stigg does.</div></div>
-    </div>
-
-    <div class="xl">
-      <div class="xl-h">LinkedIn translation</div>
-      <div class="xl-facet"><span class="fn">Industries</span><span class="chipv">Software Development</span><span class="chipv">IT Services and IT Consulting</span></div>
-      <div class="xl-facet"><span class="fn">Company Size</span><span class="chipv">51-200</span><span class="chipv">201-500</span><span class="chipv">501-1,000</span><span class="chipv">1,001-5,000</span><span class="chipv">5,001-10,000</span><span class="chipv">10,001+</span></div>
-      <div class="xl-facet"><span class="fn">Location</span><span class="chipv">United States</span><span class="chipv">Central Europe and Israel (test)</span></div>
-      <div><span class="xl-size">Large</span></div>
-      <div class="xl-miss"><b>What it misses:</b> "charges by usage, credits, or tokens" is not a LinkedIn attribute. The defining trait of the market is invisible to native filters and is reached by the ad message plus a technographic signal, never by a title.</div>
-      <div class="xl-use"><b>Use it for:</b> sizing and as a suppression reference only. This is not a launch audience.</div>
-    </div>
-  </section>
-
-  <!-- S03 SERVICEABLE MARKET -->
-  <section class="blk">
-    <div class="secnum">03 / SERVICEABLE MARKET</div>
-    <h2 class="sec">Who they can serve <em>today</em></h2>
-    <p class="body">The market narrows fast once real constraints apply. Stigg's AI positioning is new, so this shows where to aim first rather than the full size of the market.</p>
-    <table class="ftable">
-      <tr><th>Constraint</th><th>Rule</th><th>Effect on the market</th></tr>
-      <tr><td>Geography</td><td>Ads start in the United States, where the buyers concentrate</td><td>Narrows to a US-first core, with Central Europe and Israel as tests; English only</td></tr>
-      <tr><td>Product fit</td><td>Must charge by usage, consumption, or credits, or be launching it</td><td>Removes flat per-seat software with no consumption model</td></tr>
-      <tr><td>Engineering capacity</td><td>Needs an engineering team to integrate the runtime</td><td>Removes teams with no development resource to adopt it</td></tr>
-      <tr><td>Stack</td><td>Sits on top of the existing biller (Stripe, Zuora, Chargebee, Metronome, Orb)</td><td>Works alongside the current system, so no rip-and-replace barrier</td></tr>
-      <tr><td>Scale</td><td>Enough usage volume to justify real-time control</td><td>Deprioritizes pre-revenue companies with nothing yet to meter</td></tr>
-    </table>
-    <div class="xl">
-      <div class="xl-h">LinkedIn translation</div>
-      <div class="xl-facet"><span class="fn">Industries</span><span class="chipv">Software Development</span><span class="chipv">IT Services and IT Consulting</span></div>
-      <div class="xl-facet"><span class="fn">Company Size</span><span class="chipv">51-200</span><span class="chipv">201-500</span><span class="chipv">501-1,000</span><span class="chipv">1,001-5,000</span><span class="chipv">5,001-10,000</span></div>
-      <div class="xl-facet"><span class="fn">Location</span><span class="chipv">United States</span></div>
-      <div class="xl-facet"><span class="fn">Technographic</span><span class="chipv">routed to third-party list</span></div>
-      <div><span class="xl-size">Moderate</span></div>
-      <div class="xl-miss"><b>What it misses:</b> LinkedIn cannot filter on tech stack or on "is launching usage pricing." Both constraints are enforced through a third-party list (Clay or BuiltWith enrichment), then uploaded as a Matched Audience.</div>
-      <div class="xl-use"><b>Use it for:</b> the native cold ceiling and the firmographic base that the ideal client and personas tighten.</div>
-    </div>
-  </section>
-
-  <!-- S04 ICP -->
-  <section class="blk">
-    <div class="secnum">04 / IDEAL CLIENT PROFILE</div>
-    <h2 class="sec">The best-fit <em>client</em></h2>
-    <p class="body">Highest urgency, fastest to prove, and the logos that matter for the acquisition goal. The scorecard is the test; the beachhead is where we start.</p>
-    <div class="xscroll"><table class="score">
-      <tr><th>Criterion</th><th>Ideal</th><th>Acceptable</th><th>Disqualifier</th></tr>
-      <tr><td class="cri">Industry</td><td class="sc-ideal">Software with a customer-facing AI feature; frontier AI first</td><td>Usage-priced SaaS, developer infrastructure</td><td class="sc-no">Non-software, flat-seat SaaS with no usage</td></tr>
-      <tr><td class="cri">Company size</td><td class="sc-ideal">51 to 10,000</td><td>11 to 50, or 10,001+</td><td class="sc-no">10 or fewer (low priority)</td></tr>
-      <tr><td class="cri">Pricing model</td><td class="sc-ideal">Charges by usage, credits, or tokens, or launching it</td><td>Hybrid subscription plus usage</td><td class="sc-no">Pure flat per-seat, no consumption</td></tr>
-      <tr><td class="cri">Stage</td><td class="sc-ideal">Fast adoption of an AI feature, needing to monetize now</td><td>Established product adding AI pricing</td><td class="sc-no">Pre-product, nothing to meter</td></tr>
-      <tr><td class="cri">Decision owner</td><td class="sc-ideal">CTO or engineering leader; more senior at bigger companies</td><td>Founder or CEO at a smaller company</td><td class="sc-no">No technical owner</td></tr>
-      <tr><td class="cri">Trigger</td><td class="sc-ideal">An in-house build hit a wall: new pricing model, maintenance load, customers asking to see usage, agent sprawl</td><td>Frustration with Metronome or Orb; leaving a billing provider</td><td class="sc-no">Satisfied with the current build</td></tr>
-    </table></div>
-    <div class="callout"><div class="k">How we check it</div><p>In the first weeks we compare this profile against Stigg's closed-won deals in HubSpot. Any gap between who Stigg wins and who we target is fixed before Month 2.</p></div>
-    <div class="callout blue"><div class="k">Beachhead, where we start</div><p>Frontier AI companies that are launching usage or credit pricing right now: the 204 named accounts on the priority and secondary lists. Real-time control matters most where AI agents spend money autonomously, the urgency is highest the moment pricing is being built, and these are the logos that prove the model for the acquisition goal.</p></div>
-    <div class="xl">
-      <div class="xl-h">LinkedIn translation</div>
-      <div class="xl-facet"><span class="fn">Reach via</span><span class="chipv">Company List Matched Audience (204 named accounts)</span></div>
-      <div class="xl-facet"><span class="fn">Native fallback</span><span class="chipv">Industries: Software Development</span><span class="chipv">Company Size: 51-200 through 5,001-10,000</span><span class="chipv">Company Growth Rate: high</span><span class="chipv">Location: United States</span></div>
-      <div><span class="xl-size">204 accounts</span></div>
-      <div class="xl-miss"><b>What it misses:</b> "prices by usage" and "launching credits" are not filterable. Under ~5,000 accounts the named list beats native filters outright, so the list is the audience and the message carries the trigger.</div>
-      <div class="xl-use"><b>Use it for:</b> the account-based core audience and the company base that every Section 05 persona filter sits on top of.</div>
-    </div>
-  </section>
-
-  <!-- S05 BUYING COMMITTEE -->
-  <section class="blk">
-    <div class="secnum">05 / BUYING COMMITTEE AND INFLUENCERS</div>
-    <h2 class="sec">Who decides, <em>and how to reach each one</em></h2>
-    <p class="body">An engineering-led purchase. The core is Senior through VP in engineering; entry-level roles are excluded. CTOs, founders, and CEOs are reached from Month 2, once their teams have engaged. On the named accounts, the engineering personas run as four cold campaigns (section 07); founders and CEOs are reached later, only at accounts whose engineers have engaged.</p>
-    <div class="grid2">
-      <div class="card tl">
-        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Economic buyer</span><span class="ctitle">Engineering leaders</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
-        <div class="pmeta"><span class="plab">Who</span>Own build versus buy and the budget. The bigger the company, the more senior the buyer.</div>
-        <div class="pmeta"><span class="plab">Titles</span>CTO, VP of Engineering, Director of Engineering, Head of Platform</div>
-        <div class="pmeta"><span class="plab">Cares about</span>Keeping the team on the product, not on billing infrastructure; reliability and latency</div>
-        <div class="pmeta"><span class="plab">Objects with</span>"We can build this ourselves."</div>
-        <div class="xl">
-          <div class="xl-h">LinkedIn translation</div>
-          <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Director</span><span class="chipv">VP</span><span class="chipv">CXO, from Month 2</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">CTO</span><span class="chipv">VP or Director of Engineering</span><span class="chipv">Head of Platform</span></div>
-          <div></div>
-          <div class="xl-miss"><b>What it misses:</b> title wording varies by company, so function plus seniority is the base and titles are the overlay.</div>
-          <div class="xl-use"><b>Use it for:</b> the engineering leaders and fast-growing leaders campaigns.</div>
-        </div>
-      </div>
-      <div class="card tc">
-        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Evaluator and champion</span><span class="ctitle">AI Engineers</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
-        <div class="pmeta"><span class="plab">Who</span>Own AI features, agents, and usage. Feel agent costs and customer usage questions first.</div>
-        <div class="pmeta"><span class="plab">Titles</span>AI Engineer, ML Engineer, AI Platform Engineer</div>
-        <div class="pmeta"><span class="plab">Cares about</span>Agent budgets, credits, customer-visible usage, not rebuilding limits</div>
-        <div class="pmeta"><span class="plab">Objects with</span>Integration effort; "we already track tokens"</div>
-        <div class="xl">
-          <div class="xl-h">LinkedIn translation</div>
-          <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Senior</span><span class="chipv">Manager</span></div><div class="xl-facet"><span class="fn">Titles and skills</span><span class="chipv">AI Engineer</span><span class="chipv">ML Engineer</span><span class="chipv">Machine Learning</span><span class="chipv">Large Language Models</span></div>
-          <div></div>
-          <div class="xl-miss"><b>What it misses:</b> LinkedIn cannot separate AI engineers from platform engineers by function or seniority; only titles and skills tell them apart.</div>
-          <div class="xl-use"><b>Use it for:</b> the engineers campaign, split by title later if the data shows a difference.</div>
-        </div>
-      </div>
-      <div class="card tb">
-        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Champion</span><span class="ctitle">Platform and billing engineers</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
-        <div class="pmeta"><span class="plab">Who</span>Run the integration and own billing or the platform. Drive it internally.</div>
-        <div class="pmeta"><span class="plab">Titles</span>Staff, Principal, Platform, and Senior Backend Engineer</div>
-        <div class="pmeta"><span class="plab">Cares about</span>Shipping pricing changes without a rebuild, clean APIs, edge cases handled</div>
-        <div class="pmeta"><span class="plab">Objects with</span>Migration risk; "I could build this myself"</div>
-        <div class="xl">
-          <div class="xl-h">LinkedIn translation</div>
-          <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Senior</span><span class="chipv">Manager</span></div><div class="xl-facet"><span class="fn">Skills</span><span class="chipv">API Development</span><span class="chipv">Distributed Systems</span><span class="chipv">Billing Systems</span></div>
-          <div></div>
-          <div class="xl-miss"><b>What it misses:</b> "owns billing" is not a filter; skills and the message do the qualifying.</div>
-          <div class="xl-use"><b>Use it for:</b> the engineers campaign, and the trust sequence.</div>
-        </div>
-      </div>
-      <div class="card tm">
-        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Buyer at smaller companies</span><span class="ctitle">Founders and CEOs</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
-        <div class="pmeta"><span class="plab">Who</span>Sign where AI adoption outran pricing, especially at smaller and fast-growing companies.</div>
-        <div class="pmeta"><span class="plab">Titles</span>Founder, Co-founder, CEO</div>
-        <div class="pmeta"><span class="plab">Cares about</span>Monetizing fast adoption this quarter; proving the model</div>
-        <div class="pmeta"><span class="plab">Objects with</span>Focus and priorities</div>
-        <div class="xl">
-          <div class="xl-h">LinkedIn translation</div>
-          <div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Owner</span><span class="chipv">Partner</span><span class="chipv">CXO</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">Founder</span><span class="chipv">Co-founder</span><span class="chipv">CEO</span></div>
-          <div></div>
-          <div class="xl-miss"><b>What it misses:</b> founder relevance falls as company size rises; the named lists already encode size.</div>
-          <div class="xl-use"><b>Use it for:</b> the Month 2 executive campaign, at accounts whose engineers have engaged.</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="chhead"><span class="clabel">Influencer</span><span class="ctitle">Finance and revenue operations</span><span class="ctags"><span class="ppill inf">Influencer</span></span></div>
-        <div class="pmeta"><span class="plab">Role</span>Weigh in on margin and pricing economics. Reached later as a persona campaign once the engineering campaigns are producing.</div>
-      </div>
-      <div class="card tt">
-        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">The top competitor</span><span class="ctitle">The in-house build</span><span class="ctags"><span class="ppill obj">Objection to answer</span></span></div>
-        <div class="pmeta"><span class="plab">Who</span>Not an ad audience. The engineering team that plans to build entitlements, credits, and limits itself, and the competitor in most deals.</div>
-        <div class="pmeta" style="margin-top:8px"><span class="plab">Objection to answer</span>The cost is not building it once; it is maintaining real-time enforcement and every edge case while the roadmap waits. Answered in the message and the technical proof.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- S06 PRECISION LAYERS -->
-  <section class="blk">
-    <div class="secnum">06 / PRECISION LAYERS</div>
-    <h2 class="sec">Filters that <em>sharpen</em> a segment</h2>
-    <p class="body">Added on top of a base recipe to tighten a priority segment. Only the layers that earn a place for Stigg are included; the rest are listed as considered and not used.</p>
-    <div class="grid2">
-      <div class="card tl"><h4>Company Growth Rate</h4>
-        <div class="ev" style="margin-top:6px">AI companies in expansion have budget and hiring pain, which is when monetization gets rebuilt. A strong layer on the native fallback and on the new-leader play.</div>
-        <div class="lmeter"><i style="width:80%"></i></div><div class="lmcap">Size impact: tightens meaningfully &nbsp;/&nbsp; <span class="lconf">confidence: high</span></div>
-      </div>
-      <div class="card tb"><h4>Member Traits: Recently Promoted, and new in position via Sales Navigator</h4>
-        <div class="ev" style="margin-top:6px">New engineering leaders re-evaluate vendors and have first-90-day budget. Often the strongest layer for a switch or replacement play against homegrown and incumbents.</div>
-        <div class="lmeter"><i style="width:72%"></i></div><div class="lmcap">Size impact: strong &nbsp;/&nbsp; <span class="lconf">confidence: high</span></div>
-      </div>
-      <div class="card tc"><h4>Member Skills</h4>
-        <div class="ev" style="margin-top:6px">Reaches the concepts that are not clean titles: distributed systems, API development, billing systems. The qualifier for the engineering personas.</div>
-        <div class="lmeter"><i style="width:55%"></i></div><div class="lmcap">Size impact: moderate &nbsp;/&nbsp; <span class="lconf">confidence: high</span></div>
-      </div>
-      <div class="card tm"><h4>Company Followers (Stigg and competitor pages)</h4>
-        <div class="ev" style="margin-top:6px">Followers of Stigg's page are warm retargeting. Followers of Metronome and Orb pages are a competitor-aware conquest layer. Company connections only for 500-plus-employee firms.</div>
-        <div class="lmeter"><i style="width:48%"></i></div><div class="lmcap">Size impact: moderate &nbsp;/&nbsp; <span class="lconf">confidence: medium</span></div>
-      </div>
-      <div class="card tt"><h4>Years of Experience</h4>
-        <div class="ev" style="margin-top:6px">Separates true senior operators from title inflation at fast-growing startups where everyone is "senior." A light sharpener on the champion and evaluator recipes.</div>
-        <div class="lmeter"><i style="width:30%"></i></div><div class="lmcap">Size impact: light &nbsp;/&nbsp; <span class="lconf">confidence: medium</span></div>
-      </div>
-      <div class="card tb"><h4>Member Groups</h4>
-        <div class="ev" style="margin-top:6px">Niche platform-engineering and usage-pricing groups are small but very qualified, useful to widen a tight persona rather than to carry a campaign.</div>
-        <div class="lmeter"><i style="width:22%"></i></div><div class="lmcap">Size impact: small, widening &nbsp;/&nbsp; <span class="lconf">confidence: low to medium</span></div>
-      </div>
-    </div>
-    <div class="callout blue"><div class="k">Now in use for the Month 1 pockets</div><p>Frequent Contributors (the most publicly active members, who pair with Thought Leader Ads) and AI skills or interests (Artificial Intelligence, Machine Learning, Large Language Models) as refiners on the native pockets. Company Growth Rate at 10 percent and above, as a sign of momentum.</p></div>
-    <div class="callout"><div class="k">Considered, not used</div><p>Company Revenue (sparse and unreliable on small AI companies; the size band is cleaner). Company Category curated lists (Fortune 500 is the wrong universe for frontier AI startups). Education (not a credentialed-buyer purchase). Member Age and Gender (the offer does not skew, so not used). Job Seekers (used as an exclusion, never a target).</p></div>
-    <div class="callout blue"><div class="k">How to stack them</div><p>Precision layers are AND filters, so each one shrinks the audience. Stack one or two at a time and re-size in Campaign Manager after each, rather than piling them on and launching a segment too small to deliver.</p></div>
-  </section>
-
-  <!-- S07 PRIORITY SEGMENTS -->
-  <section class="blk">
-    <div class="secnum">07 / PRIORITY SEGMENTS</div>
-    <h2 class="sec">The Month 1 launch: <em>four cold campaigns</em></h2>
-    <p class="body">Four campaigns, all built on Stigg's two named lists (priority and secondary) combined, each reaching one slice of the buying committee. Every campaign runs the same five single-image ads, with the copy tuned to that slice, a website-visit goal, and a Learn more button. Each person sits in one campaign only, so the four never bid against each other.</p>
-    <div class="grid2">
-      <div class="card tl">
-        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Campaign 1</span><span class="ctitle">Engineering leaders</span><span class="ctags"><span class="ppill prim">Month 1, $500 to $1,200</span></span></div>
-        <div class="pmeta" style="margin-top:6px">Directors and VPs of Engineering and Heads of Platform at the named accounts.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Location</td><td>United States</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>Engineering leaders</div>
-        <div class="why"><b>Why now:</b> they own the build-or-buy decision, and they watched a peer's AI pricing launch go wrong in public.</div>
-        <div class="pmeta"><span class="plab">Opening line</span>"Your pricing launch should not end in a refund thread."</div>
-      </div>
-      <div class="card tc">
-        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Campaign 2</span><span class="ctitle">Engineers</span><span class="ctags"><span class="ppill prim">Month 1, $1,500 to $3,000</span></span></div>
-        <div class="pmeta" style="margin-top:6px">AI, ML, platform, staff, and backend engineers and their managers at the named accounts.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior, Manager</td></tr><tr><td>Location</td><td>United States</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>AI, platform, and billing engineers</div>
-        <div class="why"><b>Why now:</b> they live with agent costs and limits, and they are the ones who will otherwise build it themselves.</div>
-        <div class="pmeta"><span class="plab">Opening line</span>"One account. Four agents. Running all weekend."</div>
-      </div>
-      <div class="card tt">
-        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Campaign 3</span><span class="ctitle">Leaders at fast-growing companies</span><span class="ctags"><span class="ppill prim">Month 1, $400 to $1,000</span></span></div>
-        <div class="pmeta" style="margin-top:6px">Engineering leaders at named accounts whose headcount is growing fast.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Company Growth Rate</td><td>10 percent and above (a sign of momentum)</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>Engineering leaders</div>
-        <div class="why"><b>Why now:</b> growth is when pricing changes every quarter and the homegrown limit stops keeping up.</div>
-        <div class="pmeta"><span class="plab">Opening line</span>"It started as a usage counter."</div>
-      </div>
-      <div class="card tb">
-        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Campaign 4</span><span class="ctitle">Frequent contributors</span><span class="ctags"><span class="ppill prim">Month 1, $400 to $1,000</span></span></div>
-        <div class="pmeta" style="margin-top:6px">The engineering leaders and engineers at the named accounts who post and comment most.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior to VP</td></tr><tr><td>Member Traits</td><td>Frequent Contributors</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>Leaders and engineers who speak in public</div>
-        <div class="why"><b>Why now:</b> the people most likely to engage, share, and fill the warm pool first.</div>
-        <div class="pmeta"><span class="plab">Opening line</span>"Your billing tool finds it on the 30th. Stigg stops it on the 3rd."</div>
-      </div>
-    </div>
-    <div class="grid2" style="margin-top:14px">
-      <div class="callout"><div class="k">Executives come after engagement</div><p>CTOs, CEOs, and founders are not in the cold campaigns. They are reached from Month 2, only at the accounts whose engineers have already engaged, with Dor's voice leading.</p></div>
-      <div class="callout blue"><div class="k">Running beside the four</div><p>Spotlight retargeting reaches everyone who engaged or visited in the last 90 days, from the week the pool passes 300 people. Stigg's own lists (pipeline, closed-lost, email) join as a warm campaign in Month 2.</p></div>
-    </div>
-  </section>
-
-  <!-- S08 PAID SEARCH -->
-  <section class="blk">
-    <div class="secnum">08 / CAPTURING THE AUDIENCE ON PAID SEARCH</div>
-    <h2 class="sec">The same buyer, <em>when they search</em></h2>
-    <p class="body">How the ideal client and personas show up on Google. The full account structure and budget live in the Capture tab; this is the audience view of it.</p>
-    <div class="trade">
-      <div class="trade-p trade-good"><h5>Why this lane is worth it</h5><p>Clear intent, a shorter cycle than any cold audience, and self-qualifying queries. An engineer typing "stripe metered billing" is describing exactly what Stigg does.</p></div>
-      <div class="trade-p trade-catch"><h5>The catch</h5><p>Most of the word "billing" is invoicing, accounting, and telecom demand, so tight negatives are the whole game. And the landing page, not the click, decides the return.</p></div>
-    </div>
-    <div class="grid2">
-      <div class="card tt"><h4>Category capture</h4>
-        <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip med">Cost: medium</span><span class="pchip">Champion</span></div>
-        <div class="ev">Terms: usage-based billing, metered billing, consumption billing. The buyer still deciding how to price at all.</div>
-      </div>
-      <div class="card tl"><h4>Method and differentiator</h4>
-        <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip lo">Cost: low</span><span class="pchip">Platform / Eng leader</span></div>
-        <div class="ev">Terms: entitlement management, real-time billing control, AI credits. The white-space lane, often the cheapest and least contested.</div>
-      </div>
-      <div class="card tb"><h4>Stripe long-tail</h4>
-        <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip med">Cost: medium</span><span class="pchip">Champion</span></div>
-        <div class="ev">Terms: stripe metered billing, stripe usage billing. The highest-intent group: a buyer who built on Stripe and hit its limits.</div>
-      </div>
-      <div class="card tc"><h4>Competitor conquest</h4>
-        <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip hi">Cost: high</span><span class="pchip">Platform / Eng leader</span></div>
-        <div class="ev">Terms: metronome alternative, orb alternative, chargebee alternative. Not Zuora, which is a partner. Manual bids, each to its own comparison page.</div>
-      </div>
-      <div class="card tm"><h4>Brand defense</h4>
-        <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip lo">Cost: low</span><span class="pchip">All personas</span></div>
-        <div class="ev">Terms: stigg, stigg pricing. Cheap to own, and the brand SERP is already contested by competitor comparison pages.</div>
-      </div>
-    </div>
-    <div class="callout" style="border-left-color:var(--hazard)"><div class="k" style="color:var(--terra-text)">Landing page is mandatory</div><p>Each group routes to a matched page with one action, Book a Demo, and proof for the engineer's state of mind: documentation, latency, and architecture, not marketing gloss. Two pages earn their build: a positioning page ("keep your biller, add the layer it leaves out") and a "Stigg plus Stripe" page for the highest-intent Stripe queries. A short, fast form, not a long one.</p></div>
-    <div class="callout blue"><div class="k">Launch set and negatives</div><p>Start narrow on six terms, exact and phrase match: entitlement management, stripe metered billing, usage-based billing software, metered billing, metronome alternative, and the brand. Negatives load before launch, brand collisions first: metronome music terms (seiko metronome, soundbrenner), zuora navigational terms (zuora login, zuora support, since it is a partner and bare "zuora" runs exact only), invoicing and accounting (invoice software, quickbooks), medical and telecom ("usage pricing" in its telecom sense, medical billing), and free or jobs terms. Google firmographic filtering is weak, which is why the LinkedIn translation stays the qualifier; Customer Match from the named accounts and in-market segments help narrow it.</p></div>
-  </section>
-
-  <!-- S09 SIGNALS -->
-  <section class="blk">
-    <div class="secnum">09 / THIRD-PARTY DATA AND SIGNALS</div>
-    <h2 class="sec">The data that <em>builds the list</em></h2>
-    <p class="body">What identifies, sizes, and prioritizes the ideal client beyond what LinkedIn exposes. Many signals converge into one scored account view, which is where DemandSense does its work.</p>
-    <figure>
-      <div class="fig figscroll">
-        <svg viewBox="0 0 720 384" role="img" aria-label="Many signal sources converging into one scored account view" style="min-width:620px">
-          <rect x="10" y="20" width="220" height="44" rx="8" fill="none" stroke="var(--line)"/>
-          <text class="tw-svgboxlabel" x="22" y="40">Firmographic + NAICS</text><text class="tw-svgboxsub" x="22" y="55">precise AI sub-verticals</text>
-          <rect x="10" y="74" width="220" height="44" rx="8" fill="none" stroke="var(--barblue)"/>
-          <text class="tw-svgboxlabel" x="22" y="94">Technographics</text><text class="tw-svgboxsub" x="22" y="109">detect the AI and billing stack</text>
-          <rect x="10" y="128" width="220" height="44" rx="8" fill="none" stroke="var(--line)"/>
-          <text class="tw-svgboxlabel" x="22" y="148">Hiring + funding</text><text class="tw-svgboxsub" x="22" y="163">building usage pricing now</text>
-          <rect x="10" y="182" width="220" height="44" rx="8" fill="none" stroke="var(--line)"/>
-          <text class="tw-svgboxlabel" x="22" y="202">People movement</text><text class="tw-svgboxsub" x="22" y="217">new engineering leaders</text>
-          <rect x="10" y="236" width="220" height="44" rx="8" fill="none" stroke="var(--barcanopy)"/>
-          <text class="tw-svgboxlabel" x="22" y="256">Web ID + site</text><text class="tw-svgboxsub" x="22" y="271">named accounts on the site</text>
-          <rect x="10" y="290" width="220" height="44" rx="8" fill="none" stroke="var(--line)"/>
-          <text class="tw-svgboxlabel" x="22" y="310">Social + first-party CRM</text><text class="tw-svgboxsub" x="22" y="325">engagers, pipeline, closed-lost</text>
-          <path class="tw-arrow" d="M230 42 C 360 42, 360 177, 468 177"/>
-          <path class="tw-arrow" d="M230 96 C 360 96, 360 181, 468 181"/>
-          <path class="tw-arrow" d="M230 150 C 360 150, 360 185, 468 185"/>
-          <path class="tw-arrow" d="M230 204 C 360 204, 360 191, 468 191"/>
-          <path class="tw-arrow" d="M230 258 C 360 258, 360 195, 468 195"/>
-          <path class="tw-arrow" d="M230 312 C 360 312, 360 199, 468 199"/>
-          <rect x="470" y="150" width="236" height="84" rx="10" fill="var(--panel-deep)"/>
-          <text x="488" y="182" style="font-family:var(--body);font-weight:800;font-size:15px;fill:#F5F5F5">One scored</text>
-          <text x="488" y="203" style="font-family:var(--body);font-weight:800;font-size:15px;fill:#F5F5F5">account view</text>
-          <text x="488" y="221" style="font-family:'JetBrains Mono';font-size:10px;fill:#C6FF3D">served, in-motion, hidden pipeline</text>
-        </svg>
-      </div>
-      <figcaption>DemandSense composes these sources into one account-level view. Which accounts are served and engaging, which are underserved, which are in motion, and which show heavy engagement with no deal yet.</figcaption>
-    </figure>
-    <div class="grid2">
-      <div class="card tb"><h4>Technographics</h4>
-        <div class="ev" style="margin-top:6px"><b>Indicates:</b> runs an AI or LLM stack, and which biller is in place (Stripe, Zuora). The usual fix for the "must have usage pricing" constraint LinkedIn cannot see. <b>Source:</b> BuiltWith, HG Insights, Clay. <b>Activation:</b> Matched Audience list. <b>Feeds:</b> the Serviceable base and competitor conquest.</div>
-      </div>
-      <div class="card tc"><h4>Hiring signals</h4>
-        <div class="ev" style="margin-top:6px"><b>Indicates:</b> open roles for billing, platform, or monetization engineers mean they are building usage pricing right now. <b>Source:</b> Clay job scraping, LinkedIn jobs. <b>Freshness:</b> days. <b>Feeds:</b> Segment 3, the new-leader and active-build trigger.</div>
-      </div>
-      <div class="card tm"><h4>Funding and corporate events</h4>
-        <div class="ev" style="margin-top:6px"><b>Indicates:</b> a fresh AI round or a pricing-model launch means budget and urgency. <b>Source:</b> Crunchbase, news. <b>Feeds:</b> beachhead prioritization inside the named list.</div>
-      </div>
-      <div class="card tt"><h4>People movement</h4>
-        <div class="ev" style="margin-top:6px"><b>Indicates:</b> a new platform or engineering leader in the buyer seat, the moment vendors get re-evaluated. <b>Source:</b> Clay, Sales Navigator alerts. <b>Feeds:</b> Segment 3, the switch play.</div>
-      </div>
-      <div class="card tl"><h4>Website traffic and Web ID</h4>
-        <div class="ev" style="margin-top:6px"><b>Indicates:</b> which named accounts and people are already on the site. <b>Source:</b> DemandSense Web ID, Insight Tag, and Stigg's own RB2B and Common Room. <b>Feeds:</b> Segment 2 and the hidden-pipeline list for sales.</div>
-      </div>
-      <div class="card tb"><h4>Social engagement and first-party</h4>
-        <div class="ev" style="margin-top:6px"><b>Indicates:</b> engagers on Stigg's, Metronome's, Orb's, and the founder's posts, plus HubSpot and Salesforce pipeline and closed-lost. <b>Source:</b> Trigify, LinkedIn Company Hub, the CRM. <b>Feeds:</b> warm pools, conquest, and suppression.</div>
-      </div>
-    </div>
-    <div class="callout blue"><div class="k">The enrichment workflow</div><p>Build the list in Clay, compose the sources through DemandSense into one account view, upload it as a Matched Audience, and hand the top accounts to outreach. Available now with current tools: Web ID, CRM sync, Company Hub, social engagement. Needs a tool or budget line: deep technographic and intent enrichment at scale.</p></div>
-  </section>
-
-  <!-- S10 EXCLUSIONS -->
-  <section class="blk">
-    <div class="secnum">10 / EXCLUSIONS AND SUPPRESSION</div>
-    <h2 class="sec">Who we <em>never pay</em> to reach</h2>
-    <p class="body">Part of the source of truth. Downstream builds copy this list verbatim.</p>
-    <table class="excl">
-      <tr><td class="who">Existing customers</td><td class="how">Company List exclusion (Webflow, Miro, PagerDuty, Qlik, Productboard, Upwork, AI21, 8x8, HackerOne, and the rest from the CRM)</td></tr>
-      <tr><td class="who">Open pipeline</td><td class="how">Suppressed from cold where appropriate, synced from HubSpot and Salesforce</td></tr>
-      <tr><td class="who">Employees</td><td class="how">Company exclusion on Stigg</td></tr>
-      <tr><td class="who">Competitors</td><td class="how">Company List exclusion on Metronome, Orb, Chargebee, Schematic, Paid, and Credyt. Zuora and Airwallex are partners and are not excluded</td></tr>
-      <tr><td class="who">Proposed cold exclusions</td><td class="how">WRITER (an After Tokens speaker, kept in event ads), World Labs, Waymo, Viz.ai, as proposed in the account review</td></tr>
-      <tr><td class="who">Entry-level roles</td><td class="how">Seniority exclusion (Entry); not a buyer for this product</td></tr>
-      <tr><td class="who">Students and trainees</td><td class="how">Job Seniority exclusion (Training, Unpaid) and student fields of study</td></tr>
-      <tr><td class="who">Job seekers</td><td class="how">Member Traits: Job Seekers, excluded</td></tr>
-      <tr><td class="who">Out-of-market geographies</td><td class="how">Everything outside the United States at launch; Central Europe and Israel open later as separate test campaigns</td></tr>
-      <tr><td class="who">Disqualified firms</td><td class="how">Non-software, flat per-seat software with no usage, and 1-10 pre-product companies</td></tr>
-    </table>
-  </section>
-
-  <!-- S11 ACTIVATION -->
-  <section class="blk">
-    <div class="secnum">11 / ACTIVATION SEQUENCE</div>
-    <h2 class="sec">The order we <em>spend in</em></h2>
-    <p class="body">Warmest and cheapest first, cold last. Each rung names the audiences from this document it uses. Bar width tracks cost per lead.</p>
-    <div class="ladder">
-      <div class="lad-rung"><div class="lad-bar" style="width:30%;background:var(--barcanopy)"><span class="ln">1. First-party data</span></div><div class="lad-meta">Pipeline, closed-lost, email lists, identified website accounts. Joining as a warm campaign in Month 2, as the exports arrive.</div><div class="lad-cpl">$75-150</div></div>
-      <div class="lad-rung"><div class="lad-bar" style="width:44%;background:var(--barmoss)"><span class="ln">2. Warm digital</span></div><div class="lad-meta">Site visitors, ad and video engagers, page followers, newsletter readers, filtered to fit.</div><div class="lad-cpl">$120-250</div></div>
-      <div class="lad-rung"><div class="lad-bar" style="width:60%;background:var(--barblue)"><span class="ln">3. Named AI accounts</span></div><div class="lad-meta">The named accounts as four persona campaigns (section 07). The workhorse.</div><div class="lad-cpl">$250-400</div></div>
-      <div class="lad-rung"><div class="lad-bar" style="width:74%;background:var(--barterra)"><span class="ln">4. In-market search</span></div><div class="lad-meta">The Section 08 search groups, retargeted on LinkedIn for 90 days.</div><div class="lad-cpl">capture</div></div>
-      <div class="lad-rung"><div class="lad-bar" style="width:90%;background:var(--barclay)"><span class="ln">5. Broader cold, later</span></div><div class="lad-meta">An audience beyond the named accounts opens only once the four campaigns earn it.</div><div class="lad-cpl">saturation</div></div>
-    </div>
-    <div class="callout"><div class="k">Budget shape</div><p>Warm-first by default. Because warm pools are still filling, Phase 1 leans on the named-account motion and in-market search, with a small cold test, then shifts warm as the pools grow. Management fee is separate from ad spend, and the bands above are indicative, not a forecast. The full motion design lives in its own document.</p></div>
-  </section>
-
-  <script type="application/json" id="icp-source-of-truth">
-{
- "client": "Stigg",
- "version": "2.2",
- "date": "2026-10-20",
- "inputs": [
-  "strategy call transcript 2026-09-08",
-  "ImpactRx intake 2026-10-01",
-  "company recon",
-  "competitive white space",
-  "google keyword plan"
- ],
- "summary": {
-  "offering": "Real-time usage runtime for AI products: meters usage, enforces entitlements and credit limits, runs AI credit wallets and ledgers, on top of the existing billing system.",
-  "who_buys": "Software companies with a customer-facing AI feature charging by usage, credits, or tokens, where an engineering leader owns build vs buy. AI need not be the core product.",
-  "why_they_win": "Decides in real time, before the action and before money is spent, while rivals measure after the fact.",
-  "icp_one_liner": "Software companies of 51 to 10,000 employees with a customer-facing AI feature, pricing by usage or credits, engineering leader owns the decision; frontier AI first; US first.",
-  "not_a_fit": "Flat per-seat software with no consumption pricing, pre-product startups, and non-software businesses."
- },
- "tam": {
-  "definition": "Every software company that charges, or will charge, by usage, consumption, credits, or tokens.",
-  "market_stats": [
-   {
-    "figure": "$6.5B to $15.3B usage-based billing software market 2026-2032 (12.8% CAGR)",
-    "source": "third-party, varies"
-   },
-   {
-    "figure": "77% of largest software companies use consumption pricing",
-    "source": "third-party"
-   },
-   {
-    "figure": "40% of SaaS spend shifts to usage/outcome pricing by 2030",
-    "source": "Gartner"
-   }
-  ],
-  "linkedin": {
-   "recipe": {
-    "Industries": [
-     "Software Development",
-     "IT Services and IT Consulting"
-    ],
-    "Company Size": [
-     "51-200",
-     "201-500",
-     "501-1,000",
-     "1,001-5,000",
-     "5,001-10,000",
-     "10,001+"
-    ],
-    "Location": [
-     "United States",
-     "Central Europe and Israel (test)"
-    ]
-   },
-   "size": "Large",
-   "size_basis": "inferred",
-   "misses": "Charges by usage/tokens is not a LinkedIn attribute; reached by message plus technographic signal.",
-   "use_for": "Sizing and suppression base, not a launch audience."
-  }
- },
- "serviceable_market": {
-  "constraints": [
-   {
-    "constraint": "Geography",
-    "rule": "US-first for ads",
-    "effect": "US core; Central Europe and Israel as tests"
-   },
-   {
-    "constraint": "Product fit",
-    "rule": "Usage/consumption/credit pricing or launching it",
-    "effect": "Removes flat per-seat SaaS"
-   },
-   {
-    "constraint": "Engineering capacity",
-    "rule": "Needs an eng team to integrate",
-    "effect": "Removes no-dev-resource teams"
-   },
-   {
-    "constraint": "Stack",
-    "rule": "Sits on top of existing biller",
-    "effect": "No rip-and-replace barrier"
-   },
-   {
-    "constraint": "Scale",
-    "rule": "Enough usage volume to justify real-time control",
-    "effect": "Deprioritizes pre-revenue"
-   }
-  ],
-  "linkedin": {
-   "recipe": {
-    "Industries": [
-     "Software Development",
-     "IT Services and IT Consulting"
-    ],
-    "Company Size": [
-     "51-200",
-     "201-500",
-     "501-1,000",
-     "1,001-5,000"
-    ],
-    "Location": [
-     "United States"
-    ]
-   },
-   "size": "Moderate",
-   "size_basis": "inferred",
-   "misses": "Tech stack and launching-usage-pricing trigger not filterable; routed to third-party list.",
-   "use_for": "Native cold ceiling and firmographic base."
-  }
- },
- "icp": {
-  "criteria": [
-   {
-    "criterion": "Industry",
-    "ideal": "Software with a customer-facing AI feature; frontier AI first",
-    "acceptable": "Usage-priced SaaS, dev infra",
-    "disqualifier": "Non-software, flat-seat SaaS"
-   },
-   {
-    "criterion": "Company size",
-    "ideal": "51-10,000",
-    "acceptable": "11-50, 10,001+",
-    "disqualifier": "10 or fewer (low priority)"
-   },
-   {
-    "criterion": "Pricing model",
-    "ideal": "Usage/credits/tokens or launching it",
-    "acceptable": "Hybrid subscription plus usage",
-    "disqualifier": "Pure flat per-seat"
-   },
-   {
-    "criterion": "Stage",
-    "ideal": "Fast AI adoption needing to monetize now",
-    "acceptable": "Established product adding AI pricing",
-    "disqualifier": "Pre-product"
-   },
-   {
-    "criterion": "Decision owner",
-    "ideal": "Platform/billing engineering leader",
-    "acceptable": "Founder/CTO at smaller co",
-    "disqualifier": "No technical owner"
-   },
-   {
-    "criterion": "Trigger",
-    "ideal": "Launching/re-pricing usage or credits; scaling agents",
-    "acceptable": "Recent funding; migrating off homegrown",
-    "disqualifier": "Satisfied with current build"
-   }
-  ],
-  "evidence": "Stated, not yet validated by closed-won data. Rests on the strategy call, named customers on the site, and recon.",
-  "beachhead": "Frontier AI companies launching usage or credit pricing now (204 named, priority and secondary).",
-  "reach_via": "company_list",
-  "linkedin": {
-   "recipe": {
-    "Company List": [
-     "204 named AI accounts"
-    ],
-    "native_fallback": {
-     "Industries": [
-      "Software Development"
-     ],
-     "Company Size": [
-      "51-200",
-      "201-500",
-      "501-1,000"
-     ],
-     "Company Growth Rate": [
-      "high"
-     ],
-     "Location": [
-      "United States"
-     ]
-    }
-   },
-   "size": "204 accounts",
-   "size_basis": "observed",
-   "misses": "Prices-by-usage / launching-credits trigger; carried by message.",
-   "use_for": "Account-based core and person-filter base."
-  }
- },
- "personas": [
-  {
-   "name": "Platform / Engineering leader",
-   "role": "economic_buyer",
-   "priority": "Primary target",
-   "titles": [
-    "Chief Technology Officer",
-    "VP of Engineering",
-    "Head of Platform",
-    "Head of Infrastructure"
-   ],
-   "cares_about": "Reliability, latency, not owning billing plumbing",
-   "objections": "We can build this ourselves",
-   "linkedin": {
-    "recipe": {
-     "Job Function": [
-      "Engineering"
-     ],
-     "Job Seniority": [
-      "CXO",
-      "VP",
-      "Director"
-     ],
-     "Member Skills": [
-      "Distributed Systems",
-      "API Development"
-     ]
-    },
-    "size": "on the named accounts",
-    "size_basis": "tbd"
-   }
-  },
-  {
-   "name": "AI Engineers",
-   "role": "evaluator_champion",
-   "priority": "Primary",
-   "titles": [
-    "AI Engineer",
-    "ML Engineer",
-    "AI Platform Engineer"
-   ],
-   "cares_about": "Agent budgets, credits, customer-visible usage",
-   "objections": "Integration effort",
-   "linkedin": {
-    "recipe": {
-     "Job Function": [
-      "Engineering"
-     ],
-     "Job Seniority": [
-      "Senior",
-      "Manager"
-     ],
-     "Skills": [
-      "Machine Learning",
-      "Large Language Models"
-     ]
-    },
-    "size": "on the named accounts",
-    "size_basis": "tbd"
-   }
-  },
-  {
-   "name": "Billing / platform engineer",
-   "role": "champion",
-   "priority": "Primary target",
-   "titles": [
-    "Staff Engineer",
-    "Principal Engineer",
-    "Senior Backend Engineer",
-    "Platform Engineer"
-   ],
-   "cares_about": "Shipping pricing changes without a rebuild",
-   "objections": "Integration effort",
-   "linkedin": {
-    "recipe": {
-     "Job Function": [
-      "Engineering"
-     ],
-     "Job Seniority": [
-      "Director",
-      "Manager",
-      "Senior"
-     ],
-     "Member Skills": [
-      "API Development",
-      "Backend Development",
-      "Billing Systems"
-     ]
-    },
-    "size": "on the named accounts",
-    "size_basis": "tbd"
-   }
-  },
-  {
-   "name": "Founder / CEO",
-   "role": "economic_buyer",
-   "priority": "Primary",
-   "titles": [
-    "Founder",
-    "CEO"
-   ],
-   "cares_about": "Speed to monetize, proving the model",
-   "objections": "Focus and priorities",
-   "linkedin": {
-    "recipe": {
-     "Job Seniority": [
-      "Owner",
-      "Partner",
-      "CXO"
-     ],
-     "Job Function": [
-      "Entrepreneurship"
-     ]
-    },
-    "size": "on named AI accounts",
-    "size_basis": "tbd"
-   }
-  },
-  {
-   "name": "Finance / Revenue Operations",
-   "role": "influencer",
-   "priority": "Influencer",
-   "titles": [
-    "VP Finance",
-    "Director RevOps"
-   ],
-   "cares_about": "Margin, revenue recognition",
-   "objections": "Supporting voice only",
-   "linkedin": {
-    "recipe": {
-     "Job Function": [
-      "Finance"
-     ],
-     "Job Seniority": [
-      "Director",
-      "VP"
-     ],
-     "Member Skills": [
-      "Revenue Operations",
-      "Pricing Strategy"
-     ]
-    },
-    "size": "on the named accounts",
-    "size_basis": "tbd"
-   }
-  },
-  {
-   "name": "Homegrown instinct",
-   "role": "gatekeeper",
-   "priority": "Top competitor, objection to answer",
-   "titles": [],
-   "cares_about": "Control, building it in-house",
-   "objections": "Cost is not building once, it is maintaining real-time enforcement and edge cases while the roadmap waits",
-   "linkedin": {}
-  }
- ],
- "precision_layers": [
-  {
-   "layer": "Company Growth Rate",
-   "use": true,
-   "why": "AI cos in expansion rebuild monetization",
-   "size_impact": "meaningful"
-  },
-  {
-   "layer": "Member Traits: Recently Switched Jobs / Recently Promoted",
-   "use": true,
-   "why": "New leaders re-evaluate vendors, first-90-day budget",
-   "size_impact": "strong"
-  },
-  {
-   "layer": "Member Skills",
-   "use": true,
-   "why": "Reaches concepts that are not clean titles",
-   "size_impact": "moderate"
-  },
-  {
-   "layer": "Company Followers (Stigg + competitor)",
-   "use": true,
-   "why": "Warm retargeting and competitor conquest",
-   "size_impact": "moderate"
-  },
-  {
-   "layer": "Years of Experience",
-   "use": true,
-   "why": "Separates senior from title inflation",
-   "size_impact": "light"
-  },
-  {
-   "layer": "Member Groups",
-   "use": true,
-   "why": "Niche platform-eng groups widen a tight persona",
-   "size_impact": "small"
-  },
-  {
-   "layer": "Company Revenue",
-   "use": false,
-   "why": "Sparse on small AI cos",
-   "size_impact": "n/a"
-  },
-  {
-   "layer": "Company Category",
-   "use": false,
-   "why": "Fortune lists are the wrong universe",
-   "size_impact": "n/a"
-  },
-  {
-   "layer": "Member Age / Gender",
-   "use": false,
-   "why": "Offer does not skew",
-   "size_impact": "n/a"
-  }
- ],
- "priority_segments": [
-  {
-   "name": "Engineering leaders",
-   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
-   "job_function": "Engineering",
-   "location": "United States",
-   "format": "Single image, website visits, Learn more",
-   "job_seniority": [
-    "Director",
-    "VP"
-   ],
-   "month_1_budget": "$500 to $1,200",
-   "opening_line": "Your pricing launch should not end in a refund thread.",
-   "excludes": "Company Growth Rate 10%+, Frequent Contributors, executives, competitors, customers"
-  },
-  {
-   "name": "Engineers",
-   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
-   "job_function": "Engineering",
-   "location": "United States",
-   "format": "Single image, website visits, Learn more",
-   "job_seniority": [
-    "Senior",
-    "Manager"
-   ],
-   "month_1_budget": "$1,500 to $3,000",
-   "opening_line": "One account. Four agents. Running all weekend.",
-   "excludes": "Frequent Contributors, executives, competitors, customers",
-   "split_rule": "one campaign per list above about 10,000 members"
-  },
-  {
-   "name": "Leaders at fast-growing companies",
-   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
-   "job_function": "Engineering",
-   "location": "United States",
-   "format": "Single image, website visits, Learn more",
-   "job_seniority": [
-    "Director",
-    "VP"
-   ],
-   "month_1_budget": "$400 to $1,000",
-   "opening_line": "It started as a usage counter.",
-   "excludes": "executives, competitors, customers",
-   "company_growth_rate": "10% and above"
-  },
-  {
-   "name": "Frequent contributors",
-   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
-   "job_function": "Engineering",
-   "location": "United States",
-   "format": "Single image, website visits, Learn more",
-   "job_seniority": [
-    "Senior",
-    "Manager",
-    "Director",
-    "VP"
-   ],
-   "month_1_budget": "$400 to $1,000",
-   "opening_line": "Your billing tool finds it on the 30th. Stigg stops it on the 3rd.",
-   "excludes": "executives, competitors, customers",
-   "member_traits": "Frequent Contributors"
-  }
- ],
- "paid_search_groups": [
-  {
-   "group": "Category capture",
-   "persona": "Champion",
-   "terms": [
-    "usage-based billing",
-    "metered billing",
-    "consumption billing"
-   ],
-   "intent": "high",
-   "cost": "medium"
-  },
-  {
-   "group": "Method and differentiator",
-   "persona": "Platform / Engineering leader",
-   "terms": [
-    "entitlement management",
-    "real-time billing control",
-    "AI credits"
-   ],
-   "intent": "high",
-   "cost": "low"
-  },
-  {
-   "group": "Stripe long-tail",
-   "persona": "Champion",
-   "terms": [
-    "stripe metered billing",
-    "stripe usage billing"
-   ],
-   "intent": "high",
-   "cost": "medium"
-  },
-  {
-   "group": "Competitor conquest",
-   "persona": "Platform / Engineering leader",
-   "terms": [
-    "metronome alternative",
-    "orb alternative",
-    "chargebee alternative"
-   ],
-   "intent": "high",
-   "cost": "high"
-  },
-  {
-   "group": "Brand defense",
-   "persona": "All",
-   "terms": [
-    "stigg",
-    "stigg pricing"
-   ],
-   "intent": "high",
-   "cost": "low"
-  }
- ],
- "negative_keywords": [
-  "metronome music",
-  "seiko metronome",
-  "soundbrenner",
-  "zuora login",
-  "zuora support",
-  "invoice software",
-  "quickbooks",
-  "medical billing",
-  "usage pricing (telecom)",
-  "free",
-  "jobs",
-  "salary"
- ],
- "signals": [
-  {
-   "type": "Technographics",
-   "indicates": "Runs AI/LLM stack; which biller is in place",
-   "sources": [
-    "BuiltWith",
-    "HG Insights",
-    "Clay"
-   ],
-   "activation": "Matched Audience list",
-   "feeds": "Serviceable base, conquest"
-  },
-  {
-   "type": "Hiring",
-   "indicates": "Building usage pricing now",
-   "sources": [
-    "Clay",
-    "LinkedIn jobs"
-   ],
-   "activation": "trigger list",
-   "feeds": "Segment 3"
-  },
-  {
-   "type": "Funding/events",
-   "indicates": "Budget and urgency",
-   "sources": [
-    "Crunchbase",
-    "news"
-   ],
-   "activation": "prioritization",
-   "feeds": "beachhead"
-  },
-  {
-   "type": "People movement",
-   "indicates": "New eng leader in buyer seat",
-   "sources": [
-    "Clay",
-    "Sales Navigator"
-   ],
-   "activation": "trigger list",
-   "feeds": "Segment 3"
-  },
-  {
-   "type": "Web ID / site",
-   "indicates": "Named accounts and people on site",
-   "sources": [
-    "DemandSense Web ID",
-    "Insight Tag",
-    "RB2B",
-    "Common Room"
-   ],
-   "activation": "Matched Audience",
-   "feeds": "Segment 2, hidden pipeline"
-  },
-  {
-   "type": "Social + first-party",
-   "indicates": "Engagers and CRM pipeline/closed-lost",
-   "sources": [
-    "Trigify",
-    "Company Hub",
-    "HubSpot",
-    "Salesforce"
-   ],
-   "activation": "Matched Audience, suppression",
-   "feeds": "warm, conquest, suppression"
-  }
- ],
- "exclusions": [
-  {
-   "who": "Existing customers",
-   "how": "Company List exclusion"
-  },
-  {
-   "who": "Open pipeline",
-   "how": "CRM sync suppression"
-  },
-  {
-   "who": "Employees",
-   "how": "Company exclusion (Stigg)"
-  },
-  {
-   "who": "Competitors",
-   "how": "Company List exclusion: Metronome, Orb, Chargebee, Schematic, Paid, Credyt"
-  },
-  {
-   "who": "Students/trainees",
-   "how": "Seniority exclusion (Training, Unpaid)"
-  },
-  {
-   "who": "Job seekers",
-   "how": "Member Traits: Job Seekers exclusion"
-  },
-  {
-   "who": "Out-of-market geographies",
-   "how": "Non-US at launch; Central Europe and Israel as later tests"
-  },
-  {
-   "who": "Disqualified firms",
-   "how": "Non-software, flat-seat-only, 1-10 pre-product"
-  },
-  {
-   "who": "Accounts Stigg flagged",
-   "how": "Writer, World Labs, Waymo, Viz.ai, Verta removed from the list"
-  },
-  {
-   "who": "Entry-level roles",
-   "how": "Seniority exclusion (Entry)"
-  }
- ],
- "geography": {
-  "include": [
-   "United States"
-  ],
-  "test_later": [
-   "Central Europe",
-   "Israel"
-  ],
-  "language": "English only",
-  "exclude": "everything else"
- },
- "seniority": {
-  "great_fit": [
-   "Senior",
-   "Manager",
-   "Director",
-   "VP",
-   "Owner/Partner/Founder"
-  ],
-  "lower_fit": [
-   "Entry"
-  ],
-  "to_confirm": [
-   "CXO"
-  ]
- },
- "broad_base": "held back at launch; opens only if the four campaigns earn it",
- "competitors": {
-  "primary": "build in-house",
-  "closest_vendor": "Metronome (Stripe)",
-  "others": [
-   "Orb",
-   "Chargebee",
-   "Schematic",
-   "Paid",
-   "Credyt"
-  ],
-  "partners": [
-   "Zuora",
-   "Airwallex",
-   "Stripe (biller)"
-  ]
- },
- "activation_order": [
-  "first-party data",
-  "warm digital audiences",
-  "named AI accounts by persona",
-  "in-market search",
-  "two tight pockets"
- ],
- "executives": "CXO, owner, partner, founder and CEO titles excluded from cold; reached from Month 2 at accounts whose engineers have engaged",
- "retargeting": "Spotlight to 90-day engagers and visitors once the pool passes 300; Stigg first-party lists join in Month 2"
-}
-</script>
-</div>
-</section>
 <section class="view" id="messaging">
 <div class="roomwrap">
   <header class="ov-hero">
     <div class="kicker">Message and Offer / Stigg</div>
     <h1 class="big">One idea, said five ways, <em>with an offer at every step</em>.</h1>
-    <p class="lede">What Stigg says, to whom, in what order, and what it offers at each step. Built on the open ground in White Space and the buyers in Targeting, in Stigg's own words wherever they already exist.</p>
+    <p class="lede">What Stigg says, to whom, in what order, and what it offers at each step. Built on the open ground in White Space and the buyers in Targeting.</p>
   </header>
 
   <section class="blk">
     <div class="secnum">01 / THE ONE IDEA</div>
     <h2 class="sec">Every ad tells <em>the same story</em></h2>
     <div class="r-quote">Every AI request is a spend decision. Make it in milliseconds.</div>
-    <p class="body" style="margin-top:12px">The line is Stigg's own. The story behind it is what Dor sees in every deal:</p>
+    <p class="body" style="margin-top:12px">The story behind it:</p>
     <div class="mo-story">
       <div class="mo-step"><div class="n-num">1</div><p>Teams that know AI billing tools exist know the one everyone uses.</p></div>
       <div class="mo-step"><div class="n-num">2</div><p>The ones who tried it for AI found it was not built for AI, and too slow.</p></div>
@@ -2367,12 +1421,12 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <header class="ov-hero" style="padding-bottom:20px">
     <div class="kicker">Capture / Google paid search</div>
     <h1 class="big">A precise capture lane, <em>run at full budget</em></h1>
-    <p class="lede">We pulled your keyword research apart before positioning Google, because the file is misleading at first glance. It holds 399,720 searches a month, and most of it is invoicing, accounting, medical, and telecom demand that only shares the word "billing." Strip all of it and the qualified pool is about 18,080 searches a month. That is enough to run a real capture, conquest, and adjacent-category motion, funded on a three-month ramp from $6,019 to $10,002 a month, without ever spending on the wrong buyer.</p>
+    <p class="lede">We pulled your keyword research apart before positioning Google, because the file is misleading at first glance. It holds 399,720 searches a month, and most of it is invoicing, accounting, medical, and telecom demand that only shares the word "billing." Strip all of it and the qualified pool is about 18,100 searches a month. That is enough to run a real capture, conquest, and adjacent-category motion, funded on a three-month ramp from $6,019 to $10,002 a month, without ever spending on the wrong buyer.</p>
   </header>
 
   <section class="blk">
     <div class="secnum">01 / WHAT IS IN THE FILE</div>
-    <h2 class="sec">381,640 of 399,720 searches <em>are not your buyer</em></h2>
+    <h2 class="sec">381,620 of 399,720 searches <em>are not your buyer</em></h2>
     <p class="body">Here is what is actually in the file. To Google, "billing" means invoicing and accounting software, so that is where the volume sits. A single term, "usage pricing" at 33,100 a month, looks like the largest opportunity in the whole set and is telecom and cloud data-usage demand, not software. The job of this build is to make sure the budget never touches any of it.</p>
 
     <div class="cap-excl">
@@ -2380,11 +1434,11 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <div class="cap-erow"><div class="cap-elbl">Invoicing and invoice tools</div><div class="cap-etrack"><div class="cap-ebar" style="width:71%;background:rgba(140,140,150,.42)"></div></div><div class="cap-eamt">117,000</div></div>
       <div class="cap-erow"><div class="cap-elbl">SMB accounting</div><div class="cap-etrack"><div class="cap-ebar" style="width:41%;background:rgba(140,140,150,.42)"></div></div><div class="cap-eamt">67,600</div></div>
       <div class="cap-erow"><div class="cap-elbl">"Usage pricing", telecom and cloud</div><div class="cap-etrack"><div class="cap-ebar" style="width:20%;background:var(--barclay)"></div></div><div class="cap-eamt">33,100</div></div>
-      <div class="cap-erow keep"><div class="cap-elbl">Your actual buyer</div><div class="cap-etrack"><div class="cap-ebar" style="width:11%;background:var(--barcanopy);min-width:10px"></div></div><div class="cap-eamt">18,080</div></div>
+      <div class="cap-erow keep"><div class="cap-elbl">Your actual buyer</div><div class="cap-etrack"><div class="cap-ebar" style="width:11%;background:var(--barcanopy);min-width:10px"></div></div><div class="cap-eamt">18,100</div></div>
     </div>
-    <figcaption>Bars are share of the 399,720 searches in your keyword file. The bright band, about 4.5 percent, is the qualified pool: 17,600 non-brand plus 480 on the brand. The clay bar is the trap, a term that looks like the biggest prize and belongs to telecom.</figcaption>
+    <figcaption>Bars are share of the 399,720 searches in your keyword file. The bright band, about 4.5 percent, is the qualified pool: 17,620 non-brand plus 480 on the brand. The clay bar is the trap, a term that looks like the biggest prize and belongs to telecom.</figcaption>
 
-    <div class="callout"><div class="k">A number inside the pool worth stating plainly</div><p>Even inside the qualified 18,080, one figure needs honesty before anyone forecasts from it. The Competitors campaign shows 7,790 searches, but 5,400 of that, 69 percent, is the single bare term "zuora," and a bare competitor brand is overwhelmingly that company's own users heading to login, docs, and support. Strip the navigational half and genuinely in-market competitor demand is about 2,060 a month. That is the figure the plan is built on, and the reason bare "zuora" runs exact match only with a navigational negative list loaded before launch.</p></div>
+    <div class="callout"><div class="k">A number inside the pool worth stating plainly</div><p>Even inside the qualified 18,100, one figure needs honesty before anyone forecasts from it. The Competitors campaign shows 7,810 searches, but 5,400 of that, 69 percent, is the single bare term "zuora," and a bare competitor brand is overwhelmingly that company's own users heading to login, docs, and support. Strip the navigational half and genuinely in-market competitor demand is about 2,060 a month. That is the figure the plan is built on, and the reason bare "zuora" runs exact match only with a navigational negative list loaded before launch.</p></div>
 
     <div class="callout" style="border-left-color:var(--hazard)">
       <div class="k" style="color:var(--terra-text)">The negatives are the whole game</div>
@@ -2415,8 +1469,8 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       </div>
       <div class="card tc">
         <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Campaign 3</span><span class="ctitle">Competitors</span><span class="ctags">Displacement intent</span></div>
-        <div class="cap-meta"><span><b>7,790</b> searches/mo (<b>2,060</b> in-market)</span><span><b>$1,702 &rarr; $2,706</b>/mo</span><span>Manual CPC, one rival per ad group</span></div>
-        <div class="cap-ag"><span class="agn">Zuora <span class="agv">6,180/mo, exact only</span></span><span class="agp">&rarr; /zuora-competitors</span></div>
+        <div class="cap-meta"><span><b>7,810</b> searches/mo (<b>2,060</b> in-market)</span><span><b>$1,702 &rarr; $2,706</b>/mo</span><span>Manual CPC, one rival per ad group</span></div>
+        <div class="cap-ag"><span class="agn">Zuora <span class="agv">6,200/mo, exact only</span></span><span class="agp">&rarr; /zuora-competitors</span></div>
         <div class="cap-ag"><span class="agn">Metronome <span class="agv">910/mo</span></span><span class="agp">&rarr; /metronome-alternatives</span></div>
         <div class="cap-ag"><span class="agn">Orb <span class="agv">700/mo</span></span><span class="agp">&rarr; /orb-alternative</span></div>
       </div>
@@ -2513,16 +1567,16 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Create</span><span class="ctitle">Make demand exist</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span><span class="eco-pip on-canopy"></span></span></div>
-        <p class="body" style="margin:4px 0">Running well already. The founder publishes category-defining posts and the company has an engaged following.</p>
-        <div class="why"><b>What we would run:</b> amplify the strongest existing posts with Thought Leader Ads. The content already exists, so there is no creative discovery phase, and it is the cheapest reach in the system.</div>
+        <p class="body" style="margin:4px 0">Running already. Dor publishes a real point of view on AI pricing, and the company has an engaged following.</p>
+        <div class="why"><b>What we run:</b> a monthly thought leadership program: a voice session with Dor, interviews turned into posts and clips, and the best posts promoted as Thought Leader Ads to the warm audience.</div>
       </div>
 
       <div class="card tb">
         <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Connect</span><span class="ctitle">Qualify and convert, the hub</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-blue"></span><span class="eco-pip on-blue"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
-        <p class="body" style="margin:4px 0">LinkedIn ads are live. The step to take is structural: make this the layer that filters the traffic by company and role before spend.</p>
-        <div class="why"><b>What we would run:</b> restructure the spend into warm retargeting of the site visitors and content engagers, plus named-account targeting. This is the entry motion and the center of gravity.</div>
+        <p class="body" style="margin:4px 0">LinkedIn is the hub: the one channel that can reach specific people at specific accounts by role and seniority.</p>
+        <div class="why"><b>What we run:</b> four cold single-image campaigns on the 204 named accounts and Spotlight retargeting, then warm offers, executives at engaged accounts, and Stigg's own lists from Month 2.</div>
       </div>
 
       <div class="card tt">
@@ -2530,7 +1584,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-terra"></span><span class="eco-pip on-terra"></span><span class="eco-pip on-terra"></span><span class="eco-pip"></span></span></div>
         <p class="body" style="margin:4px 0">Google launches as a new, targeted lane. Its job is capturing the buyers already searching and defending the brand against the named rivals.</p>
-        <div class="why"><b>What we would run:</b> point Google at category, method, and competitor terms, each with a matched landing page, so it feeds the same retargeting pools rather than running on its own.</div>
+        <div class="why"><b>What we run:</b> five search campaigns kept apart by intent (category, method, Stripe metered billing, competitor alternatives, brand), each with a matched page, feeding the same retargeting audiences.</div>
       </div>
 
       <div class="card">
@@ -2538,15 +1592,15 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-canopy"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
         <p class="body" style="margin:4px 0">HubSpot is in place, which is the foundation. The layer to build is the connection that turns ad activity into a revenue picture.</p>
-        <div class="why"><b>What we would run:</b> wire HubSpot and the five-source signals so influenced pipeline, named accounts, and hidden pipeline become visible. This is the other half of the entry, and it answers the attribution question directly.</div>
+        <div class="why"><b>What we run:</b> HubSpot connected to DemandSense, so influenced pipeline, named accounts on the site, and engaged accounts with no deal yet become visible.</div>
       </div>
 
       <div class="card tm">
         <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Activate</span><span class="ctitle">Turn signal into conversations</span><span class="ctags"><span class="badge bbuild">Build during</span></span></div>
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-moss"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
-        <p class="body" style="margin:4px 0">This layer turns on once the signals are firing. Its job is converting warmed named accounts into conversations.</p>
-        <div class="why"><b>What we would run:</b> signal-triggered outreach on LinkedIn and by email on the accounts the ads warm up, handed over the moment the signal says they are ready.</div>
+        <p class="body" style="margin:4px 0">This layer turns on once the signals are firing. Its job is getting engaged, named accounts to Stigg's sales team.</p>
+        <div class="why"><b>What we run:</b> engaged accounts sent to Stigg's sales team with what each person engaged with, the week the signal shows they are leaning in.</div>
       </div>
 
       <div class="card tc">
@@ -2554,11 +1608,11 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
         <p class="body" style="margin:4px 0">Sequenced for later, once a qualified pool exists. Programmatic inherits a pool; it cannot build one, so it runs after LinkedIn qualifies the audience.</p>
-        <div class="why"><b>What we would run:</b> account-based air cover through programmatic for the accounts LinkedIn under-delivers, reassessed after the first ninety days.</div>
+        <div class="why"><b>What we run:</b> account-based air cover through programmatic for the accounts LinkedIn under-delivers, reassessed after the first ninety days.</div>
       </div>
 
     </div>
-    <p class="body" style="font-size:13px;color:var(--muted);margin-top:14px">The bars show how ready each layer is to run today, not a grade. The four marked to start here are the recommended entry motion; the rest are sequenced behind them so budget only moves to the next layer once the current one earns it.</p>
+    <p class="body" style="font-size:13px;color:var(--muted);margin-top:14px">The bars show how ready each layer is to run today, not a grade. The four marked to start here are running now; the rest are sequenced behind them so budget only moves to the next layer once the current one earns it.</p>
   </section>
 </div>
 </section>
@@ -2568,35 +1622,47 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">HOW IT WORKS / THE METHOD</div>
     <h2 class="sec">One system, <em>with an order</em></h2>
-    <p class="body">We do not run channels as a menu. We run them as one system with an order, aimed at acquiring the named AI accounts and converting the warm ecosystem you already have. Each layer has a job, and each makes the next one cheaper. Here is what each does in Stigg's account, why LinkedIn looks expensive on its own but is not once the system is judged as a whole, and how the signals and revenue tie back to HubSpot.</p>
+    <p class="body">Each channel has one job, and each makes the next one cheaper. LinkedIn reaches the named accounts, Dor's thought leadership earns their trust, Google catches the ones already searching, and the signal layer shows which accounts are moving so Stigg's sales team knows where to spend time.</p>
 
     <div class="hiw-stack">
       <div class="card tl">
-        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Create</span><span class="ctitle">Make demand exist</span><span class="ctags">Thought Leader Ads / founder content</span></div>
-        <p class="body" style="margin:6px 0">Stigg already has the hardest part of this: a founder who publishes a real category point of view. We amplify the strongest existing posts with Thought Leader Ads, which run the content that already exists, so there is no creative discovery phase and it is the cheapest reach in the system.</p>
-        <div class="why"><b>Job in this account:</b> seed the top of the funnel and grow the retargeting pools cheaply, so every layer below has warm traffic to work with.</div>
+        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Create</span><span class="ctitle">Earn the attention</span><span class="ctags">Thought leadership / Dor</span></div>
+        <p class="body" style="margin:6px 0">A voice session with Dor, then monthly interviews turned into posts, short clips, and a newsletter. Mor and Sara approve the first five posts. Dor's best-performing posts run as Thought Leader Ads to the warm audience from Month 2.</p>
+        <div class="why"><b>Job in this account:</b> make engineering leaders at the named accounts recognize Dor's point of view before any sales conversation.</div>
       </div>
       <div class="card tb">
-        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Connect</span><span class="ctitle">Qualify and convert, the hub</span><span class="ctags">Retargeting / account-based / Matched Audiences</span></div>
-        <p class="body" style="margin:6px 0">LinkedIn is the only channel that can read a site visitor's company, size, seniority, and function and decide whether they are worth spending on, before the spend. It retargets the warm traffic, runs named-account plays, and turns a stream of anonymous visits into a qualified, named audience the rest of the system works against.</p>
-        <div class="why"><b>Job in this account:</b> qualify the roughly 5,000 monthly visits and the content engagers, and produce the signals every other layer reads from.</div>
+        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Connect</span><span class="ctitle">Reach the named accounts</span><span class="ctags">LinkedIn / four cold campaigns, then warm</span></div>
+        <p class="body" style="margin:6px 0">Four single-image campaigns on the 204 named accounts, one buyer slice each: engineering leaders, engineers, leaders at fast-growing companies, and frequent contributors. Spotlight retargeting follows everyone who engages. Warm offers, executives at engaged accounts, and Stigg's own lists join in Month 2; a video trust sequence runs in Month 3.</p>
+        <div class="why"><b>Job in this account:</b> put Stigg in front of the right engineers at the right accounts, and build the warm audience every later step works from.</div>
       </div>
       <div class="card tt">
-        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Capture</span><span class="ctitle">Harvest active demand</span><span class="ctags">Google search / conquest</span></div>
-        <p class="body" style="margin:6px 0">Google catches the buyers already searching for usage billing, metering, and competitor alternatives, and defends the brand against the named rivals. Each group points at a matched landing page rather than the homepage, because the page decides the return on an expensive click, not the click itself.</p>
-        <div class="why"><b>Job in this account:</b> harvest in-market demand and feed the same retargeting pools, so search and LinkedIn compound instead of running separately.</div>
-      </div>
-      <div class="card tc">
-        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Extend</span><span class="ctitle">Scale on a qualified pool</span><span class="ctags">Programmatic, later</span></div>
-        <p class="body" style="margin:6px 0">Programmatic re-engages the enriched buyers LinkedIn prices out, at a fraction of the cost per thousand impressions, and give account-based air cover across display and native. They inherit a qualified pool; they cannot build one, which is exactly why they run after LinkedIn, not before.</p>
-        <div class="why"><b>Job in this account:</b> cheap, high-frequency reach against an audience LinkedIn has already qualified, reassessed after the first ninety days.</div>
+        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Capture</span><span class="ctitle">Catch active demand</span><span class="ctags">Google / five search campaigns</span></div>
+        <p class="body" style="margin:6px 0">Five campaigns kept apart by intent: category, method, Stripe metered billing, competitor alternatives, and brand. Each routes to a matched page, never the homepage. Book a Demo is the conversion Google bids on.</p>
+        <div class="why"><b>Job in this account:</b> harvest buyers already searching, and feed the same retargeting audiences LinkedIn uses.</div>
       </div>
       <div class="card tm">
-        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Activate</span><span class="ctitle">Turn signal into conversations</span><span class="ctags">Signal-triggered outreach / nurture</span></div>
-        <p class="body" style="margin:6px 0">When the signals say an account is leaning in, we hand it to signal-triggered outreach on LinkedIn and by email, with full context on what each prospect engaged with. This is where marketing hands sales a warm, named account instead of a cold list.</p>
-        <div class="why"><b>Job in this account:</b> convert the accounts the ads warm up into conversations, the moment they are ready.</div>
+        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Convert</span><span class="ctitle">Turn interest into meetings</span><span class="ctags">Warm offers / signals to sales</span></div>
+        <p class="body" style="margin:6px 0">Warm accounts get one clear ask: a guide, an architecture session, or Start free. When DemandSense shows an account leaning in, it goes to Stigg's sales team with what each person engaged with.</p>
+        <div class="why"><b>Job in this account:</b> hand sales a short list of engaged, named accounts instead of a cold list.</div>
+      </div>
+      <div class="card tc">
+        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Extend</span><span class="ctitle">Reach the accounts LinkedIn misses</span><span class="ctags">Programmatic, later</span></div>
+        <p class="body" style="margin:6px 0">Display for named accounts that LinkedIn under-delivers, once a qualified audience exists. It inherits an audience; it cannot build one, so it runs after LinkedIn.</p>
+        <div class="why"><b>Job in this account:</b> cheap repeat reach to the underserved accounts, reassessed after the first 90 days.</div>
       </div>
     </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">THE FIRST 90 DAYS</div>
+    <h2 class="sec">What runs each month, <em>by channel</em></h2>
+    <p class="body">The ask grows as the accounts warm. Month 1 earns attention, Month 2 turns it into trust and a first offer, Month 3 asks the accounts that are ready.</p>
+    <div class="scroll"><table class="tbl"><thead><tr><th>Channel</th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr></thead><tbody>
+      <tr><td class="k">LinkedIn</td><td>After Tokens campaigns through November 10; four cold single-image campaigns; Spotlight once the warm audience passes 300</td><td>Lead gen form offers to the 90-day warm audience; executives at engaged accounts; Stigg's own lists as a warm campaign</td><td>Video trust sequence from interview clips; the form moves to 30-day engagers; Follower ads</td></tr>
+      <tr><td class="k">Thought leadership</td><td>Voice session with Dor; five sample posts for Mor and Sara to approve</td><td>First interviews become posts, clips, and quote cards; best posts run as Thought Leader Ads</td><td>After Tokens session clips; steady monthly cadence</td></tr>
+      <tr><td class="k">Google</td><td>Five search campaigns launch, bidding on Book a Demo</td><td>Conversion values by plan tier; search terms reviewed weekly</td><td>Closed-won deals imported from HubSpot as the data allows</td></tr>
+      <tr><td class="k">Signals and reporting</td><td>DemandSense and Web ID live; HubSpot connected; weekly job-title review</td><td>Engaged accounts sent to Stigg's sales team; AI-usage verification tested on the lists</td><td>First influenced-pipeline read and the day-90 review</td></tr>
+    </tbody></table></div>
   </section>
 
   <section class="blk">
@@ -2643,7 +1709,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">THE SIGNAL LAYER</div>
     <h2 class="sec">Reporting the board <em>actually asks for</em></h2>
-    <p class="body">Most agencies rent a dashboard. We run on DemandSense, a signal platform we are a top partner in. It composes five signal sources into one account-level view: who is engaging, from what company, in what role, and how close they are to buying. That produces a coverage picture no single channel can, so the conversation moves from clicks to accounts and pipeline.</p>
+    <p class="body">We run on DemandSense, a signal platform we are a top partner in. It composes five signal sources into one account-level view: who is engaging, from what company, in what role, and how close they are to buying. That produces a coverage picture no single channel can, so the conversation moves from clicks to accounts and pipeline.</p>
 
     <div class="edu-wf">
       <div class="edu-wf-row"><div class="edu-wf-lbl">Unaware</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:100%;background:var(--barclay)">the addressable universe</div></div></div>
