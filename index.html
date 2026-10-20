@@ -16,7 +16,7 @@ personas: engineering-led. Senior software engineers, VP Eng, CTO, founders/CEOs
 competitors: Metronome + Orb = primary rivals (mature, lead on measure-after-the-fact). Schematic + Credyt = minor/immature (Credyt heavy SEO). Zuora + Chargebee = PARTNERS (Stigg layers on top, works with them; NOT competitors). Homegrown / build-in-house = the third, implicit competitor to answer in message + targeting.
 wedge: decide in real-time, before the action, before money is spent (vs rivals measuring after the fact). Plus keep-your-billing, built-for-AI from day one incl. agent limits, run-in-your-own-cloud.
 google_role: targeted, secondary capture lane (high-intent capture + select conquest). Milovan's 5-campaign plan lives in the Capture tab, positioned as targeted alongside the primary ABM motion, not a co-equal engine. Zuora conquest softened (partner).
-channel_order: Create (thought leadership) -> Connect (LinkedIn ABM hub + warm conversion, start) -> Capture (Google targeted, start) -> Intelligence (DemandSense/Web ID/HubSpot, start) -> Activate (LinkedIn + email outreach, build) -> Extend (programmatic, later; Meta ruled out by intake).
+channel_order: Create (thought leadership) -> Connect (LinkedIn ABM hub + warm conversion, start) -> Capture (Google targeted, start) -> Intelligence (DemandSense/Web ID/HubSpot, start) -> Activate (signal-triggered LinkedIn and email, build) -> Extend (programmatic, later; Meta ruled out by intake).
 attribution: HubSpot stays inbound system of record (Salesforce siloed on sales side). DemandSense syncs CRM + LinkedIn paid/organic + company intelligence API + RB2B/Common Room; account movement, campaigns by persona, surface accounts to sales.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,9 +220,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 /* --- overview --- */
 .ov-hero{padding:56px 0 30px;border-bottom:1px solid var(--line)}
 .ov-thesis{background:var(--panel-deep);border-radius:16px;padding:30px 32px;margin:24px 0}
-.ov-thesis .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#D4FF3D;margin-bottom:12px}
-.ov-thesis p{color:#F4F1EA;font-size:clamp(17px,2.1vw,21px);line-height:1.55;font-family:'Inter',sans-serif;font-style:normal;font-weight:450}
-.ov-thesis p em{color:#D4FF3D;font-style:normal;font-weight:650}
+.ov-thesis .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C6FF3D;margin-bottom:12px}
+.ov-thesis p{color:#F5F5F5;font-size:clamp(17px,2.1vw,21px);line-height:1.55;font-family:'Inter',sans-serif;font-style:normal;font-weight:450}
+.ov-thesis p em{color:#C6FF3D;font-style:normal;font-weight:650}
 .ov-movegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
 @media(max-width:820px){.ov-movegrid{grid-template-columns:1fr}}
 /* --- ecosystem board --- */
@@ -243,28 +243,28 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 /* educational: compounding loop + coverage waterfall + influenced-revenue */
 .edu-wf{display:flex;flex-direction:column;gap:9px;margin:20px 0 6px}
 .edu-wf-row{display:flex;align-items:center;gap:13px}
-.edu-wf-lbl{width:150px;flex-shrink:0;font-family:'Archivo Black';font-size:12.5px;text-transform:uppercase;letter-spacing:-.01em;text-align:right;color:var(--ink)}
+.edu-wf-lbl{width:150px;flex-shrink:0;font-family:var(--body);font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:-.01em;text-align:right;color:var(--ink)}
 .edu-wf-track{flex:1;background:rgba(0,0,0,.05);border-radius:6px;height:32px;overflow:hidden}
 [data-theme="dark"] .edu-wf-track{background:rgba(255,255,255,.05)}
-.edu-wf-bar{height:32px;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-family:'JetBrains Mono';font-size:11px;font-weight:700;color:#0A0A0C}
+.edu-wf-bar{height:32px;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-family:'JetBrains Mono';font-size:11px;font-weight:700;color:#001122}
 .edu-svgbox{fill:var(--card);stroke:var(--line);stroke-width:1.5}
-.edu-svghub{fill:rgba(27,155,209,.10);stroke:var(--blue);stroke-width:2}
-[data-theme="dark"] .edu-svghub{fill:rgba(27,155,209,.18)}
-.edu-svgout{fill:rgba(212,255,61,.12);stroke:var(--moss);stroke-width:1.5}
-[data-theme="dark"] .edu-svgout{fill:rgba(212,255,61,.10)}
+.edu-svghub{fill:rgba(0,153,209,.10);stroke:var(--blue);stroke-width:2}
+[data-theme="dark"] .edu-svghub{fill:rgba(0,153,209,.18)}
+.edu-svgout{fill:rgba(198,255,61,.12);stroke:var(--moss);stroke-width:1.5}
+[data-theme="dark"] .edu-svgout{fill:rgba(198,255,61,.10)}
 .edu-arrow{stroke:var(--muted);stroke-width:2;fill:none}
 .edu-boxlabel{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:var(--ink)}
 .edu-boxsub{font-family:'JetBrains Mono';font-size:9.5px;fill:var(--muted)}
 .edu-statrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
 .edu-stat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:10px;padding:14px 16px}
-.edu-stat .n{font-family:'Archivo Black';font-size:24px;line-height:1;color:var(--moss-text)}
+.edu-stat .n{font-family:var(--disp);font-weight:400;font-size:24px;line-height:1;color:var(--moss-text)}
 .edu-stat .l{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.4}
 /* --- paths forward --- */
 .pf-fitgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:18px 0}
 @media(max-width:820px){.pf-fitgrid{grid-template-columns:1fr}}
 .pf-proofgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:16px}
 @media(max-width:900px){.pf-proofgrid{grid-template-columns:1fr}}
-.pf-proof .n{font-family:'Archivo Black';font-size:20px;color:var(--canopy-text);line-height:1}
+.pf-proof .n{font-family:var(--body);font-weight:800;font-size:20px;color:var(--canopy-text);line-height:1}
 .pmscroll{overflow-x:auto}
 @media(max-width:820px){.pmscroll .pm{min-width:720px}}
 /* --- accent card + budget-ramp bar helpers --- */
@@ -273,20 +273,20 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .card.tp .why b{color:var(--pink-text)}
 .dm-budget{display:flex;flex-direction:column;gap:11px;margin:20px 0 6px}
 .dm-brow{display:flex;align-items:center;gap:13px}
-.dm-blbl{width:170px;flex-shrink:0;font-family:'Archivo Black';font-size:12.5px;text-transform:uppercase;letter-spacing:-.01em;text-align:right;color:var(--ink)}
+.dm-blbl{width:170px;flex-shrink:0;font-family:var(--body);font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:-.01em;text-align:right;color:var(--ink)}
 .dm-btrack{flex:1;background:rgba(0,0,0,.05);border-radius:6px;height:34px;overflow:hidden}
 [data-theme="dark"] .dm-btrack{background:rgba(255,255,255,.05)}
-.dm-bar{height:34px;border-radius:6px;display:flex;align-items:center;padding:0 13px;font-family:'JetBrains Mono';font-size:11.5px;font-weight:700;color:#0A0A0C}
+.dm-bar{height:34px;border-radius:6px;display:flex;align-items:center;padding:0 13px;font-family:'JetBrains Mono';font-size:11.5px;font-weight:700;color:#001122}
 .dm-bamt{margin-left:auto;font-family:'JetBrains Mono';font-size:11px;color:var(--muted);width:120px;text-align:right;flex-shrink:0}
 @media(max-width:640px){.dm-blbl{width:96px}.dm-bamt{width:80px}}
 .dm-lanes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
 @media(max-width:820px){.dm-lanes{grid-template-columns:1fr}}
 .dm-lane{border-radius:13px;padding:20px 22px;border:1px solid var(--line)}
-.dm-lane.ent{background:rgba(27,155,209,.07);border-left:4px solid var(--blue)}
-.dm-lane.self{background:rgba(255,45,122,.06);border-left:4px solid var(--jet-pink)}
-[data-theme="dark"] .dm-lane.ent{background:rgba(27,155,209,.10)}
-[data-theme="dark"] .dm-lane.self{background:rgba(255,45,122,.10)}
-.dm-lane .goal{font-family:'Archivo Black';font-size:20px;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+.dm-lane.ent{background:rgba(0,153,209,.07);border-left:4px solid var(--blue)}
+.dm-lane.self{background:rgba(91,184,224,.06);border-left:4px solid var(--jet-pink)}
+[data-theme="dark"] .dm-lane.ent{background:rgba(0,153,209,.10)}
+[data-theme="dark"] .dm-lane.self{background:rgba(91,184,224,.10)}
+.dm-lane .goal{font-family:var(--body);font-weight:800;font-size:20px;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
 .dm-lane.ent .goal{color:var(--blue-text)}.dm-lane.self .goal{color:var(--pink-text)}
 .dm-lane .glbl{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:5px 0 12px}
 .dm-lane ul{list-style:none;margin:0}
@@ -300,7 +300,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 [data-theme="dark"] .cap-etrack{background:rgba(255,255,255,.05)}
 .cap-ebar{height:30px;border-radius:6px}
 .cap-eamt{width:118px;flex-shrink:0;font-family:'JetBrains Mono';font-size:11px;color:var(--muted);text-align:right}
-.cap-erow.keep .cap-elbl{color:var(--canopy-text);font-family:'Archivo Black';font-weight:normal;text-transform:uppercase;font-size:12px}
+.cap-erow.keep .cap-elbl{color:var(--canopy-text);font-family:var(--body);font-weight:800;text-transform:uppercase;font-size:12px}
 .cap-erow.keep .cap-eamt{color:var(--canopy-text);font-weight:700}
 @media(max-width:640px){.cap-elbl{width:120px;font-size:11px}.cap-eamt{width:82px}}
 .cap-camps{display:flex;flex-direction:column;gap:14px;margin-top:16px}
@@ -321,8 +321,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .ws-say b{color:var(--ink)}
 .wsaxis{stroke:var(--line);stroke-width:1.2}
 .wsaxis-soft{stroke:var(--line);stroke-width:1;stroke-dasharray:4 4}
-.ws-openzone{fill:rgba(212,255,61,.10)}
-[data-theme="dark"] .ws-openzone{fill:rgba(212,255,61,.07)}
+.ws-openzone{fill:rgba(198,255,61,.10)}
+[data-theme="dark"] .ws-openzone{fill:rgba(198,255,61,.07)}
 .ws-lanehead{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 .ws-lanehead h4{flex:1;min-width:240px}
 .ws-line{margin:9px 0;font-size:14px;color:var(--ink);line-height:1.5}
@@ -332,26 +332,26 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .cx2{color:var(--muted)}
 .cp2{color:var(--clay-text);font-weight:700}
 .ws-uvp{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--canopy);border-radius:0 13px 13px 0;padding:26px 28px;margin:22px 0}
-[data-theme="dark"] .ws-uvp{background:linear-gradient(135deg,rgba(212,255,61,.07),rgba(27,155,209,.05))}
+[data-theme="dark"] .ws-uvp{background:linear-gradient(135deg,rgba(198,255,61,.07),rgba(0,153,209,.05))}
 .ws-uvp .q{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(19px,2.6vw,26px);line-height:1.35;color:var(--ink)}
 .ws-uvp .q em{color:var(--canopy-text);font-style:italic}
 /* light-mode contrast: clay/amber text is too light for small copy; darken it */
-[data-theme="light"] .cp2{color:#7a5300}
-[data-theme="light"] .card.tc .why b{color:#7a5300}
-[data-theme="light"] .callout.clay .k{color:#7a5300}
+[data-theme="light"] .cp2{color:#7A5A00}
+[data-theme="light"] .card.tc .why b{color:#7A5A00}
+[data-theme="light"] .callout.clay .k{color:#7A5A00}
 /* --- targeting worksheet additive styles (unique names) --- */
 .twwrap{max-width:1120px;margin:0 auto;padding:0 26px}
 .tw-hero{padding:54px 0 34px;border-bottom:1px solid var(--line)}
 /* narrowing funnel */
 .tw-funnel{margin:24px auto 6px;display:flex;flex-direction:column;align-items:center;gap:12px}
 .tw-band{border-radius:11px;padding:15px 22px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.tw-band .bt{font-family:'Archivo Black';font-size:15px;text-transform:uppercase;letter-spacing:-.01em}
+.tw-band .bt{font-family:var(--body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:-.01em}
 .tw-band .bs{font-family:'JetBrains Mono';font-size:11px;margin-top:4px}
-.tw-band.b1{background:var(--barclay);width:100%;color:#0A0A0C}
+.tw-band.b1{background:var(--barclay);width:100%;color:#001122}
 .tw-band.b1 .bs{color:#3a2c00}
-.tw-band.b2{background:var(--barblue);width:70%;color:#04121f}
-.tw-band.b2 .bs{color:#04121f}
-.tw-band.b3{background:var(--barcanopy);width:46%;color:#0A0A0C}
+.tw-band.b2{background:var(--barblue);width:70%;color:#001122}
+.tw-band.b2 .bs{color:#001122}
+.tw-band.b3{background:var(--barcanopy);width:46%;color:#001122}
 .tw-band.b3 .bs{color:#2c3600}
 .tw-bandnote{font-size:12.5px;color:var(--muted);max-width:520px;margin:2px auto 0;text-align:center}
 .tw-banddesc{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:2px}
@@ -362,13 +362,13 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 /* stepped-bar ladder */
 .tw-ladder{margin:22px 0 6px;display:flex;flex-direction:column;gap:12px}
 .tw-rung{display:flex;align-items:center;gap:14px}
-.tw-rungnum{font-family:'Archivo Black';font-size:15px;color:var(--muted);width:20px;flex-shrink:0;text-align:center}
+.tw-rungnum{font-family:var(--body);font-weight:800;font-size:15px;color:var(--muted);width:20px;flex-shrink:0;text-align:center}
 .tw-track{width:210px;flex-shrink:0;background:rgba(0,0,0,.05);border-radius:6px;height:30px;overflow:hidden}
 [data-theme="dark"] .tw-track{background:rgba(255,255,255,.05)}
 .tw-bar{height:30px;border-radius:6px}
 .tw-b-canopy{background:var(--barcanopy)}.tw-b-moss{background:var(--barmoss)}.tw-b-blue{background:var(--barblue)}.tw-b-clay{background:var(--barclay)}.tw-b-terra{background:var(--barterra)}
 .tw-rungbody{flex:1;min-width:0}
-.tw-rungbody .rn{font-family:'Archivo Black';font-size:13.5px;text-transform:uppercase;letter-spacing:-.01em}
+.tw-rungbody .rn{font-family:var(--body);font-weight:800;font-size:13.5px;text-transform:uppercase;letter-spacing:-.01em}
 .tw-rungbody .rn .cpl{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);text-transform:none;margin-left:8px;letter-spacing:.02em}
 .tw-rungbody .rp{font-size:13px;color:var(--ink);margin-top:3px}
 @media(max-width:640px){.tw-track{width:120px}}
@@ -376,44 +376,44 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .tw-tradeoff{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
 @media(max-width:820px){.tw-tradeoff{grid-template-columns:1fr}}
 .tw-panel{border-radius:13px;padding:20px 22px;border:1px solid var(--line)}
-.tw-panel.up{background:rgba(123,170,62,.08);border-left:4px solid var(--moss)}
-.tw-panel.catch{background:rgba(196,82,31,.08);border-left:4px solid var(--terracotta)}
-[data-theme="dark"] .tw-panel.up{background:rgba(123,170,62,.10)}
-[data-theme="dark"] .tw-panel.catch{background:rgba(196,82,31,.10)}
+.tw-panel.up{background:rgba(0,196,179,.08);border-left:4px solid var(--moss)}
+.tw-panel.catch{background:rgba(244,162,97,.08);border-left:4px solid var(--terracotta)}
+[data-theme="dark"] .tw-panel.up{background:rgba(0,196,179,.10)}
+[data-theme="dark"] .tw-panel.catch{background:rgba(244,162,97,.10)}
 .tw-panel .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;font-weight:700}
-.tw-panel.up .k{color:#39601a}.tw-panel.catch .k{color:#9c3d13}
-[data-theme="dark"] .tw-panel.up .k{color:#8FC24E}[data-theme="dark"] .tw-panel.catch .k{color:#E0794A}
+.tw-panel.up .k{color:#00756B}.tw-panel.catch .k{color:#B53A0C}
+[data-theme="dark"] .tw-panel.up .k{color:#00C4B3}[data-theme="dark"] .tw-panel.catch .k{color:#FF7A45}
 .tw-panel ul{list-style:none;margin:0}
 .tw-panel li{position:relative;padding-left:20px;margin:8px 0;font-size:13.5px;color:var(--ink);line-height:1.45}
-.tw-panel.up li::before{content:'▲';position:absolute;left:0;color:#4a7a20;font-size:10px;top:3px}
-.tw-panel.catch li::before{content:'▼';position:absolute;left:0;color:#9c3d13;font-size:10px;top:3px}
-[data-theme="dark"] .tw-panel.up li::before{color:#8FC24E}[data-theme="dark"] .tw-panel.catch li::before{color:#E0794A}
+.tw-panel.up li::before{content:'▲';position:absolute;left:0;color:#00756B;font-size:10px;top:3px}
+.tw-panel.catch li::before{content:'▼';position:absolute;left:0;color:#B53A0C;font-size:10px;top:3px}
+[data-theme="dark"] .tw-panel.up li::before{color:#00C4B3}[data-theme="dark"] .tw-panel.catch li::before{color:#FF7A45}
 /* intent + cost indicator chips */
 .tw-inds{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
 .tw-ind{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:20px;display:inline-block}
-.tw-hi{background:rgba(123,170,62,.18);color:#39601a}
-[data-theme="dark"] .tw-hi{color:#8FC24E}
-.tw-med{background:rgba(255,182,39,.16);color:#7a5300}
-[data-theme="dark"] .tw-med{color:#FFB627}
+.tw-hi{background:rgba(0,196,179,.18);color:#00756B}
+[data-theme="dark"] .tw-hi{color:#00C4B3}
+.tw-med{background:rgba(255,209,102,.16);color:#7A5A00}
+[data-theme="dark"] .tw-med{color:#FFD166}
 .tw-lo{background:rgba(154,151,136,.18);color:#565143}
 [data-theme="dark"] .tw-lo{color:#b9b6a8}
-.tw-costhi{background:rgba(196,82,31,.14);color:#9c3d13}
-[data-theme="dark"] .tw-costhi{color:#E0794A}
-.tw-costlo{background:rgba(123,170,62,.18);color:#39601a}
-[data-theme="dark"] .tw-costlo{color:#8FC24E}
+.tw-costhi{background:rgba(244,162,97,.14);color:#B53A0C}
+[data-theme="dark"] .tw-costhi{color:#FF7A45}
+.tw-costlo{background:rgba(0,196,179,.18);color:#00756B}
+[data-theme="dark"] .tw-costlo{color:#00C4B3}
 /* segment tag */
 .tw-segtag{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block}
-.tw-segnative{background:rgba(212,255,61,.2);color:#41530a}
-[data-theme="dark"] .tw-segnative{background:rgba(212,255,61,.14);color:#D4FF3D}
-.tw-segcombo{background:rgba(27,155,209,.16);color:#0f6a92}
+.tw-segnative{background:rgba(198,255,61,.2);color:#4A6600}
+[data-theme="dark"] .tw-segnative{background:rgba(198,255,61,.14);color:#C6FF3D}
+.tw-segcombo{background:rgba(0,153,209,.16);color:#006A96}
 [data-theme="dark"] .tw-segcombo{color:#5BB8E0}
 .tw-priostat{margin-left:auto}
 /* motion flow + convergence SVG helpers */
 .tw-svgbox{fill:var(--card);stroke:var(--line);stroke-width:1.5}
-.tw-svghub{fill:rgba(27,155,209,.10);stroke:var(--blue);stroke-width:2}
-[data-theme="dark"] .tw-svghub{fill:rgba(27,155,209,.18)}
-.tw-svgsig{fill:rgba(212,255,61,.12);stroke:var(--moss);stroke-width:1.5}
-[data-theme="dark"] .tw-svgsig{fill:rgba(212,255,61,.10)}
+.tw-svghub{fill:rgba(0,153,209,.10);stroke:var(--blue);stroke-width:2}
+[data-theme="dark"] .tw-svghub{fill:rgba(0,153,209,.18)}
+.tw-svgsig{fill:rgba(198,255,61,.12);stroke:var(--moss);stroke-width:1.5}
+[data-theme="dark"] .tw-svgsig{fill:rgba(198,255,61,.10)}
 .tw-arrow{stroke:var(--muted);stroke-width:2;fill:none}
 .tw-feedback{stroke:var(--barmoss);stroke-width:2;stroke-dasharray:6 4;fill:none}
 .tw-svgboxlabel{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:var(--ink)}
@@ -423,21 +423,21 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 /* ===== targeting worksheet v2 components (tw2-) ===== */
 /* summary hero */
 .icp-sum{background:var(--panel-deep);border-radius:16px;padding:28px 30px;margin:20px 0}
-.icp-sum .icp-k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#D4FF3D;margin-bottom:14px}
+.icp-sum .icp-k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C6FF3D;margin-bottom:14px}
 .icp-row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:9px 0;border-top:1px solid rgba(255,255,255,.10)}
 .icp-row:first-of-type{border-top:none}
 .icp-row .lab{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.10em;text-transform:uppercase;color:rgba(216,212,200,.7);padding-top:2px}
-.icp-row .val{color:#F4F1EA;font-size:15px;line-height:1.5}
-.icp-row .val em{color:#D4FF3D;font-style:normal;font-weight:650}
+.icp-row .val{color:#F5F5F5;font-size:15px;line-height:1.5}
+.icp-row .val em{color:#C6FF3D;font-style:normal;font-weight:650}
 .icp-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .icp-chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 13px;min-width:120px}
-.icp-chip .n{font-family:'Archivo Black',sans-serif;font-size:19px;color:#D4FF3D;line-height:1.1}
+.icp-chip .n{font-family:var(--body);font-weight:800;font-size:19px;color:#C6FF3D;line-height:1.1}
 .icp-chip .c{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(216,212,200,.72);margin-top:3px}
 .icp-ver{margin-top:16px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;color:rgba(216,212,200,.6);line-height:1.6}
 /* funnel bands */
 .fnl{display:flex;flex-direction:column;align-items:center;gap:8px;margin:18px 0}
-.fnl-band{border-radius:12px;padding:14px 20px;text-align:center;color:#04121f}
-.fnl-band .bt{font-family:'Archivo Black',sans-serif;font-size:14px;line-height:1.15}
+.fnl-band{border-radius:12px;padding:14px 20px;text-align:center;color:#001122}
+.fnl-band .bt{font-family:var(--body);font-weight:800;font-size:14px;line-height:1.15}
 .fnl-band .bs{font-family:'JetBrains Mono';font-size:10.5px;margin-top:4px;opacity:.82}
 /* translation panel (the one repeated component) */
 .xl{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0;background:rgba(0,0,0,.025)}
@@ -445,11 +445,11 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .xl-h{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-text);margin-bottom:10px;font-weight:700}
 .xl-facet{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin:7px 0}
 .xl-facet .fn{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);min-width:118px}
-.chipv{display:inline-block;background:rgba(27,155,209,.12);border:1px solid rgba(27,155,209,.30);color:var(--blue-text);border-radius:7px;padding:3px 9px;font-family:'JetBrains Mono';font-size:11px;margin:2px 3px 2px 0}
-.xl-size{display:inline-block;margin-top:10px;font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--ink)}
+.chipv{display:inline-block;background:rgba(0,153,209,.12);border:1px solid rgba(0,153,209,.30);color:var(--blue-text);border-radius:7px;padding:3px 9px;font-family:'JetBrains Mono';font-size:11px;margin:2px 3px 2px 0}
+.xl-size{display:inline-block;margin-top:10px;font-family:var(--body);font-weight:800;font-size:14px;color:var(--ink)}
 .xl-tag{display:inline-block;font-family:'JetBrains Mono';font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:6px;margin-left:8px;vertical-align:middle}
-.xl-tag.obs{background:rgba(143,194,78,.16);color:var(--moss-text)}
-.xl-tag.inf{background:rgba(255,182,39,.16);color:var(--clay-text)}
+.xl-tag.obs{background:rgba(0,196,179,.12);color:var(--moss-text)}[data-theme="light"] .xl-tag.obs{color:#005E56}
+.xl-tag.inf{background:rgba(255,209,102,.16);color:var(--clay-text)}
 .xl-miss{font-size:13px;color:var(--ink);margin-top:9px;line-height:1.5}
 .xl-miss b,.xl-use b{color:var(--terra-text)}
 .xl-use{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
@@ -463,8 +463,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 /* priority pill */
 .ppill{display:inline-block;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:7px;font-weight:700}
 .ppill.prim{background:rgba(143,194,78,.18);color:var(--moss-text)}
-.ppill.sec{background:rgba(27,155,209,.16);color:var(--blue-text)}
-.ppill.inf{background:rgba(255,182,39,.16);color:var(--clay-text)}
+.ppill.sec{background:rgba(0,153,209,.16);color:var(--blue-text)}
+.ppill.inf{background:rgba(255,209,102,.16);color:var(--clay-text)}
 .ppill.obj{background:rgba(224,121,74,.16);color:var(--terra-text)}
 .pmeta{font-size:13px;color:var(--ink);margin:4px 0;line-height:1.5}
 .pmeta .plab{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:6px}
@@ -476,8 +476,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 /* ladder */
 .ladder{display:flex;flex-direction:column;gap:9px;margin:16px 0}
 .lad-rung{display:flex;align-items:center;gap:14px}
-.lad-bar{height:46px;border-radius:9px;display:flex;align-items:center;padding:0 14px;color:#04121f;min-width:150px}
-.lad-bar .ln{font-family:'Archivo Black',sans-serif;font-size:12.5px;line-height:1.1}
+.lad-bar{height:46px;border-radius:9px;display:flex;align-items:center;padding:0 14px;color:#001122;min-width:150px}
+.lad-bar .ln{font-family:var(--body);font-weight:800;font-size:12.5px;line-height:1.1}
 .lad-meta{flex:1;font-size:13px;color:var(--ink);line-height:1.45}
 .lad-cpl{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);white-space:nowrap}
 /* tradeoff */
@@ -486,7 +486,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .trade-p{border-radius:12px;padding:16px 18px;border:1px solid var(--line)}
 .trade-good{background:rgba(143,194,78,.08);border-left:4px solid var(--barmoss)}
 .trade-catch{background:rgba(255,90,31,.07);border-left:4px solid var(--hazard)}
-.trade-p h5{font-family:'Archivo Black',sans-serif;font-size:14px;margin:0 0 6px}
+.trade-p h5{font-family:var(--body);font-weight:800;font-size:14px;margin:0 0 6px}
 .trade-good h5{color:var(--moss-text)}
 .trade-catch h5{color:var(--terra-text)}
 .trade-p p{font-size:13.5px;color:var(--ink);line-height:1.5;margin:0}
@@ -495,9 +495,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .ichip,.cchip,.pchip{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:7px;font-weight:700}
 .ichip{background:rgba(143,194,78,.16);color:var(--moss-text)}
 .cchip.hi{background:rgba(224,121,74,.16);color:var(--terra-text)}
-.cchip.med{background:rgba(255,182,39,.16);color:var(--clay-text)}
+.cchip.med{background:rgba(255,209,102,.16);color:var(--clay-text)}
 .cchip.lo{background:rgba(143,194,78,.16);color:var(--moss-text)}
-.pchip{background:rgba(27,155,209,.14);color:var(--blue-text)}
+.pchip{background:rgba(0,153,209,.14);color:var(--blue-text)}
 /* exclusions two-col */
 .excl{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
 .excl td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45}
@@ -508,11 +508,121 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .xscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0}
 .xscroll .score{min-width:600px;margin:0}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link id="brand-v3-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap">
+<style id="brand-v3">
+/* ==========================================================================
+   Impactable Brand v3 layer (brand_v3.css)
+   Loads LAST, after canonical.css and any additive view CSS.
+   Source of truth: Impactable Brand Bible v3 (navy holds, teal leads,
+   blue = recognition, lime and warm tones punctuate; 70/20/8/4).
+   Light mode = bone paper + navy ink (default). Dark mode = navy canvas.
+   Defines the v3 tokens newer view CSS expects (--disp, --serif, --mono,
+   --teal, --teal-text, --tint, --rust ...) and remaps canonical's legacy
+   tokens so older views pick up v3 without edits.
+   ========================================================================== */
+:root{
+  --navy:#001122;--navy-800:#00172E;--navy-700:#002245;--navy-500:#003973;
+  --blue:#0099D1;--blue-soft:#5BB8E0;--teal:#00C4B3;--teal-dark:#009D8F;
+  --lime:#C6FF3D;--orange:#F4A261;--yellow:#FFD166;--rust:#FF5A1F;
+  --disp:'Anton','Oswald','Arial Narrow',Impact,sans-serif;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  /* dark (navy canvas) */
+  --bg:#001122;--surface:#00172E;--card:#0D2744;--line:rgba(190,214,246,.14);
+  --ink:#F5F5F5;--chalk:#E8E4DA;--muted:#93A4BE;--tint:rgba(190,214,246,.06);
+  --teal-text:#00C4B3;--blue-text:#5BB8E0;--lime-text:#C6FF3D;--orange-text:#F4A261;--rust-text:#FF7A45;
+  /* legacy canonical tokens remapped to v3 pillar colors */
+  --canopy:#00C4B3;--canopy-text:#00C4B3;--moss:#00C4B3;--moss-text:#00C4B3;
+  --terracotta:#F4A261;--terra-text:#F4A261;--clay:#FFD166;--clay-text:#FFD166;
+  --hazard:#FF5A1F;--pink-text:#5BB8E0;--asphalt:#001122;--concrete:#00172E;--court:#002245;--bone:#F5F5F5;
+  --panel-deep:#00172E;--panel-mid:#002245;
+  --barcanopy:#C6FF3D;--barblue:#0099D1;--barterra:#F4A261;--barclay:#FFD166;--barmoss:#00C4B3;--barpink:#5BB8E0;--barnavy:#002245;
+  --dot:rgba(190,214,246,.06);
+}
+[data-theme="light"]{
+  --bg:#F5F5F5;--surface:#FFFFFF;--card:#FFFFFF;--line:rgba(0,34,69,.14);
+  --ink:#001122;--chalk:#2B3A52;--muted:#4F5F78;--tint:rgba(0,34,69,.04);
+  --teal-text:#00756B;--blue-text:#006A96;--lime-text:#4A6600;--orange-text:#995011;--rust-text:#B53A0C;
+  --canopy-text:#00756B;--moss-text:#00756B;--terra-text:#995011;--clay-text:#7A5A00;--pink-text:#006A96;
+  --dot:rgba(0,34,69,.07);
+}
+[data-theme="dark"]{color-scheme:dark}
+html{background:var(--bg)}
+body{font-family:var(--body);background-color:var(--bg);background-image:radial-gradient(circle at 1px 1px,var(--dot) 1px,transparent 0);background-size:22px 22px;color:var(--ink)}
+::selection{background:rgba(0,196,179,.28)}
+
+/* --- type: Anton display at 24px+, Inter 800 below, Fraunces for emphasis --- */
+h1.big,h2.sec,.ws-uvp blockquote,.ctablock h2,.pm .price,.stat .n,.t2-rn{font-family:var(--disp)!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.01em;line-height:.98}
+h1.big{font-size:clamp(40px,6.4vw,76px)}
+h2.sec{font-size:clamp(28px,4vw,44px);line-height:1}
+h1.big em,h2.sec em{font-family:var(--serif)!important;font-style:italic;font-weight:600;text-transform:none;letter-spacing:-.01em;color:var(--teal-text);transform:none!important;display:inline}
+h3.sub,.card h4,.ws-zone h4,.ws-lane h4,.ws-comp .card h4,.move .mt,.chhead .ctitle,.pm .ohead{font-family:var(--body)!important;font-weight:800!important;text-transform:none!important;letter-spacing:-.01em}
+h3.sub em{font-family:var(--serif);font-style:italic;color:var(--teal-text)}
+.kicker,.secnum,.metastrip,.tag,.badge,.pill,.tab,.brand,figcaption,summary,.ws-lane .num,.ws-lane .rows .l,.ws-comp dt{font-family:var(--mono)}
+.kicker{color:var(--teal-text)}
+.secnum{color:var(--blue-text)}
+.lede{font-size:17px;color:var(--chalk)}
+.stat .n{font-size:34px;color:var(--teal-text)}
+
+/* --- nav: navy band in both themes, wordmark, teal active tab --- */
+nav.top{background:#00172E!important;border-bottom:1px solid rgba(190,214,246,.14)}
+nav.top .brand{display:flex;align-items:center;gap:10px;color:#F5F5F5}
+nav.top .brand img.wm{height:22px;width:auto;display:block}
+nav.top .brand .sep{color:rgba(232,228,218,.65)}
+.tab{color:rgba(232,228,218,.75)}
+.tab.active{background:#00C4B3!important;color:#001122!important}
+.nav-cta{background:#00C4B3!important;color:#001122!important}
+.themeBtn{border-color:rgba(190,214,246,.25)}
+
+/* --- accents: teal leads; lime for Create; blue for Connect --- */
+.btn.primary,.recpill{background:#00C4B3!important;color:#001122!important}
+.bstart{background:#C6FF3D!important;color:#001122!important}
+.callout{border-left-color:var(--teal)}
+.callout .k{color:var(--teal-text)}
+.why{border-left-color:var(--teal)}
+.why b,.hl{color:var(--teal-text)}
+.card.tl{border-left-color:var(--lime)}.card.tb{border-left-color:var(--blue)}.card.tt{border-left-color:var(--orange)}.card.tc{border-left-color:var(--yellow)}.card.tm{border-left-color:var(--teal)}
+[data-theme="dark"] .callout{background:linear-gradient(135deg,rgba(0,196,179,.07),rgba(0,153,209,.05))}
+[data-theme="light"] .callout{background:rgba(0,34,69,.03)}
+.tag,.pill,.t2-chip{border-color:var(--line)}
+
+/* --- pinned dark panels: navy + v3 literals --- */
+.dark-panel{--canopy-text:#00C4B3;--teal-text:#00C4B3;--blue-text:#5BB8E0;--moss-text:#00C4B3;--lime-text:#C6FF3D}
+.pm td.rec,.ctablock{background:#00172E!important}
+.pm td.rec .price,.ctablock h2 em{color:#00C4B3!important}
+.pm td.rec .ck{color:#00C4B3}
+
+/* --- motifs: signal glow on heroes and the closing CTA (contained) --- */
+.ws-hero,.r-hero,.t2-top,section.hero{position:relative;overflow:hidden}
+.ws-hero::after,.r-hero::after,.t2-top::after{content:"";position:absolute;right:-160px;top:-140px;width:440px;height:440px;background:radial-gradient(circle,rgba(0,196,179,.16),transparent 65%);pointer-events:none;z-index:0}
+.ws-hero::before,.r-hero::before,.t2-top::before{content:"";position:absolute;left:-180px;bottom:-200px;width:380px;height:380px;background:radial-gradient(circle,rgba(0,153,209,.12),transparent 65%);pointer-events:none;z-index:0}
+.ws-hero>*,.r-hero>*,.t2-top>*{position:relative;z-index:1}
+
+/* --- brand footer --- */
+.bv3-foot{border-top:1px solid var(--line);padding:26px 0 40px;margin-top:10px}
+.bv3-foot .row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.bv3-foot img.wm{height:24px;width:auto}
+.bv3-foot img.mp{height:40px;width:auto;border-radius:6px;background:#FFFFFF;padding:4px}
+.bv3-foot .tagline{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--chalk)}
+.bv3-foot .wm-dark{display:none}
+[data-theme="dark"] .bv3-foot .wm-dark{display:block}
+[data-theme="dark"] .bv3-foot .wm-light{display:none}
+
+/* --- room classes from room_additive.css that still name retired fonts and colors --- */
+.n-num,.r-arrow,.r-src .n{font-family:var(--disp)!important;font-weight:400!important}
+.n-name,.n-node b,.r-val{font-family:var(--body)!important;font-weight:800!important;text-transform:none!important}
+.r-src{background:#00172E!important}.r-src .n{color:#00C4B3!important}.r-src .l{color:#F5F5F5!important}
+.r-quote{border-left-color:var(--teal)}
+.n-back{border-color:var(--teal)}
+.n-lab,.n-layer,.r-mh,.r-lbl{font-family:var(--mono)}
+
+</style>
 </head>
 <body>
 <nav class="top dark-panel">
   <div class="inner">
-    <div class="brand">IMPACTABLE<span class="sep">// Stigg / Intelligence Room</span></div>
+    <div class="brand"><img class="wm" alt="Impactable" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzk4IiBoZWlnaHQ9IjcyIiB2aWV3Qm94PSI5OSA4NCAzOTggNzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMjc1Nl82MzUpIj4KPHBhdGggZD0iTTEwNy43NjIgMTEzLjAyOUg5OS44M1YxNTQuNTc0SDEwNy43NjJWMTEzLjAyOVoiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTE1My45OTUgMTMxLjEzN0wxNjEuMjg2IDEyMS4wNDFWMTU0LjU3NEgxNTQuMDc1TDE1My45OTUgMTMxLjEzN1oiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTEzOS4wMSAxNDMuMTk2TDEyNC4yNjcgMTI0Ljg4OFYxNTQuNTc0SDExNi44OTZWMTEzLjAyOUgxMjYuMTFMMTM5LjY5MSAxMzAuNjU3TDE4MC42MzYgODUuMDY1M0wxMzkuMDEgMTQzLjE5NloiIGZpbGw9IiMwMDk5RDEiLz4KPHBhdGggZD0iTTIwMy45NTQgMTI3LjMzMUMyMDMuOTU0IDEzNi44MjYgMTk3Ljk0NCAxNDIuMzU1IDE4Ny40ODggMTQyLjM1NUgxNzguMzk0VjE1NC41NzRIMTcwLjQyMVYxMTMuMDI5SDE4Ny40NDhDMTk3LjkwNCAxMTMuMDI5IDIwMy45MTMgMTE4LjE5NyAyMDMuOTEzIDEyNy4zMzFNMTk2LjQyMiAxMjcuNTcyQzE5Ni40MjIgMTIyLjQ4NCAxOTMuMDU2IDExOS45NiAxODcuMDg3IDExOS45NkgxNzguNDM0VjEzNS4zNDRIMTg3LjA4N0MxOTMuMDE2IDEzNS4zNDQgMTk2LjQyMiAxMzIuNzggMTk2LjQyMiAxMjcuNTcyWiIgZmlsbD0iI0Y1RjVGNSIvPgo8cGF0aCBkPSJNMjQyLjAxMiAxNDUuNzZIMjIxLjdMMjE4LjAxNSAxNTQuNTM0SDIwOS43NjJMMjI3Ljk5IDExMi45ODlIMjM2LjI0M0wyNTQuMjMxIDE1NC41MzRIMjQ1LjY5OEwyNDIuMDEyIDE0NS43NlpNMjM5LjE2OCAxMzguOTQ5TDIzMS45MTYgMTIxLjQ4MkwyMjQuNTQ1IDEzOC45NDlIMjM5LjE2OFoiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTI3OC4xMDkgMTE5LjgzOUMyNzAuMjU3IDExOS44MzkgMjY0LjE2NyAxMjUuODg5IDI2NC4xNjcgMTMzLjYyMUMyNjQuMTY3IDE0MS4zNTMgMjcwLjI5NyAxNDcuNDQzIDI3OC4xMDkgMTQ3LjQ0M0MyODIuMDc1IDE0Ny40NDMgMjg2LjI4MiAxNDUuNiAyODkuMzY3IDE0Mi41OTVMMjk0LjA1NCAxNDcuODAzQzI4OS43NjcgMTUyLjEzIDI4My42NzggMTU0LjkzNCAyNzcuNjY4IDE1NC45MzRDMjY1LjQ0OSAxNTQuOTM0IDI1NS45OTQgMTQ1LjcyIDI1NS45OTQgMTMzLjc0MUMyNTUuOTk0IDEyMS43NjIgMjY1LjU2OSAxMTIuNzg4IDI3Ny45NDkgMTEyLjc4OEMyODMuODc4IDExMi43ODggMjg5LjkyNyAxMTUuMzUyIDI5My45NzQgMTE5LjQzOUwyODkuMzI2IDEyNS4yNDhDMjg2LjM2MiAxMjEuOTIzIDI4Mi4xNTUgMTE5LjgzOSAyNzguMDY5IDExOS44MzkiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTMzMi4wMzMgMTEzLjAyOVYxMjAuMDhIMzE5LjA5M1YxNTQuNTc0SDMxMS4wODFWMTIwLjA4SDI5OC4xNFYxMTMuMDI5SDMzMi4wMzNaIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0zNjcuNDg4IDE0NS43NkgzNDcuMTc2TDM0My40OSAxNTQuNTM0SDMzNS4yMzdMMzUzLjQ2NiAxMTIuOTg5SDM2MS43MTlMMzc5LjcwNyAxNTQuNTM0SDM3MS4xNzNMMzY3LjQ4OCAxNDUuNzZaTTM2NC42NDMgMTM4Ljk0OUwzNTcuMzkyIDEyMS40ODJMMzUwLjAyIDEzOC45NDlIMzY0LjY0M1oiIGZpbGw9IiMwMDk5RDEiLz4KPHBhdGggZD0iTTQxOC4zNjggMTIzLjQwNUM0MTguMzY4IDEyNy45NzIgNDE1LjY0NCAxMzEuNDU4IDQxMS4xMTcgMTMyLjYyQzQxNi41NjYgMTMzLjYyMSA0MTkuOTcxIDEzNy41ODcgNDE5Ljk3MSAxNDMuMTE2QzQxOS45NzEgMTUwLjI0NyA0MTQuMDgyIDE1NC41NzQgNDA0LjU4NyAxNTQuNTc0SDM4NS41OTdWMTEzLjAyOUg0MDQuMDY2QzQxMi45MiAxMTMuMDI5IDQxOC4zNjggMTE2Ljk5NSA0MTguMzY4IDEyMy40MDVaTTQxMC4yMzYgMTI0LjgwN0M0MTAuMjM2IDEyMS42NDIgNDA3Ljc1MiAxMTkuODggNDAzLjYyNSAxMTkuODhIMzkzLjUzVjEyOS45NzVINDAzLjYyNUM0MDcuNzEyIDEyOS45NzUgNDEwLjIzNiAxMjguMDkyIDQxMC4yMzYgMTI0LjgwN1pNNDExLjcxOCAxNDIuMTE0QzQxMS43MTggMTM4Ljc0OSA0MDguNjczIDEzNi42NjYgNDAzLjYyNSAxMzYuNjY2SDM5My41M1YxNDcuNzIzSDQwMy42MjVDNDA4LjY3MyAxNDcuNzIzIDQxMS43MTggMTQ1LjcyIDQxMS43MTggMTQyLjE1NCIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDM2LjgzNyAxMTMuMDI5VjE0Ny4zNjNINDU0Ljc0NVYxNTQuNTc0SDQyOC44NjRWMTEzLjAyOUg0MzYuODM3WiIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDkzLjE2NiAxMzAuMjE2VjEzNy4xODdINDcyLjk3NFYxNDcuNjAzSDQ5Ni4xNzFWMTU0LjU3NEg0NjUuMDQyVjEzMC4zMzZMNDkzLjE2NiAxMzAuMjE2WiIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDY1LjA0MiAxMTkuOTZWMTEzLjAyOUg0OTUuNDg5VjExOS45Nkg0NzIuOTc0SDQ2NS4wNDJaIiBmaWxsPSIjRjVGNUY1Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjc1Nl82MzUiPgo8cmVjdCB3aWR0aD0iMzk2LjM0IiBoZWlnaHQ9IjY5Ljg2OTMiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5OS44MyA4NS4wNjUzKSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="><span class="sep">Stigg / Intelligence Room</span></div>
     <div class="tabs">
       <button class="tab active" data-v="overview">Overview</button>
       <button class="tab" data-v="whitespace">White Space</button>
@@ -558,7 +668,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="move" data-goto="targeting">
         <div class="mn">02 / TARGETING</div>
         <div class="mt">Who to aim at, most cheaply</div>
-        <div class="md">The engineers who choose the infrastructure, from senior software engineers up to CTOs and founders, plus the named frontier-AI accounts for the enterprise motion. Reached warm-first, cheapest audiences first.</div>
+        <div class="md">Engineering leaders and engineers at 204 named AI accounts, in four focused campaigns. Executives follow once their engineers engage.</div>
         <div class="arrow">See the audience plan &rsaquo;</div>
       </div>
       <div class="move" data-goto="capture">
@@ -653,21 +763,21 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <text class="svgmuted" x="52" y="352" text-anchor="end" transform="rotate(-90 52 352)" style="text-anchor:middle">Replaces your billing</text>
         <!-- clusters (dots use theme-independent hex) -->
         <!-- big suites: replaces billing + after the fact (bottom-left) -->
-        <circle cx="150" cy="300" r="8" fill="#FFB627"/><text class="svglabel" x="164" y="304">Zuora</text>
-        <circle cx="150" cy="330" r="8" fill="#C4521F"/><text class="svglabel" x="164" y="334">Chargebee</text>
+        <circle cx="150" cy="300" r="8" fill="#FFD166"/><text class="svglabel" x="164" y="304">Zuora</text>
+        <circle cx="150" cy="330" r="8" fill="#F4A261"/><text class="svglabel" x="164" y="334">Chargebee</text>
         <!-- usage counters: on-top-ish + after the fact (upper-left) -->
-        <circle cx="150" cy="120" r="8" fill="#1B9BD1"/><text class="svglabel" x="164" y="124">Lago</text>
-        <circle cx="235" cy="150" r="8" fill="#1B9BD1"/><text class="svglabel" x="249" y="154">m3ter</text>
-        <circle cx="150" cy="175" r="8" fill="#1B9BD1"/><text class="svglabel" x="164" y="179">Amberflo</text>
-        <circle cx="255" cy="105" r="8" fill="#1B9BD1"/><text class="svglabel" x="269" y="109">OpenMeter</text>
+        <circle cx="150" cy="120" r="8" fill="#0099D1"/><text class="svglabel" x="164" y="124">Lago</text>
+        <circle cx="235" cy="150" r="8" fill="#0099D1"/><text class="svglabel" x="249" y="154">m3ter</text>
+        <circle cx="150" cy="175" r="8" fill="#0099D1"/><text class="svglabel" x="164" y="179">Amberflo</text>
+        <circle cx="255" cy="105" r="8" fill="#0099D1"/><text class="svglabel" x="269" y="109">OpenMeter</text>
         <!-- bought by payments: some on-top + after the fact (middle-left) -->
-        <circle cx="300" cy="250" r="8" fill="#C4521F"/><text class="svglabel" x="314" y="254">Metronome</text>
-        <circle cx="300" cy="285" r="8" fill="#C4521F"/><text class="svglabel" x="314" y="289">Orb</text>
+        <circle cx="300" cy="250" r="8" fill="#F4A261"/><text class="svglabel" x="314" y="254">Metronome</text>
+        <circle cx="300" cy="285" r="8" fill="#F4A261"/><text class="svglabel" x="314" y="289">Orb</text>
         <!-- control layer: real-time + on-top (top-right open zone) -->
         <circle cx="470" cy="150" r="8" fill="#5BB8E0"/><text class="svglabel" x="484" y="154">Schematic</text>
         <circle cx="455" cy="120" r="8" fill="#5BB8E0"/><text class="svglabel" x="469" y="124">Credyt</text>
         <!-- Stigg highlighted -->
-        <circle cx="600" cy="95" r="13" fill="#D4FF3D" stroke="#0A0A0C" stroke-width="1.5"/>
+        <circle cx="600" cy="95" r="13" fill="#C6FF3D" stroke="#001122" stroke-width="1.5"/>
         <text class="svgnum" x="600" y="80" text-anchor="middle" style="font-size:15px">STIGG</text>
       </svg>
     </div>
@@ -686,24 +796,24 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <svg viewBox="0 0 720 330" role="img" aria-label="How many of the eleven tools make each claim">
         <!-- row 1 -->
         <text class="svglabel" x="16" y="46">Usage-based billing for modern software</text>
-        <rect x="320" y="32" width="260" height="20" rx="4" fill="#C4521F"/>
-        <text class="svgnum" x="592" y="48" style="font-size:12px;fill:#C4521F">11 of 11</text>
+        <rect x="320" y="32" width="260" height="20" rx="4" fill="#F4A261"/>
+        <text class="svgnum" x="592" y="48" style="font-size:12px;fill:var(--orange-text)">11 of 11</text>
         <!-- row 2 -->
         <text class="svglabel" x="16" y="102">Built for AI, credits and tokens</text>
-        <rect x="320" y="88" width="213" height="20" rx="4" fill="#C4521F"/>
-        <text class="svgnum" x="592" y="104" style="font-size:12px;fill:#C4521F">9 of 11</text>
+        <rect x="320" y="88" width="213" height="20" rx="4" fill="#F4A261"/>
+        <text class="svgnum" x="592" y="104" style="font-size:12px;fill:var(--orange-text)">9 of 11</text>
         <!-- row 3 -->
         <text class="svglabel" x="16" y="158">Change pricing without engineering</text>
-        <rect x="320" y="144" width="165" height="20" rx="4" fill="#FFB627"/>
-        <text class="svgnum" x="592" y="160" style="font-size:12px;fill:#b07800">7 of 11</text>
+        <rect x="320" y="144" width="165" height="20" rx="4" fill="#FFD166"/>
+        <text class="svgnum" x="592" y="160" style="font-size:12px;fill:var(--clay-text)">7 of 11</text>
         <!-- row 4 -->
         <text class="svglabel" x="16" y="214">Keep your existing billing, no migration</text>
-        <rect x="320" y="200" width="118" height="20" rx="4" fill="#FFB627"/>
-        <text class="svgnum" x="592" y="216" style="font-size:12px;fill:#b07800">5 of 11</text>
+        <rect x="320" y="200" width="118" height="20" rx="4" fill="#FFD166"/>
+        <text class="svgnum" x="592" y="216" style="font-size:12px;fill:var(--clay-text)">5 of 11</text>
         <!-- row 5 highlighted -->
         <text class="svglabel" x="16" y="270" style="font-weight:700">Stops usage in real time, before the cost</text>
-        <rect x="320" y="256" width="71" height="20" rx="4" fill="#D4FF3D" stroke="#0A0A0C" stroke-width="1"/>
-        <text class="svgnum" x="592" y="272" style="font-size:12px;fill:#5C7200">3 of 11</text>
+        <rect x="320" y="256" width="71" height="20" rx="4" fill="#C6FF3D" stroke="#001122" stroke-width="1"/>
+        <text class="svgnum" x="592" y="272" style="font-size:12px;fill:var(--lime-text)">3 of 11</text>
         <line class="wsaxis-soft" x1="320" y1="20" x2="320" y2="290"/>
       </svg>
     </div>
@@ -716,22 +826,22 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <div class="secnum">03 / THE COMPETITORS</div>
   <h2 class="sec">Everyone in the field, <em>grouped by what they do</em></h2>
   <div class="ws-camp-legend">
-    <span><i style="background:#C4521F"></i>Rivals that matter</span>
-    <span><i style="background:#FFB627"></i>Billing systems you keep</span>
-    <span><i style="background:#1B9BD1"></i>Usage counters</span>
-    <span><i style="background:#D4FF3D"></i>Real-time control layer</span>
+    <span><i style="background:#F4A261"></i>Rivals that matter</span>
+    <span><i style="background:#FFD166"></i>Billing systems you keep</span>
+    <span><i style="background:#0099D1"></i>Usage counters</span>
+    <span><i style="background:#C6FF3D"></i>Real-time control layer</span>
   </div>
 
   <h3 class="sub">Group one: <em>the rivals that matter</em></h3>
   <div class="card tt">
     <h4>Metronome</h4><div class="role">Usage billing, now part of Stripe</div>
     <p class="ws-say">Measures product usage and turns it into invoices, popular with large usage-based software companies. Acquired by Stripe, closed January 2026. Was the best-funded independent option in this space.</p>
-    <div class="why"><b>What it means for Stigg:</b> It bills at the end of the cycle, so nothing is stopped in the moment. Now that Stripe owns it, choosing Metronome leans a buyer toward Stripe's payment rails. That is the exact concern Stigg's independence answers.</div>
+    <div class="why"><b>What it means for Stigg:</b> Its pitch is high-volume metering and billing for finance teams, and it now markets spend caps and alerts. Those act on metered usage; Stigg decides on each request, before it runs. Now that Stripe owns it, choosing Metronome leans a buyer toward Stripe's payment rails. That is the exact concern Stigg's independence answers.</div>
   </div>
   <div class="card tt">
     <h4>Orb</h4><div class="role">Usage billing, now part of Adyen</div>
     <p class="ws-say">Usage-based billing built for pricing changes, credits, and invoicing. A closed, hosted platform with quote-based pricing, now owned by the payments company Adyen.</p>
-    <div class="why"><b>What it means for Stigg:</b> Same story as Metronome. It bills after the fact and now sits inside a payments company. Stigg stays independent and enforces before the cost is incurred.</div>
+    <div class="why"><b>What it means for Stigg:</b> Orb sells revenue design and pricing simulations to finance teams, with thresholds to cap runaway costs. It still works from metered usage, not the request, and now sits inside a payments company. Stigg stays independent and decides before the cost is incurred.</div>
   </div>
 
   <div class="card tt">
@@ -740,9 +850,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <div class="why"><b>What it means for Stigg:</b> A billing system extending upward, not a control layer built for AI. It decides at invoice time; Stigg decides in the request path, before the cost.</div>
   </div>
   <div class="card tt">
-    <h4>Paid</h4><div class="role">Newer entrant</div>
-    <p class="ws-say">Named by Stigg as a company moving into the space. A full profile follows before launch.</p>
-    <div class="why"><b>What it means for Stigg:</b> Watch its message as campaigns start; the white space refresh at day 60 will place it on the map.</div>
+    <h4>Paid</h4><div class="role">Results-based billing for AI agents</div>
+    <p class="ws-say">Billing for AI agents built around results: charging for the outcomes an agent delivers, tracking cost and margin per agent, and showing buyers the value. Founded in London by the co-founder of Outreach, with about 33 million dollars raised across its first two rounds.</p>
+    <div class="why"><b>What it means for Stigg:</b> Paid helps a company decide what to charge for and proves the value afterward. Stigg decides what each customer and agent is allowed to use, on the request. Different jobs, and a pricing conversation where Stigg can sit underneath either model.</div>
   </div>
 
   <h3 class="sub">Group two: <em>the billing systems you keep</em></h3>
@@ -791,7 +901,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 <section class="blk">
   <div class="secnum">04 / COMPARISON AT A GLANCE</div>
   <h2 class="sec">One row answers <em>yes</em> to everything</h2>
-  <p class="body"><b>Yes</b> means a clear, built-in strength. <b>Some</b> means partial, or available only through a larger commitment. <b>No</b> means it is not what the tool is for.</p>
+  <p class="body"><b>Yes</b> means a clear, built-in strength. <b>Some</b> means partial, or available only through a larger commitment; for Metronome and Orb on the first column, spend caps and alerts that act on metered usage rather than on the request. <b>No</b> means it is not what the tool is for.</p>
   <div class="scroll">
     <table class="tbl ws-mgrid">
       <thead>
@@ -806,8 +916,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       </thead>
       <tbody>
         <tr><td class="k" style="color:var(--canopy-text);font-weight:700">Stigg</td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td><td><span class="ck2">Yes</span></td></tr>
-        <tr><td class="k">Metronome (Stripe)</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
-        <tr><td class="k">Orb (Adyen)</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Metronome (Stripe)</td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Orb (Adyen)</td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
+        <tr><td class="k">Paid</td><td><span class="cx2">Unknown</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
         <tr><td class="k">Zuora</td><td><span class="cx2">No</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
         <tr><td class="k">Chargebee</td><td><span class="cx2">No</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td></tr>
         <tr><td class="k">Lago</td><td><span class="cx2">No</span></td><td><span class="cp2">Some</span></td><td><span class="cp2">Some</span></td><td><span class="ck2">Yes</span></td><td><span class="cp2">Some</span></td></tr>
@@ -821,7 +932,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   </div>
   <div class="callout" style="margin-top:20px">
     <div class="k">The row that matters</div>
-    <p>No other tool answers <b>Yes</b> across all five at once. Schematic comes closest, but it is tied to Stripe and does not run in your cloud. Everyone else either measures after the fact or asks you to replace your billing.</p>
+    <p>No other tool answers <b>Yes</b> across all five at once. Schematic comes closest, but it is tied to Stripe and does not run in your cloud. Metronome and Orb now offer caps and alerts, but on metered usage, not on the request. Everyone else either measures after the fact or asks you to replace your billing.</p>
   </div>
 </section>
 
@@ -834,7 +945,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <div class="card tl">
     <div class="ws-lanehead"><h4>It says no in the moment, before the money is spent</h4><span class="badge bh">Strongest lane</span></div>
     <div class="ws-line"><b>What it means:</b> Most tools here add up usage and send a bill at the end of the month. By then a single customer or AI agent may already have run up a large cost. Stigg checks whether an action is allowed and stops it right away, in a few thousandths of a second, before the cost happens.</div>
-    <div class="ws-line"><b>How Stigg is different:</b> This is Stigg's clearest strength. The counters and the billing suites reconcile after the fact. Only Schematic and Credyt sit near this, so it is mostly open rather than entirely empty.</div>
+    <div class="ws-line"><b>How Stigg is different:</b> This is Stigg's clearest strength. The counters and the billing suites reconcile after the fact. Only Schematic and Credyt sit near this. Metronome and Orb now offer spend caps and alerts, but they act on metered usage, not on the request, so the lane is mostly open rather than empty.</div>
     <div class="ws-line"><b>Who it is for:</b> The finance leader watching AI costs climb, and the platform engineer who otherwise builds the guardrails by hand.</div>
     <div class="ws-line"><b>How big a deal:</b> The strongest and most defensible position. It is the one thing the after-the-fact tools cannot match.</div>
   </div>
@@ -882,7 +993,11 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <div class="ws-line"><b>What it means:</b> Building entitlements, credits, and limits takes a sprint. Maintaining real-time enforcement and the edge cases (overdrafts, expiry, burn-down order) takes the roadmap.</div>
     <div class="ws-line"><b>How Stigg is different:</b> No vendor frames itself against the in-house build; they compare against each other. Stigg can name the competitor that actually shows up in most deals.</div>
     <div class="ws-line"><b>Who it is for:</b> CTOs and founders weighing build versus buy, often under a strategic pricing deadline.</div>
-    <div class="ws-line"><b>How big a deal:</b> The highest-leverage message, because building in-house is the first competitor Stigg names.</div>
+    <div class="ws-line"><b>How big a deal:</b> The highest-return message, because building in-house is the first competitor Stigg names.</div>
+  </div>
+  <div class="callout" style="margin-top:20px">
+    <div class="k">What buyers have lived through</div>
+    <p>The AI pricing problems that made news in 2025 were not billing problems. A coding assistant moved its plan to usage limits, customers ran out in days or were charged without warning, and it refunded three weeks of charges. A model provider added weekly limits after a few accounts ran agents around the clock. Both were limits decided too late. That is the moment Stigg's ads name, without naming any company.</p>
   </div>
 </section>
 
@@ -985,11 +1100,11 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 <section class="view" id="targeting">
 <div class="twwrap">
   <header class="tw-hero">
-    <div class="kicker">Audience Targeting / ICP Source of Truth</div>
+    <div class="kicker">Audience Targeting / Source of Truth</div>
     <h1 class="big">Who to target,<br>and every way to <em>reach them</em>.</h1>
-    <p class="lede">The single source of truth for who Stigg sells to and how we capture that audience. It starts in plain language, narrows from the whole market down to the beachhead, and translates every layer into the exact LinkedIn filters that build it, with honest sizes. Then the named plays to launch, how the same buyer shows up on search, and the signals that assemble the account list.</p>
+    <p class="lede">The single source of truth for who Stigg sells to and how we capture that audience. It starts in plain language, narrows from the whole market down to the beachhead, and translates every layer into the exact LinkedIn filters that build it, with honest sizes. Then the named plays to launch, how the same buyer shows up on search, and the signals that assemble the named accounts.</p>
     <div class="metastrip">
-      <span>ICP source of truth</span><span>LinkedIn translations</span><span>Version 2.0</span><span>September 2026</span>
+      <span>Ideal client source of truth</span><span>LinkedIn translations</span><span>Version 2.2</span><span>October 2026</span>
     </div>
   </header>
 
@@ -1002,15 +1117,15 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="icp-row"><div class="lab">What they sell</div><div class="val">A real-time layer that sits between an application and its billing system and decides, in the moment, what each customer or AI agent is allowed to do. It meters usage, enforces entitlements and credit limits, and runs the wallets and ledgers behind AI credit pricing, <em>without replacing the billing system already in place</em>.</div></div>
       <div class="icp-row"><div class="lab">Who buys it</div><div class="val">Software companies with an AI feature their customers use, charging by usage, credits, or tokens, where an <em>engineering leader</em> owns the build-versus-buy decision. AI does not have to be the core product.</div></div>
       <div class="icp-row"><div class="lab">Why they win</div><div class="val">It decides in real time, <em>before the action and before the money is spent</em>, while the established tools measure usage after the fact.</div></div>
-      <div class="icp-row"><div class="lab">The ICP</div><div class="val">Software companies of 51 to 10,000 employees with a customer-facing AI feature, pricing by usage or credits or about to, where an engineering leader owns the decision and the team is otherwise tempted to build it in-house. Frontier AI companies are the priority logos. United States first.</div></div>
+      <div class="icp-row"><div class="lab">The ideal client</div><div class="val">Software companies of 51 to 10,000 employees with a customer-facing AI feature, pricing by usage or credits or about to, where an engineering leader owns the decision and the team is otherwise tempted to build it in-house. Frontier AI companies are the priority logos. United States first.</div></div>
       <div class="icp-row"><div class="lab">Not a fit</div><div class="val">Flat per-seat software with no consumption pricing, pre-product startups with nothing to meter, and non-software businesses.</div></div>
       <div class="icp-chips">
-        <div class="icp-chip"><div class="n">~360</div><div class="c">Named accounts (expanding)</div></div>
+        <div class="icp-chip"><div class="n">204</div><div class="c">Named accounts (priority and secondary)</div></div>
         <div class="icp-chip"><div class="n">51-10,000</div><div class="c">Priority company size</div></div>
         <div class="icp-chip"><div class="n">Eng-led</div><div class="c">Decision owner</div></div>
         <div class="icp-chip"><div class="n">Two clocks</div><div class="c">Warm fast, named-account slow</div></div>
       </div>
-      <div class="icp-ver">Version 2.1 &nbsp;/&nbsp; October 2026 &nbsp;/&nbsp; Inputs: strategy call (2026-09-08), ImpactRx intake (2026-10-01), target account list, company recon, competitive white space, Google keyword plan.<br>Change log: v2.1 applies the intake. ICP widened to any software company with a customer-facing AI feature; size 51 to 10,000; Central Europe and Israel as tests; AI Engineers added; Chargebee and Paid listed as competitors; Month 1 launch rebuilt as three persona campaigns on the account list plus two native pockets.</div>
+      <div class="icp-ver">Version 2.2 &nbsp;/&nbsp; October 2026 &nbsp;/&nbsp; Inputs: strategy call, Stigg intake, onboarding call (October 6), Stigg priority and secondary account files, company recon, competitive white space, Google keyword plan.</div>
     </div>
   </section>
 
@@ -1024,7 +1139,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="fnl-band" style="width:100%;background:var(--barcanopy)"><div class="bt">Total Addressable Market</div><div class="bs">Every usage-priced or usage-curious software company, globally</div></div>
       <div class="fnl-band" style="width:76%;background:var(--barmoss)"><div class="bt">Serviceable Market</div><div class="bs">US-first software companies with AI features and usage pricing with the scale and engineering to integrate</div></div>
       <div class="fnl-band" style="width:54%;background:var(--barblue)"><div class="bt">Ideal Client Profile</div><div class="bs">Software companies with a customer-facing AI feature, 51 to 10,000 employees, engineering leader owns it</div></div>
-      <div class="fnl-band" style="width:34%;background:var(--barterra)"><div class="bt">Beachhead</div><div class="bs">Frontier AI companies launching usage or credit pricing right now (~360 named)</div></div>
+      <div class="fnl-band" style="width:34%;background:var(--barterra)"><div class="bt">Beachhead</div><div class="bs">Frontier AI companies launching usage or credit pricing right now (204 named, priority and secondary)</div></div>
     </div>
     <figcaption>Each band is a subset of the one above it. Widths are illustrative of the narrowing, not to scale.</figcaption>
 
@@ -1067,7 +1182,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <div class="xl-facet"><span class="fn">Technographic</span><span class="chipv">routed to third-party list</span></div>
       <div><span class="xl-size">Moderate</span><span class="xl-tag inf">inferred</span></div>
       <div class="xl-miss"><b>What it misses:</b> LinkedIn cannot filter on tech stack or on "is launching usage pricing." Both constraints are enforced through a third-party list (Clay or BuiltWith enrichment), then uploaded as a Matched Audience.</div>
-      <div class="xl-use"><b>Use it for:</b> the native cold ceiling and the firmographic base that the ICP and personas tighten.</div>
+      <div class="xl-use"><b>Use it for:</b> the native cold ceiling and the firmographic base that the ideal client and personas tighten.</div>
     </div>
   </section>
 
@@ -1085,13 +1200,13 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <tr><td class="cri">Decision owner</td><td class="sc-ideal">CTO or engineering leader; more senior at bigger companies</td><td>Founder or CEO at a smaller company</td><td class="sc-no">No technical owner</td></tr>
       <tr><td class="cri">Trigger</td><td class="sc-ideal">An in-house build hit a wall: new pricing model, maintenance load, customers asking to see usage, agent sprawl</td><td>Frustration with Metronome or Orb; leaving a billing provider</td><td class="sc-no">Satisfied with the current build</td></tr>
     </table></div>
-    <div class="callout"><div class="k">Evidence line</div><p>Stated, not yet validated by closed-won data. This ICP rests on the strategy call, the ImpactRx intake (company size, seniority, and ideal industries ranked by Stigg), the named customers on Stigg's site (Webflow, Miro, PagerDuty, Qlik, Productboard, Upwork, AI21, 8x8, HackerOne), and the recon. A closed-won pull from HubSpot in week one will confirm or adjust the size bands and the beachhead, and any gap between who they win and who they say they want is the most useful thing that pull will surface.</p></div>
+    <div class="callout"><div class="k">Evidence line</div><p>Stated, not yet validated by closed-won data. This profile rests on the strategy call, the ImpactRx intake (company size, seniority, and ideal industries ranked by Stigg), the named customers on Stigg's site (Webflow, Miro, PagerDuty, Qlik, Productboard, Upwork, AI21, 8x8, HackerOne), and the recon. A closed-won pull from HubSpot in week one will confirm or adjust the size bands and the beachhead, and any gap between who they win and who they say they want is the most useful thing that pull will surface.</p></div>
     <div class="callout blue"><div class="k">Beachhead, where we start</div><p>Frontier AI companies that are launching usage or credit pricing right now: the roughly 360 named accounts, expanding daily. The real-time wedge matters most where AI agents spend money autonomously, the urgency is highest the moment pricing is being built, and these are the logos that prove the model for the acquisition goal.</p></div>
     <div class="xl">
       <div class="xl-h">LinkedIn translation</div>
-      <div class="xl-facet"><span class="fn">Reach via</span><span class="chipv">Company List Matched Audience (~360 named accounts)</span></div>
+      <div class="xl-facet"><span class="fn">Reach via</span><span class="chipv">Company List Matched Audience (204 named accounts)</span></div>
       <div class="xl-facet"><span class="fn">Native fallback</span><span class="chipv">Industries: Software Development</span><span class="chipv">Company Size: 51-200 through 5,001-10,000</span><span class="chipv">Company Growth Rate: high</span><span class="chipv">Location: United States</span></div>
-      <div><span class="xl-size">~360 accounts</span><span class="xl-tag obs">observed as a list</span></div>
+      <div><span class="xl-size">204 accounts</span><span class="xl-tag obs">observed as a list</span></div>
       <div class="xl-miss"><b>What it misses:</b> "prices by usage" and "launching credits" are not filterable. Under ~5,000 accounts the named list beats native filters outright, so the list is the audience and the message carries the trigger.</div>
       <div class="xl-use"><b>Use it for:</b> the account-based core audience and the company base that every Section 05 persona filter sits on top of.</div>
     </div>
@@ -1101,7 +1216,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <section class="blk">
     <div class="secnum">05 / BUYING COMMITTEE AND INFLUENCERS</div>
     <h2 class="sec">Who decides, <em>and how to reach each one</em></h2>
-    <p class="body">An engineering-led purchase. Stigg rates Senior, Manager, Director, VP, and Owner or Founder as a great fit and entry level as a lower fit; CXO was left unchecked even though the CTO is named as a buyer, so it is confirmed at kickoff. On the account list, these personas run as three campaigns: engineering leaders, engineers, and founders and CEOs.</p>
+    <p class="body">An engineering-led purchase. Stigg rates Senior, Manager, Director, VP, and Owner or Founder as a great fit and entry level as a lower fit; CTOs and other executives are held for Month 2, once their teams have engaged. On the named accounts, the engineering personas run as four cold campaigns (section 07); founders and CEOs are reached later, only at accounts whose engineers have engaged.</p>
     <div class="grid2">
       <div class="card tl">
         <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Economic buyer</span><span class="ctitle">Engineering leaders</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
@@ -1111,10 +1226,10 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="pmeta"><span class="plab">Objects with</span>"We can build this ourselves."</div>
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
-          <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Director</span><span class="chipv">VP</span><span class="chipv">CXO, to confirm</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">CTO</span><span class="chipv">VP or Director of Engineering</span><span class="chipv">Head of Platform</span></div>
-          <div><span class="xl-size">On the account list</span><span class="xl-tag inf">size after build</span></div>
+          <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Director</span><span class="chipv">VP</span><span class="chipv">CXO, from Month 2</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">CTO</span><span class="chipv">VP or Director of Engineering</span><span class="chipv">Head of Platform</span></div>
+          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
           <div class="xl-miss"><b>What it misses:</b> title wording varies by company, so function plus seniority is the base and titles are the overlay.</div>
-          <div class="xl-use"><b>Use it for:</b> the engineering leaders campaign on the account list, and the new-leaders pocket.</div>
+          <div class="xl-use"><b>Use it for:</b> the engineering leaders and fast-growing leaders campaigns.</div>
         </div>
       </div>
       <div class="card tc">
@@ -1126,9 +1241,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Senior</span><span class="chipv">Manager</span></div><div class="xl-facet"><span class="fn">Titles and skills</span><span class="chipv">AI Engineer</span><span class="chipv">ML Engineer</span><span class="chipv">Machine Learning</span><span class="chipv">Large Language Models</span></div>
-          <div><span class="xl-size">On the account list</span><span class="xl-tag inf">size after build</span></div>
+          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
           <div class="xl-miss"><b>What it misses:</b> LinkedIn cannot separate AI engineers from platform engineers by function or seniority; only titles and skills tell them apart.</div>
-          <div class="xl-use"><b>Use it for:</b> the engineers campaign on the account list, split by title later if the data shows a difference.</div>
+          <div class="xl-use"><b>Use it for:</b> the engineers campaign, split by title later if the data shows a difference.</div>
         </div>
       </div>
       <div class="card tb">
@@ -1140,9 +1255,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Senior</span><span class="chipv">Manager</span></div><div class="xl-facet"><span class="fn">Skills</span><span class="chipv">API Development</span><span class="chipv">Distributed Systems</span><span class="chipv">Billing Systems</span></div>
-          <div><span class="xl-size">On the account list</span><span class="xl-tag inf">size after build</span></div>
+          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
           <div class="xl-miss"><b>What it misses:</b> "owns billing" is not a filter; skills and the message do the qualifying.</div>
-          <div class="xl-use"><b>Use it for:</b> the engineers campaign on the account list, and the trust sequence.</div>
+          <div class="xl-use"><b>Use it for:</b> the engineers campaign, and the trust sequence.</div>
         </div>
       </div>
       <div class="card tm">
@@ -1154,9 +1269,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Owner</span><span class="chipv">Partner</span><span class="chipv">CXO</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">Founder</span><span class="chipv">Co-founder</span><span class="chipv">CEO</span></div>
-          <div><span class="xl-size">On the account list</span><span class="xl-tag inf">size after build</span></div>
-          <div class="xl-miss"><b>What it misses:</b> founder relevance falls as company size rises; the account list already encodes size.</div>
-          <div class="xl-use"><b>Use it for:</b> the founders and CEOs campaign on the account list.</div>
+          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
+          <div class="xl-miss"><b>What it misses:</b> founder relevance falls as company size rises; the named lists already encode size.</div>
+          <div class="xl-use"><b>Use it for:</b> the Month 2 executive campaign, at accounts whose engineers have engaged.</div>
         </div>
       </div>
       <div class="card">
@@ -1182,7 +1297,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="lmeter"><i style="width:80%"></i></div><div class="lmcap">Size impact: tightens meaningfully &nbsp;/&nbsp; <span class="lconf">confidence: high</span></div>
       </div>
       <div class="card tb"><h4>Member Traits: Recently Promoted, and new in position via Sales Navigator</h4>
-        <div class="ev" style="margin-top:6px">New engineering leaders re-evaluate vendors and have first-90-day budget. Often the highest-leverage layer for a switch or replacement play against homegrown and incumbents.</div>
+        <div class="ev" style="margin-top:6px">New engineering leaders re-evaluate vendors and have first-90-day budget. Often the strongest layer for a switch or replacement play against homegrown and incumbents.</div>
         <div class="lmeter"><i style="width:72%"></i></div><div class="lmcap">Size impact: strong &nbsp;/&nbsp; <span class="lconf">confidence: high</span></div>
       </div>
       <div class="card tc"><h4>Member Skills</h4>
@@ -1210,58 +1325,57 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <!-- S07 PRIORITY SEGMENTS -->
   <section class="blk">
     <div class="secnum">07 / PRIORITY SEGMENTS</div>
-    <h2 class="sec">The Month 1 launch: <em>five campaigns</em></h2>
-    <p class="body">Three persona campaigns on Stigg's account list, so each buyer gets its own budget and its own read, plus two native pockets built from LinkedIn filters. No broad base at launch; it opens only if these earn it. All five share one rotation of ten Thought Leader Ads from Dor's best posts. Stigg's own data (pipeline, closed-lost, email lists, identified visitors) runs alongside as a warm campaign, funded first.</p>
+    <h2 class="sec">The Month 1 launch: <em>four cold campaigns</em></h2>
+    <p class="body">Four campaigns, all built on Stigg's two named lists (priority and secondary) combined, each reaching one slice of the buying committee. Every campaign runs the same five single-image ads, with the copy tuned to that slice, a website-visit goal, and a Learn more button. Each person sits in one campaign only, so the four never bid against each other.</p>
     <div class="grid2">
       <div class="card tl">
-        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Account list 1</span><span class="ctitle">Engineering leaders</span><span class="ctags"><span class="ppill prim">Month 1, $3,500</span></span></div>
-        <div class="pmeta" style="margin-top:6px">The decision makers at the named accounts.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company List</td><td>Stigg target account list (current version)</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP, CXO to confirm</td></tr></table>
+        <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Campaign 1</span><span class="ctitle">Engineering leaders</span><span class="ctags"><span class="ppill prim">Month 1, $500 to $1,200</span></span></div>
+        <div class="pmeta" style="margin-top:6px">Directors and VPs of Engineering and Heads of Platform at the named accounts.</div>
+        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Location</td><td>United States</td></tr></table>
         <div class="pmeta"><span class="plab">Persona</span>Engineering leaders</div>
         <div class="pmeta"><span class="plab">Size</span>Size after build</div>
-        <div class="why"><b>Why chase it:</b> the logos that prove the model, reached at the seat that decides.</div>
+        <div class="why"><b>Why now:</b> they own the build-or-buy decision, and they watched a peer's AI pricing launch go wrong in public.</div>
+        <div class="pmeta"><span class="plab">Opening line</span>"Your pricing launch should not end in a refund thread."</div>
       </div>
       <div class="card tc">
-        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Account list 2</span><span class="ctitle">Engineers</span><span class="ctags"><span class="ppill prim">Month 1, $3,000</span></span></div>
-        <div class="pmeta" style="margin-top:6px">AI, ML, platform, staff, and billing engineers at the named accounts.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company List</td><td>Stigg target account list</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior, Manager</td></tr><tr><td>Titles or skills</td><td>AI, ML, platform, staff, backend; Machine Learning, API Development</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>AI Engineers, platform and billing engineers</div>
-        <div class="pmeta"><span class="plab">Size</span>Size after build</div>
-        <div class="why"><b>Why chase it:</b> the champions who bring Stigg in, and the people most likely to start an in-house build.</div>
-      </div>
-      <div class="card tm">
-        <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Account list 3</span><span class="ctitle">Founders and CEOs</span><span class="ctags"><span class="ppill prim">Month 1, $2,000</span></span></div>
-        <div class="pmeta" style="margin-top:6px">The signers at smaller and fast-growing named accounts.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company List</td><td>Stigg target account list</td></tr><tr><td>Job Seniority</td><td>Owner, Partner, CXO</td></tr><tr><td>Titles</td><td>Founder, Co-founder, CEO</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>Founders and CEOs</div>
-        <div class="pmeta"><span class="plab">Size</span>Size after build; must reach 300 members to serve</div>
-        <div class="why"><b>Why chase it:</b> founders sign where AI adoption outran pricing.</div>
+        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Campaign 2</span><span class="ctitle">Engineers</span><span class="ctags"><span class="ppill prim">Month 1, $1,500 to $3,000</span></span></div>
+        <div class="pmeta" style="margin-top:6px">AI, ML, platform, staff, and backend engineers and their managers at the named accounts.</div>
+        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior, Manager</td></tr><tr><td>Location</td><td>United States</td></tr></table>
+        <div class="pmeta"><span class="plab">Persona</span>AI, platform, and billing engineers</div>
+        <div class="pmeta"><span class="plab">Size</span>Size after build; split into one campaign per list above about 10,000 members</div>
+        <div class="why"><b>Why now:</b> they live with agent costs and limits, and they are the ones who will otherwise build it themselves.</div>
+        <div class="pmeta"><span class="plab">Opening line</span>"One account. Four agents. Running all weekend."</div>
       </div>
       <div class="card tt">
-        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Native pocket</span><span class="ctitle">New leaders at fast-growing companies</span><span class="ctags"><span class="ppill sec">Month 1, $3,000</span></span></div>
-        <div class="pmeta" style="margin-top:6px">Engineering leaders new in role, at companies growing quickly, with AI skills or interests.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Industries</td><td>Software Development; Technology, Information and Internet; IT Services</td></tr><tr><td>Company Growth Rate</td><td>10 to 20 percent (a proxy)</td></tr><tr><td>Seniority and function</td><td>Engineering, Director and above</td></tr><tr><td>Member Traits</td><td>Recently promoted; new in position via a Sales Navigator list</td></tr><tr><td>Skills or interests</td><td>Artificial Intelligence, Machine Learning</td></tr></table>
+        <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Campaign 3</span><span class="ctitle">Leaders at fast-growing companies</span><span class="ctags"><span class="ppill prim">Month 1, $400 to $1,000</span></span></div>
+        <div class="pmeta" style="margin-top:6px">Engineering leaders at named accounts whose headcount is growing fast.</div>
+        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Company Growth Rate</td><td>10 percent and above (a proxy for momentum)</td></tr></table>
         <div class="pmeta"><span class="plab">Persona</span>Engineering leaders</div>
-        <div class="pmeta"><span class="plab">Size</span>Target 10K to 15K members</div>
-        <div class="why"><b>Why chase it:</b> new leaders review what they inherited, including the homegrown billing stack, in their first 90 days.</div>
+        <div class="pmeta"><span class="plab">Size</span>Size after build</div>
+        <div class="why"><b>Why now:</b> growth is when pricing changes every quarter and the homegrown limit stops keeping up.</div>
+        <div class="pmeta"><span class="plab">Opening line</span>"It started as a usage counter."</div>
       </div>
       <div class="card tb">
-        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Native pocket</span><span class="ctitle">Active voices in AI</span><span class="ctags"><span class="ppill sec">Month 1, $2,500</span></span></div>
-        <div class="pmeta" style="margin-top:6px">The most publicly active engineering and IT leaders, engineers, and founders at software and IT companies.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Industries</td><td>Software Development; IT Services</td></tr><tr><td>Function and seniority</td><td>Engineering, IT, founders; Senior and above</td></tr><tr><td>Member Traits</td><td>Frequent Contributors</td></tr><tr><td>Skills or interests</td><td>Artificial Intelligence, Machine Learning</td></tr></table>
-        <div class="pmeta"><span class="plab">Persona</span>Leaders, engineers, founders</div>
-        <div class="pmeta"><span class="plab">Size</span>Target 10K to 15K members</div>
-        <div class="why"><b>Why chase it:</b> the people most likely to engage in public, which feeds the warm pool and pairs with Thought Leader Ads.</div>
+        <div class="chhead"><span class="clabel" style="color:var(--blue-text)">Campaign 4</span><span class="ctitle">Frequent contributors</span><span class="ctags"><span class="ppill prim">Month 1, $400 to $1,000</span></span></div>
+        <div class="pmeta" style="margin-top:6px">The engineering leaders and engineers at the named accounts who post and comment most.</div>
+        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior to VP</td></tr><tr><td>Member Traits</td><td>Frequent Contributors</td></tr></table>
+        <div class="pmeta"><span class="plab">Persona</span>Leaders and engineers who speak in public</div>
+        <div class="pmeta"><span class="plab">Size</span>Size after build</div>
+        <div class="why"><b>Why now:</b> the people most likely to engage, share, and fill the warm pool first.</div>
+        <div class="pmeta"><span class="plab">Opening line</span>"Your billing tool finds it on the 30th. Stigg stops it on the 3rd."</div>
       </div>
     </div>
-    <div class="callout"><div class="k">One more than the usual three to four</div><p>The house standard launches three to four cold segments. This launch runs five because the account list is split by persona, which keeps each buyer's read clean. The broad base is held back until the five earn it.</p></div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="callout"><div class="k">Executives come after engagement</div><p>CTOs, CEOs, and founders are not in the cold campaigns. They are reached from Month 2, only at the accounts whose engineers have already engaged, with Dor's voice leading.</p></div>
+      <div class="callout blue"><div class="k">Running beside the four</div><p>Spotlight retargeting reaches everyone who engaged or visited in the last 90 days, from the week the pool passes 300 people. Stigg's own lists (pipeline, closed-lost, email) join as a warm campaign in Month 2.</p></div>
+    </div>
   </section>
 
   <!-- S08 PAID SEARCH -->
   <section class="blk">
     <div class="secnum">08 / CAPTURING THE AUDIENCE ON PAID SEARCH</div>
     <h2 class="sec">The same buyer, <em>when they search</em></h2>
-    <p class="body">How the ICP and personas show up on Google. The full account structure and budget live in the Capture tab; this is the audience view of it.</p>
+    <p class="body">How the ideal client and personas show up on Google. The full account structure and budget live in the Capture tab; this is the audience view of it.</p>
     <div class="trade">
       <div class="trade-p trade-good"><h5>Why this lane is worth it</h5><p>Clear intent, a shorter cycle than any cold audience, and self-qualifying queries. An engineer typing "stripe metered billing" is describing Stigg's exact wedge, with no persuasion step.</p></div>
       <div class="trade-p trade-catch"><h5>The catch</h5><p>Most of the word "billing" is invoicing, accounting, and telecom demand, so tight negatives are the whole game. And the landing page, not the click, decides the return.</p></div>
@@ -1288,15 +1402,15 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="ev">Terms: stigg, stigg pricing. Cheap to own, and the brand SERP is already contested by competitor comparison pages.</div>
       </div>
     </div>
-    <div class="callout" style="border-left-color:var(--hazard)"><div class="k" style="color:var(--terra-text)">Landing page is mandatory</div><p>Each group routes to a matched page with one action, Book a Demo, and proof for the engineer's state of mind: documentation, latency, and architecture, not marketing gloss. Two pages earn their build: a positioning page ("keep your biller, add the layer it is missing") and a "Stigg plus Stripe" page for the highest-intent Stripe queries. A short, fast form, not a long one.</p></div>
-    <div class="callout blue"><div class="k">Launch set and negatives</div><p>Start narrow on six terms, exact and phrase match: entitlement management, stripe metered billing, usage-based billing software, metered billing, metronome alternative, and the brand. Negatives load before launch, brand collisions first: metronome music terms (seiko metronome, soundbrenner), zuora navigational terms (zuora login, zuora support, since it is a partner and bare "zuora" runs exact only), invoicing and accounting (invoice software, quickbooks), medical and telecom ("usage pricing" in its telecom sense, medical billing), and free or jobs terms. Google firmographic filtering is weak, which is why the LinkedIn translation stays the qualifier; Customer Match from the account list and in-market segments help narrow it.</p></div>
+    <div class="callout" style="border-left-color:var(--hazard)"><div class="k" style="color:var(--terra-text)">Landing page is mandatory</div><p>Each group routes to a matched page with one action, Book a Demo, and proof for the engineer's state of mind: documentation, latency, and architecture, not marketing gloss. Two pages earn their build: a positioning page ("keep your biller, add the layer it leaves out") and a "Stigg plus Stripe" page for the highest-intent Stripe queries. A short, fast form, not a long one.</p></div>
+    <div class="callout blue"><div class="k">Launch set and negatives</div><p>Start narrow on six terms, exact and phrase match: entitlement management, stripe metered billing, usage-based billing software, metered billing, metronome alternative, and the brand. Negatives load before launch, brand collisions first: metronome music terms (seiko metronome, soundbrenner), zuora navigational terms (zuora login, zuora support, since it is a partner and bare "zuora" runs exact only), invoicing and accounting (invoice software, quickbooks), medical and telecom ("usage pricing" in its telecom sense, medical billing), and free or jobs terms. Google firmographic filtering is weak, which is why the LinkedIn translation stays the qualifier; Customer Match from the named accounts and in-market segments help narrow it.</p></div>
   </section>
 
   <!-- S09 SIGNALS -->
   <section class="blk">
     <div class="secnum">09 / THIRD-PARTY DATA AND SIGNALS</div>
     <h2 class="sec">The data that <em>builds the list</em></h2>
-    <p class="body">What identifies, sizes, and prioritizes the ICP beyond what LinkedIn exposes. Many signals converge into one scored account view, which is where DemandSense does its work.</p>
+    <p class="body">What identifies, sizes, and prioritizes the ideal client beyond what LinkedIn exposes. Many signals converge into one scored account view, which is where DemandSense does its work.</p>
     <figure>
       <div class="fig figscroll">
         <svg viewBox="0 0 720 384" role="img" aria-label="Many signal sources converging into one scored account view" style="min-width:620px">
@@ -1319,9 +1433,9 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
           <path class="tw-arrow" d="M230 258 C 360 258, 360 195, 468 195"/>
           <path class="tw-arrow" d="M230 312 C 360 312, 360 199, 468 199"/>
           <rect x="470" y="150" width="236" height="84" rx="10" fill="var(--panel-deep)"/>
-          <text x="488" y="182" style="font-family:'Archivo Black',sans-serif;font-size:15px;fill:#F4F1EA">One scored</text>
-          <text x="488" y="203" style="font-family:'Archivo Black',sans-serif;font-size:15px;fill:#F4F1EA">account view</text>
-          <text x="488" y="221" style="font-family:'JetBrains Mono';font-size:10px;fill:#D4FF3D">served, in-motion, hidden pipeline</text>
+          <text x="488" y="182" style="font-family:var(--body);font-weight:800;font-size:15px;fill:#F5F5F5">One scored</text>
+          <text x="488" y="203" style="font-family:var(--body);font-weight:800;font-size:15px;fill:#F5F5F5">account view</text>
+          <text x="488" y="221" style="font-family:'JetBrains Mono';font-size:10px;fill:#C6FF3D">served, in-motion, hidden pipeline</text>
         </svg>
       </div>
       <figcaption>DemandSense composes these sources into one account-level view. Which accounts are served and engaging, which are underserved, which are in motion, and which show heavy engagement with no deal yet.</figcaption>
@@ -1359,7 +1473,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       <tr><td class="who">Open pipeline</td><td class="how">Suppressed from cold where appropriate, synced from HubSpot and Salesforce</td></tr>
       <tr><td class="who">Employees</td><td class="how">Company exclusion on Stigg</td></tr>
       <tr><td class="who">Competitors</td><td class="how">Company List exclusion on Metronome, Orb, Chargebee, Schematic, Paid, and Credyt. Zuora and Airwallex are partners and are not excluded</td></tr>
-      <tr><td class="who">Accounts Stigg flagged</td><td class="how">Removed from the account list: Writer (in an Orb implementation), World Labs (too small), Waymo (consumer), Viz.ai (not a fit), Verta (acquired)</td></tr>
+      <tr><td class="who">Accounts Stigg flagged</td><td class="how">Excluded from cold campaigns, pending Stigg's confirmation: WRITER (kept in After Tokens ads as a speaker), World Labs, Waymo, Viz.ai</td></tr>
       <tr><td class="who">Entry-level roles</td><td class="how">Seniority exclusion (Entry), rated a lower fit by Stigg</td></tr>
       <tr><td class="who">Students and trainees</td><td class="how">Job Seniority exclusion (Training, Unpaid) and student fields of study</td></tr>
       <tr><td class="who">Job seekers</td><td class="how">Member Traits: Job Seekers, excluded</td></tr>
@@ -1374,11 +1488,11 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <h2 class="sec">The order we <em>spend in</em></h2>
     <p class="body">Warmest and cheapest first, cold last. Each rung names the audiences from this document it uses. Bar width tracks cost per lead.</p>
     <div class="ladder">
-      <div class="lad-rung"><div class="lad-bar" style="width:30%;background:var(--barcanopy)"><span class="ln">1. First-party data</span></div><div class="lad-meta">Pipeline, closed-lost, email lists, identified website accounts. Stigg is sharing all of them, so warm from day one.</div><div class="lad-cpl">$75-150</div></div>
+      <div class="lad-rung"><div class="lad-bar" style="width:30%;background:var(--barcanopy)"><span class="ln">1. First-party data</span></div><div class="lad-meta">Pipeline, closed-lost, email lists, identified website accounts. Joining as a warm campaign in Month 2, as the exports arrive.</div><div class="lad-cpl">$75-150</div></div>
       <div class="lad-rung"><div class="lad-bar" style="width:44%;background:var(--barmoss)"><span class="ln">2. Warm digital</span></div><div class="lad-meta">Site visitors, ad and video engagers, page followers, newsletter readers, filtered to fit.</div><div class="lad-cpl">$120-250</div></div>
-      <div class="lad-rung"><div class="lad-bar" style="width:60%;background:var(--barblue)"><span class="ln">3. Named AI accounts</span></div><div class="lad-meta">The account list as three persona campaigns (Section 07). The workhorse.</div><div class="lad-cpl">$250-400</div></div>
+      <div class="lad-rung"><div class="lad-bar" style="width:60%;background:var(--barblue)"><span class="ln">3. Named AI accounts</span></div><div class="lad-meta">The named accounts as four persona campaigns (section 07). The workhorse.</div><div class="lad-cpl">$250-400</div></div>
       <div class="lad-rung"><div class="lad-bar" style="width:74%;background:var(--barterra)"><span class="ln">4. In-market search</span></div><div class="lad-meta">The Section 08 search groups, retargeted on LinkedIn for 90 days.</div><div class="lad-cpl">capture</div></div>
-      <div class="lad-rung"><div class="lad-bar" style="width:90%;background:var(--barclay)"><span class="ln">5. Two tight pockets</span></div><div class="lad-meta">New leaders at fast-growing companies and active voices in AI. A broad base opens only if these earn it.</div><div class="lad-cpl">saturation</div></div>
+      <div class="lad-rung"><div class="lad-bar" style="width:90%;background:var(--barclay)"><span class="ln">5. Broader cold, later</span></div><div class="lad-meta">An audience beyond the named accounts opens only once the four campaigns earn it.</div><div class="lad-cpl">saturation</div></div>
     </div>
     <div class="callout"><div class="k">Budget shape</div><p>Warm-first by default. Because warm pools are still filling, Phase 1 leans on the named-account motion and in-market search, with a small cold test, then shifts warm as the pools grow. Management fee is separate from ad spend, and the bands above are indicative, not a forecast. The full motion design lives in its own document.</p></div>
   </section>
@@ -1386,8 +1500,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <script type="application/json" id="icp-source-of-truth">
 {
  "client": "Stigg",
- "version": "2.1",
- "date": "2026-10-03",
+ "version": "2.2",
+ "date": "2026-10-20",
  "inputs": [
   "strategy call transcript 2026-09-08",
   "ImpactRx intake 2026-10-01",
@@ -1533,12 +1647,12 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
    }
   ],
   "evidence": "Stated, not yet validated by closed-won data. Rests on the strategy call, named customers on the site, and recon.",
-  "beachhead": "Frontier AI companies launching usage or credit pricing now (~360 named, expanding).",
+  "beachhead": "Frontier AI companies launching usage or credit pricing now (204 named, priority and secondary).",
   "reach_via": "company_list",
   "linkedin": {
    "recipe": {
     "Company List": [
-     "~360 named AI accounts"
+     "204 named AI accounts"
     ],
     "native_fallback": {
      "Industries": [
@@ -1557,7 +1671,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
      ]
     }
    },
-   "size": "~360 accounts",
+   "size": "204 accounts",
    "size_basis": "observed",
    "misses": "Prices-by-usage / launching-credits trigger; carried by message.",
    "use_for": "Account-based core and person-filter base."
@@ -1591,7 +1705,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       "API Development"
      ]
     },
-    "size": "on the account list",
+    "size": "on the named accounts",
     "size_basis": "tbd"
    }
   },
@@ -1620,7 +1734,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       "Large Language Models"
      ]
     },
-    "size": "on the account list",
+    "size": "on the named accounts",
     "size_basis": "tbd"
    }
   },
@@ -1652,7 +1766,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       "Billing Systems"
      ]
     },
-    "size": "on the account list",
+    "size": "on the named accounts",
     "size_basis": "tbd"
    }
   },
@@ -1705,7 +1819,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       "Pricing Strategy"
      ]
     },
-    "size": "on the account list",
+    "size": "on the named accounts",
     "size_basis": "tbd"
    }
   },
@@ -1777,111 +1891,65 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
  ],
  "priority_segments": [
   {
-   "name": "Account list: engineering leaders",
-   "type": "list",
-   "recipe": {
-    "Company List": [
-     "Stigg target account list"
-    ],
-    "Job Function": [
-     "Engineering"
-    ],
-    "Job Seniority": [
-     "Director",
-     "VP",
-     "CXO (confirm)"
-    ]
-   },
-   "month1_budget": 3500
+   "name": "Engineering leaders",
+   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
+   "job_function": "Engineering",
+   "location": "United States",
+   "format": "Single image, website visits, Learn more",
+   "job_seniority": [
+    "Director",
+    "VP"
+   ],
+   "month_1_budget": "$500 to $1,200",
+   "opening_line": "Your pricing launch should not end in a refund thread.",
+   "excludes": "Company Growth Rate 10%+, Frequent Contributors, executives, competitors, customers"
   },
   {
-   "name": "Account list: engineers",
-   "type": "list",
-   "recipe": {
-    "Company List": [
-     "Stigg target account list"
-    ],
-    "Job Function": [
-     "Engineering"
-    ],
-    "Job Seniority": [
-     "Senior",
-     "Manager"
-    ],
-    "Titles/skills": [
-     "AI, ML, platform, staff, backend"
-    ]
-   },
-   "month1_budget": 3000
+   "name": "Engineers",
+   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
+   "job_function": "Engineering",
+   "location": "United States",
+   "format": "Single image, website visits, Learn more",
+   "job_seniority": [
+    "Senior",
+    "Manager"
+   ],
+   "month_1_budget": "$1,500 to $3,000",
+   "opening_line": "One account. Four agents. Running all weekend.",
+   "excludes": "Frequent Contributors, executives, competitors, customers",
+   "split_rule": "one campaign per list above about 10,000 members"
   },
   {
-   "name": "Account list: founders and CEOs",
-   "type": "list",
-   "recipe": {
-    "Company List": [
-     "Stigg target account list"
-    ],
-    "Job Seniority": [
-     "Owner",
-     "Partner",
-     "CXO"
-    ],
-    "Titles": [
-     "Founder",
-     "Co-founder",
-     "CEO"
-    ]
-   },
-   "month1_budget": 2000
+   "name": "Leaders at fast-growing companies",
+   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
+   "job_function": "Engineering",
+   "location": "United States",
+   "format": "Single image, website visits, Learn more",
+   "job_seniority": [
+    "Director",
+    "VP"
+   ],
+   "month_1_budget": "$400 to $1,000",
+   "opening_line": "It started as a usage counter.",
+   "excludes": "executives, competitors, customers",
+   "company_growth_rate": "10% and above"
   },
   {
-   "name": "New leaders at fast-growing companies",
-   "type": "native",
-   "recipe": {
-    "Industries": [
-     "Software Development",
-     "Technology, Information and Internet",
-     "IT Services"
-    ],
-    "Company Growth Rate": [
-     "10-20%"
-    ],
-    "Function/seniority": [
-     "Engineering, Director+"
-    ],
-    "Member Traits": [
-     "Recently promoted",
-     "new in position via Sales Navigator list"
-    ],
-    "Skills/interests": [
-     "Artificial Intelligence",
-     "Machine Learning"
-    ]
-   },
-   "size": "10K-15K target",
-   "month1_budget": 3000
-  },
-  {
-   "name": "Active voices in AI",
-   "type": "native",
-   "recipe": {
-    "Industries": [
-     "Software Development",
-     "IT Services"
-    ],
-    "Function/seniority": [
-     "Engineering, IT, founders; Senior+"
-    ],
-    "Member Traits": [
-     "Frequent Contributors"
-    ],
-    "Skills/interests": [
-     "Artificial Intelligence",
-     "Machine Learning"
-    ]
-   },
-   "size": "10K-15K target",
-   "month1_budget": 2500
+   "name": "Frequent contributors",
+   "company_lists": "Stigg priority (65) and secondary (139) named accounts",
+   "job_function": "Engineering",
+   "location": "United States",
+   "format": "Single image, website visits, Learn more",
+   "job_seniority": [
+    "Senior",
+    "Manager",
+    "Director",
+    "VP"
+   ],
+   "month_1_budget": "$400 to $1,000",
+   "opening_line": "Your billing tool finds it on the 30th. Stigg stops it on the 3rd.",
+   "excludes": "executives, competitors, customers",
+   "member_traits": "Frequent Contributors"
   }
  ],
  "paid_search_groups": [
@@ -2088,7 +2156,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
    "CXO"
   ]
  },
- "broad_base": "held back at launch; opens only if the five campaigns earn it",
+ "broad_base": "held back at launch; opens only if the four campaigns earn it",
  "competitors": {
   "primary": "build in-house",
   "closest_vendor": "Metronome (Stripe)",
@@ -2111,9 +2179,11 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   "named AI accounts by persona",
   "in-market search",
   "two tight pockets"
- ]
+ ],
+ "executives": "CXO, owner, partner, founder and CEO titles excluded from cold; reached from Month 2 at accounts whose engineers have engaged",
+ "retargeting": "Spotlight to 90-day engagers and visitors once the pool passes 300; Stigg first-party lists join in Month 2"
 }
-  </script>
+</script>
 </div>
 </section>
 <section class="view" id="capture">
@@ -2206,7 +2276,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="ev" style="margin-top:6px">Metronome and Orb are the direct rivals, same usage-runtime pitch and same buyer, and Stigg has a published comparison page for each. Zuora carries volume but most of it is navigational, and Stigg partners with Zuora rather than competing with it, so that ad group runs exact-match only as a light intercept. Expect Metronome and Orb to beat it on cost per lead.</div>
       </div>
       <div class="card tb"><h4>The one page that must be built</h4>
-        <div class="ev" style="margin-top:6px">Billing Platform Selection, 1,300 searches a month, is the largest ad group and the worst intent match: "subscription billing software" wants a biller, and Stigg sits on top of one. The fix is a single page that leads with "keep your biller, add the layer it is missing." It serves two campaigns, so it is the highest-return page build in the engagement.</div>
+        <div class="ev" style="margin-top:6px">Billing Platform Selection, 1,300 searches a month, is the largest ad group and the worst intent match: "subscription billing software" wants a biller, and Stigg sits on top of one. The fix is a single page that leads with "keep your biller, add the layer it leaves out." It serves two campaigns, so it is the highest-return page build in the engagement.</div>
       </div>
       <div class="card tt"><h4>The research-intent risk</h4>
         <div class="ev" style="margin-top:6px">The Usage-Based Pricing ad group may be founders researching how to price, not engineers sourcing infrastructure. It stays in because the same searcher becomes the buyer weeks later, but the rule is clear: if it converts below half the campaign rate after 100 clicks, pause it and let content own that demand.</div>
@@ -2283,7 +2353,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Capture</span><span class="ctitle">Harvest active demand</span><span class="ctags"><span class="badge bstart">Start here</span></span></div>
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-terra"></span><span class="eco-pip on-terra"></span><span class="eco-pip on-terra"></span><span class="eco-pip"></span></span></div>
-        <p class="body" style="margin:4px 0">Google is already running. Its job here is capturing the buyers already searching and defending the brand against the named rivals.</p>
+        <p class="body" style="margin:4px 0">Google launches as a new, targeted lane. Its job is capturing the buyers already searching and defending the brand against the named rivals.</p>
         <div class="why"><b>What we would run:</b> point Google at category, method, and competitor terms, each with a matched landing page, so it feeds the same retargeting pools rather than running on its own.</div>
       </div>
 
@@ -2300,7 +2370,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
         <div class="eco-head"><span class="eco-owner">IMP</span><span class="eco-owner">Stigg</span>
           <span class="eco-pips"><span class="eco-pip on-moss"></span><span class="eco-pip"></span><span class="eco-pip"></span><span class="eco-pip"></span></span></div>
         <p class="body" style="margin:4px 0">This layer turns on once the signals are firing. Its job is converting warmed named accounts into conversations.</p>
-        <div class="why"><b>What we would run:</b> signal-triggered LinkedIn and email outreach on the accounts the ads warm up, handed over the moment the signal says they are ready.</div>
+        <div class="why"><b>What we would run:</b> signal-triggered outreach on LinkedIn and by email on the accounts the ads warm up, handed over the moment the signal says they are ready.</div>
       </div>
 
       <div class="card tc">
@@ -2347,7 +2417,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
       </div>
       <div class="card tm">
         <div class="chhead"><span class="clabel" style="color:var(--moss-text)">Activate</span><span class="ctitle">Turn signal into conversations</span><span class="ctags">Signal-triggered outreach / nurture</span></div>
-        <p class="body" style="margin:6px 0">When the signals say an account is leaning in, we hand it to signal-triggered LinkedIn and email outreach, with full context on what each prospect engaged with. This is where marketing hands sales a warm, named account instead of a cold list.</p>
+        <p class="body" style="margin:6px 0">When the signals say an account is leaning in, we hand it to signal-triggered outreach on LinkedIn and by email, with full context on what each prospect engaged with. This is where marketing hands sales a warm, named account instead of a cold list.</p>
         <div class="why"><b>Job in this account:</b> convert the accounts the ads warm up into conversations, the moment they are ready.</div>
       </div>
     </div>
@@ -2361,7 +2431,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <figure>
       <div class="fig figscroll">
         <svg viewBox="0 0 760 210" role="img" aria-label="How each channel makes the next one cheaper">
-          <defs><marker id="hiw-ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#9a9788"/></marker></defs>
+          <defs><marker id="hiw-ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#93A4BE"/></marker></defs>
           <rect class="edu-svgbox" x="14" y="70" width="150" height="66" rx="10"/>
           <text class="edu-boxlabel" x="89" y="98" text-anchor="middle">Content</text>
           <text class="edu-boxsub" x="89" y="116" text-anchor="middle">creates brand searches</text>
@@ -2387,7 +2457,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     </figure>
 
     <div class="edu-statrow">
-      <div class="edu-stat"><div class="n">70-80%</div><div class="l">Share of the named account list we aim to reach inside 90 days</div></div>
+      <div class="edu-stat"><div class="n">70-80%</div><div class="l">Share of the named accounts we aim to reach inside 90 days</div></div>
       <div class="edu-stat"><div class="n">40% higher</div><div class="l">Click-through on warm audiences versus cold prospecting</div></div>
       <div class="edu-stat"><div class="n">~3x</div><div class="l">Pipeline conversion on accounts touched more than once versus single-touch</div></div>
     </div>
@@ -2401,8 +2471,8 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 
     <div class="edu-wf">
       <div class="edu-wf-row"><div class="edu-wf-lbl">Unaware</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:100%;background:var(--barclay)">the addressable universe</div></div></div>
-      <div class="edu-wf-row"><div class="edu-wf-lbl">Aware</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:74%;background:var(--barblue);color:#04121f">reached and served</div></div></div>
-      <div class="edu-wf-row"><div class="edu-wf-lbl">Engaged</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:52%;background:var(--barblue);color:#04121f">clicked, watched, visited</div></div></div>
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Aware</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:74%;background:var(--barblue);color:#001122">reached and served</div></div></div>
+      <div class="edu-wf-row"><div class="edu-wf-lbl">Engaged</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:52%;background:var(--barblue);color:#001122">clicked, watched, visited</div></div></div>
       <div class="edu-wf-row"><div class="edu-wf-lbl">Active pipeline</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:32%;background:var(--barmoss)">in a deal</div></div></div>
       <div class="edu-wf-row"><div class="edu-wf-lbl">Closed-won</div><div class="edu-wf-track"><div class="edu-wf-bar" style="width:16%;background:var(--barcanopy)">revenue</div></div></div>
     </div>
@@ -2425,7 +2495,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
     <figure>
       <div class="fig figscroll">
         <svg viewBox="0 0 760 240" role="img" aria-label="How influenced revenue is calculated">
-          <defs><marker id="hiw-ah2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#9a9788"/></marker></defs>
+          <defs><marker id="hiw-ah2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#93A4BE"/></marker></defs>
           <rect class="edu-svgbox" x="14" y="28" width="180" height="40" rx="8"/><text class="edu-boxlabel" x="26" y="45">Ad impressions and clicks</text><text class="edu-boxsub" x="26" y="60">who saw and engaged</text>
           <rect class="edu-svgbox" x="14" y="100" width="180" height="40" rx="8"/><text class="edu-boxlabel" x="26" y="117">Site visits, named</text><text class="edu-boxsub" x="26" y="132">Website Visitor ID</text>
           <rect class="edu-svgbox" x="14" y="172" width="180" height="40" rx="8"/><text class="edu-boxlabel" x="26" y="189">Deals and companies</text><text class="edu-boxsub" x="26" y="204">from HubSpot</text>
@@ -2592,7 +2662,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   <section class="blk" style="border-bottom:none">
     <div class="ctablock dark-panel">
       <h2>Let's pick the <em>starting point</em>.</h2>
-      <p>Book a call and we will confirm the path, agree the named-account list, and set the week-one measurement plan. No pitch.</p>
+      <p>Book a call and we will confirm the path, agree the named accounts, and set the week-one measurement plan. No pitch.</p>
       <div class="btnrow">
         <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
         <button class="btn ghost" data-goto="overview">Back to the overview</button>
@@ -2640,5 +2710,6 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
   });}
 })();
 </script>
+<div class="wrap"><div class="bv3-foot" id="bv3-foot"><div class="row"><img class="wm wm-light" alt="Impactable" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzk4IiBoZWlnaHQ9IjcyIiB2aWV3Qm94PSI5OSA4NCAzOTggNzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMjc1Nl82MzUpIj4KPHBhdGggZD0iTTEwNy43NjIgMTEzLjAyOUg5OS44M1YxNTQuNTc0SDEwNy43NjJWMTEzLjAyOVoiIGZpbGw9IiMxQTNCNkQiLz4KPHBhdGggZD0iTTE1My45OTUgMTMxLjEzN0wxNjEuMjg2IDEyMS4wNDFWMTU0LjU3NEgxNTQuMDc1TDE1My45OTUgMTMxLjEzN1oiIGZpbGw9IiMxQTNCNkQiLz4KPHBhdGggZD0iTTEzOS4wMSAxNDMuMTk2TDEyNC4yNjcgMTI0Ljg4OFYxNTQuNTc0SDExNi44OTZWMTEzLjAyOUgxMjYuMTFMMTM5LjY5MSAxMzAuNjU3TDE4MC42MzYgODUuMDY1M0wxMzkuMDEgMTQzLjE5NloiIGZpbGw9IiMwMDk5RDEiLz4KPHBhdGggZD0iTTIwMy45NTQgMTI3LjMzMUMyMDMuOTU0IDEzNi44MjYgMTk3Ljk0NCAxNDIuMzU1IDE4Ny40ODggMTQyLjM1NUgxNzguMzk0VjE1NC41NzRIMTcwLjQyMVYxMTMuMDI5SDE4Ny40NDhDMTk3LjkwNCAxMTMuMDI5IDIwMy45MTMgMTE4LjE5NyAyMDMuOTEzIDEyNy4zMzFNMTk2LjQyMiAxMjcuNTcyQzE5Ni40MjIgMTIyLjQ4NCAxOTMuMDU2IDExOS45NiAxODcuMDg3IDExOS45NkgxNzguNDM0VjEzNS4zNDRIMTg3LjA4N0MxOTMuMDE2IDEzNS4zNDQgMTk2LjQyMiAxMzIuNzggMTk2LjQyMiAxMjcuNTcyWiIgZmlsbD0iIzFBM0I2RCIvPgo8cGF0aCBkPSJNMjQyLjAxMiAxNDUuNzZIMjIxLjdMMjE4LjAxNSAxNTQuNTM0SDIwOS43NjJMMjI3Ljk5IDExMi45ODlIMjM2LjI0M0wyNTQuMjMxIDE1NC41MzRIMjQ1LjY5OEwyNDIuMDEyIDE0NS43NlpNMjM5LjE2OCAxMzguOTQ5TDIzMS45MTYgMTIxLjQ4MkwyMjQuNTQ1IDEzOC45NDlIMjM5LjE2OFoiIGZpbGw9IiMxQTNCNkQiLz4KPHBhdGggZD0iTTI3OC4xMDkgMTE5LjgzOUMyNzAuMjU3IDExOS44MzkgMjY0LjE2NyAxMjUuODg5IDI2NC4xNjcgMTMzLjYyMUMyNjQuMTY3IDE0MS4zNTMgMjcwLjI5NyAxNDcuNDQzIDI3OC4xMDkgMTQ3LjQ0M0MyODIuMDc1IDE0Ny40NDMgMjg2LjI4MiAxNDUuNiAyODkuMzY3IDE0Mi41OTVMMjk0LjA1NCAxNDcuODAzQzI4OS43NjcgMTUyLjEzIDI4My42NzggMTU0LjkzNCAyNzcuNjY4IDE1NC45MzRDMjY1LjQ0OSAxNTQuOTM0IDI1NS45OTQgMTQ1LjcyIDI1NS45OTQgMTMzLjc0MUMyNTUuOTk0IDEyMS43NjIgMjY1LjU2OSAxMTIuNzg4IDI3Ny45NDkgMTEyLjc4OEMyODMuODc4IDExMi43ODggMjg5LjkyNyAxMTUuMzUyIDI5My45NzQgMTE5LjQzOUwyODkuMzI2IDEyNS4yNDhDMjg2LjM2MiAxMjEuOTIzIDI4Mi4xNTUgMTE5LjgzOSAyNzguMDY5IDExOS44MzkiIGZpbGw9IiMxQTNCNkQiLz4KPHBhdGggZD0iTTMzMi4wMzMgMTEzLjAyOVYxMjAuMDhIMzE5LjA5M1YxNTQuNTc0SDMxMS4wODFWMTIwLjA4SDI5OC4xNFYxMTMuMDI5SDMzMi4wMzNaIiBmaWxsPSIjMUEzQjZEIi8+CjxwYXRoIGQ9Ik0zNjcuNDg4IDE0NS43NkgzNDcuMTc2TDM0My40OSAxNTQuNTM0SDMzNS4yMzdMMzUzLjQ2NiAxMTIuOTg5SDM2MS43MTlMMzc5LjcwNyAxNTQuNTM0SDM3MS4xNzNMMzY3LjQ4OCAxNDUuNzZaTTM2NC42NDMgMTM4Ljk0OUwzNTcuMzkyIDEyMS40ODJMMzUwLjAyIDEzOC45NDlIMzY0LjY0M1oiIGZpbGw9IiMwMDk5RDEiLz4KPHBhdGggZD0iTTQxOC4zNjggMTIzLjQwNUM0MTguMzY4IDEyNy45NzIgNDE1LjY0NCAxMzEuNDU4IDQxMS4xMTcgMTMyLjYyQzQxNi41NjYgMTMzLjYyMSA0MTkuOTcxIDEzNy41ODcgNDE5Ljk3MSAxNDMuMTE2QzQxOS45NzEgMTUwLjI0NyA0MTQuMDgyIDE1NC41NzQgNDA0LjU4NyAxNTQuNTc0SDM4NS41OTdWMTEzLjAyOUg0MDQuMDY2QzQxMi45MiAxMTMuMDI5IDQxOC4zNjggMTE2Ljk5NSA0MTguMzY4IDEyMy40MDVaTTQxMC4yMzYgMTI0LjgwN0M0MTAuMjM2IDEyMS42NDIgNDA3Ljc1MiAxMTkuODggNDAzLjYyNSAxMTkuODhIMzkzLjUzVjEyOS45NzVINDAzLjYyNUM0MDcuNzEyIDEyOS45NzUgNDEwLjIzNiAxMjguMDkyIDQxMC4yMzYgMTI0LjgwN1pNNDExLjcxOCAxNDIuMTE0QzQxMS43MTggMTM4Ljc0OSA0MDguNjczIDEzNi42NjYgNDAzLjYyNSAxMzYuNjY2SDM5My41M1YxNDcuNzIzSDQwMy42MjVDNDA4LjY3MyAxNDcuNzIzIDQxMS43MTggMTQ1LjcyIDQxMS43MTggMTQyLjE1NCIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDM2LjgzNyAxMTMuMDI5VjE0Ny4zNjNINDU0Ljc0NVYxNTQuNTc0SDQyOC44NjRWMTEzLjAyOUg0MzYuODM3WiIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDkzLjE2NiAxMzAuMjE2VjEzNy4xODdINDcyLjk3NFYxNDcuNjAzSDQ5Ni4xNzFWMTU0LjU3NEg0NjUuMDQyVjEzMC4zMzZMNDkzLjE2NiAxMzAuMjE2WiIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDY1LjA0MiAxMTkuOTZWMTEzLjAyOUg0OTUuNDg5VjExOS45Nkg0NzIuOTc0SDQ2NS4wNDJaIiBmaWxsPSIjMUEzQjZEIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjc1Nl82MzUiPgo8cmVjdCB3aWR0aD0iMzk2LjM0IiBoZWlnaHQ9IjY5Ljg2OTMiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5OS44MyA4NS4wNjUzKSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="><img class="wm wm-dark" alt="Impactable" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzk4IiBoZWlnaHQ9IjcyIiB2aWV3Qm94PSI5OSA4NCAzOTggNzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMjc1Nl82MzUpIj4KPHBhdGggZD0iTTEwNy43NjIgMTEzLjAyOUg5OS44M1YxNTQuNTc0SDEwNy43NjJWMTEzLjAyOVoiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTE1My45OTUgMTMxLjEzN0wxNjEuMjg2IDEyMS4wNDFWMTU0LjU3NEgxNTQuMDc1TDE1My45OTUgMTMxLjEzN1oiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTEzOS4wMSAxNDMuMTk2TDEyNC4yNjcgMTI0Ljg4OFYxNTQuNTc0SDExNi44OTZWMTEzLjAyOUgxMjYuMTFMMTM5LjY5MSAxMzAuNjU3TDE4MC42MzYgODUuMDY1M0wxMzkuMDEgMTQzLjE5NloiIGZpbGw9IiMwMDk5RDEiLz4KPHBhdGggZD0iTTIwMy45NTQgMTI3LjMzMUMyMDMuOTU0IDEzNi44MjYgMTk3Ljk0NCAxNDIuMzU1IDE4Ny40ODggMTQyLjM1NUgxNzguMzk0VjE1NC41NzRIMTcwLjQyMVYxMTMuMDI5SDE4Ny40NDhDMTk3LjkwNCAxMTMuMDI5IDIwMy45MTMgMTE4LjE5NyAyMDMuOTEzIDEyNy4zMzFNMTk2LjQyMiAxMjcuNTcyQzE5Ni40MjIgMTIyLjQ4NCAxOTMuMDU2IDExOS45NiAxODcuMDg3IDExOS45NkgxNzguNDM0VjEzNS4zNDRIMTg3LjA4N0MxOTMuMDE2IDEzNS4zNDQgMTk2LjQyMiAxMzIuNzggMTk2LjQyMiAxMjcuNTcyWiIgZmlsbD0iI0Y1RjVGNSIvPgo8cGF0aCBkPSJNMjQyLjAxMiAxNDUuNzZIMjIxLjdMMjE4LjAxNSAxNTQuNTM0SDIwOS43NjJMMjI3Ljk5IDExMi45ODlIMjM2LjI0M0wyNTQuMjMxIDE1NC41MzRIMjQ1LjY5OEwyNDIuMDEyIDE0NS43NlpNMjM5LjE2OCAxMzguOTQ5TDIzMS45MTYgMTIxLjQ4MkwyMjQuNTQ1IDEzOC45NDlIMjM5LjE2OFoiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTI3OC4xMDkgMTE5LjgzOUMyNzAuMjU3IDExOS44MzkgMjY0LjE2NyAxMjUuODg5IDI2NC4xNjcgMTMzLjYyMUMyNjQuMTY3IDE0MS4zNTMgMjcwLjI5NyAxNDcuNDQzIDI3OC4xMDkgMTQ3LjQ0M0MyODIuMDc1IDE0Ny40NDMgMjg2LjI4MiAxNDUuNiAyODkuMzY3IDE0Mi41OTVMMjk0LjA1NCAxNDcuODAzQzI4OS43NjcgMTUyLjEzIDI4My42NzggMTU0LjkzNCAyNzcuNjY4IDE1NC45MzRDMjY1LjQ0OSAxNTQuOTM0IDI1NS45OTQgMTQ1LjcyIDI1NS45OTQgMTMzLjc0MUMyNTUuOTk0IDEyMS43NjIgMjY1LjU2OSAxMTIuNzg4IDI3Ny45NDkgMTEyLjc4OEMyODMuODc4IDExMi43ODggMjg5LjkyNyAxMTUuMzUyIDI5My45NzQgMTE5LjQzOUwyODkuMzI2IDEyNS4yNDhDMjg2LjM2MiAxMjEuOTIzIDI4Mi4xNTUgMTE5LjgzOSAyNzguMDY5IDExOS44MzkiIGZpbGw9IiNGNUY1RjUiLz4KPHBhdGggZD0iTTMzMi4wMzMgMTEzLjAyOVYxMjAuMDhIMzE5LjA5M1YxNTQuNTc0SDMxMS4wODFWMTIwLjA4SDI5OC4xNFYxMTMuMDI5SDMzMi4wMzNaIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0zNjcuNDg4IDE0NS43NkgzNDcuMTc2TDM0My40OSAxNTQuNTM0SDMzNS4yMzdMMzUzLjQ2NiAxMTIuOTg5SDM2MS43MTlMMzc5LjcwNyAxNTQuNTM0SDM3MS4xNzNMMzY3LjQ4OCAxNDUuNzZaTTM2NC42NDMgMTM4Ljk0OUwzNTcuMzkyIDEyMS40ODJMMzUwLjAyIDEzOC45NDlIMzY0LjY0M1oiIGZpbGw9IiMwMDk5RDEiLz4KPHBhdGggZD0iTTQxOC4zNjggMTIzLjQwNUM0MTguMzY4IDEyNy45NzIgNDE1LjY0NCAxMzEuNDU4IDQxMS4xMTcgMTMyLjYyQzQxNi41NjYgMTMzLjYyMSA0MTkuOTcxIDEzNy41ODcgNDE5Ljk3MSAxNDMuMTE2QzQxOS45NzEgMTUwLjI0NyA0MTQuMDgyIDE1NC41NzQgNDA0LjU4NyAxNTQuNTc0SDM4NS41OTdWMTEzLjAyOUg0MDQuMDY2QzQxMi45MiAxMTMuMDI5IDQxOC4zNjggMTE2Ljk5NSA0MTguMzY4IDEyMy40MDVaTTQxMC4yMzYgMTI0LjgwN0M0MTAuMjM2IDEyMS42NDIgNDA3Ljc1MiAxMTkuODggNDAzLjYyNSAxMTkuODhIMzkzLjUzVjEyOS45NzVINDAzLjYyNUM0MDcuNzEyIDEyOS45NzUgNDEwLjIzNiAxMjguMDkyIDQxMC4yMzYgMTI0LjgwN1pNNDExLjcxOCAxNDIuMTE0QzQxMS43MTggMTM4Ljc0OSA0MDguNjczIDEzNi42NjYgNDAzLjYyNSAxMzYuNjY2SDM5My41M1YxNDcuNzIzSDQwMy42MjVDNDA4LjY3MyAxNDcuNzIzIDQxMS43MTggMTQ1LjcyIDQxMS43MTggMTQyLjE1NCIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDM2LjgzNyAxMTMuMDI5VjE0Ny4zNjNINDU0Ljc0NVYxNTQuNTc0SDQyOC44NjRWMTEzLjAyOUg0MzYuODM3WiIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDkzLjE2NiAxMzAuMjE2VjEzNy4xODdINDcyLjk3NFYxNDcuNjAzSDQ5Ni4xNzFWMTU0LjU3NEg0NjUuMDQyVjEzMC4zMzZMNDkzLjE2NiAxMzAuMjE2WiIgZmlsbD0iIzAwOTlEMSIvPgo8cGF0aCBkPSJNNDY1LjA0MiAxMTkuOTZWMTEzLjAyOUg0OTUuNDg5VjExOS45Nkg0NzIuOTc0SDQ2NS4wNDJaIiBmaWxsPSIjRjVGNUY1Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjc1Nl82MzUiPgo8cmVjdCB3aWR0aD0iMzk2LjM0IiBoZWlnaHQ9IjY5Ljg2OTMiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5OS44MyA4NS4wNjUzKSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="><img class="mp" alt="LinkedIn Marketing Partner" src="data:image/png;base64,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"><span class="tagline">Signal in. Pipeline out. One system.</span></div></div></div>
 </body>
 </html>
