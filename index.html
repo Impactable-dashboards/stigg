@@ -215,7 +215,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .hl{color:var(--canopy-text)}
 </style>
 <style>
-/* ===== ROOM ADDITIVE (overview / ecosystem / how it works / paths forward) ===== */
+/* ===== ROOM ADDITIVE (overview / ecosystem / how it works) ===== */
 .roomwrap{max-width:1120px;margin:0 auto;padding:0 26px}
 /* --- overview --- */
 .ov-hero{padding:56px 0 30px;border-bottom:1px solid var(--line)}
@@ -225,6 +225,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .ov-thesis p em{color:#C6FF3D;font-style:normal;font-weight:650}
 .ov-movegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
 @media(max-width:820px){.ov-movegrid{grid-template-columns:1fr}}
+.ov-movegrid .move:last-child:nth-child(odd){grid-column:1/-1}
 /* --- ecosystem board --- */
 .eco-board{display:flex;flex-direction:column;gap:13px;margin-top:20px}
 .eco-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:7px}
@@ -259,14 +260,6 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .edu-stat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:10px;padding:14px 16px}
 .edu-stat .n{font-family:var(--disp);font-weight:400;font-size:24px;line-height:1;color:var(--moss-text)}
 .edu-stat .l{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.4}
-/* --- paths forward --- */
-.pf-fitgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:18px 0}
-@media(max-width:820px){.pf-fitgrid{grid-template-columns:1fr}}
-.pf-proofgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:16px}
-@media(max-width:900px){.pf-proofgrid{grid-template-columns:1fr}}
-.pf-proof .n{font-family:var(--body);font-weight:800;font-size:20px;color:var(--canopy-text);line-height:1}
-.pmscroll{overflow-x:auto}
-@media(max-width:820px){.pmscroll .pm{min-width:720px}}
 /* --- accent card + budget-ramp bar helpers --- */
 .card.tp{border-left:4px solid var(--jet-pink)}
 .card.tp .why{border-left-color:var(--jet-pink)}
@@ -630,7 +623,6 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <button class="tab" data-v="capture">Capture</button>
       <button class="tab" data-v="ecosystem">Ecosystem</button>
       <button class="tab" data-v="howitworks">How It Works</button>
-      <button class="tab" data-v="pathsforward">Paths Forward</button>
     </div>
     <div class="navright">
       <a class="nav-cta" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a call</a>
@@ -650,14 +642,13 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
     </div>
     <div class="btnrow">
       <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
-      <button class="btn ghost" data-goto="pathsforward">See the starting points</button>
     </div>
   </header>
 
   <section class="blk">
     <div class="secnum">THE MOVES</div>
     <h2 class="sec">Five moves, <em>in order</em></h2>
-    <p class="body">Each one is a tab. Read them top to bottom and the whole argument is there: where the market is open, who to aim at, what already runs, how the system works, and where to start.</p>
+    <p class="body">Each one is a tab. Read them top to bottom and the whole argument is there: where the market is open, who to aim at, what already runs, and how the system works.</p>
     <div class="ov-movegrid">
       <div class="move" data-goto="whitespace">
         <div class="mn">01 / WHITE SPACE</div>
@@ -688,12 +679,6 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="mt">How the system runs</div>
         <div class="md">LinkedIn qualifies the traffic before spend, the signals compose into one account view, and the revenue wires back into HubSpot so you see influenced pipeline, not just clicks.</div>
         <div class="arrow">See the method &rsaquo;</div>
-      </div>
-      <div class="move" data-goto="pathsforward">
-        <div class="mn">06 / PATHS FORWARD</div>
-        <div class="mt">Where to start</div>
-        <div class="md">Two ways in, both aimed at the acquisition engine and built to expand. Start small, prove it, and grow into the full system from strength.</div>
-        <div class="arrow">See the options &rsaquo;</div>
       </div>
     </div>
   </section>
@@ -2524,158 +2509,6 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   </section>
 </div>
 </section>
-
-<section class="view" id="pathsforward">
-<div class="roomwrap">
-  <section class="blk">
-    <div class="secnum">PATHS FORWARD / FIT</div>
-    <h2 class="sec">Where we fit, <em>and where to start</em></h2>
-    <p class="body">Before the options, the honest read on fit. Stigg is a strong fit for how we work, for a specific reason: the two hardest things to stand up are already here. You make demand exist through the founder's voice and a real organic audience, and you run on HubSpot. That means the engagement is not a rebuild, it is connective tissue: aim the spend at the named AI accounts, convert the warm ecosystem you already have, and wire it all back to deals.</p>
-
-    <div class="pf-fitgrid">
-      <div class="card tb">
-        <h4>Acquire the named logos</h4>
-        <div style="font-size:14px;color:var(--ink);margin-top:6px">The priority is intentional acquisition of specific AI accounts, reached with quality attention and tracked by account movement long before a lead appears.</div>
-      </div>
-      <div class="card tl">
-        <h4>Convert the warm ecosystem</h4>
-        <div style="font-size:14px;color:var(--ink);margin-top:6px">Roughly 5,000 to 7,000 monthly visitors and 5,000 company-page followers, filtered to the ideal customer profile, are the fastest path to early return while the account-based motion builds.</div>
-      </div>
-      <div class="card">
-        <h4>Prove it back to the CRM</h4>
-        <div style="font-size:14px;color:var(--ink);margin-top:6px">HubSpot stays the inbound system of record. We wire it to DemandSense so ad exposure, engagement, and account journeys tie back to real deals for the sales team.</div>
-      </div>
-    </div>
-    <div class="callout"><div class="k">What we aim at</div><p>One goal, run on two clocks. The long clock is intentional acquisition of the named AI accounts, which builds awareness and engagement over a quarter or more before it converts. The short clock is the warm ecosystem and the in-market search traffic, which we convert now for early wins. Paid search stays targeted and high-intent, so people already looking can reach you, rather than a broad spray. A complimentary conversion-rate audit is included so the demos actually land.</p></div>
-  </section>
-
-  <section class="blk">
-    <div class="secnum">THE OPTIONS</div>
-    <h2 class="sec">Two ways in, <em>built to expand</em></h2>
-    <p class="body">Both options run the same acquisition engine, LinkedIn account-based marketing plus retargeting and targeted Google capture, with the full signal and attribution layer underneath. The difference is the trust layer on top: whether Stigg runs its own thought leadership or we run it for you. Management fee is always separate from ad spend, and either option carries up to $30,000 a month in combined media.</p>
-
-    <div class="pmscroll">
-    <table class="pm">
-      <tr>
-        <td class="rowlbl"></td>
-        <td>
-          <div class="ohead">LinkedIn and Google</div>
-          <div class="per" style="margin:4px 0 8px">Option 1 / the acquisition engine</div>
-          <div class="price">$4,500</div><div class="per">per month, management fee</div>
-          <a class="btn ghost" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">Talk it through</a>
-        </td>
-        <td class="rec">
-          <span class="recpill">Recommended for Stigg</span>
-          <div class="ohead">LinkedIn, Google and Thought Leadership</div>
-          <div class="per" style="margin:4px 0 8px;color:rgba(216,212,200,.7)">Option 2 / the engine plus the trust layer</div>
-          <div class="price">$6,000</div><div class="per" style="color:rgba(216,212,200,.7)">per month, management fee</div>
-          <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener" style="margin-top:10px;padding:9px 14px;font-size:11px">Start here</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Ad spend</td>
-        <td><span class="ck">&#10003;</span> Up to $30,000/mo across LinkedIn and Google</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Up to $30,000/mo across LinkedIn and Google</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Named-account acquisition</td>
-        <td><span class="ck">&#10003;</span> LinkedIn account-based marketing on the named AI list</td>
-        <td class="rectint"><span class="ck">&#10003;</span> LinkedIn account-based marketing on the named AI list</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Warm-audience conversion</td>
-        <td><span class="ck">&#10003;</span> Retargeting site visitors and page followers, filtered to fit</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Retargeting site visitors and page followers, filtered to fit</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Targeted paid search</td>
-        <td><span class="ck">&#10003;</span> High-intent capture and select conquest</td>
-        <td class="rectint"><span class="ck">&#10003;</span> High-intent capture and select conquest</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Thought leadership content</td>
-        <td><span class="cx">&#8212;</span> You run it in-house</td>
-        <td class="rectint"><span class="ck">&#10003;</span> Full monthly program, produced and distributed</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Signals and attribution</td>
-        <td><span class="ck">&#10003;</span> DemandSense, HubSpot sync, influenced revenue, account movement</td>
-        <td class="rectint"><span class="ck">&#10003;</span> DemandSense, HubSpot sync, influenced revenue, account movement</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Website Visitor ID</td>
-        <td><span class="ck">&#10003;</span> Included for the first 90 days</td>
-        <td class="rectint"><span class="ck">&#10003;</span> 90 days included, plus 500 credits added</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Reporting</td>
-        <td>60-day impact report, campaigns by persona, CRO audit</td>
-        <td class="rectint">60-day impact report, campaigns by persona, CRO audit</td>
-      </tr>
-      <tr>
-        <td class="rowlbl">Why it fits Stigg</td>
-        <td>The full acquisition engine at the lightest fee, if content stays in-house</td>
-        <td class="rectint">Adds the trust layer that converts the warm mid-funnel, the fastest way to rise above the noise</td>
-      </tr>
-    </table>
-    </div>
-
-    <div class="callout blue" style="margin-top:16px">
-      <div class="k">What the thought leadership program includes, each month</div>
-      <p>One subject-matter interview with the founder or team, one long-form video for YouTube, eight short clips for YouTube and social, twelve personal LinkedIn posts and eight company-page posts, and one newsletter or blog. Produced and distributed by us, fed straight into the retargeting funnel so the content does double duty as demand and as trust.</p>
-    </div>
-
-    <div class="freebar">The free Demand Plan is already delivered and stays free. The white space, targeting, Google plan, and motion design in this room are yours to keep, whichever path you choose.</div>
-
-    <div class="callout blue" style="margin-top:18px">
-      <div class="k">Our recommendation</div>
-      <p>Start at <b>Option 2</b>. For a 0-to-1 brand that needs to rise above Metronome and Orb, thought leadership is not a nice-to-have, it is the layer that humanizes the brand and builds trust in the mid-funnel before the stronger calls to action land. It also means the founder's point of view, your sharpest asset, gets distributed rather than sitting idle. <b>Option 1</b> is the right call if Stigg keeps content in-house and wants us focused purely on the paid acquisition engine. Both assume the week-one measurement wiring, since none of the reporting is trustworthy without it.</p>
-    </div>
-  </section>
-
-  <section class="blk">
-    <div class="secnum">PROOF</div>
-    <h2 class="sec">The closest <em>matches</em></h2>
-    <p class="body">Not a list of everyone we have worked with, just the three whose situation looks most like Stigg's.</p>
-    <div class="pf-proofgrid">
-      <div class="card tl pf-proof">
-        <div class="n">20X</div>
-        <h4 style="margin-top:6px">HeyReach</h4>
-        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A software company with a founder on camera and strong organic traffic. 13x return on ad spend and 158 customers, by activating warm traffic and layering thought leadership rather than buying cold clicks.</div>
-        <div class="why"><b>Why this one for you:</b> the closest analog to Stigg, a founder voice and real warm traffic turned into pipeline, which is exactly the Option 2 motion.</div>
-      </div>
-      <div class="card tb pf-proof">
-        <div class="n">21x</div>
-        <h4 style="margin-top:6px">Vertical-AI SaaS</h4>
-        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A 21.11x return on ad spend, $389K closed-won, and $805K in pipeline in ninety days, with the results tied back to revenue rather than clicks.</div>
-        <div class="why"><b>Why this one for you:</b> this is the influenced-revenue answer to "did the ads bring deals," proven in an AI software company with the same attribution question.</div>
-      </div>
-      <div class="card tc pf-proof">
-        <div class="n">$111</div>
-        <h4 style="margin-top:6px">Kong</h4>
-        <div style="font-size:13.5px;color:var(--ink);margin:6px 0">A developer-infrastructure company where cost per lead fell from roughly $1,000 to $111 and the account-based motion built $663K in pipeline across multiple regions.</div>
-        <div class="why"><b>Why this one for you:</b> the named-logo analog, an API and developer-infrastructure company where account-based marketing landed named accounts efficiently at scale.</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="blk" style="border-bottom:none">
-    <div class="ctablock dark-panel">
-      <h2>Let's pick the <em>starting point</em>.</h2>
-      <p>Book a call and we will confirm the path, agree the named accounts, and set the week-one measurement plan. No pitch.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
-        <button class="btn ghost" data-goto="overview">Back to the overview</button>
-      </div>
-    </div>
-  </section>
-
-  <footer class="foot">
-    <div class="fb">Impactable <span class="hl">// Intelligence Room for Stigg</span></div>
-  </footer>
-</div>
-</section>
-
 
 <script>
 (function(){
