@@ -215,7 +215,7 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .hl{color:var(--canopy-text)}
 </style>
 <style>
-/* ===== ROOM ADDITIVE (overview / ecosystem / how it works) ===== */
+/* ===== ROOM ADDITIVE (overview / ecosystem / how it works / paths forward) ===== */
 .roomwrap{max-width:1120px;margin:0 auto;padding:0 26px}
 /* --- overview --- */
 .ov-hero{padding:56px 0 30px;border-bottom:1px solid var(--line)}
@@ -225,7 +225,6 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .ov-thesis p em{color:#C6FF3D;font-style:normal;font-weight:650}
 .ov-movegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
 @media(max-width:820px){.ov-movegrid{grid-template-columns:1fr}}
-.ov-movegrid .move:last-child:nth-child(odd){grid-column:1/-1}
 /* --- ecosystem board --- */
 .eco-board{display:flex;flex-direction:column;gap:13px;margin-top:20px}
 .eco-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:7px}
@@ -260,6 +259,14 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .edu-stat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:10px;padding:14px 16px}
 .edu-stat .n{font-family:var(--disp);font-weight:400;font-size:24px;line-height:1;color:var(--moss-text)}
 .edu-stat .l{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.4}
+/* --- paths forward --- */
+.pf-fitgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:18px 0}
+@media(max-width:820px){.pf-fitgrid{grid-template-columns:1fr}}
+.pf-proofgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:16px}
+@media(max-width:900px){.pf-proofgrid{grid-template-columns:1fr}}
+.pf-proof .n{font-family:var(--body);font-weight:800;font-size:20px;color:var(--canopy-text);line-height:1}
+.pmscroll{overflow-x:auto}
+@media(max-width:820px){.pmscroll .pm{min-width:720px}}
 /* --- accent card + budget-ramp bar helpers --- */
 .card.tp{border-left:4px solid var(--jet-pink)}
 .card.tp .why{border-left-color:var(--jet-pink)}
@@ -502,6 +509,37 @@ td.rec .ck{color:#8FC24E}td.rec .cp{color:#FFB627}td.rec .cx{color:rgba(216,212,
 .xscroll .score{min-width:600px;margin:0}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link id="brand-v3-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap">
+<style id="room-nutshell">.ws-src{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:8px;letter-spacing:.02em}.ws-src a{color:var(--blue-text)}.card.tp{border-left:4px solid var(--rust)}
+/* nutshell + message tab (v3) */
+.n-grid{margin-top:18px}.n-card h4{margin-top:4px}
+.n-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.r-quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.35;color:var(--ink);border-left:3px solid var(--teal);padding:6px 0 6px 14px;margin-top:10px}
+.n-pri{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:8px}
+.n-step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px 14px;overflow:hidden;display:flex;flex-direction:column;gap:5px}
+.n-bar{height:6px;margin:0 -14px 8px}
+.n-num{font-family:var(--disp);font-size:26px;line-height:1;color:var(--ink)}
+.n-layer{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.n-name{font-family:var(--body);font-weight:800;font-size:14px;line-height:1.2;color:var(--ink)}
+.n-job{font-size:13px;color:var(--chalk);flex:1}
+.n-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+@media(max-width:900px){.n-pri{grid-template-columns:1fr 1fr}}@media(max-width:560px){.n-pri{grid-template-columns:1fr}}
+.n-loop{display:flex;align-items:stretch;gap:6px;margin-top:8px}
+.n-node{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px}
+.n-node b{font-family:var(--body);font-weight:800;font-size:13.5px;color:var(--ink);line-height:1.2}
+.n-node span{font-size:13px;color:var(--chalk)}
+.r-arrow{font-family:var(--body);font-weight:800;font-size:22px;color:var(--muted);text-align:center;align-self:center}
+@media(max-width:900px){.n-loop{flex-direction:column}.n-loop .r-arrow{transform:rotate(90deg)}}
+.n-back{margin-top:10px;border:1px dashed var(--teal);border-radius:10px;padding:10px 14px;font-size:13.5px;color:var(--ink)}
+.n-why .n{font-size:28px}.n-wt{font-size:13.5px;color:var(--ink);margin-top:8px}
+.mo-story{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+@media(max-width:900px){.mo-story{grid-template-columns:1fr 1fr}}@media(max-width:560px){.mo-story{grid-template-columns:1fr}}
+.mo-step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.mo-step .n-num{font-size:24px;color:var(--teal-text)}
+.mo-step p{font-size:13.5px;color:var(--ink);margin-top:6px}
+.mo-step.win{border:2px solid var(--teal)}
+.mo-line{font-size:13.5px;color:var(--chalk);margin-top:6px}.mo-line b{color:var(--ink)}
+.mo-img{font-family:var(--body);font-weight:800;font-size:15px;line-height:1.25;color:var(--ink);text-transform:uppercase;letter-spacing:.01em}
+</style>
 <style id="brand-v3">
 /* ==========================================================================
    Impactable Brand v3 layer (brand_v3.css)
@@ -620,12 +658,13 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <button class="tab active" data-v="overview">Overview</button>
       <button class="tab" data-v="whitespace">White Space</button>
       <button class="tab" data-v="targeting">Targeting</button>
+      <button class="tab" data-v="messaging">Message and Offer</button>
       <button class="tab" data-v="capture">Capture</button>
       <button class="tab" data-v="ecosystem">Ecosystem</button>
       <button class="tab" data-v="howitworks">How It Works</button>
+      <button class="tab" data-v="agreed">What We Agreed</button>
     </div>
     <div class="navright">
-      <a class="nav-cta" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a call</a>
       <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">&#9680;</button>
     </div>
   </div>
@@ -634,26 +673,55 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
 <div class="roomwrap">
   <header class="ov-hero">
     <div class="kicker">Intelligence Room / Stigg</div>
-    <h1 class="big">You already make demand.<br>Let's build the <em>connective tissue</em>.</h1>
-    <p class="lede">Stigg is a 0-to-1 company after a rebrand into the token economy, with one clear priority: acquire the named AI logos that prove the model, and do it with quality attention rather than volume. The good news is the hardest parts are already here. The founder has a real voice, the site draws healthy organic traffic, and HubSpot is in place. What is not yet built is the connective tissue: a LinkedIn motion that aims at those accounts and converts the warm ecosystem, targeted search for the people already looking, and an attribution loop that ties it all back to deals.</p>
-    <div class="ov-thesis dark-panel">
-      <div class="k">The thesis, in one sentence</div>
-      <p>Aim LinkedIn account-based marketing at the named AI accounts and the warm ecosystem you already have, keep Google as a targeted capture lane, humanize the brand with thought leadership in the middle, and wire it all into HubSpot so you can see <em>which accounts the ads actually moved</em>.</p>
-    </div>
-    <div class="btnrow">
-      <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a strategy call</a>
-    </div>
+    <h1 class="big">The Stigg plan, <em>as agreed</em>.</h1>
+    <p class="lede">The strategy for Stigg's first 90 days, built from the strategy call, the intake, the October 6 onboarding, and the October 19 sync. It covers who Stigg competes with, which accounts and people we reach, what we say and offer them, and how LinkedIn, Google, and Dor's thought leadership run as one program. Competitor facts link to their sources, and every decision is dated in the last tab.</p>
   </header>
+
+
+  <section class="blk">
+    <div class="secnum">STRATEGY IN A NUTSHELL</div>
+    <h2 class="sec">The whole plan <em>on one page</em></h2>
+    <div class="grid2 n-grid">
+      <div class="card tb n-card"><div class="n-lab">01 / Who they are</div><h4>The usage runtime for AI products</h4><p class="body">Stigg decides what every customer, user, and agent is allowed to use, in milliseconds, and charges for it correctly.</p><div class="tags"><span class="tag">Founded 2021</span><span class="tag">Tel Aviv and New York</span><span class="tag">Miro, Webflow, PagerDuty run on it</span></div></div>
+      <div class="card tl n-card"><div class="n-lab">02 / What they offer</div><h4>Credits, limits, and metering on top of your billing</h4><p class="body">One layer for credits, entitlements, metering, and AI usage control. Billing stays where it is.</p><div class="tags"><span class="tag">Start free</span><span class="tag">Pro and Scale plans</span><span class="tag">Runs in your own cloud</span></div></div>
+      <div class="card tc n-card"><div class="n-lab">03 / Who they work best with</div><h4>Software companies that charge for AI usage</h4><p class="body">Engineering leaders and engineers at 204 named AI accounts, with executives once their teams engage.</p><div class="tags"><span class="tag">Engineering leaders</span><span class="tag">Engineers</span><span class="tag">Leaders at fast-growing companies</span><span class="tag">Frequent contributors</span></div></div>
+      <div class="card tm n-card"><div class="n-lab">04 / How we position them</div><h4>Decided on the request, not on the invoice</h4><div class="r-quote">Every AI request is a spend decision. Make it in milliseconds.</div><p class="body" style="margin-top:10px">Billing platforms find the problem when the invoice runs. Stigg stops it on the request, on top of the biller you keep. <a class="r-next" href="#whitespace" data-goto="whitespace">See the open ground &rsaquo;</a></p></div>
+    </div>
+
+    <h3 class="sub" style="margin-top:26px">05 / Channels, <em>in priority order</em></h3>
+    <div class="n-pri">
+      <div class="n-step"><div class="n-bar" style="background:var(--lime)"></div><div class="n-num">1</div><div class="n-layer">Create</div><div class="n-name">Thought leadership</div><div class="n-job">Dor's voice, from interviews to posts and clips, earns the attention the ads build on.</div><div class="n-meta"><span class="ppill prim">Month 1</span><span class="ppill sec">In scope</span></div></div>
+      <div class="n-step"><div class="n-bar" style="background:var(--blue)"></div><div class="n-num">2</div><div class="n-layer">Connect</div><div class="n-name">LinkedIn on the named accounts</div><div class="n-job">Four cold campaigns on the 204 accounts, plus Spotlight to everyone who engages.</div><div class="n-meta"><span class="ppill prim">Month 1</span><span class="ppill sec">In scope</span></div></div>
+      <div class="n-step"><div class="n-bar" style="background:var(--orange)"></div><div class="n-num">3</div><div class="n-layer">Capture</div><div class="n-name">Google search</div><div class="n-job">Catches the buyers already searching for limits, credits, and billing alternatives.</div><div class="n-meta"><span class="ppill prim">Month 1</span><span class="ppill sec">In scope</span></div></div>
+      <div class="n-step"><div class="n-bar" style="background:var(--teal)"></div><div class="n-num">4</div><div class="n-layer">Convert</div><div class="n-name">Warm offers and signals</div><div class="n-job">Guides and an architecture session for warm accounts; engaged accounts go to sales.</div><div class="n-meta"><span class="ppill prim">Month 2 to 3</span><span class="ppill sec">In scope</span></div></div>
+      <div class="n-step"><div class="n-bar" style="background:var(--yellow)"></div><div class="n-num">5</div><div class="n-layer">Extend</div><div class="n-name">Programmatic</div><div class="n-job">Display for named accounts LinkedIn cannot reach well.</div><div class="n-meta"><span class="ppill prim">Later</span><span class="ppill sec">Add-on</span></div></div>
+    </div>
+
+    <h3 class="sub" style="margin-top:26px">06 / How it works <em>as one engine</em></h3>
+    <div class="n-loop">
+      <div class="n-node"><b>Dor's posts earn attention</b><span>Real point of view, from the founder.</span></div><div class="r-arrow">&rarr;</div>
+      <div class="n-node"><b>LinkedIn reaches the named accounts</b><span>The right engineers, one message each.</span></div><div class="r-arrow">&rarr;</div>
+      <div class="n-node"><b>Search catches who is looking</b><span>The same buyers, when they search.</span></div><div class="r-arrow">&rarr;</div>
+      <div class="n-node"><b>Signals show which accounts moved</b><span>One view of every account that engaged.</span></div><div class="r-arrow">&rarr;</div>
+      <div class="n-node"><b>Warm offers turn interest into meetings</b><span>The ask grows as the account warms.</span></div>
+    </div>
+    <div class="n-back">&#8635; Everyone who engages goes back into a warm audience that costs less to reach next time.</div>
+    <div class="grid3" style="margin-top:12px">
+      <div class="stat n-why"><div class="n">Cold ads</div><div class="l">made cheaper by thought leadership</div><div class="n-wt">People who know Dor's voice click and engage at a lower cost.</div></div>
+      <div class="stat n-why"><div class="n">Search</div><div class="l">made cheaper by LinkedIn</div><div class="n-wt">Named accounts who saw the ads search for Stigg by name.</div></div>
+      <div class="stat n-why"><div class="n">Sales time</div><div class="l">made cheaper by signals</div><div class="n-wt">Conversations go only to accounts that have already engaged.</div></div>
+    </div>
+  </section>
 
   <section class="blk">
     <div class="secnum">THE MOVES</div>
-    <h2 class="sec">Five moves, <em>in order</em></h2>
-    <p class="body">Each one is a tab. Read them top to bottom and the whole argument is there: where the market is open, who to aim at, what already runs, and how the system works.</p>
+    <h2 class="sec">Seven tabs, <em>in order</em></h2>
+    <p class="body">Read top to bottom: where the market is open, who to aim at, what to say, how search fits, what already runs, how the system works, and and what is agreed.</p>
     <div class="ov-movegrid">
       <div class="move" data-goto="whitespace">
         <div class="mn">01 / WHITE SPACE</div>
         <div class="mt">Where the market is open</div>
-        <div class="md">The field split into four groups, and Stigg sits nearly alone in the most valuable one: a real-time layer that runs on top of your billing. No one else can say the whole sentence.</div>
+        <div class="md">The field split into four groups, and Stigg sits nearly alone in the most valuable one: a real-time layer that runs on top of your billing. Several vendors claim parts of it; none combines all four.</div>
         <div class="arrow">See the open ground &rsaquo;</div>
       </div>
       <div class="move" data-goto="targeting">
@@ -662,23 +730,35 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="md">Engineering leaders and engineers at 204 named AI accounts, in four focused campaigns. Executives follow once their engineers engage.</div>
         <div class="arrow">See the audience plan &rsaquo;</div>
       </div>
+      <div class="move" data-goto="messaging">
+        <div class="mn">03 / MESSAGE AND OFFER</div>
+        <div class="mt">What to say, and what to offer</div>
+        <div class="md">One idea in Stigg's own words, five ranked messages, and an offer at every stage, starting with what Stigg already has.</div>
+        <div class="arrow">See the message plan &rsaquo;</div>
+      </div>
       <div class="move" data-goto="capture">
-        <div class="mn">03 / CAPTURE</div>
+        <div class="mn">04 / CAPTURE</div>
         <div class="mt">The precise Google plan</div>
         <div class="md">Built on your own keyword file: about 18,080 of 399,720 monthly searches are your buyer, so Google runs as a precise capture lane, five intent-separated campaigns funded to $10,000 a month, not a spend bucket.</div>
         <div class="arrow">See the Google plan &rsaquo;</div>
       </div>
       <div class="move" data-goto="ecosystem">
-        <div class="mn">04 / ECOSYSTEM</div>
+        <div class="mn">05 / ECOSYSTEM</div>
         <div class="mt">What already runs, and what to add</div>
-        <div class="md">The founder's content and healthy organic traffic are already live. The layer to add is the connective tissue: the LinkedIn account-based hub, the warm-audience conversion, and the attribution underneath it all.</div>
+        <div class="md">Dor's content and the site's organic traffic already run. What we add: LinkedIn on the named accounts, conversion of the warm audience, and attribution in HubSpot.</div>
         <div class="arrow">See the footprint &rsaquo;</div>
       </div>
       <div class="move" data-goto="howitworks">
-        <div class="mn">05 / HOW IT WORKS</div>
+        <div class="mn">06 / HOW IT WORKS</div>
         <div class="mt">How the system runs</div>
         <div class="md">LinkedIn qualifies the traffic before spend, the signals compose into one account view, and the revenue wires back into HubSpot so you see influenced pipeline, not just clicks.</div>
         <div class="arrow">See the method &rsaquo;</div>
+      </div>
+      <div class="move" data-goto="agreed">
+        <div class="mn">07 / WHAT WE AGREED</div>
+        <div class="mt">Decisions, dated</div>
+        <div class="md">The signed scope, every decision from the calls by date, the order things launch, and the open items with owners.</div>
+        <div class="arrow">See the decisions &rsaquo;</div>
       </div>
     </div>
   </section>
@@ -701,7 +781,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
 <section class="blk">
   <div class="secnum">01 / THE SHAPE OF THE MARKET</div>
   <h2 class="sec">Four groups, and a gap <em>in the middle</em></h2>
-  <p class="body">Put simply: the biggest competitor is an engineering team that plans to build this layer itself, and Stigg names it first. Among vendors, Metronome (now part of Stripe) is the closest, with Orb, Chargebee, Schematic, and a newer entrant, Paid, moving into the space. Most of them measure usage after the fact and bill for it later. Zuora and Stripe are billing systems Stigg runs on top of, and partnerships with Zuora and Airwallex are in discussion. Almost nobody sits where Stigg sits: an independent layer that decides in the moment and leaves your billing where it is.</p>
+  <p class="body">The biggest competitor is an engineering team that plans to build this layer itself. Among vendors, Metronome (now part of Stripe) is the closest, with Orb, Chargebee, Schematic, and a newer entrant, Paid, moving into the space. Most of them measure usage after the fact and bill for it later. Zuora and Stripe are billing systems Stigg runs on top of, and partnerships with Zuora and Airwallex are in discussion. Almost nobody sits where Stigg sits: an independent layer that decides in the moment and leaves your billing where it is.</p>
 
   <div class="grid2" style="margin-top:20px">
     <div class="card tt">
@@ -726,9 +806,9 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
     </div>
   </div>
 
-  <div class="callout" style="border-left-color:var(--jet-pink)">
-    <div class="k" style="color:var(--pink-text)">The biggest competitor is building in-house</div>
-    <p>Stigg lists it first. Most deals start when an in-house build hits a wall: a new pricing model the current system cannot support, often on a strategic deadline; maintenance eating developer time; enterprise customers who cannot see their own AI usage; or agents running up costs. So the real contest is often an engineering team that assumes it can build entitlements, credits, and real-time limits itself. It is answered in the message and the technical proof: the cost is not building it once, it is maintaining real-time enforcement and every edge case while the product roadmap waits.</p>
+  <div class="callout">
+    <div class="k">The biggest competitor is building in-house</div>
+    <p>Most deals start when an in-house build hits a wall: a new pricing model it cannot support, maintenance eating developer time, enterprise customers who cannot see their own AI usage, or agents running up costs. The cost is not building it once; it is maintaining real-time enforcement and every edge case while the roadmap waits.</p>
   </div>
 
   <figure>
@@ -818,26 +898,40 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   </div>
 
   <h3 class="sub">Group one: <em>the rivals that matter</em></h3>
-  <div class="card tt">
-    <h4>Metronome</h4><div class="role">Usage billing, now part of Stripe</div>
-    <p class="ws-say">Measures product usage and turns it into invoices, popular with large usage-based software companies. Acquired by Stripe, closed January 2026. Was the best-funded independent option in this space.</p>
-    <div class="why"><b>What it means for Stigg:</b> Its pitch is high-volume metering and billing for finance teams, and it now markets spend caps and alerts. Those act on metered usage; Stigg decides on each request, before it runs. Now that Stripe owns it, choosing Metronome leans a buyer toward Stripe's payment rails. That is the exact concern Stigg's independence answers.</div>
+  <div class="card tp">
+    <h4>Building it in-house</h4><div class="role">The biggest competitor</div>
+    <div class="ws-line"><b>How they position:</b> "We can build credits and limits ourselves." It usually starts as a usage counter in the product database.</div><div class="ws-line"><b>Who decides:</b> Engineering leaders at AI companies with strong platform teams.</div><div class="ws-line"><b>What it costs:</b> No license fee. The cost is engineering time to build it, then to maintain it through every pricing change.</div><div class="ws-line"><b>Strong at:</b> Full control, and an exact fit to today's pricing.</div>
+    <div class="why"><b>Where Stigg wins:</b> Most deals start when an in-house build hits a wall: a new pricing model it cannot support, maintenance eating the roadmap, enterprise customers asking to see their own usage, or agents running up costs. Stigg answers with the edge cases already solved; Miro launched AI credits on Stigg in under six weeks.</div>
+    <div class="ws-src">Sources: <a href="https://www.stigg.io/" target="_blank" rel="noopener">stigg.io</a></div>
   </div>
   <div class="card tt">
-    <h4>Orb</h4><div class="role">Usage billing, now part of Adyen</div>
-    <p class="ws-say">Usage-based billing built for pricing changes, credits, and invoicing. A closed, hosted platform with quote-based pricing, now owned by the payments company Adyen.</p>
-    <div class="why"><b>What it means for Stigg:</b> Orb sells revenue design and pricing simulations to finance teams, with thresholds to cap runaway costs. It still works from metered usage, not the request, and now sits inside a payments company. Stigg stays independent and decides before the cost is incurred.</div>
+    <h4>Metronome</h4><div class="role">Usage billing, part of Stripe since January 2026</div>
+    <div class="ws-line"><b>How they position:</b> Usage-based billing and metering infrastructure at high volume. It now also markets spend caps and spend alerts.</div><div class="ws-line"><b>Who they sell to:</b> Finance and billing teams at large usage-based software, AI, and infrastructure companies.</div><div class="ws-line"><b>How they sell:</b> On contract through sales; now Stripe's usage-billing product line.</div><div class="ws-line"><b>Named customers:</b> OpenAI, Anthropic, Databricks, NVIDIA, and the story of replacing a homegrown billing system.</div><div class="ws-line"><b>Strong at:</b> Volume, credibility with AI labs, and contract terms such as commitments and credits.</div>
+    <div class="why"><b>Where Stigg wins:</b> Caps and alerts act on usage after it is metered. Stigg decides on each request before it runs, at p99 under 10 milliseconds, and works with any biller, not only Stripe.</div>
+    <div class="ws-src">Sources: <a href="https://usagepricing.com/blueprint/metronome" target="_blank" rel="noopener">usagepricing.com</a> &middot; <a href="https://sacra.com/c/metronome/" target="_blank" rel="noopener">Sacra</a></div>
   </div>
-
   <div class="card tt">
-    <h4>Chargebee</h4><div class="role">Subscription billing moving into usage and entitlements</div>
-    <p class="ws-say">A mature subscription-billing platform adding usage and entitlement features as it moves up-market. Widely used, often described as a category unicorn. Stigg names it among the companies moving into its space.</p>
-    <div class="why"><b>What it means for Stigg:</b> A billing system extending upward, not a control layer built for AI. It decides at invoice time; Stigg decides in the request path, before the cost.</div>
+    <h4>Orb</h4><div class="role">Usage billing, part of Adyen</div>
+    <div class="ws-line"><b>How they position:</b> "The revenue design platform": pricing simulations, invoicing, and finance workflows.</div><div class="ws-line"><b>Who they sell to:</b> Finance, pricing, and revenue operations teams at AI and SaaS companies.</div><div class="ws-line"><b>How they sell:</b> Quote-based; no published pricing.</div><div class="ws-line"><b>Named customers:</b> Writer, Glean, Replit.</div><div class="ws-line"><b>Strong at:</b> Modeling a pricing change before it launches, and getting the invoice right.</div>
+    <div class="why"><b>Where Stigg wins:</b> Orb plans the price and bills it. Stigg enforces it on every request, and leaves the biller in place.</div>
+    <div class="ws-src">Sources: <a href="https://www.withorb.com/homepage-a" target="_blank" rel="noopener">withorb.com</a> &middot; <a href="https://www.withorb.com/blog/ai-billing-software" target="_blank" rel="noopener">Orb on AI billing</a></div>
+  </div>
+  <div class="card tt">
+    <h4>Chargebee</h4><div class="role">Subscription billing suite, moving into AI</div>
+    <div class="ws-line"><b>How they position:</b> "Billing and monetization infrastructure for the AI economy," and a 2026 Gartner Magic Quadrant Leader for recurring billing.</div><div class="ws-line"><b>Who they sell to:</b> Finance and revenue teams that want one platform for billing, payments, quotes, and revenue recognition.</div><div class="ws-line"><b>How they price:</b> From 0.80 percent of monthly billing value, with no platform fee.</div><div class="ws-line"><b>Named customers:</b> Zapier, DeepL, Freshworks.</div><div class="ws-line"><b>Strong at:</b> A full revenue stack under one login, with entitlements built in.</div>
+    <div class="why"><b>Where Stigg wins:</b> Chargebee replaces your billing; Stigg runs on top of it. Chargebee's usage model alerts customers and bills overages past their credit limits. Stigg enforces the limit on the request.</div>
+    <div class="ws-src">Sources: <a href="https://www.chargebee.com/v2" target="_blank" rel="noopener">chargebee.com</a> &middot; <a href="https://www.chargebee.com/billing/usage-based/" target="_blank" rel="noopener">Chargebee usage billing</a> &middot; <a href="https://www.stigg.io/blog-posts/chargebee-vs-metronome" target="_blank" rel="noopener">Chargebee vs Metronome</a></div>
   </div>
   <div class="card tt">
     <h4>Paid</h4><div class="role">Results-based billing for AI agents</div>
-    <p class="ws-say">Billing for AI agents built around results: charging for the outcomes an agent delivers, tracking cost and margin per agent, and showing buyers the value. Founded in London by the co-founder of Outreach, with about 33 million dollars raised across its first two rounds.</p>
-    <div class="why"><b>What it means for Stigg:</b> Paid helps a company decide what to charge for and proves the value afterward. Stigg decides what each customer and agent is allowed to use, on the request. Different jobs, and a pricing conversation where Stigg can sit underneath either model.</div>
+    <div class="ws-line"><b>How they position:</b> Charge for the outcomes an agent delivers, track cost and margin per agent, and show buyers the value.</div><div class="ws-line"><b>Who they sell to:</b> AI agent companies, and SaaS companies adding agents.</div><div class="ws-line"><b>How they price:</b> Free for developers to start.</div><div class="ws-line"><b>Backing:</b> Founded by the co-founder of Outreach; about 33 million dollars from Sequoia, EQT, and Lightspeed.</div><div class="ws-line"><b>Strong at:</b> Pricing on results, and proving the value to the buyer.</div>
+    <div class="why"><b>Where Stigg wins:</b> Paid decides what to charge for and proves the value afterward. Stigg decides what each customer and agent is allowed to use, on the request, and works underneath either pricing model.</div>
+    <div class="ws-src">Sources: <a href="https://techcrunch.com/2025/09/28/paid-the-ai-agent-results-based-billing-startup-from-manny-medina-raises-huge-21m-seed" target="_blank" rel="noopener">TechCrunch</a> &middot; <a href="https://www.cbinsights.com/company/paid-ai" target="_blank" rel="noopener">CB Insights</a></div>
+  </div>
+
+  <div class="callout">
+    <div class="k">What this means for targeting</div>
+    <p>Five of the 65 priority accounts are publicly named customers of these rivals: OpenAI and Anthropic (Metronome), and WRITER, Glean, and Replit (Orb). At those accounts the message is never "switch vendors." It is the layer their vendor leaves out: the decision on each request, on top of the billing they already run.</p>
   </div>
 
   <h3 class="sub">Group two: <em>the billing systems you keep</em></h3>
@@ -870,16 +964,19 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   </div>
 
   <h3 class="sub">Group four: <em>the real-time control layer, where Stigg sits</em></h3>
-  <div class="card tl">
-    <h4>Schematic</h4><div class="role">Entitlements, built on Stripe</div>
-    <p class="ws-say">An entitlements layer that sits between your product and Stripe and enforces access in real time. Raised about 6.5 million dollars, launched a Stripe App.</p>
-    <div class="why"><b>What it means for Stigg:</b> The nearest match to Stigg's message, almost word for word. The difference that matters: Schematic is built specifically for Stripe. Stigg works with Stripe, Zuora, Chargebee, and others, and can run in your own cloud. That breadth is the wedge.</div>
+    <div class="card tl">
+    <h4>Schematic</h4><div class="role">Entitlements on top of Stripe</div>
+    <div class="ws-line"><b>How they position:</b> "Ship any pricing model": entitlements enforced at runtime, and pricing changed without code.</div><div class="ws-line"><b>Who they sell to:</b> Product and go-to-market teams at SaaS and AI companies that bill through Stripe.</div><div class="ws-line"><b>How they sell:</b> Through Stripe: Stripe chose Schematic for entitlements on Stripe Billing, with a native Stripe app launched at Stripe Sessions 2026.</div><div class="ws-line"><b>Named customers:</b> Plotly, Automox, Florence, Sema4.ai. About 12 million dollars raised; Boulder, Colorado.</div><div class="ws-line"><b>Strong at:</b> Fast pricing changes and feature access for Stripe users.</div>
+    <div class="why"><b>Where Stigg wins:</b> Schematic is built around Stripe, and Stripe now also owns Metronome. Stigg is the independent option: it works with Stripe, Zuora, or any biller, runs in the customer's own cloud, and is built for credit ledgers at over a million events a second.</div>
+    <div class="ws-src">Sources: <a href="https://schematichq.com/stripe" target="_blank" rel="noopener">Schematic and Stripe</a> &middot; <a href="https://news.crunchbase.com/venture/update-pricing-faster-easier-saas-ai-schematic" target="_blank" rel="noopener">Crunchbase News</a></div>
   </div>
   <div class="card tl">
-    <h4>Credyt</h4><div class="role">Real-time AI billing</div>
-    <p class="ws-say">Authorizes AI usage in real time before the cost is incurred, either as a full billing system or alongside your existing one. A newer, smaller entrant in the same camp as Stigg.</p>
-    <div class="why"><b>What it means for Stigg:</b> Shares Stigg's core idea of deciding before spend. It is early and small, without Stigg's enterprise track record, named customers, or in-your-cloud option. A validator of the category more than a threat today.</div>
+    <h4>Credyt</h4><div class="role">Real-time wallets for AI builders</div>
+    <div class="ws-line"><b>How they position:</b> Check the wallet balance before the work runs, and debit it in real time.</div><div class="ws-line"><b>Who they sell to:</b> AI builders and smaller platforms, including teams setting up billing from inside their coding tools.</div><div class="ws-line"><b>How they price:</b> Free to start, then one dollar per active wallet a month, with Stripe for payments.</div><div class="ws-line"><b>Named customers:</b> None published. Launched November 2025, London.</div><div class="ws-line"><b>Strong at:</b> Fast setup for prepaid credit products.</div>
+    <div class="why"><b>Where Stigg wins:</b> Credyt's message is the closest to Stigg's, so Stigg leads on depth: entitlements beyond wallets, the existing biller kept, deployment in the customer's own cloud, and enterprise compliance (SOC 2, ISO 9001).</div>
+    <div class="ws-src">Sources: <a href="https://hackernoon.com/about/credyt" target="_blank" rel="noopener">Credyt</a> &middot; <a href="https://www.crunchbase.com/organization/credyt" target="_blank" rel="noopener">Crunchbase</a></div>
   </div>
+
 </section>
 
 <!-- 4. COMPARISON MATRIX -->
@@ -971,14 +1068,14 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
     <div class="ws-line"><b>What it means:</b> When AI usage spikes, enterprise buyers want to see what they used, by whom, and what is left, before the invoice arrives. Stigg gives every end customer that visibility from auditable, financial-grade credit balances.</div>
     <div class="ws-line"><b>How Stigg is different:</b> The after-the-fact tools report to the vendor at invoice time. Stigg shares control with the vendor's own customers, live.</div>
     <div class="ws-line"><b>Who it is for:</b> Engineering leaders and AI engineers whose enterprise customers are asking for usage visibility and spend limits.</div>
-    <div class="ws-line"><b>How big a deal:</b> One of the buying triggers Stigg names directly; it becomes urgent with every usage spike.</div>
+    <div class="ws-line"><b>How big a deal:</b> One of the most common buying triggers; it becomes urgent with every usage spike.</div>
   </div>
   <div class="card tm">
     <div class="ws-lanehead"><h4>The real cost of building it yourself</h4><span class="badge bh">Answers the top competitor</span></div>
     <div class="ws-line"><b>What it means:</b> Building entitlements, credits, and limits takes a sprint. Maintaining real-time enforcement and the edge cases (overdrafts, expiry, burn-down order) takes the roadmap.</div>
     <div class="ws-line"><b>How Stigg is different:</b> No vendor frames itself against the in-house build; they compare against each other. Stigg can name the competitor that actually shows up in most deals.</div>
     <div class="ws-line"><b>Who it is for:</b> CTOs and founders weighing build versus buy, often under a strategic pricing deadline.</div>
-    <div class="ws-line"><b>How big a deal:</b> The highest-return message, because building in-house is the first competitor Stigg names.</div>
+    <div class="ws-line"><b>How big a deal:</b> The highest-return message, because building in-house is the competitor in most deals.</div>
   </div>
   <div class="callout" style="margin-top:20px">
     <div class="k">What buyers have lived through</div>
@@ -1043,7 +1140,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   </div>
   <div class="callout" style="border-left-color:var(--hazard)">
     <div class="k" style="color:var(--terra-text)">Proof, stated plainly</div>
-    <p>Stigg's customer stories are strong but none are AI logos yet, and enterprise buyers close after a proof of concept and references. Until the first AI logos land, credibility comes from the founder's point of view, which Stigg names as its most effective program, plus technical depth and auditable credits.</p>
+    <p>Stigg's customer stories are strong, but none is from an AI-native company yet, and enterprise buyers close after a proof of concept and references. Until an AI-native story is published, credibility comes from Dor's point of view, technical depth, and auditable credits. Customer logos stay out of cold ads, as agreed on October 19.</p>
   </div>
 </section>
 
@@ -1063,9 +1160,9 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <ul class="clean">
     <li>The biggest competitor is an engineering team building it in-house; most deals start when that build hits a wall.</li>
     <li>Among vendors, the market split into groups, and Stigg sits nearly alone in the most valuable one: a real-time layer that runs on top of your billing.</li>
-    <li>The two most popular middle options were just bought by payment companies, which hands Stigg a timely, honest independence story.</li>
+    <li>The two most popular middle options were just bought by payment companies, which makes Stigg's independence from payment companies a timely point.</li>
     <li>Stigg's single strongest, hardest-to-copy point is stopping usage in the moment, before the cost, which the after-the-fact tools cannot match.</li>
-    <li>The closest vendor is Metronome, now part of Stripe. Schematic uses almost the same words but is tied to Stripe and cannot run in your cloud. That breadth is Stigg's wedge.</li>
+    <li>The closest vendor is Metronome, now part of Stripe. Schematic uses almost the same words but is tied to Stripe and cannot run in your cloud. That breadth is Stigg's advantage.</li>
     <li>Two claims, built for AI and change pricing without engineering, are real but shared, so they support the story rather than lead it.</li>
     <li>Engineering leads the decision: CTOs and engineering leaders own it, engineers champion it, and founders sign at smaller companies. The message has to land with all three.</li>
   </ul>
@@ -1089,7 +1186,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
     <h1 class="big">Who to target,<br>and every way to <em>reach them</em>.</h1>
     <p class="lede">The single source of truth for who Stigg sells to and how we capture that audience. It starts in plain language, narrows from the whole market down to the beachhead, and translates every layer into the exact LinkedIn filters that build it, with honest sizes. Then the named plays to launch, how the same buyer shows up on search, and the signals that assemble the named accounts.</p>
     <div class="metastrip">
-      <span>Ideal client source of truth</span><span>LinkedIn translations</span><span>Version 2.2</span><span>October 2026</span>
+      <span>Ideal client profile</span><span>LinkedIn filters</span><span>October 2026</span>
     </div>
   </header>
 
@@ -1110,7 +1207,6 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="icp-chip"><div class="n">Eng-led</div><div class="c">Decision owner</div></div>
         <div class="icp-chip"><div class="n">Two clocks</div><div class="c">Warm fast, named-account slow</div></div>
       </div>
-      <div class="icp-ver">Version 2.2 &nbsp;/&nbsp; October 2026 &nbsp;/&nbsp; Inputs: strategy call, Stigg intake, onboarding call (October 6), Stigg priority and secondary account files, company recon, competitive white space, Google keyword plan.</div>
     </div>
   </section>
 
@@ -1118,7 +1214,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">02 / TOTAL ADDRESSABLE MARKET</div>
     <h2 class="sec">Everyone who <em>could</em> need it</h2>
-    <p class="body">The widest boundary: every software company that charges, or will charge, by usage, consumption, credits, or tokens, and therefore needs to meter and control it in real time. Here is the whole narrowing, from that market down to the slice to win first.</p>
+    <p class="body">The widest boundary: every software company that charges, or will charge, by usage, consumption, credits, or tokens, and therefore needs to meter and control it in real time. The narrowing, from that market down to the slice to win first:</p>
 
     <div class="fnl">
       <div class="fnl-band" style="width:100%;background:var(--barcanopy)"><div class="bt">Total Addressable Market</div><div class="bs">Every usage-priced or usage-curious software company, globally</div></div>
@@ -1140,7 +1236,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <div class="xl-facet"><span class="fn">Industries</span><span class="chipv">Software Development</span><span class="chipv">IT Services and IT Consulting</span></div>
       <div class="xl-facet"><span class="fn">Company Size</span><span class="chipv">51-200</span><span class="chipv">201-500</span><span class="chipv">501-1,000</span><span class="chipv">1,001-5,000</span><span class="chipv">5,001-10,000</span><span class="chipv">10,001+</span></div>
       <div class="xl-facet"><span class="fn">Location</span><span class="chipv">United States</span><span class="chipv">Central Europe and Israel (test)</span></div>
-      <div><span class="xl-size">Large</span><span class="xl-tag inf">inferred</span></div>
+      <div><span class="xl-size">Large</span></div>
       <div class="xl-miss"><b>What it misses:</b> "charges by usage, credits, or tokens" is not a LinkedIn attribute. The defining trait of the market is invisible to native filters and is reached by the ad message plus a technographic signal, never by a title.</div>
       <div class="xl-use"><b>Use it for:</b> sizing and as a suppression reference only. This is not a launch audience.</div>
     </div>
@@ -1150,7 +1246,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">03 / SERVICEABLE MARKET</div>
     <h2 class="sec">Who they can serve <em>today</em></h2>
-    <p class="body">The market narrows fast once real constraints apply. Stigg is early, a 0-to-1 company after the rebrand, so this reads as aim, not room: the constraints define where the first wins come from.</p>
+    <p class="body">The market narrows fast once real constraints apply. Stigg's AI positioning is new, so this shows where to aim first rather than the full size of the market.</p>
     <table class="ftable">
       <tr><th>Constraint</th><th>Rule</th><th>Effect on the market</th></tr>
       <tr><td>Geography</td><td>Ads start in the United States, where the buyers concentrate</td><td>Narrows to a US-first core, with Central Europe and Israel as tests; English only</td></tr>
@@ -1165,7 +1261,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <div class="xl-facet"><span class="fn">Company Size</span><span class="chipv">51-200</span><span class="chipv">201-500</span><span class="chipv">501-1,000</span><span class="chipv">1,001-5,000</span><span class="chipv">5,001-10,000</span></div>
       <div class="xl-facet"><span class="fn">Location</span><span class="chipv">United States</span></div>
       <div class="xl-facet"><span class="fn">Technographic</span><span class="chipv">routed to third-party list</span></div>
-      <div><span class="xl-size">Moderate</span><span class="xl-tag inf">inferred</span></div>
+      <div><span class="xl-size">Moderate</span></div>
       <div class="xl-miss"><b>What it misses:</b> LinkedIn cannot filter on tech stack or on "is launching usage pricing." Both constraints are enforced through a third-party list (Clay or BuiltWith enrichment), then uploaded as a Matched Audience.</div>
       <div class="xl-use"><b>Use it for:</b> the native cold ceiling and the firmographic base that the ideal client and personas tighten.</div>
     </div>
@@ -1185,13 +1281,13 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <tr><td class="cri">Decision owner</td><td class="sc-ideal">CTO or engineering leader; more senior at bigger companies</td><td>Founder or CEO at a smaller company</td><td class="sc-no">No technical owner</td></tr>
       <tr><td class="cri">Trigger</td><td class="sc-ideal">An in-house build hit a wall: new pricing model, maintenance load, customers asking to see usage, agent sprawl</td><td>Frustration with Metronome or Orb; leaving a billing provider</td><td class="sc-no">Satisfied with the current build</td></tr>
     </table></div>
-    <div class="callout"><div class="k">Evidence line</div><p>Stated, not yet validated by closed-won data. This profile rests on the strategy call, the ImpactRx intake (company size, seniority, and ideal industries ranked by Stigg), the named customers on Stigg's site (Webflow, Miro, PagerDuty, Qlik, Productboard, Upwork, AI21, 8x8, HackerOne), and the recon. A closed-won pull from HubSpot in week one will confirm or adjust the size bands and the beachhead, and any gap between who they win and who they say they want is the most useful thing that pull will surface.</p></div>
-    <div class="callout blue"><div class="k">Beachhead, where we start</div><p>Frontier AI companies that are launching usage or credit pricing right now: the roughly 360 named accounts, expanding daily. The real-time wedge matters most where AI agents spend money autonomously, the urgency is highest the moment pricing is being built, and these are the logos that prove the model for the acquisition goal.</p></div>
+    <div class="callout"><div class="k">How we check it</div><p>In the first weeks we compare this profile against Stigg's closed-won deals in HubSpot. Any gap between who Stigg wins and who we target is fixed before Month 2.</p></div>
+    <div class="callout blue"><div class="k">Beachhead, where we start</div><p>Frontier AI companies that are launching usage or credit pricing right now: the 204 named accounts on the priority and secondary lists. Real-time control matters most where AI agents spend money autonomously, the urgency is highest the moment pricing is being built, and these are the logos that prove the model for the acquisition goal.</p></div>
     <div class="xl">
       <div class="xl-h">LinkedIn translation</div>
       <div class="xl-facet"><span class="fn">Reach via</span><span class="chipv">Company List Matched Audience (204 named accounts)</span></div>
       <div class="xl-facet"><span class="fn">Native fallback</span><span class="chipv">Industries: Software Development</span><span class="chipv">Company Size: 51-200 through 5,001-10,000</span><span class="chipv">Company Growth Rate: high</span><span class="chipv">Location: United States</span></div>
-      <div><span class="xl-size">204 accounts</span><span class="xl-tag obs">observed as a list</span></div>
+      <div><span class="xl-size">204 accounts</span></div>
       <div class="xl-miss"><b>What it misses:</b> "prices by usage" and "launching credits" are not filterable. Under ~5,000 accounts the named list beats native filters outright, so the list is the audience and the message carries the trigger.</div>
       <div class="xl-use"><b>Use it for:</b> the account-based core audience and the company base that every Section 05 persona filter sits on top of.</div>
     </div>
@@ -1201,7 +1297,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">05 / BUYING COMMITTEE AND INFLUENCERS</div>
     <h2 class="sec">Who decides, <em>and how to reach each one</em></h2>
-    <p class="body">An engineering-led purchase. Stigg rates Senior, Manager, Director, VP, and Owner or Founder as a great fit and entry level as a lower fit; CTOs and other executives are held for Month 2, once their teams have engaged. On the named accounts, the engineering personas run as four cold campaigns (section 07); founders and CEOs are reached later, only at accounts whose engineers have engaged.</p>
+    <p class="body">An engineering-led purchase. The core is Senior through VP in engineering; entry-level roles are excluded. CTOs, founders, and CEOs are reached from Month 2, once their teams have engaged. On the named accounts, the engineering personas run as four cold campaigns (section 07); founders and CEOs are reached later, only at accounts whose engineers have engaged.</p>
     <div class="grid2">
       <div class="card tl">
         <div class="chhead"><span class="clabel" style="color:var(--canopy-text)">Economic buyer</span><span class="ctitle">Engineering leaders</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
@@ -1212,13 +1308,13 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Director</span><span class="chipv">VP</span><span class="chipv">CXO, from Month 2</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">CTO</span><span class="chipv">VP or Director of Engineering</span><span class="chipv">Head of Platform</span></div>
-          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
+          <div></div>
           <div class="xl-miss"><b>What it misses:</b> title wording varies by company, so function plus seniority is the base and titles are the overlay.</div>
           <div class="xl-use"><b>Use it for:</b> the engineering leaders and fast-growing leaders campaigns.</div>
         </div>
       </div>
       <div class="card tc">
-        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Evaluator and champion</span><span class="ctitle">AI Engineers</span><span class="ctags"><span class="ppill prim">Primary, new from intake</span></span></div>
+        <div class="chhead"><span class="clabel" style="color:var(--clay-text)">Evaluator and champion</span><span class="ctitle">AI Engineers</span><span class="ctags"><span class="ppill prim">Primary</span></span></div>
         <div class="pmeta"><span class="plab">Who</span>Own AI features, agents, and usage. Feel agent costs and customer usage questions first.</div>
         <div class="pmeta"><span class="plab">Titles</span>AI Engineer, ML Engineer, AI Platform Engineer</div>
         <div class="pmeta"><span class="plab">Cares about</span>Agent budgets, credits, customer-visible usage, not rebuilding limits</div>
@@ -1226,7 +1322,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Senior</span><span class="chipv">Manager</span></div><div class="xl-facet"><span class="fn">Titles and skills</span><span class="chipv">AI Engineer</span><span class="chipv">ML Engineer</span><span class="chipv">Machine Learning</span><span class="chipv">Large Language Models</span></div>
-          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
+          <div></div>
           <div class="xl-miss"><b>What it misses:</b> LinkedIn cannot separate AI engineers from platform engineers by function or seniority; only titles and skills tell them apart.</div>
           <div class="xl-use"><b>Use it for:</b> the engineers campaign, split by title later if the data shows a difference.</div>
         </div>
@@ -1240,7 +1336,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Function</span><span class="chipv">Engineering</span></div><div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Senior</span><span class="chipv">Manager</span></div><div class="xl-facet"><span class="fn">Skills</span><span class="chipv">API Development</span><span class="chipv">Distributed Systems</span><span class="chipv">Billing Systems</span></div>
-          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
+          <div></div>
           <div class="xl-miss"><b>What it misses:</b> "owns billing" is not a filter; skills and the message do the qualifying.</div>
           <div class="xl-use"><b>Use it for:</b> the engineers campaign, and the trust sequence.</div>
         </div>
@@ -1254,7 +1350,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="xl">
           <div class="xl-h">LinkedIn translation</div>
           <div class="xl-facet"><span class="fn">Seniority</span><span class="chipv">Owner</span><span class="chipv">Partner</span><span class="chipv">CXO</span></div><div class="xl-facet"><span class="fn">Titles</span><span class="chipv">Founder</span><span class="chipv">Co-founder</span><span class="chipv">CEO</span></div>
-          <div><span class="xl-size">On the named accounts</span><span class="xl-tag inf">size after build</span></div>
+          <div></div>
           <div class="xl-miss"><b>What it misses:</b> founder relevance falls as company size rises; the named lists already encode size.</div>
           <div class="xl-use"><b>Use it for:</b> the Month 2 executive campaign, at accounts whose engineers have engaged.</div>
         </div>
@@ -1265,7 +1361,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       </div>
       <div class="card tt">
         <div class="chhead"><span class="clabel" style="color:var(--terra-text)">The top competitor</span><span class="ctitle">The in-house build</span><span class="ctags"><span class="ppill obj">Objection to answer</span></span></div>
-        <div class="pmeta"><span class="plab">Who</span>Not an ad audience. The engineering team that plans to build entitlements, credits, and limits itself, and the competitor Stigg names first.</div>
+        <div class="pmeta"><span class="plab">Who</span>Not an ad audience. The engineering team that plans to build entitlements, credits, and limits itself, and the competitor in most deals.</div>
         <div class="pmeta" style="margin-top:8px"><span class="plab">Objection to answer</span>The cost is not building it once; it is maintaining real-time enforcement and every edge case while the roadmap waits. Answered in the message and the technical proof.</div>
       </div>
     </div>
@@ -1302,7 +1398,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="lmeter"><i style="width:22%"></i></div><div class="lmcap">Size impact: small, widening &nbsp;/&nbsp; <span class="lconf">confidence: low to medium</span></div>
       </div>
     </div>
-    <div class="callout blue"><div class="k">Now in use for the Month 1 pockets</div><p>Frequent Contributors (the most publicly active members, who pair with Thought Leader Ads) and AI skills or interests (Artificial Intelligence, Machine Learning, Large Language Models) as refiners on the native pockets. Company Growth Rate at 10 to 20 percent, always labelled a proxy for momentum. Verify each in Campaign Manager at build.</p></div>
+    <div class="callout blue"><div class="k">Now in use for the Month 1 pockets</div><p>Frequent Contributors (the most publicly active members, who pair with Thought Leader Ads) and AI skills or interests (Artificial Intelligence, Machine Learning, Large Language Models) as refiners on the native pockets. Company Growth Rate at 10 percent and above, as a sign of momentum.</p></div>
     <div class="callout"><div class="k">Considered, not used</div><p>Company Revenue (sparse and unreliable on small AI companies; the size band is cleaner). Company Category curated lists (Fortune 500 is the wrong universe for frontier AI startups). Education (not a credentialed-buyer purchase). Member Age and Gender (the offer does not skew, so not used). Job Seekers (used as an exclusion, never a target).</p></div>
     <div class="callout blue"><div class="k">How to stack them</div><p>Precision layers are AND filters, so each one shrinks the audience. Stack one or two at a time and re-size in Campaign Manager after each, rather than piling them on and launching a segment too small to deliver.</p></div>
   </section>
@@ -1318,7 +1414,6 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="pmeta" style="margin-top:6px">Directors and VPs of Engineering and Heads of Platform at the named accounts.</div>
         <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Location</td><td>United States</td></tr></table>
         <div class="pmeta"><span class="plab">Persona</span>Engineering leaders</div>
-        <div class="pmeta"><span class="plab">Size</span>Size after build</div>
         <div class="why"><b>Why now:</b> they own the build-or-buy decision, and they watched a peer's AI pricing launch go wrong in public.</div>
         <div class="pmeta"><span class="plab">Opening line</span>"Your pricing launch should not end in a refund thread."</div>
       </div>
@@ -1327,16 +1422,14 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="pmeta" style="margin-top:6px">AI, ML, platform, staff, and backend engineers and their managers at the named accounts.</div>
         <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior, Manager</td></tr><tr><td>Location</td><td>United States</td></tr></table>
         <div class="pmeta"><span class="plab">Persona</span>AI, platform, and billing engineers</div>
-        <div class="pmeta"><span class="plab">Size</span>Size after build; split into one campaign per list above about 10,000 members</div>
         <div class="why"><b>Why now:</b> they live with agent costs and limits, and they are the ones who will otherwise build it themselves.</div>
         <div class="pmeta"><span class="plab">Opening line</span>"One account. Four agents. Running all weekend."</div>
       </div>
       <div class="card tt">
         <div class="chhead"><span class="clabel" style="color:var(--terra-text)">Campaign 3</span><span class="ctitle">Leaders at fast-growing companies</span><span class="ctags"><span class="ppill prim">Month 1, $400 to $1,000</span></span></div>
         <div class="pmeta" style="margin-top:6px">Engineering leaders at named accounts whose headcount is growing fast.</div>
-        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Company Growth Rate</td><td>10 percent and above (a proxy for momentum)</td></tr></table>
+        <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Director, VP</td></tr><tr><td>Company Growth Rate</td><td>10 percent and above (a sign of momentum)</td></tr></table>
         <div class="pmeta"><span class="plab">Persona</span>Engineering leaders</div>
-        <div class="pmeta"><span class="plab">Size</span>Size after build</div>
         <div class="why"><b>Why now:</b> growth is when pricing changes every quarter and the homegrown limit stops keeping up.</div>
         <div class="pmeta"><span class="plab">Opening line</span>"It started as a usage counter."</div>
       </div>
@@ -1345,7 +1438,6 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
         <div class="pmeta" style="margin-top:6px">The engineering leaders and engineers at the named accounts who post and comment most.</div>
         <table class="ftable" style="margin-top:8px"><tr><th>Build recipe</th><th>Value</th></tr><tr><td>Company lists</td><td>Priority (65) and secondary (139) named accounts</td></tr><tr><td>Job Function</td><td>Engineering</td></tr><tr><td>Job Seniority</td><td>Senior to VP</td></tr><tr><td>Member Traits</td><td>Frequent Contributors</td></tr></table>
         <div class="pmeta"><span class="plab">Persona</span>Leaders and engineers who speak in public</div>
-        <div class="pmeta"><span class="plab">Size</span>Size after build</div>
         <div class="why"><b>Why now:</b> the people most likely to engage, share, and fill the warm pool first.</div>
         <div class="pmeta"><span class="plab">Opening line</span>"Your billing tool finds it on the 30th. Stigg stops it on the 3rd."</div>
       </div>
@@ -1362,7 +1454,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
     <h2 class="sec">The same buyer, <em>when they search</em></h2>
     <p class="body">How the ideal client and personas show up on Google. The full account structure and budget live in the Capture tab; this is the audience view of it.</p>
     <div class="trade">
-      <div class="trade-p trade-good"><h5>Why this lane is worth it</h5><p>Clear intent, a shorter cycle than any cold audience, and self-qualifying queries. An engineer typing "stripe metered billing" is describing Stigg's exact wedge, with no persuasion step.</p></div>
+      <div class="trade-p trade-good"><h5>Why this lane is worth it</h5><p>Clear intent, a shorter cycle than any cold audience, and self-qualifying queries. An engineer typing "stripe metered billing" is describing exactly what Stigg does.</p></div>
       <div class="trade-p trade-catch"><h5>The catch</h5><p>Most of the word "billing" is invoicing, accounting, and telecom demand, so tight negatives are the whole game. And the landing page, not the click, decides the return.</p></div>
     </div>
     <div class="grid2">
@@ -1376,7 +1468,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       </div>
       <div class="card tb"><h4>Stripe long-tail</h4>
         <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip med">Cost: medium</span><span class="pchip">Champion</span></div>
-        <div class="ev">Terms: stripe metered billing, stripe usage billing. The highest-intent wedge: a buyer who built on Stripe and hit its limits.</div>
+        <div class="ev">Terms: stripe metered billing, stripe usage billing. The highest-intent group: a buyer who built on Stripe and hit its limits.</div>
       </div>
       <div class="card tc"><h4>Competitor conquest</h4>
         <div class="gchips"><span class="ichip">Intent: high</span><span class="cchip hi">Cost: high</span><span class="pchip">Platform / Eng leader</span></div>
@@ -1458,8 +1550,8 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
       <tr><td class="who">Open pipeline</td><td class="how">Suppressed from cold where appropriate, synced from HubSpot and Salesforce</td></tr>
       <tr><td class="who">Employees</td><td class="how">Company exclusion on Stigg</td></tr>
       <tr><td class="who">Competitors</td><td class="how">Company List exclusion on Metronome, Orb, Chargebee, Schematic, Paid, and Credyt. Zuora and Airwallex are partners and are not excluded</td></tr>
-      <tr><td class="who">Accounts Stigg flagged</td><td class="how">Excluded from cold campaigns, pending Stigg's confirmation: WRITER (kept in After Tokens ads as a speaker), World Labs, Waymo, Viz.ai</td></tr>
-      <tr><td class="who">Entry-level roles</td><td class="how">Seniority exclusion (Entry), rated a lower fit by Stigg</td></tr>
+      <tr><td class="who">Proposed cold exclusions</td><td class="how">WRITER (an After Tokens speaker, kept in event ads), World Labs, Waymo, Viz.ai, as proposed in the account review</td></tr>
+      <tr><td class="who">Entry-level roles</td><td class="how">Seniority exclusion (Entry); not a buyer for this product</td></tr>
       <tr><td class="who">Students and trainees</td><td class="how">Job Seniority exclusion (Training, Unpaid) and student fields of study</td></tr>
       <tr><td class="who">Job seekers</td><td class="how">Member Traits: Job Seekers, excluded</td></tr>
       <tr><td class="who">Out-of-market geographies</td><td class="how">Everything outside the United States at launch; Central Europe and Israel open later as separate test campaigns</td></tr>
@@ -2171,6 +2263,105 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
 </script>
 </div>
 </section>
+<section class="view" id="messaging">
+<div class="roomwrap">
+  <header class="ov-hero">
+    <div class="kicker">Message and Offer / Stigg</div>
+    <h1 class="big">One idea, said five ways, <em>with an offer at every step</em>.</h1>
+    <p class="lede">What Stigg says, to whom, in what order, and what it offers at each step. Built on the open ground in White Space and the buyers in Targeting, in Stigg's own words wherever they already exist.</p>
+  </header>
+
+  <section class="blk">
+    <div class="secnum">01 / THE ONE IDEA</div>
+    <h2 class="sec">Every ad tells <em>the same story</em></h2>
+    <div class="r-quote">Every AI request is a spend decision. Make it in milliseconds.</div>
+    <p class="body" style="margin-top:12px">The line is Stigg's own. The story behind it is what Dor sees in every deal:</p>
+    <div class="mo-story">
+      <div class="mo-step"><div class="n-num">1</div><p>Teams that know AI billing tools exist know the one everyone uses.</p></div>
+      <div class="mo-step"><div class="n-num">2</div><p>The ones who tried it for AI found it was not built for AI, and too slow.</p></div>
+      <div class="mo-step"><div class="n-num">3</div><p>So they live with it, or they build their own.</p></div>
+      <div class="mo-step win"><div class="n-num">4</div><p><b>What they do not know:</b> Stigg decides every request in real time, before the spend.</p></div>
+    </div>
+    <div class="callout" style="margin-top:14px"><div class="k">Why it lands now</div><p>The AI pricing problems that made news in 2025 were limits decided too late: customers who ran out in days, surprise charges, refunds. Every engineering leader on the list watched it happen to a peer. The ads name that moment, never the company.</p></div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">02 / THE PILLARS, IN ORDER</div>
+    <h2 class="sec">One answer, one reason, <em>three proofs</em></h2>
+    <p class="body">Five messages sit under the one idea, ranked. Cold ads lead with the first two. The three proofs do their work once someone has clicked.</p>
+    <div class="grid2">
+      <div class="card tl"><h4>Decide before the spend <span class="badge bh">Lead</span></h4><div class="mo-line"><b>Its job:</b> the answer. A limit checked after the request is too late.</div><div class="mo-line"><b>Proof:</b> checks at p99 under 10 milliseconds; zero overdraft.</div><div class="mo-line"><b>Cold line:</b> "Your billing tool finds it on the 30th. Stigg stops it on the 3rd."</div></div>
+      <div class="card tb"><h4>Every edge case solved <span class="badge bh">Lead</span></h4><div class="mo-line"><b>Its job:</b> the reason not to build it in-house.</div><div class="mo-line"><b>Proof:</b> Miro shipped AI credits in under six weeks.</div><div class="mo-line"><b>Cold line:</b> "It started as a usage counter."</div></div>
+      <div class="card tc"><h4>AI usage, under control</h4><div class="mo-line"><b>Its job:</b> proof for the agent era.</div><div class="mo-line"><b>Proof:</b> budgets per user, team, and agent, enforced on every call.</div><div class="mo-line"><b>Used:</b> cold for engineers, and in retargeting.</div></div>
+      <div class="card tt"><h4>Credits customers can see</h4><div class="mo-line"><b>Its job:</b> proof for enterprise buyers.</div><div class="mo-line"><b>Proof:</b> wallets, ledgers, expiry, and a live balance each customer can check.</div><div class="mo-line"><b>Used:</b> retargeting.</div></div>
+      <div class="card tm"><h4>Augment, do not replace</h4><div class="mo-line"><b>Its job:</b> removes the migration worry once someone is interested.</div><div class="mo-line"><b>Proof:</b> two-way sync with Stripe, Zuora, and other billers; no migration.</div><div class="mo-line"><b>Used:</b> retargeting and the sales conversation, never as a cold headline.</div></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">03 / WHO HEARS WHAT</div>
+    <h2 class="sec">The same idea, <em>tuned to each seat</em></h2>
+    <div class="grid3">
+      <div class="card tl"><h4>Engineering leaders</h4><div class="mo-line"><b>They worry about:</b> the team buried in billing work, and a runaway-cost incident.</div><div class="mo-line"><b>Earns attention:</b> the real cost of building it in-house.</div><div class="mo-line"><b>Earns trust:</b> how Miro and Webflow moved pricing faster.</div><div class="mo-line"><b>Earns the click:</b> the engineer's case for buying; an architecture session.</div></div>
+      <div class="card tb"><h4>Engineers</h4><div class="mo-line"><b>They worry about:</b> overdrafts, edge cases, latency, a P1 at 2am.</div><div class="mo-line"><b>Earns attention:</b> a limit checked after the request is too late.</div><div class="mo-line"><b>Earns trust:</b> docs, the architecture, p99 under 10 milliseconds.</div><div class="mo-line"><b>Earns the click:</b> Start free, Install with AI, the pricing guide.</div></div>
+      <div class="card tc"><h4>Founders and CEOs, from Month 2</h4><div class="mo-line"><b>They worry about:</b> AI costs outrunning revenue; rivals shipping pricing faster.</div><div class="mo-line"><b>Earns attention:</b> every AI request is a spend decision.</div><div class="mo-line"><b>Earns trust:</b> Dor's point of view; customer outcomes.</div><div class="mo-line"><b>Earns the click:</b> the Miro story; Talk to a Human.</div></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">04 / WHAT WE SAY AT EACH STAGE</div>
+    <h2 class="sec">The ask grows <em>as the account warms</em></h2>
+    <div class="mo-story">
+      <div class="mo-step"><div class="n-layer">Cold</div><div class="n-name" style="margin-top:4px">Earn the click</div><p>Who it is for, the pain, what Stigg does. Single image. Learn more.</p></div>
+      <div class="mo-step"><div class="n-layer">Warm, 90 days</div><div class="n-name" style="margin-top:4px">Build trust</div><p>Interview clips, Dor's posts, customer stories. A free guide, no commitment.</p></div>
+      <div class="mo-step"><div class="n-layer">High intent, 30 days</div><div class="n-name" style="margin-top:4px">One clear ask</div><p>One proof point and one next step: an architecture session or Start free.</p></div>
+      <div class="mo-step win"><div class="n-layer">In pipeline</div><div class="n-name" style="margin-top:4px">Remove objections</div><p>Security, migration ease, and outcomes, kept visible while sales works the deal.</p></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">05 / THE OFFERS</div>
+    <h2 class="sec">Start with what Stigg <em>already has</em></h2>
+    <p class="body">Stigg already has enough to carry the first 90 days. Four existing assets become ad offers with design work only, and three new ideas are worth testing.</p>
+    <h3 class="sub">Already in hand</h3>
+    <div class="tags"><span class="tag">Start free (Build plan)</span><span class="tag">Install with AI</span><span class="tag">Talk to a Human</span><span class="tag">The newsletter</span><span class="tag">Pricing and entitlements guides</span><span class="tag">Customer stories</span><span class="tag">Developer docs</span><span class="tag">Dor's posts and talks</span><span class="tag">After Tokens sessions, from November 10</span></div>
+    <h3 class="sub" style="margin-top:18px">Repurpose first</h3>
+    <div class="grid2">
+      <div class="card tl"><h4>The Engineer's Case for Buying Monetization</h4><div class="mo-line">An existing blog post, laid out as a short PDF behind a lead gen form.</div><div class="mo-line"><b>For:</b> engineering leaders, warm.</div></div>
+      <div class="card tb"><h4>How Miro shipped AI credits in under six weeks</h4><div class="mo-line">The existing story as a one-page document ad.</div><div class="mo-line"><b>For:</b> everyone, warm.</div></div>
+      <div class="card tc"><h4>The AI pricing implementation guide</h4><div class="mo-line">Three existing guides (usage, token, and hybrid pricing) bundled into one download.</div><div class="mo-line"><b>For:</b> engineers, warm and high intent.</div></div>
+      <div class="card tm"><h4>After Tokens on demand</h4><div class="mo-line">The event sessions as a library and short clips.</div><div class="mo-line"><b>For:</b> everyone, warm, after November 10.</div></div>
+    </div>
+    <h3 class="sub" style="margin-top:18px">New, to test</h3>
+    <div class="grid3">
+      <div class="card tt"><h4>Architecture session</h4><div class="mo-line">Thirty minutes with a Stigg engineer on where real-time control fits in their stack. A technical version of Talk to a Human.</div></div>
+      <div class="card tt"><h4>Build-versus-buy worksheet</h4><div class="mo-line">One page estimating the engineering time to build and maintain credits and limits in-house.</div></div>
+      <div class="card tt"><h4>AI usage control checklist</h4><div class="mo-line">Five questions every AI team should answer, such as whether it can stop a runaway agent.</div></div>
+    </div>
+    <div class="scroll" style="margin-top:16px"><table class="tbl"><thead><tr><th>Persona</th><th>Warm offer</th><th>High-intent offer</th></tr></thead><tbody>
+      <tr><td class="k">Engineering leaders</td><td>The Engineer's Case for Buying Monetization</td><td>Architecture session</td></tr>
+      <tr><td class="k">Engineers</td><td>The AI pricing implementation guide</td><td>Start free, or Install with AI</td></tr>
+      <tr><td class="k">Founders and CEOs</td><td>How Miro shipped AI credits in under six weeks</td><td>Talk to a Human</td></tr>
+    </tbody></table></div>
+    <p class="body" style="margin-top:10px">Every form asks for three things: name, email, and company.</p>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">06 / THE FIRST FIVE ADS</div>
+    <h2 class="sec">Five images, <em>one per campaign angle</em></h2>
+    <p class="body">Each starts from a moment AI buyers remember, names one concrete thing, and makes one claim. No customer logos and no company names in cold ads.</p>
+    <div class="grid2">
+      <div class="card tl"><h4><span class="mo-img">Your pricing launch should not end in a refund thread.</span></h4><div class="mo-line"><b>Leads in:</b> engineering leaders.</div><div class="mo-line"><b>Claim:</b> credit limits enforced before the request runs.</div></div>
+      <div class="card tb"><h4><span class="mo-img">One account. Four agents. Running all weekend.</span></h4><div class="mo-line"><b>Leads in:</b> engineers.</div><div class="mo-line"><b>Claim:</b> budgets per user, team, and agent, checked on every call.</div></div>
+      <div class="card tc"><h4><span class="mo-img">It started as a usage counter.</span></h4><div class="mo-line"><b>Leads in:</b> leaders at fast-growing companies.</div><div class="mo-line"><b>Claim:</b> credits and limits without building them yourself.</div></div>
+      <div class="card tt"><h4><span class="mo-img">New pricing. No deploy.</span></h4><div class="mo-line"><b>Leads in:</b> leaders at fast-growing companies.</div><div class="mo-line"><b>Claim:</b> plans, limits, and credits change without shipping code.</div></div>
+      <div class="card tm"><h4><span class="mo-img">Your billing tool finds it on the 30th. Stigg stops it on the 3rd.</span></h4><div class="mo-line"><b>Leads in:</b> frequent contributors.</div><div class="mo-line"><b>Claim:</b> every AI request is a spend decision.</div></div>
+    </div>
+    <p class="body" style="margin-top:16px"><a class="r-next" href="#capture" data-goto="capture">Next: how the same buyers show up on search &rsaquo;</a></p>
+  </section>
+</div>
+</section>
+
 <section class="view" id="capture">
 <div class="roomwrap">
   <header class="ov-hero" style="padding-bottom:20px">
@@ -2180,7 +2371,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   </header>
 
   <section class="blk">
-    <div class="secnum">01 / THE HONEST READ</div>
+    <div class="secnum">01 / WHAT IS IN THE FILE</div>
     <h2 class="sec">381,640 of 399,720 searches <em>are not your buyer</em></h2>
     <p class="body">Here is what is actually in the file. To Google, "billing" means invoicing and accounting software, so that is where the volume sits. A single term, "usage pricing" at 33,100 a month, looks like the largest opportunity in the whole set and is telecom and cloud data-usage demand, not software. The job of this build is to make sure the budget never touches any of it.</p>
 
@@ -2252,7 +2443,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
     <p class="body">Across five campaigns, a few pockets carry most of the value. These are the ones worth building pages and copy around, and the ones to watch in the search-term report.</p>
     <div class="grid2">
       <div class="card tl"><h4>The Stripe gap, highest intent</h4>
-        <div class="ev" style="margin-top:6px">"Stripe metered billing" and its variants are a buyer describing Stigg's exact wedge: they have Stripe, are trying to make it enforce usage, and are finding out it does not do entitlements or credits. There is no persuasion step in that conversation, and it deserves its own page.</div>
+        <div class="ev" style="margin-top:6px">"Stripe metered billing" and its variants are a buyer describing exactly what Stigg does: they have Stripe, are trying to make it enforce usage, and are finding out it does not do entitlements or credits. There is no persuasion step in that conversation, and it deserves its own page.</div>
       </div>
       <div class="card tm"><h4>Entitlement management, owned outright</h4>
         <div class="ev" style="margin-top:6px">220 searches a month, effectively uncontested, and the only term set in the plan where Stigg is the literal answer rather than one option among several. Low cost, clean intent, worth protecting from the identity-and-access-management terms that share the word.</div>
@@ -2308,7 +2499,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">ECOSYSTEM / CURRENT FOOTPRINT</div>
     <h2 class="sec">What already runs, <em>and the layer to add</em></h2>
-    <p class="body">Here is Stigg's demand system on one board, mapped to the jobs a full motion does. The point is encouraging: the two hardest layers to stand up, making demand exist and having a real audience behind it, are already running. Create is live through the founder's content, and there is healthy warm traffic to work with. With the goal now clear, acquiring the named AI logos with quality attention, the center of gravity for the work ahead is the connective tissue: the LinkedIn account-based hub that aims at those accounts and converts the warm ecosystem, a targeted Google capture lane, and the intelligence layer that ties both back to deals.</p>
+    <p class="body">Stigg's marketing today, mapped to the jobs a full program does. Two layers already run: Dor's content creates demand, and the site has warm traffic to work with. What we add: LinkedIn campaigns on the named accounts, conversion of that warm audience, a targeted Google lane, and reporting that ties both back to deals.</p>
 
     <div class="eco-legend">
       <span><i class="bstart" style="background:var(--canopy)"></i>Start here</span>
@@ -2475,7 +2666,7 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   <section class="blk">
     <div class="secnum">ATTRIBUTION / THE HUBSPOT ANSWER</div>
     <h2 class="sec">See what the ads <em>actually influenced</em></h2>
-    <p class="body">LinkedIn's own reporting cannot see the CRM, so it structurally cannot tell you whether the ads brought deals. Because Stigg runs HubSpot, this is where the measurement story lands. Connect HubSpot once, and deal and company data flows in and matches to the accounts that saw or engaged with the ads, with the window set to Stigg's real sales cycle.</p>
+    <p class="body">LinkedIn's own reporting cannot see the CRM, so it structurally cannot tell you whether the ads brought deals. Because Stigg runs HubSpot, this is where measurement happens. Connect HubSpot once, and deal and company data flows in and matches to the accounts that saw or engaged with the ads, with the window set to Stigg's real sales cycle.</p>
 
     <figure>
       <div class="fig figscroll">
@@ -2509,6 +2700,59 @@ nav.top .brand .sep{color:rgba(232,228,218,.65)}
   </section>
 </div>
 </section>
+
+<section class="view" id="agreed">
+<div class="roomwrap">
+  <header class="ov-hero">
+    <div class="kicker">What We Agreed / Stigg</div>
+    <h1 class="big">What is agreed, <em>and what is still open</em>.</h1>
+    <p class="lede">Every decision from the calls so far, with its date, so both teams work from the same plan. Anything Impactable has suggested but Stigg has not yet confirmed is marked as proposed.</p>
+  </header>
+
+  <section class="blk">
+    <div class="secnum">01 / THE SCOPE</div>
+    <h2 class="sec">Three programs, <em>one plan</em></h2>
+    <div class="grid3">
+      <div class="card tb"><h4>LinkedIn</h4><div class="mo-line">Four cold campaigns on the 204 named accounts, Spotlight retargeting, then warm offers and executives from Month 2.</div></div>
+      <div class="card tl"><h4>Thought leadership</h4><div class="mo-line">Dor's voice: interviews turned into posts, clips, and Thought Leader Ads. Starts with a voice session and five sample posts.</div></div>
+      <div class="card tt"><h4>Google</h4><div class="mo-line">Five intent-separated search campaigns that catch the buyers already searching.</div></div>
+    </div>
+    <p class="body" style="margin-top:12px">Media up to $30,000 a month across all three, over a 90-day horizon. DemandSense account intelligence and 90 days of website visitor identification are included.</p>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">02 / DECISIONS, BY DATE</div>
+    <h2 class="sec">What was decided, <em>and where</em></h2>
+    <div class="scroll"><table class="tbl"><thead><tr><th>When</th><th>Where</th><th>Decision</th><th>Status</th></tr></thead><tbody>
+      <tr><td class="k">September 29</td><td>Signed scope</td><td>LinkedIn, thought leadership, and Google, with media up to $30,000 a month combined</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 1</td><td>Intake</td><td>Meta ruled out; United States first, with Central Europe and Israel later as tests; English only</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 1</td><td>Intake</td><td>The ideal client is any software company that charges its own customers for AI usage</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 6</td><td>Onboarding call</td><td>Two lists: priority (65 accounts) and secondary (139 accounts, for the mid-market self-serve motion)</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 6</td><td>Onboarding call</td><td>Target by job function and seniority, not titles, and review the titles getting impressions every week</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 6</td><td>Onboarding call</td><td>Reach senior engineering managers who own billing infrastructure, not lower-tier managers</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 6</td><td>Onboarding call</td><td>Any logic for verifying AI usage goes to Mor for approval before it is used</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 19</td><td>Sync</td><td>No customer logos in cold ads</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 19</td><td>Sync</td><td>Ad copy built from competitive references and specific moments, not general claims</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 19</td><td>Sync</td><td>Proof of concept: Stigg's team takes one or two concepts to about 60 percent; Impactable's creative team produces the rest</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">October 19</td><td>Sync</td><td>Mor and Sara approve the first five thought leadership posts; After Tokens speakers' posts run as Thought Leader Ads with their approval</td><td><span class="ck2">Agreed</span></td></tr><tr><td class="k">Proposed</td><td>Impactable</td><td>Four single-image cold campaigns on both lists, one buyer slice each</td><td><span class="cp2">Proposed</span></td></tr><tr><td class="k">Proposed</td><td>Impactable</td><td>Executives reached only at accounts whose engineers have engaged, from Month 2</td><td><span class="cp2">Proposed</span></td></tr><tr><td class="k">Proposed</td><td>Impactable</td><td>Stigg's pipeline, closed-lost, and email lists join as a warm campaign in Month 2</td><td><span class="cp2">Proposed</span></td></tr><tr><td class="k">Proposed</td><td>Impactable</td><td>Cold exclusions: WRITER, World Labs, Waymo, Viz.ai</td><td><span class="cp2">Proposed</span></td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section class="blk">
+    <div class="secnum">03 / THE ORDER</div>
+    <h2 class="sec">What runs first, <em>and what follows</em></h2>
+    <div class="mo-story">
+      <div class="mo-step"><div class="n-layer">Now</div><div class="n-name" style="margin-top:4px">After Tokens</div><p>Event campaigns run through November 10.</p></div>
+      <div class="mo-step"><div class="n-layer">Next</div><div class="n-name" style="margin-top:4px">Cold campaigns</div><p>The four campaigns launch once the five images and the copy are approved.</p></div>
+      <div class="mo-step"><div class="n-layer">Then</div><div class="n-name" style="margin-top:4px">Spotlight</div><p>Retargeting starts once the warm audience passes 300 people.</p></div>
+      <div class="mo-step win"><div class="n-layer">Month 2</div><div class="n-name" style="margin-top:4px">Warm offers</div><p>Guides and the architecture session, executives at engaged accounts, and Stigg's own lists.</p></div>
+    </div>
+  </section>
+
+  <section class="blk" style="border-bottom:none">
+    <div class="secnum">04 / OPEN ITEMS</div>
+    <h2 class="sec">What is open, <em>and who owns it</em></h2>
+    <div class="scroll"><table class="tbl"><thead><tr><th>Item</th><th>Owner</th></tr></thead><tbody>
+      <tr><td>Five cold images, as the proof of concept</td><td class="k">Stigg's team and Impactable's creative team</td></tr><tr><td>Approve the cold ad copy</td><td class="k">Sara</td></tr><tr><td>Confirm the proposed cold exclusions</td><td class="k">Sagi</td></tr><tr><td>Confirm the p99 under 10 milliseconds figure for ad copy</td><td class="k">Stigg</td></tr><tr><td>Pipeline, closed-lost, and email exports for Month 2</td><td class="k">Stigg</td></tr><tr><td>Test whether AI usage can be verified on the current lists; logic to Mor before use</td><td class="k">Impactable data team</td></tr><tr><td>Speaker approvals for Thought Leader Ads</td><td class="k">Sara</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <footer class="foot">
+    <div class="fb">Impactable <span class="hl">// Intelligence Room for Stigg</span></div>
+  </footer>
+</div>
+</section>
+
 
 <script>
 (function(){
